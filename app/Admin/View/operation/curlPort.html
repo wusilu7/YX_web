@@ -1,0 +1,51 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.08.group.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>测试请求端口</span></div>
+
+<div style="width: 300px; display: inline-block; float: left;">
+    <input id="domain" type="text" class="form-control jin-search-input" placeholder="域名"><hr>
+    <input id="ip" type="text" class="form-control jin-search-input" placeholder="ip"><hr>
+    <textarea id="port" cols="30" rows="20" placeholder="端口"></textarea><br>
+    <a id="jin_search" class="btn btn-success">请求</a>
+</div>
+<div id="showinfo" style="width: 900px; display: inline-block; float: left;">
+
+</div>
+<div id="page"></div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+
+    $("#jin_search").on('click', function () {
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=912',
+            data: {
+                domain:$("#domain").val(),
+                ip:$("#ip").val(),
+                port:$("#port").val().split('\n')
+            },
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json);
+                layer.closeAll('loading');
+                var c='';
+                for (var i=0;i<json.length;i++){
+                    c+='<span style="color: red">'+json[i]['port']+'</span>'+'-------'+json[i]['info']+'<br>'
+                }
+                $("#showinfo").html(c);
+            }
+        });
+    });
+
+
+
+
+</script>

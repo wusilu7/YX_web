@@ -1,0 +1,2 @@
+★10:52:07-60.176.228.195★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=测试`cont=测试测试`sender_name=GM`receiver_id=2814754062079509`item_list=`money_list=2#100000;`exp=
+★10:52:07-60.176.228.195★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

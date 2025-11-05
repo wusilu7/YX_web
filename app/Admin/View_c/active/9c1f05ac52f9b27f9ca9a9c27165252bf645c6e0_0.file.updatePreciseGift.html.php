@@ -1,0 +1,1393 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-08-15 10:00:32
+  from "D:\pro\WebSiteYiXing\app\Admin\View\active\updatePreciseGift.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_66bd6140e9d3e2_99614425',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9c1f05ac52f9b27f9ca9a9c27165252bf645c6e0' => 
+    array (
+      0 => 'D:\\pro\\WebSiteYiXing\\app\\Admin\\View\\active\\updatePreciseGift.html',
+      1 => 1678771397,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_66bd6140e9d3e2_99614425 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<!--|↓↓↓↓↓↓|-->
+<link href="<?php echo CSS;?>
+jin/3.07.sa.css" rel="stylesheet">
+<div class="jin-content-title"><span>精准礼包修改</span></div>
+<hr />
+<div class="form-horizontal col-sm-6 col-sm-offset-3">
+    <div class="form-group">
+        <label for="ID" class="col-sm-2 control-label">编号</label>
+        <div class="col-sm-10">
+            <input id="ID" class="form-control" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="GiftName" class="col-sm-2 control-label">礼包名</label>
+        <div class="col-sm-5">
+            <input id="GiftName" type="text"  class="form-control">
+        </div>
+        <button id="showOtherGiftName" type="button" class="layui-btn layui-btn-xs">其他语言</button>
+    </div>
+    <div id="showOtherGiftNameStyle" style="display: none;">
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">英文</label>
+            <div class="col-sm-5">
+                <input id="GiftName_English" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">繁体</label>
+            <div class="col-sm-5">
+                <input id="GiftName_CN_t" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">法语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_FR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">德语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_DE" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">印尼语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_ID_ID" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">日语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_JP" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">韩语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_KR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">葡萄牙</label>
+            <div class="col-sm-5">
+                <input id="GiftName_PT_BR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">俄语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_RU" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">西班牙</label>
+            <div class="col-sm-5">
+                <input id="GiftName_ES_ES" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">泰文</label>
+            <div class="col-sm-5">
+                <input id="GiftName_THAI" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="GiftName_English" class="col-sm-2 control-label">阿拉伯语</label>
+            <div class="col-sm-5">
+                <input id="GiftName_UAE" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ActivityName" class="col-sm-2 control-label">活动名</label>
+        <div class="col-sm-5">
+            <input id="ActivityName" type="text"  class="form-control">
+        </div>
+        <button id="showOtherActivityName" type="button" class="layui-btn layui-btn-xs">其他语言</button>
+    </div>
+    <div id="showOtherActivityNameStyle" style="display: none;">
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">英文</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_English" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">繁体</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_CN_t" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">法语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_FR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">德语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_DE" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">印尼语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_ID_ID" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">日语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_JP" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">韩语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_KR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">葡萄牙</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_PT_BR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">俄语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_RU" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">西班牙</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_ES_ES" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">泰文</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_THAI" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ActivityName_English" class="col-sm-2 control-label">阿拉伯语</label>
+            <div class="col-sm-5">
+                <input id="ActivityName_UAE" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="MainBtnName" class="col-sm-2 control-label">主界面的按钮名</label>
+        <div class="col-sm-5">
+            <input id="MainBtnName" type="text"  class="form-control">
+        </div>
+        <button id="showOtherMainBtnName" type="button" class="layui-btn layui-btn-xs">其他语言</button>
+    </div>
+    <div id="showOtherMainBtnNameStyle" style="display: none;">
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">英文</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_English" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">繁体</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_CN_t" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">法语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_FR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">德语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_DE" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">印尼语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_ID_ID" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">日语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_JP" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">韩语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_KR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">葡萄牙</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_PT_BR" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">俄语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_RU" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">西班牙</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_ES_ES" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">泰文</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_THAI" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainBtnName_English" class="col-sm-2 control-label">阿拉伯语</label>
+            <div class="col-sm-5">
+                <input id="MainBtnName_UAE" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Tip" class="col-sm-2 control-label">礼包描述</label>
+        <div class="col-sm-5">
+            <!--<input id="Tip" class="form-control"/>-->
+            <textarea id="Tip" cols="40" rows="7"></textarea>
+        </div>
+        <button id="showOtherTip" type="button" class="layui-btn layui-btn-xs">其他语言</button>
+    </div>
+    <div id="showOtherTipStyle" style="display: none;">
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">英文</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_English" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">繁体</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_CN_t" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">法语</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_FR" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">德语</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_DE" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">印尼</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_ID_ID" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">日本</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_JP" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">韩语</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_KR" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">葡萄牙</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_PT_BR" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">俄语</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_RU" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">西班牙</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_ES_ES" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">泰文</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_THAI" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tip_English" class="col-sm-2 control-label">阿拉伯</label>
+            <div class="col-sm-5">
+                <textarea id="Tip_UAE" cols="40" rows="7"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Icon" class="col-sm-2 control-label">礼包Icon</label>
+        <div class="col-sm-5">
+            <select id="Icon" style="height: 34px;line-height: 34px; width: 200px; padding: 0 8px;">
+                <option value="PayGiftIcon_1">PayGiftIcon_1</option>
+                <option value="PayGiftIcon_2">PayGiftIcon_2</option>
+                <option value="PayGiftIcon_3">PayGiftIcon_3</option>
+                <option value="PayGiftIcon_4">PayGiftIcon_4</option>
+                <option value="PayGiftIcon_5">PayGiftIcon_5</option>
+                <option value="PayGiftIcon_6">PayGiftIcon_6</option>
+                <option value="PayGiftIcon_7">PayGiftIcon_7</option>
+                <option value="PayGiftIcon_8">PayGiftIcon_8</option>
+                <option value="PayGiftIcon_9">PayGiftIcon_9</option>
+                <option value="PayGiftIcon_10">PayGiftIcon_10</option>
+                <option value="PayGiftIcon_11">PayGiftIcon_11</option>
+                <option value="PayGiftIcon_12">PayGiftIcon_12</option>
+                <option value="PayGiftIcon_13">PayGiftIcon_13</option>
+                <option value="PayGiftIcon_14">PayGiftIcon_14</option>
+                <option value="PayGiftIcon_15">PayGiftIcon_15</option>
+                <option value="PayGiftIcon_16">PayGiftIcon_16</option>
+                <option value="PayGiftIcon_17">PayGiftIcon_17</option>
+                <option value="PayGiftIcon_18">PayGiftIcon_18</option>
+                <option value="PayGiftIcon_19">PayGiftIcon_19</option>
+                <option value="PayGiftIcon_20">PayGiftIcon_20</option>
+                <option value="PayGiftIcon_21">PayGiftIcon_21</option>
+                <option value="PayGiftIcon_22">PayGiftIcon_22</option>
+                <option value="PayGiftIcon_23">PayGiftIcon_23</option>
+                <option value="festivalbox">festivalbox</option>
+                <option value="tebieqingxin_Icon">tebieqingxin_Icon</option>
+                <option value="RanSeBg6">RanSeBg6</option>
+                <option value="RanSeBg7">RanSeBg7</option>
+                <option value="RanSeBg8">RanSeBg8</option>
+                <option value="Christmas">Christmas</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Icon_img" class="col-sm-2 control-label">Icon展示图</label>
+        <div class="col-sm-5">
+            <img id="Icon_img" src="<?php echo IMG;?>
+PayGiftIcon_1.png" alt="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="BackResource1" class="col-sm-2 control-label">背景图1资源ID</label>
+        <div class="col-sm-5">
+            <select id="BackResource1" style="height: 34px;line-height: 34px; width: 200px; padding: 0 8px;">
+                <option value="tebieqingxin">tebieqingxin</option>
+                <option value="Shop_54">Shop_54</option>
+                <option value="Shop_55">Shop_55</option>
+                <option value="DuanWuGiftBg">DuanWuGiftBg</option>
+                <option value="XianShiTeHui01">XianShiTeHui01</option>
+                <option value="XianShiTeHui02">XianShiTeHui02</option>
+                <option value="NewYear">NewYear</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="IsOpen" class="col-sm-2 control-label">是否开放</label>
+        <div class="col-sm-10">
+            <select id="IsOpen" style="height: 34px;line-height: 34px; width: 100px; padding: 0 8px;">
+                <option value="1">开放</option>
+                <option value="0">关闭</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PayType" class="col-sm-2 control-label">付费类型</label>
+        <div class="col-sm-10">
+            <select id="PayType" style="height: 34px;line-height: 34px; width: 100px; padding: 0 8px;">
+                <option value="1">游戏货币</option>
+                <option value="0" selected="selected">人民币</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group Cost">
+        <label for="Cost" class="col-sm-2 control-label">消耗货币</label>
+        <div class="col-sm-10">
+            <input id="Cost" type="number"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group Price">
+        <label for="Price" class="col-sm-2 control-label">消耗人民币</label>
+        <div class="col-sm-10">
+            <input id="Price" type="number"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OldPrice" class="col-sm-2 control-label">原始价格</label>
+        <div class="col-sm-10">
+            <input id="OldPrice" type="number"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group Price">
+        <label for="Price" class="col-sm-2 control-label">IOS价格</label>
+        <div class="col-sm-10">
+            <input id="PriceiOS" type="number"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group Price">
+        <label for="Price" class="col-sm-2 control-label">安卓价格</label>
+        <div class="col-sm-10">
+            <input id="PriceAndroid" type="number"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="LimitCount" class="col-sm-2 control-label">限购次数</label>
+        <div class="col-sm-10">
+            <input id="LimitCount" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Fixed_OpenTime" class="col-sm-2 control-label">开启时间</label>
+        <div class="col-sm-10">
+            <input type="text" id="Fixed_OpenTime" class="form-control jin-datetime">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OPS_OpenTime1" class="col-sm-2 control-label">开服xx后开启</label>
+        <div class="col-sm-10">
+            <input type="number" id="OPS_OpenTime1" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">天
+            <input type="number" id="OPS_OpenTime2" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">时
+            <input type="number" id="OPS_OpenTime3" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">分
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Fixed_EndTime" class="col-sm-2 control-label">结束时间</label>
+        <div class="col-sm-10">
+            <input type="text" id="Fixed_EndTime" class="form-control jin-datetime">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OPS_OpenTime1" class="col-sm-2 control-label">开服xx后关闭</label>
+        <div class="col-sm-10">
+            <input type="number" id="OPS_EndTime1" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">天
+            <input type="number" id="OPS_EndTime2" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">时
+            <input type="number" id="OPS_EndTime3" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">分
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ContinueTime1" class="col-sm-2 control-label">持续时间</label>
+        <div class="col-sm-10">
+            <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;"  id="ContinueTime1" >小时
+            <input type="number" style="height: 34px;line-height: 34px;  width: 80px; text-align: center;"  id="ContinueTime2" >分钟
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Multiple" class="col-sm-2 control-label">倍数</label>
+        <div class="col-sm-10">
+            <input type="text" id="Multiple" style="height: 34px;line-height: 34px; width: 100px; text-align: center;">*在礼包右上角显示X倍超值
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ShowType" class="col-sm-2 control-label">显示类型</label>
+        <div class="col-sm-10">
+            <select id="ShowType" style="height: 34px;line-height: 34px; width: 500px; padding: 0 8px;">
+                <option value="0">0--普通礼包</option>
+                <option value="1">1--礼包激活后弹出展示界面（可多个礼包同时展示，最多3个）</option>
+                <option value="2">2--礼包激活后弹出展示界面（只展示优先级最高的礼包）</option>
+                <option value="3">3--已激活礼包上线时展示（可多个礼包同时展示，最多3个）</option>
+                <option value="4">4--部落游商</option>
+                <option value="5">5--章节礼包</option>
+                <option value="6">6--小节日礼包</option>
+                <option value="7">7--推送礼包</option>
+                <option value="8">8--阅读礼包</option>
+                <option value="9">9--限时礼包</option>
+                <option value="10">10--染色颜料礼包</option>
+                <option value="11">11--装备冲榜宝箱礼包</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SKUIOS" class="col-sm-2 control-label">SKUIOS</label>
+        <div class="col-sm-10">
+            <input id="SKUIOS" type="text"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SKUAndroid" class="col-sm-2 control-label">SKUAndroid</label>
+        <div class="col-sm-10">
+            <input id="SKUAndroid" type="text"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="UpdateTime" class="col-sm-2 control-label">UpdateTime</label>
+        <div class="col-sm-3">
+            <input id="UpdateTime" type="text"  class="form-control">
+        </div>
+        <a id="UpdateTime_add" class="btn btn-info jin_add"><span class="glyphicon glyphicon-plus"></span></a>
+    </div>
+    <div>
+        <div class="form-group hide">
+            <label for="level1" class="col-sm-2 control-label">等级限制</label>
+            <div class="col-sm-10">
+                <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="level1">至
+                <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="level2">
+            </div>
+        </div>
+        <div class="form-group hide">
+            <label for="vip1" class="col-sm-2 control-label">VIP限制</label>
+            <div class="col-sm-10">
+                <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="vip1">至
+                <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="vip2">
+            </div>
+        </div>
+        <div class="form-group" style="border: 1px solid red; margin: 10px 0;">
+            <div class="form-group">
+                <label for="forced_send_Condition" class="col-sm-2 control-label">强制发送</label>
+                <input id="forced_send_Condition" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+                *当条件设置为空,也会发送
+            </div>
+            <label for="limit1" class="col-sm-2 control-label">条件限制</label>
+            <div class="col-sm-10">
+                <select id="type1" style="height: 34px;line-height: 34px; width: 100px; padding: 0 8px;"></select>
+                <select id="type2" style="height: 34px;line-height: 34px; width: 150px; padding: 0 8px;"></select>
+                <div class="limit_style" style="display: inline-block;">
+                    <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit1">至
+                    <input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group"  style="border: 1px solid red; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_OtherReward" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_OtherReward" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+        <label for="OtherReward" class="col-sm-2 control-label">其他奖励</label>
+        <div class="col-sm-10">
+            <!--<input id="Tip" class="form-control"/>-->
+            <textarea id="OtherReward" cols="80" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="form-group"  style="border: 1px solid red; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_UIParamSet" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_UIParamSet" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当设置为空,也会发送
+        </div>
+        <label for="UIParamSet" class="col-sm-2 control-label">UI参数</label>
+        <div class="col-sm-10">
+            <textarea id="UIParamSet" cols="80" rows="3"></textarea>
+        </div>
+    </div>
+    <div  style="border: 1px solid blue; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_ShowReward1" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_ShowReward1" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+        <div class="form-group">
+            <label for="reward_type11" class="col-sm-2 control-label">展示奖励1</label>
+            <div class="col-sm-10">
+                <select id="reward_type11" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son11">
+                </div>
+                数量:<input id="item_num11" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type12" class="col-sm-2 control-label">展示奖励2</label>
+            <div class="col-sm-10">
+                <select id="reward_type12" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son12">
+                </div>
+                数量:<input id="item_num12" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type13" class="col-sm-2 control-label">展示奖励3</label>
+            <div class="col-sm-10">
+                <select id="reward_type13" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son13">
+                </div>
+                数量:<input id="item_num13" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type14" class="col-sm-2 control-label">展示奖励4</label>
+            <div class="col-sm-10">
+                <select id="reward_type14" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son14">
+                </div>
+                数量:<input id="item_num14" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type15" class="col-sm-2 control-label">展示奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type15" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son15">
+                </div>
+                数量:<input id="item_num15" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type16" class="col-sm-2 control-label">展示奖励6</label>
+            <div class="col-sm-10">
+                <select id="reward_type16" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son16">
+                </div>
+                数量:<input id="item_num16" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type17" class="col-sm-2 control-label">展示奖励7</label>
+            <div class="col-sm-10">
+                <select id="reward_type17" style="width: 100px; height: 32px; line-height: 32px;">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son17">
+                </div>
+                数量:<input id="item_num17" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type18" class="col-sm-2 control-label">展示奖励8</label>
+            <div class="col-sm-10">
+                <select id="reward_type18" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son18">
+                </div>
+                数量:<input id="item_num18" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type19" class="col-sm-2 control-label">展示奖励9</label>
+            <div class="col-sm-10">
+                <select id="reward_type19" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son19">
+                </div>
+                数量:<input id="item_num19" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type20" class="col-sm-2 control-label">展示奖励10</label>
+            <div class="col-sm-10">
+                <select id="reward_type20" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son20">
+                </div>
+                数量:<input id="item_num20" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+    </div>
+    <div  style="border: 1px solid red; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_Reward" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_Reward" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+        <div class="form-group">
+            <label for="reward_type1" class="col-sm-2 control-label">实际奖励1</label>
+            <div class="col-sm-10">
+                <select id="reward_type1" style="width: 100px; height: 32px; line-height: 32px;">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son1">
+                </div>
+                数量:<input id="item_num1" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">*数量为空不配该奖励
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type2" class="col-sm-2 control-label">实际奖励2</label>
+            <div class="col-sm-10">
+                <select id="reward_type2" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son2">
+                </div>
+                数量:<input id="item_num2" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type3" class="col-sm-2 control-label">实际奖励3</label>
+            <div class="col-sm-10">
+                <select id="reward_type3" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son3">
+                </div>
+                数量:<input id="item_num3" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type4" class="col-sm-2 control-label">实际奖励4</label>
+            <div class="col-sm-10">
+                <select id="reward_type4" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son4">
+                </div>
+                数量:<input id="item_num4" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type5" class="col-sm-2 control-label">实际奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type5" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son5">
+                </div>
+                数量:<input id="item_num5" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type6" class="col-sm-2 control-label">实际奖励6</label>
+            <div class="col-sm-10">
+                <select id="reward_type6" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son6">
+                </div>
+                数量:<input id="item_num6" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type7" class="col-sm-2 control-label">实际奖励7</label>
+            <div class="col-sm-10">
+                <select id="reward_type7" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son7">
+                </div>
+                数量:<input id="item_num7" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type8" class="col-sm-2 control-label">实际奖励8</label>
+            <div class="col-sm-10">
+                <select id="reward_type8" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son8">
+                </div>
+                数量:<input id="item_num8" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type9" class="col-sm-2 control-label">实际奖励9</label>
+            <div class="col-sm-10">
+                <select id="reward_type9" style="width: 100px; height: 32px; line-height: 32px;">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son9">
+                </div>
+                数量:<input id="item_num9" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type10" class="col-sm-2 control-label">实际奖励10</label>
+            <div class="col-sm-10">
+                <select id="reward_type10" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son10">
+                </div>
+                数量:<input id="item_num10" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+    </div>
+    <div  style="border: 1px solid aqua; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_RewardRandPool" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_RewardRandPool" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+
+        <div class="form-group">
+            <label for="reward_type21" class="col-sm-2 control-label">随机奖励1</label>
+            <div class="col-sm-10">
+                <select id="reward_type21" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son21">
+                </div>
+                数量:<input id="item_num21" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability21" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type22" class="col-sm-2 control-label">随机奖励2</label>
+            <div class="col-sm-10">
+                <select id="reward_type22" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son22">
+                </div>
+                数量:<input id="item_num22" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability22" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type23" class="col-sm-2 control-label">随机奖励3</label>
+            <div class="col-sm-10">
+                <select id="reward_type23" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son23">
+                </div>
+                数量:<input id="item_num23" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability23" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type24" class="col-sm-2 control-label">随机奖励4</label>
+            <div class="col-sm-10">
+                <select id="reward_type24" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son24">
+                </div>
+                数量:<input id="item_num24" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability24" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type25" class="col-sm-2 control-label">随机奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type25" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son25">
+                </div>
+                数量:<input id="item_num25" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability25" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type26" class="col-sm-2 control-label">随机奖励6</label>
+            <div class="col-sm-10">
+                <select id="reward_type26" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son26">
+                </div>
+                数量:<input id="item_num26" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability26" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type27" class="col-sm-2 control-label">随机奖励7</label>
+            <div class="col-sm-10">
+                <select id="reward_type27" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son27">
+                </div>
+                数量:<input id="item_num27" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability27" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type28" class="col-sm-2 control-label">随机奖励8</label>
+            <div class="col-sm-10">
+                <select id="reward_type28" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son28">
+                </div>
+                数量:<input id="item_num28" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability28" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type29" class="col-sm-2 control-label">随机奖励9</label>
+            <div class="col-sm-10">
+                <select id="reward_type29" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son29">
+                </div>
+                数量:<input id="item_num29" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability29" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type30" class="col-sm-2 control-label">随机奖励10</label>
+            <div class="col-sm-10">
+                <select id="reward_type30" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son30">
+                </div>
+                数量:<input id="item_num30" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability30" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="RewardRandNum" class="col-sm-2 control-label">随机数量</label>
+        <div class="col-sm-10">
+            <input type="text" id="RewardRandNum" style="height: 34px;line-height: 34px; width: 60px; text-align: center;">*从随机奖励中抽取X个
+        </div>
+    </div>
+    <div class="btn-group center jin-sa-btn">
+        <button data-type="update" class="btn  btn-success">修改</button>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+
+<?php echo '<script'; ?>
+ type="text/javascript">
+    var iii = 30;//奖励个数
+    var UpdateTime=0;
+    var type1 = ['角色条件','建筑开放'];
+    var type2 = [
+        ['主角等级','普通副本死亡次数','精英副本死亡次数','秘境副本死亡次数','解锁普通周目','解锁精英周目','秘境神罚值','普通副本死亡礼包','英雄之路死亡礼包','大工匠槽位等级','获得装备'],
+        ['酋长屋','集市','冒险','伐木场','采石场','狩猎场','兽栏','祭坛','石匠铺','英雄模式','勇士营','美食屋','神灵秘境','乐神','赛季','勇士榜']
+    ];
+    $(function () {
+        ItemsTag(iii);
+        var c1='';
+        var c2='';
+        //初始化
+        for (var i=0;i<type1.length;i++){
+            c1+='<option value="'+i+'">'+type1[i]+'</option>'
+        }
+        for (var i=0;i<type2[0].length;i++){
+            c2+='<option value="'+type2[0][i]+'" data-data-id="'+i+'">'+type2[0][i]+'</option>'
+        }
+        $('#type1').html(c1);
+        $('#type2').html(c2);
+        $('#type1').change(function () {
+            var c2 = '';
+            for (var i=0;i<type2[$(this).val()].length;i++){
+                c2+='<option value="'+type2[$(this).val()][i]+'" data-data-id="'+i+'">'+type2[$(this).val()][i]+'</option>'
+            }
+            $('#type2').html(c2);
+        });
+        $('#type2').change(function () {
+            if($(this).val()=='解锁普通周目'||$(this).val()=='解锁精英周目'){
+                $(".limit_style").html('周目<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit1"> ' +
+                    '章节<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit2">' +
+                    '最大周目<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit3">' +
+                    '最大章节<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit4">');
+            }else if ($(this).val()=='大工匠槽位等级'){
+                $(".limit_style").html('槽位<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit1"> ' +
+                    '等级<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit2">');
+            }else{
+                $(".limit_style").html('<input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit1">至 ' +
+                    '<input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit2">');
+            }
+        });
+    });
+    function getSa() {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=920",
+            dataType: "json",
+            success: function (json) {
+                $("#ID").val(json.ID);
+                $("#ID").attr('data-data-gi',json.gi);
+                $("#ID").attr('data-data-sign',json.gi_sign);
+                $("#GiftName").val(json.GiftName);
+                $("#GiftName_CN_t").val(json.GiftName_CN_t);
+                $("#GiftName_FR").val(json.GiftName_FR);
+                $("#GiftName_DE").val(json.GiftName_DE);
+                $("#GiftName_ID_ID").val(json.GiftName_ID_ID);
+                $("#GiftName_JP").val(json.GiftName_JP);
+                $("#GiftName_KR").val(json.GiftName_KR);
+                $("#GiftName_PT_BR").val(json.GiftName_PT_BR);
+                $("#GiftName_RU").val(json.GiftName_RU);
+                $("#GiftName_ES_ES").val(json.GiftName_ES_ES);
+                $("#GiftName_THAI").val(json.GiftName_THAI);
+                $("#GiftName_UAE").val(json.GiftName_UAE);
+                $("#ActivityName").val(json.ActivityName);
+                $("#ActivityName_CN_t").val(json.ActivityName_CN_t);
+                $("#ActivityName_FR").val(json.ActivityName_FR);
+                $("#ActivityName_DE").val(json.ActivityName_DE);
+                $("#ActivityName_ID_ID").val(json.ActivityName_ID_ID);
+                $("#ActivityName_JP").val(json.ActivityName_JP);
+                $("#ActivityName_KR").val(json.ActivityName_KR);
+                $("#ActivityName_PT_BR").val(json.ActivityName_PT_BR);
+                $("#ActivityName_RU").val(json.ActivityName_RU);
+                $("#ActivityName_ES_ES").val(json.ActivityName_ES_ES);
+                $("#ActivityName_THAI").val(json.ActivityName_THAI);
+                $("#ActivityName_UAE").val(json.ActivityName_UAE);
+                $("#MainBtnName").val(json.MainBtnName);
+                $("#MainBtnName_CN_t").val(json.MainBtnName_CN_t);
+                $("#MainBtnName_FR").val(json.MainBtnName_FR);
+                $("#MainBtnName_DE").val(json.MainBtnName_DE);
+                $("#MainBtnName_ID_ID").val(json.MainBtnName_ID_ID);
+                $("#MainBtnName_JP").val(json.MainBtnName_JP);
+                $("#MainBtnName_KR").val(json.MainBtnName_KR);
+                $("#MainBtnName_PT_BR").val(json.MainBtnName_PT_BR);
+                $("#MainBtnName_RU").val(json.MainBtnName_RU);
+                $("#MainBtnName_ES_ES").val(json.MainBtnName_ES_ES);
+                $("#MainBtnName_THAI").val(json.MainBtnName_THAI);
+                $("#MainBtnName_UAE").val(json.MainBtnName_UAE);
+                $("#GiftName_English").val(json.GiftName_English);
+                $("#ActivityName_English").val(json.ActivityName_English);
+                $("#MainBtnName_English").val(json.MainBtnName_English);
+                $("#Tip").val(json.Tip);
+                $("#Tip_English").val(json.Tip_English);
+                $("#Tip_CN_t").val(json.Tip_CN_t);
+                $("#Tip_FR").val(json.Tip_FR);
+                $("#Tip_DE").val(json.Tip_DE);
+                $("#Tip_ID_ID").val(json.Tip_ID_ID);
+                $("#Tip_JP").val(json.Tip_JP);
+                $("#Tip_KR").val(json.Tip_KR);
+                $("#Tip_PT_BR").val(json.Tip_PT_BR);
+                $("#Tip_RU").val(json.Tip_RU);
+                $("#Tip_ES_ES").val(json.Tip_ES_ES);
+                $("#Tip_THAI").val(json.Tip_THAI);
+                $("#Tip_UAE").val(json.Tip_UAE);
+                $("#Icon option[value='"+json.Icon+"']").attr("selected","selected");
+                $("#BackResource1 option[value='"+json.BackResource1+"']").attr("selected","selected");
+                $("#Icon_img").attr("src","<?php echo IMG;?>
+"+json.Icon+".png");
+                $("#IsOpen option[value='"+json.IsOpen+"']").attr("selected","selected");
+                $("#PayType option[value='"+json.PayType+"']").attr("selected","selected");
+                $("#Cost").val(json.Cost);
+                $("#Price").val(json.Price);
+                $("#PriceiOS").val(json.PriceiOS);
+                $("#PriceAndroid").val(json.PriceAndroid);
+                $("#OldPrice").val(json.OldPrice);
+                $("#LimitCount").val(json.LimitCount);
+                $("#RewardRandNum").val(json.RewardRandNum);
+                FixedTime(json);
+                continuetime = Math.floor(json.ContinueTime/60)+'小时'+json.ContinueTime%60;
+                $("#ContinueTime1").val(continuetime.split('小时')[0]);
+                $("#ContinueTime2").val(continuetime.split('小时')[1]);
+                $("#Multiple").val(json.Multiple);
+                $("#ShowType option[value='"+json.ShowType+"']").attr("selected","selected");
+                $("#SKUIOS").val(json.SKUIOS);
+                $("#SKUAndroid").val(json.SKUAndroid);
+                $("#UpdateTime").val(json.UpdateTime);
+                UpdateTime = json.UpdateTime;
+                $("#forced_send_ShowReward1").prop("checked",parseInt(json.forced_send_ShowReward1));
+                $("#forced_send_Reward").prop("checked",parseInt(json.forced_send_Reward));
+                $("#forced_send_RewardRandPool").prop("checked",parseInt(json.forced_send_RewardRandPool));
+                $("#forced_send_Condition").prop("checked",parseInt(json.forced_send_Condition));
+                $("#OtherReward").val(json.OtherReward);
+                $("#forced_send_OtherReward").prop("checked",parseInt(json.forced_send_OtherReward));
+                $("#UIParamSet").val(json.UIParamSet);
+                $("#forced_send_UIParamSet").prop("checked",parseInt(json.forced_send_UIParamSet));
+
+
+                //付费类型事件
+                if(json.PayType==0){
+                    $(".Cost").hide();
+                    $(".Price").show();
+                }else{
+                    $(".Price").hide();
+                    $(".Cost").show();
+                }
+                $("#PayType").on('change',function () {
+                    if($(this).val()==0){
+                        $(".Cost").hide();
+                        $(".Price").show();
+                    }else{
+                        $(".Price").hide();
+                        $(".Cost").show();
+                    }
+                });
+                reward_shadow(json.Reward.split(';'),10);
+                if(json.ShowReward1){
+                    reward_shadow(json.ShowReward1.split(';'),20,11);
+                }
+                if(json.RewardRandPool){
+                    reward_shadow(json.RewardRandPool.split(';'),30,21);
+                }
+                if(json.Condition){
+                    var Condition_arr = json.Condition.split(';');
+                    Condition_arr.pop();
+                    var Condition = [];
+                    for(var k=0;k<3;k++){ //三个条件类型(等级 VIP 其余)
+                        Condition[k]=[];
+                        Condition_arr_son = Condition_arr.shift();
+                        if(Condition_arr_son){
+                            if(Condition_arr_son.indexOf('[玩家等级]')!=-1){
+                                $("#level1").val(Condition_arr_son.slice(9,Condition_arr_son.indexOf(',')));
+                                $("#level2").val(Condition_arr_son.slice(Condition_arr_son.indexOf(',')+1,-1));
+                            }else if(Condition_arr_son.indexOf('[VIP等级]')!=-1){
+                                $("#vip1").val(Condition_arr_son.slice(10,Condition_arr_son.indexOf(',')));
+                                $("#vip2").val(Condition_arr_son.slice(Condition_arr_son.indexOf(',')+1,-1));
+                            }else {
+                                type2_son = Condition_arr_son.slice(Condition_arr_son.indexOf('[')+1,Condition_arr_son.indexOf(']'));
+                                type2_son_middle = type2_son; //type2_son初始值下面还要用
+                                if(type2_son_middle=='建筑开放'){
+                                    type2_son_id = Condition_arr_son.slice(Condition_arr_son.indexOf('(')+1,Condition_arr_son.indexOf(','));
+                                    type2_son = type2[1][type2_son_id];
+                                }
+                                if(type2_son=='解锁普通周目'||type2_son=='解锁精英周目'){
+                                    $(".limit_style").html('周目<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit1"> ' +
+                                        '章节<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit2">' +
+                                        '最大周目<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit3">' +
+                                        '最大章节<input type="number" style="height: 34px;line-height: 34px; width: 45px; text-align: center;" id="limit4">');
+                                }else if (type2_son=='大工匠槽位等级') {
+                                    $(".limit_style").html('槽位<input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit1"> ' +
+                                        '等级<input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit2">');
+                                }else{
+                                    $(".limit_style").html('<input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit1">至 ' +
+                                        '<input type="number" style="height: 34px;line-height: 34px; width: 80px; text-align: center;" id="limit2">');
+                                }
+                                for (var i=0;i<type1.length;i++){
+                                    for (var j=0;j<type2[i].length;j++){
+                                        if(type2[i][j]==type2_son){
+                                            $("#type1 option[value='"+i+"']").attr("selected","selected");
+                                            var c2='';
+                                            for (var m=0;m<type2[i].length;m++){
+                                                c2+='<option value="'+type2[i][m]+'" data-data-id="'+m+'">'+type2[i][m]+'</option>'
+                                            }
+                                            $("#type2").html(c2);
+                                            $("#type2 option[value='"+type2_son+"']").attr("selected","selected");
+                                            if(type2_son=='解锁普通周目'||type2_son=='解锁精英周目'){
+                                                $Condition_arr_son_son = Condition_arr_son.split(',');
+                                                $("#limit1").val(Condition_arr_son.slice(Condition_arr_son.indexOf('(')+1,Condition_arr_son.indexOf(',')));
+                                                $("#limit2").val($Condition_arr_son_son[1]);
+                                                $("#limit3").val($Condition_arr_son_son[2]);
+                                                $("#limit4").val(Condition_arr_son.slice(Condition_arr_son.lastIndexOf(',')+1,-1));
+                                            }else{
+                                                $("#limit1").val(Condition_arr_son.slice(Condition_arr_son.indexOf('(')+1,Condition_arr_son.indexOf(',')));
+                                                $("#limit2").val(Condition_arr_son.slice(Condition_arr_son.indexOf(',')+1,-1));
+                                            }
+                                            if(type2_son_middle=='建筑开放'){
+                                                $("#limit1").val(Condition_arr_son.slice(Condition_arr_son.indexOf(',')+1,-1));
+                                                $("#limit2").val('');
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        $(document).ready(calendar1('hour', '#Fixed_OpenTime', '#Fixed_EndTime'));
+    }
+    $(document).ready(
+        $("#Icon").change(function () {
+            $("#Icon_img").attr("src","<?php echo IMG;?>
+"+$(this).val()+".png");
+        })
+    );
+    $('#UpdateTime_add').on('click', function () {
+        $('#UpdateTime').val($('#UpdateTime').val()-0+1);
+    });
+    $('button[data-type="update"]').on('click', function () {//修改服务器
+        if(UpdateTime==$("#UpdateTime").val()){
+            layer.alert('请确认UpdateTime选项是否需要+1？', {icon: 0, shadeClose: true, btn: ['不需要', '需要']}, function () {
+                all_update();
+            });
+        }else{
+            all_update();
+        }
+    });
+
+    $("#showOtherGiftName").click(function () {
+        $("#showOtherGiftNameStyle").toggle()
+    });
+
+    $("#showOtherActivityName").click(function () {
+        $("#showOtherActivityNameStyle").toggle()
+    });
+
+    $("#showOtherMainBtnName").click(function () {
+        $("#showOtherMainBtnNameStyle").toggle()
+    });
+
+    $("#showOtherTip").click(function () {
+        $("#showOtherTipStyle").toggle()
+    });
+    function all_update() {
+        var OpenTime='';
+        var EndTime='';
+        if($("#Fixed_OpenTime").val()!=''){
+            OpenTime+='[固定日期]=('+$("#Fixed_OpenTime").val()+',0);';
+        }
+        if($('#OPS_OpenTime1').val()!=''){
+            OpenTime+='[开服日期]=('+($('#OPS_OpenTime1').val()-0+1)+','+$('#OPS_OpenTime2').val()+','+$('#OPS_OpenTime3').val()+',0);';
+        }
+        if($("#Fixed_EndTime").val()!=''){
+            EndTime+='[固定日期]=('+$("#Fixed_EndTime").val()+',0);';
+        }
+        if($('#OPS_EndTime1').val()!=''){
+            EndTime+='[开服日期]=('+($('#OPS_EndTime1').val()-0+1)+','+$('#OPS_EndTime2').val()+','+$('#OPS_EndTime3').val()+',0);';
+        }
+        var t_reward=reward(10);
+        var ShowReward1=reward(20,11);
+        var RewardRandPool=reward_rand(30,21);
+        if(t_reward==''){
+            layer.msg('请配置奖励!',{time:800});
+            return false;
+        }
+        if(OpenTime==''||EndTime==''){
+            layer.msg('请配置时间!',{time:800});
+            return false;
+        }
+        //条件判断(等级,VIP以及其余条件)
+        var cc='';
+        if($('#limit1').val()!=''&&$('#limit2').val()!=''){
+            if($("#type1").val()==1){
+                cc+='['+$("#type1").find("option:selected").text()+']('+$('#type2').find("option:selected").attr('data-data-id')+','+$('#limit1').val()+');';
+            }else {
+                if($("#type2").val()=='解锁普通周目'||$("#type2").val()=='解锁精英周目'){
+                    cc+='['+$("#type2").val()+']('+$('#limit1').val()+','+$('#limit2').val()+','+$('#limit3').val()+','+$('#limit4').val()+');';
+                }else{
+                    cc+='['+$("#type2").val()+']('+$('#limit1').val()+','+$('#limit2').val()+');';
+                }
+            }
+        }else{
+//            if($("#type1").val()==0){
+//                layer.msg('请配置条件!',{time:800});
+//                return false;
+//            }
+        }
+
+
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            data: {
+                gi: $("#ID").attr('data-data-gi'),
+                sign: $("#ID").attr('data-data-sign'),
+                ID:$("#ID").val(),
+                GiftName:$("#GiftName").val(),
+                ActivityName:$("#ActivityName").val(),
+                MainBtnName:$("#MainBtnName").val(),
+                GiftName_English:$("#GiftName_English").val(),
+                ActivityName_English:$("#ActivityName_English").val(),
+                MainBtnName_English:$("#MainBtnName_English").val(),
+                Tip: $("#Tip").val(),
+                Tip_English: $("#Tip_English").val(),
+                Icon: $("#Icon").val(),
+                BackResource1: $("#BackResource1").val(),
+                IsOpen: $("#IsOpen").val(),
+                PayType: $("#PayType").val(),
+                Cost: $("#Cost").val(),
+                Price: $("#Price").val(),
+                PriceiOS: $("#PriceiOS").val(),
+                PriceAndroid: $("#PriceAndroid").val(),
+                OldPrice: $("#OldPrice").val(),
+                LimitCount : $("#LimitCount").val(),
+                OpenTime: OpenTime,
+                EndTime: EndTime,
+                ContinueTime:$("#ContinueTime1").val()*60+parseInt($("#ContinueTime2").val()),
+                Condition:cc,
+                Multiple:$("#Multiple").val(),
+                ShowType:$("#ShowType").val(),
+                RewardRandNum:$("#RewardRandNum").val(),
+                ShowReward1:ShowReward1,
+                SKUIOS:$("#SKUIOS").val(),
+                SKUAndroid:$("#SKUAndroid").val(),
+                UpdateTime:$("#UpdateTime").val(),
+                OtherReward:$("#OtherReward").val(),
+                forced_send_OtherReward:$('#forced_send_OtherReward').is(':checked') ? $('#forced_send_OtherReward').val() : 0,
+                UIParamSet:$("#UIParamSet").val(),
+                forced_send_UIParamSet:$('#forced_send_UIParamSet').is(':checked') ? $('#forced_send_UIParamSet').val() : 0,
+                RewardRandPool:RewardRandPool,
+                forced_send_ShowReward1:$('#forced_send_ShowReward1').is(':checked') ? $('#forced_send_ShowReward1').val() : 0,
+                forced_send_Reward:$('#forced_send_Reward').is(':checked') ? $('#forced_send_Reward').val() : 0,
+                forced_send_RewardRandPool:$('#forced_send_RewardRandPool').is(':checked') ? $('#forced_send_RewardRandPool').val() : 0,
+                forced_send_Condition:$('#forced_send_Condition').is(':checked') ? $('#forced_send_Condition').val() : 0,
+                Reward:t_reward
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                layer.alert('成功', {icon: 1}, function (index) {
+                    layer.close(index);
+                    window.location.reload();
+                });
+            }
+        });
+    }
+<?php echo '</script'; ?>
+>
+<?php }
+}

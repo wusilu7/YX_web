@@ -1,0 +1,116 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.93.soapTest.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>SOAP测试</span></div>
+<div class="alert alert-info">
+    <div id="group_server_2"></div>
+</div>
+<div class="form-horizontal col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">URL</span>
+            <input type="text" class="form-control" id="url" placeholder="SOAP地址" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">OPT</span>
+            <input type="text" class="form-control" id="opt" placeholder="枚举值" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">arg1</span>
+            <input type="text" class="form-control" id="arg1" placeholder="参数一" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">arg2</span>
+            <input type="text" class="form-control" id="arg2" placeholder="参数二" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">arg3</span>
+            <input type="text" class="form-control" id="arg3" placeholder="参数三" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">arg4</span>
+            <input type="text" class="form-control" id="arg4" placeholder="参数四" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <a id="send" class="btn btn-danger center">发送</a>
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" id="result" rows="4" placeholder="返回结果显示区" readonly></textarea>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    $(function () { //ready
+        gsSelect('#group', '#server');
+        var arr = ['url', 'opt', 'arg1', 'arg2', 'arg3', 'arg4'];
+        for (var i = 0; i < arr.length; i++) {
+            $('#' + arr[i]).val($.cookie('soap_' + arr[i]));
+        }
+    });
+    $('#server').change(function() {
+        soapTest();
+    });
+
+    function soapTest() {
+        $.ajax({
+            type: "POST",
+            url : location.href + "&jinIf=912",
+            data: {si: $('#server').val()},
+            dataType: 'json',
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (res) {
+                layer.closeAll('loading');
+                $("#url").val(res.url);
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.alert("请选择服务器");
+            }
+        });
+    }
+    $('#send').on('click', function () {
+        var data = {
+            url : $("#url").val(),
+            opt : $("#opt").val(),
+            arg1: $("#arg1").val(),
+            arg2: $("#arg2").val(),
+            arg3: $("#arg3").val(),
+            arg4: $("#arg4").val()
+        };
+        $.ajax({
+            type: "POST",
+            url : location.href + "&jinIf=931",
+            data: data,
+            dataType: 'json',
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (res) {
+                layer.closeAll('loading');
+                $("#result").text(JSON.stringify(res, null, "\t"));
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.alert("发送失败，请检查参数是否正确填写！");
+            }
+        });
+    });
+</script>

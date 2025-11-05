@@ -1,0 +1,8 @@
+★17:39:16-115.192.212.239★发送请求★http://101.43.70.129:1002/mservice.wsdl|10|0|0|0|opentime=2023-03-31 00:00:00`othmmss=63540
+★17:39:16-115.192.212.239★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:39:44-115.192.212.239★发送请求★http://101.43.70.129:1002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/carnival.txt`row_idx_name=ID`server_cond_value=3`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/carnival.txt`row_idx_name=ID`server_cond_value=3`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=OpenDate`sv_tb_name=/public/carnival.txt`row_idx_name=ID`server_cond_value=3`col_idx_name=OpenDate`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/carnival.txt`row_idx_name=ID`server_cond_value=3`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=Duration`sv_tb_name=/public/carnival.txt`row_idx_name=ID`server_cond_value=3`col_idx_name=Duration`sv_value=0`isutf8=0`is_add=0
+★17:39:44-115.192.212.239★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:46:18-115.192.212.239★发送请求★http://101.43.70.129:1002/mservice.wsdl|10|0|0|0|opentime=2023-03-31 00:00:00`othmmss=63960
+★17:46:18-115.192.212.239★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:50:05-115.192.212.239★发送请求★http://101.43.70.129:1002/mservice.wsdl|10|0|0|0|opentime=2023-03-31 00:00:00`othmmss=64200
+★17:50:05-115.192.212.239★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

@@ -1,0 +1,37 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.99.changelog.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>更新日志</span></div>
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="panel panel-default">
+        <div class="panel-heading">更新日志</div>
+        <div id="content" class="panel-body">
+        </div>
+    </div>
+</div>
+{{include file="../common/2footer.html"}}
+<script>
+    $(document).ready(getChange());
+    function getChange() {
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=912",
+            dataType: "json",
+            success: function (json) {
+                for (var i = 0; i < json.length; i++) {   //取数据填表
+                    c += '<h4>' + json[i]['version'] + '</h4>';
+                    c += '<div class="text">';
+                    for (var j = 0; j < json[i]['content'].length; j++) {
+                        c += '<div>' + (j + 1) + '. ' + json[i]['content'][j] + '</div>';
+                    }
+                    c += '</div>';
+                }
+                $("#content").html(c);
+            },
+            error: function () {
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+</script>

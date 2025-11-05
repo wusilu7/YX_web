@@ -1,0 +1,64 @@
+{{include file="../common/1header.html"}}
+
+<style type="text/css">
+	.center{
+		display:inline-block
+	}
+</style>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+
+<div class="form-horizontal col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+        <select id="role_type">
+            <option value="1">角色名</option>
+            <option value="2">角色ID</option>
+        </select>
+        <input type="text" class="form-control" id="charge_role" required style="width:20%;display:inline-block">
+        <span class="chargemoney">充值档位</span>
+        <select id="charge_money">
+            <option value="3">体力</option>
+            <option value="2">死亡奖励</option>
+            <option value="0">超值礼包-每日福利</option>
+            <option value="1">狩猎场，快速狩猎</option>
+            <option value="4">宗师</option>
+            <option value="5">特别奖励</option>
+            <option value="6">乐神大奖</option>
+            <option value="7">石币免费-广告双倍</option>
+            <option value="8">技能3选1重置</option>
+        </select>
+        <span class="chargemoney">额外参数</span>
+        <input type="text"  id="param" value="-1">
+        <a id="send" class="btn btn-success center">充值</a>
+	</div>
+</div>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    gsSelect('#group', '#server', '#platform');
+    var data = {};
+    $("#send").on('click', function () {
+        data.charge_money = $("#charge_money").val();
+        data.role_type = $("#role_type").val();
+        data.charge_role = $("#charge_role").val();
+        data.param = $("#param").val();
+        data.si = $("#server").val();
+        $.ajax({
+            type: "POST",
+            url: location + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            success: function (json) {
+                if (json == 1) {
+                    layer.alert('成功');
+                } else if (json == 2) {
+                    layer.alert('失败, 该服没有此游戏角色');
+                } else {
+                    layer.alert('失败！信息:'+json);
+                }
+            }
+        });
+    });
+</script>

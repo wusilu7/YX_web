@@ -1,0 +1,10 @@
+★12:12:59-115.192.208.39★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=测试福利`cont=感谢最近大佬们测试反馈，我们会积极采纳大佬们的意见。因为产品目前商业化还不完整，内部评估下来，原计划的每日钻石发放会影响游戏的测试进程，也会让原始的游戏体验变味，所以接下来的福利发放会做些调整，根据项目的迭代来发放。今日奖励调整为“未来战警”时装1套。之后会随着版本的不断变化，不定期给到福利噢，我们也会最大努力去迭代内容，把大家提出的反馈和建议加入游戏之中，并不断增加新的玩法和内容。听取意见，修改产品。谢谢大佬参与和理解！`sender_name=GM`receiver_id=2814754062073956`item_list=91002#80#-1;`money_list=`exp=
+★12:12:59-115.192.208.39★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:16:02-115.192.208.39★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=测试福利`cont=感谢您参与测试，请查收您的测试福利。有任何问题，可以在群里反馈。`sender_name=GM`receiver_id=2814754062073956`item_list=91002#80#-1;`money_list=`exp=
+★12:16:02-115.192.208.39★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:28:24-115.192.208.39★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=测试福利`cont=感谢您参与测试，请查收您的测试福利。有任何问题，可以在群里反馈。`sender_name=GM`item_list=91002#80#-1;`money_list=`exp=`template_id=106`create_time=1703824046`valid_time=1706659209`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★12:28:24-115.192.208.39★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:28:24-115.192.208.39★审核成功★时间：2023-12-29 12:28:24; 所有服务器id：3185; 审核成功id：3185
+★13:21:54-115.192.208.39★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=测试福利`cont=感谢您参与测试，请查收您的测试福利。有任何问题，可以在群里反馈。`sender_name=GM`item_list=`money_list=2#1000;`exp=`template_id=107`create_time=1703827266`valid_time=1706659228`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★13:21:54-115.192.208.39★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:21:54-115.192.208.39★审核成功★时间：2023-12-29 13:21:54; 所有服务器id：3185; 审核成功id：3185

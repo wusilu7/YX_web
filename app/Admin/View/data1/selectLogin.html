@@ -1,0 +1,171 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.10.selectlogin.css" rel="stylesheet">
+<style type="text/css">
+    .col-sm-1 {
+        width: 90px;
+        padding-top: 8px;
+    }
+    .alert-info{
+        color: white;
+    }
+    .form-group{
+        margin-bottom: 35px;
+    }
+    .text_title{
+        font-size: 20px;
+        color: black;
+        font-weight: 500;
+    }
+    .text_content{
+        margin-left: 35px;
+    }
+    .dropdown-header{
+        padding: 10px 20px;
+    }
+    #server_top{
+        width: 100px
+    }
+</style>
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>安装转化率</span></div>
+<div class="alert alert-info">
+    <div class="form-group" id="group_server_5"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <!-- <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a> -->
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th class="jin-login-column1">节点</th>
+            <th>人数</th>
+            <th>转换率</th>
+            <th>流失率</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①…；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    $(document).ready(gsSelect3('#g', '#p', '#s', getLogin)).ready(calendar('month', '#time_start', '#time_end'));
+    var data = {};
+    function getLogin() {
+        var time_start  = $('#time_start').val();//查询开始时间
+        var time_end    = $('#time_end').val();//查询结束时间
+        data.time_start = time_start;
+        data.time_end   = time_end;
+        data.group      = $('#g').val();
+        data.pi         = $('#p').val();
+        data.si         = $('#s').val();
+        $.cookie('cookie_g', data.group, {expires: 30});
+        $.cookie('cookie_s', data.si, {expires: 30});
+        $.ajax({
+            type: "POST",
+            url: location + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                console.log(json.device);
+                if (json.device != 0) {
+                    var c =
+                        '<tr>' +
+                        '<td>安装</td>' +
+                        '<td>' + json.device + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>注册帐号</td>' +
+                        '<td>' + json.account + '</td>' +
+                        '<td>' + ((json.account / json.device) * 100).toFixed(2) + '%' + '</td>' +
+                        '<td>' + ((1 - json.account / json.device) * 100).toFixed(2) + '%' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>创建角色</td>' +
+                        '<td>' + json.character + '</td>' +
+                        '<td>' + ((json.character / json.device) * 100).toFixed(2) + '%' + '</td>' +
+                        '<td>' + ((1 - json.character / json.device) * 100).toFixed(2) + '%' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>进入游戏</td>' +
+                        '<td>' + json.enter + '</td>' +
+                        '<td>' + ((json.enter / json.device) * 100).toFixed(2) + '%' + '</td>' +
+                        '<td>' + ((1 - json.enter / json.device) * 100).toFixed(2) + '%' + '</td>' +
+                        '</tr>';
+                } else {
+                    var c =
+                        '<tr>' +
+                        '<td>安装</td>' +
+                        '<td>' + json.device + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>注册帐号</td>' +
+                        '<td>' + json.account + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>更新资源</td>' +
+                        '<td>' + json.resource + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>创建角色</td>' +
+                        '<td>' + json.character + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '</tr><tr>' +
+                        '<td>进入游戏</td>' +
+                        '<td>' + json.enter + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '<td>' + '/' + '</td>' +
+                        '</tr>';
+                }
+                
+                $('#content').html(c);
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getLogin();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getLogin();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        getLogin();
+    });
+</script>

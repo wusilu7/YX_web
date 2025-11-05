@@ -1,0 +1,105 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.17.moneyConsume.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>商店购买统计</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+<!--    <a id="server_summary" class="btn btn-success">服务器汇总</a>-->
+    <!--<a id="group_summary" class="btn btn-success">渠道汇总</a>-->
+    <label for="subtract_num">总额：</label>
+    <span id="subtract_num"></span>
+</div>
+<!--<div class="jin-explain">-->
+<!--<b>说明</b>：-->
+<!--<div>-->
+<!--①由于数据量比较大，服务器汇总限制为最大查询15天，渠道汇总限制为最大查询7天；-->
+<!--</div>-->
+<!--</div>-->
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>类型</th>
+            <th>人数</th>
+            <th>次数</th>
+            <th>总额</th>
+            <th>占比</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    moneySelect();
+    gsSelect('#group', '#server', '#platform');
+    calendar('minute', '#time_start', '#time_end');
+    var data = {page: 1};
+    function getConsume() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // $check = checkSummaryTime(time_start, time_end, 30, 15);
+        // if ($check === false) {
+        //     return false;
+        // }
+
+        data.time_start = time_start;//查询开始时间;
+        data.time_end   = time_end;//查询结束时间
+        data.group      = $('#group').val();
+        data.pi         = $('#platform').val();
+        data.si         = $('#server').val();
+        $.ajax({
+            type: "POST",
+            url: location + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c = '';
+                for (var i = 0; i < json.length - 1; i++) {
+                    var per = (json[i]['sum'] / json[json.length - 1] * 100).toFixed(2);
+                    if (isNaN(per)) {//如果是非数字，避免出现NaN的情况
+                        per = 0;
+                    }
+                    c +=
+                        '<tr>' +
+                        '<td>' + json[i]['buy_type'] + '</td>' +
+                        '<td>' + json[i]['char_num'] + '</td>' +
+                        '<td>' + json[i]['num'] + '</td>' +
+                        '<td>' + json[i]['sum'] + '</td>' +
+                        '<td>' + per + '%' + '</td>' +
+                        '</tr>';
+                }
+                $('#content').html(c);
+                $('#subtract_num').html(json[json.length - 1]);
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getConsume();
+    });
+</script>

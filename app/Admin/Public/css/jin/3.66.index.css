@@ -1,0 +1,43 @@
+#time {
+    cursor: default;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 0 #aaaaaa, 0 2px 0 #aaaaaa, 0 3px 0 #aaaaaa, 0 4px 0 #aaaaaa, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+#time:hover {
+    color: #fdffcd;
+}
+
+/*最新更新*/
+.jin-change-div {
+    margin-top: 50px;
+}
+
+.change-title, .change-date {
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+}
+
+.change-date {
+    font-size: 18px;
+}
+
+#content {
+    margin: 30px;
+}
+
+.change-text {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.change-text div {
+    font-size: 15px;
+    margin-bottom: 8px;
+}

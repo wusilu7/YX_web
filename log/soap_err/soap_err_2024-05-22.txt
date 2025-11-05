@@ -1,0 +1,2 @@
+★16:06:37-101.43.35.210★发送普通邮件失败★记录时间：2024-05-22 16:06:37,返回码：error=13`error_msg=`result=0，错误数据： title=竞技挑战券补偿`cont=请查收！祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683323`item_list=40124#5#-1;`money_list=`exp=
+★16:06:43-101.43.35.210★发送普通邮件失败★记录时间：2024-05-22 16:06:43,返回码：error=13`error_msg=`result=0，错误数据： title=竞技挑战券补偿`cont=请查收！祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683323`item_list=40124#5#-1;`money_list=`exp=

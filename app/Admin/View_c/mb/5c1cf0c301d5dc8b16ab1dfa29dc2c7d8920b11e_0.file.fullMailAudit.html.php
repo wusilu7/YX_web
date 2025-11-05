@@ -1,0 +1,347 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-01-18 15:44:53
+  from "C:\Users\Administrator\Desktop\pro\WebSiteYiXing\app\Admin\View\mb\fullMailAudit.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_65a8d6f58f35d0_79765456',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '5c1cf0c301d5dc8b16ab1dfa29dc2c7d8920b11e' => 
+    array (
+      0 => 'C:\\Users\\Administrator\\Desktop\\pro\\WebSiteYiXing\\app\\Admin\\View\\mb\\fullMailAudit.html',
+      1 => 1704262933,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_65a8d6f58f35d0_79765456 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<link href="<?php echo CSS;?>
+jin/3.18.mailAudit.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>全服邮件审核</span></div>
+<div class="alert alert-info">
+    <div id="group_only"></div>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>发送服务器</th>
+            <th>全服邮件ID</th>
+            <th>邮件标题</th>
+            <th>邮件内容</th>
+            <th>货币</th>
+            <th>道具</th>
+            <th>经验</th>
+            <th>额外信息</th>
+            <th>创建人</th>
+            <th>创建时间</th>
+            <th>定时时间</th>
+            <th class="jin-mail-column10">操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+
+<?php echo '<script'; ?>
+>
+    var isMultilingualClass='';
+    if(eval('<?php echo $_smarty_tpl->tpl_vars['isMultilingual']->value;?>
+')==0){
+        isMultilingualClass='hide'
+    }
+    // groupSelect();
+    // $("#group").on('change', function () {
+    //     jsonAudit();
+    // });
+
+    groupSelect();
+    $("#group").on('change', function () {
+        jsonAudit();
+    });
+
+    //待审核邮件数据
+    function jsonAudit() {
+        var url = location.href + "&jinIf=912";
+        var btn = [
+            "<div class='btn-group btn-group-sm'>" +
+            "<button data-type='u' class='btn btn-primary'>修改</button>" +
+            "<button data-type='a' class='btn btn-success'>审核通过</button>" +
+//            "<button data-type='ta' class='btn btn-warning'>定时审核</button>" +
+            "<button data-type='d' class='btn btn-danger'>删除</button>" +
+            "</div>"
+        ];
+        var money_c = function (json) {
+            return '<span data-data-money="'+json['money']+'">'+json['money_as']+'</span>'
+        };
+        var item_c = function (json) {
+            return '<span data-data-item="'+json['item']+'">'+json['item_as']+'</span>'
+        };
+        var arr = ['mail_id', 'si', 'full_id', 'title', 'content', money_c, item_c,'exp', 'full_info', 'cu', 'create_time','timing_time', btn];
+        var id = "#content";
+        var data = {
+             gi: $("#group").val()
+        };
+        noPageContentList(url, data, id, arr);
+    }
+
+    //邮件审核
+    $('#content').on('click', 'button[data-type="a"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        var money = $(this).parents('tr').find('td').eq(5).html();
+        var item = $(this).parents('tr').find('td').eq(6).html();
+        layer.alert('审核通过后 <b>' + mail_id + '号邮件</b> 将激活<br>' +
+            '货币:<br>' +
+            '<div style="padding-left: 20px;">'+money+'</div>' +
+            '道具:<br>' +
+            '<div style="padding-left: 20px;">'+item+'</div>'+'<br>' , {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=9138",
+                data: {
+                    mail_id: mail_id
+                },
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']//0.3透明度的白色背景
+                    });
+                },
+                dataType: 'json',
+                success: function (json) {
+                    layer.closeAll('loading');
+                    if(json){
+                        layer.alert('审核通过，<b>' + mail_id + '号邮件</b> 已激活', {icon: 1}, function (index) {
+                            layer.close(index);
+                            jsonAudit();
+                        });
+                    }else{
+                        layer.alert('权限不足！请联系管理员！', {icon: 2}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                },
+                error: function (msg) {
+                    layer.closeAll('loading');
+                    layer.msg('数据获取失败，请勿频繁刷新');
+                }
+            });
+        });
+    }).on('click', 'button[data-type="d"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除[' + mail_id + '号邮件]？', {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    mail_id: mail_id
+                },
+                success: function () {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        jsonAudit();
+                    });
+                }
+            });
+        });
+    }).on('click', 'button[data-type="u"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        var title = $(this).parents('tr').find('td').eq(3).text();
+        var content = $(this).parents('tr').find('td').eq(4).text();
+        var money = $(this).parents('tr').find('td').eq(5).find('span').attr('data-data-money');
+        var item = $(this).parents('tr').find('td').eq(6).find('span').attr('data-data-item');
+        var exp = $(this).parents('tr').find('td').eq(7).text();
+        var full_info = $(this).parents('tr').find('td').eq(8).text();
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=9121',
+            data: {
+                id: mail_id
+            },
+            dataType: "json",
+            success: function (res) {
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '邮件修改',
+                    area: ['500px', '800px'],
+                    btn: ['修改', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content: '<div class="jin-child">' +
+                    '<div class="input-group '+isMultilingualClass+'">' +
+                    '<ul class="nav nav-tabs">' +
+                    '<li  class="active"><a href="#nav_content1" data-toggle="tab">中文</a></li>' +
+                    '<li><a href="#nav_content2" data-toggle="tab">繁体</a></li>' +
+                    '<li><a href="#nav_content3" data-toggle="tab">英语</a></li>' +
+                    '<li><a href="#nav_content4" data-toggle="tab">西班牙</a></li>' +
+                    '<li><a href="#nav_content5" data-toggle="tab">阿拉伯语</a></li>' +
+                    '<li><a href="#nav_content6" data-toggle="tab">俄语</a></li>' +
+                    '<li><a href="#nav_content7" data-toggle="tab">泰文</a></li>' +
+                    '<li><a href="#nav_content8" data-toggle="tab">巴西</a></li>' +
+                    '<li><a href="#nav_content9" data-toggle="tab">印尼</a></li>' +
+                    '<li><a href="#nav_content10" data-toggle="tab">日本</a></li>' +
+                    '<li><a href="#nav_content11" data-toggle="tab">韩文</a></li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '<div class="tab-content">' +
+                    '<div class="tab-pane active" id="nav_content1">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title1" type="text" class="form-control" value="' + res.title + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content1"  rows="10"  class="form-control">' + res.content + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content2">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title2" type="text" class="form-control" value="' + res.title2 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content2"  rows="10"  class="form-control">' + res.content2 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content3">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title3" type="text" class="form-control" value="' + res.title3 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content3"  rows="10"  class="form-control">' + res.content3 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content4">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title4" type="text" class="form-control" value="' + res.title4 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content4"  rows="10"  class="form-control">' + res.content4 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content5">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title5" type="text" class="form-control" value="' + res.title5 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content5"  rows="10"  class="form-control">' + res.content5 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content6">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title6" type="text" class="form-control" value="' + res.title6 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content6"  rows="10"  class="form-control">' + res.content6 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content7">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title7" type="text" class="form-control" value="' + res.title7 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content7"  rows="10"  class="form-control">' + res.content7 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content8">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title8" type="text" class="form-control" value="' + res.title8 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content8"  rows="10"  class="form-control">' + res.content8 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content9">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title9" type="text" class="form-control" value="' + res.title9 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content9"  rows="10"  class="form-control">' + res.content9 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content10">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title10" type="text" class="form-control" value="' + res.title10 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content10"  rows="10"  class="form-control">' + res.content10 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content11">' +
+                    '<div class="input-group"><span class="input-group-addon">标题</span><input id="title11" type="text" class="form-control" value="' + res.title11 + '"></div><br>' +
+                    '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content11"  rows="10"  class="form-control">' + res.content11 + '</textarea></div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="input-group"><span class="input-group-addon">货币</span><textarea id="money"  rows="2"  class="form-control">' +
+                    money + '</textarea></div>' +
+                    '<div class="input-group"><span class="input-group-addon">道具</span><textarea id="item"  rows="2"  class="form-control">' +
+                    item + '</textarea></div>' +
+                    '<div class="input-group"><span class="input-group-addon">经验</span><textarea id="exp"  rows="1"  class="form-control">' +
+                    exp + '</textarea></div>' +
+                    '<div class="input-group"><span class="input-group-addon">额外信息</span><textarea id="full_info"  rows="4"  class="form-control">' +
+                    full_info + '</textarea></div>' +
+                    '</div>',
+                    yes: function (index) {
+                        $.ajax({
+                            type: "POST",
+                            url: location.href + '&jinIf=913',
+                            data: {
+                                mail_id: mail_id,
+                                title1: $('#title1').val(),
+                                title2: $('#title2').val(),
+                                title3: $('#title3').val(),
+                                title4: $('#title4').val(),
+                                title5: $('#title5').val(),
+                                title6: $('#title6').val(),
+                                title7: $('#title7').val(),
+                                title8: $('#title8').val(),
+                                title9: $('#title9').val(),
+                                title10: $('#title10').val(),
+                                title11: $('#title11').val(),
+                                content1: $('#content1').val(),
+                                content2: $('#content2').val(),
+                                content3: $('#content3').val(),
+                                content4: $('#content4').val(),
+                                content5: $('#content5').val(),
+                                content6: $('#content6').val(),
+                                content7: $('#content7').val(),
+                                content8: $('#content8').val(),
+                                content9: $('#content9').val(),
+                                content10: $('#content10').val(),
+                                content11: $('#content11').val(),
+                                money: $('#money').val(),
+                                item: $('#item').val(),
+                                exp: $('#exp').val(),
+                                full_info: $('#full_info').val()
+                            },
+                            success: function () {
+                                layer.close(index);
+                                layer.alert('修改成功', {icon: 1}, function (index1) {
+                                    layer.close(index1);
+                                    jsonAudit();
+                                });
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                });
+            }
+        });
+    }).on('click', 'button[data-type="ta"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        var ttime1 = $(this).parents('tr').find('td').eq(10).text();
+        if(ttime1=='无'){
+            ttime1='';
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '定时审核',
+            area: ['400px', '200px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">定时时间</span><input id="ttime" type="text" class="form-control" value="'+ttime1+'"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=915',
+                    data: {
+                        mail_id: mail_id,
+                        ttime: $('#ttime').val()
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('设置定时成功', {icon: 1}, function (index1) {
+                            layer.close(index1);
+                            jsonAudit();
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+        $(document).ready(calendarOne('hour', "#ttime"));
+    })
+<?php echo '</script'; ?>
+>
+<?php }
+}

@@ -1,0 +1,17 @@
+★00:26:31-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|29|0|0|0|charguid=844429225101458`order=17150127769017532972645`amount=18.00`resettype=0`giftid=80`id=231`param=
+★00:26:31-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:26:48-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|5|0|0|0|charguid=844429225101458`order=17150127972808532972645`amount=12.00`id=208`param=
+★00:26:49-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:16:31-122.235.189.164★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=5.7福利`cont=5.7福利`sender_name=GM`item_list=`money_list=19#500;`exp=`template_id=102`create_time=1715051761`valid_time=1715212815`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715040015`cond_world_id=-1
+★11:16:31-122.235.189.164★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:16:31-122.235.189.164★审核成功★时间：2024-05-07 11:16:31; 所有服务器id：3185; 审核成功id：3185
+★13:29:55-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|29|0|0|0|charguid=1125904201811921`order=17150597924332466542644`amount=12.00`resettype=3`giftid=72`id=193`param=
+★13:29:55-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:45:01-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|1|0|0|0|opentime=2024-05-06 17:45:01`closetime=`allowip=`blackip=
+★17:45:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:45:02-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|10|0|0|0|opentime=2024-05-07 00:00:00`othmmss=63900
+★17:45:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:41:29-139.224.119.176★发送请求★http://49.235.116.123:20002/mservice.wsdl|5|0|0|0|charguid=844433520068623`order=17150820747026571642645`amount=30.00`id=209`param=
+★19:41:29-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:51:48-122.235.189.164★发送请求★http://121.37.40.146:10002/mservice.wsdl|10|0|0|0|opentime=2024-05-08 00:00:00`othmmss=78660
+★21:51:48-122.235.189.164★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

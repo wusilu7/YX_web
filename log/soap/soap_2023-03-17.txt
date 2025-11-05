@@ -1,0 +1,2 @@
+★22:11:08-60.186.108.194★发送请求★http://139.196.16.175:2002/mservice.wsdl|10|0|0|0|opentime=2023-03-17 00:00:00`othmmss=79860
+★22:11:08-60.186.108.194★Result★"Could not connect to host"

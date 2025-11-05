@@ -1,0 +1,41 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.93.soapTest.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>主播历史记录</span></div>
+
+<div class="col-sm-10 col-sm-offset-1">
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>服务器</th>
+                <th>主播ID</th>
+                <th>房间ID</th>
+                <th>主播名字</th>
+                <th>开播时间</th>
+                <th>下播时间</th>
+                <th>图标ID</th>
+                <th>是否有效</th>
+                <th>操作时间</th>
+                <th>操作人</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div id="page"></div>
+
+
+</div>
+
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    var url = "?p=Admin&c=Mb&a=anchorTemplate&jinIf=918";
+    var arr = ['id','si', 'anchor_id','room_id', 'name','start_time', 'end_time','icon_id','is_valid','create_time','create_user'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    tableList(url, data, id, arr);
+</script>

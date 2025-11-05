@@ -1,0 +1,5 @@
+★14:32:00-223.104.165.157★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=福利`cont=福利`sender_name=GM`item_list=`money_list=1#100;`exp=`template_id=137`create_time=1707978699`valid_time=1708214415`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★14:32:00-223.104.165.157★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:32:00-223.104.165.157★审核成功★时间：2024-02-15 14:32:00; 所有服务器id：3185; 审核成功id：3185
+★21:04:56-183.156.50.9★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=补偿`cont=补偿`sender_name=GM`receiver_id=2814754062073958`item_list=40011#1#-1;`money_list=`exp=
+★21:04:56-183.156.50.9★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

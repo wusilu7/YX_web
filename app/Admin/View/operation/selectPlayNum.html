@@ -1,0 +1,44 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.05.serverswitch.css" rel="stylesheet">
+<div class="jin-content-title"><span>服务器人数</span></div>
+
+<div class="jin-server-select">
+    {{if $Mobel == 'Mobel'}}
+    <div class="form-group" id="group_server_6_mobel"></div>
+    {{else}}
+    <div class="form-group" id="group_server_6"></div>
+    {{/if}}
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center jin-server-table">
+        <thead>
+        <tr>
+            <th>服务器id</th>
+            <th>名称</th>
+            <th>渠道</th>
+            <th>角色数量</th>
+            <th>记录时间</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    var url = location.href + '&jinIf=912';
+    var id = "#content";
+    var data = {};
+    var arr = ['server_id','name', 'group_name','play_num','play_num_time'];
+    gsSelect3('#g');
+    $("#jin_search").on('click', function () {
+        data.group_id = $("#g").val();
+        noPageContentList(url, data, id, arr);
+    });
+
+
+</script>

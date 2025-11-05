@@ -1,0 +1,158 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-04-24 17:49:25
+  from "D:\pro\WebSiteYiXing\app\Admin\View\player\changeName.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_6628d5a535fea7_23203495',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3d403f1acaa726a4e16a8b889a398543e9baba4e' => 
+    array (
+      0 => 'D:\\pro\\WebSiteYiXing\\app\\Admin\\View\\player\\changeName.html',
+      1 => 1704262933,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_6628d5a535fea7_23203495 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>改名</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<div class="tab-content">
+    <div class="tab-pane active">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="username" class="col-sm-4 control-label ">角色id或角色名</label>
+                <div class="col-sm-5">
+                    <input id="username" class="form-control" placeholder="请输入角色id或角色名"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="acc_search" class="col-sm-4 control-label "></label>
+                <div class="col-sm-5">
+                    <button id="acc_search" class="btn btn-primary">查找</button>
+                </div>
+            </div>
+            <div id="content"></div>
+        </div>
+    </div>
+</div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①在改名设置页面查找想要改名的帐号，然后在新角色名里面输入新的角色名后，请点击<b>确认</b>。
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+    $(document).ready(gsSelect('#group', '#server'));
+    $("#acc_search").on('click', function () {
+        if ($.trim($("#username").val()) === '') {
+            layer.alert("请输入角色id或角色名！", {icon: 0});
+        } else {
+            change_name();
+        }
+    });
+    function change_name() {
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=912',
+            data: {username: $("#username").val()},
+            dataType: 'json',
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c = '';
+                c +=
+                    '<div class="form-group">' +
+                        '<label class="col-sm-4 control-label ">角色名</label>' +
+                        '<div class="col-sm-5">' +
+                            '<div id="acc_name1" class="form-control">' + json.char_name + '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                        '<label for="auth" class="col-sm-4 control-label ">新角色名</label>' +
+                        '<div class="col-sm-5">' +
+                        '<input type="text" id="new_name" class="form-control" placeholder="请输入新的角色名"/>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                        '<label for="auth" class="col-sm-4 control-label ">忽略屏蔽字校验</label>' +
+                        '<div class="col-sm-5">' +
+                            '<input type="radio" id="igncheckstringOff" name="igncheckstring" value="0" checked/>' +
+                            '<label for="igncheckstringOff" class="ccontrol-label ">否</label>' +
+                            '&nbsp;&nbsp;' +
+                            '<input type="radio" id="igncheckstringOn" name="igncheckstring" value="1"/>' +
+                            '<label for="igncheckstringOn" class="ccontrol-label ">是</label>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                        '<label for="update" class="col-sm-4 control-label "></label>' +
+                        '<div class="col-sm-5">' +
+                            '<button id="update" class="btn btn-danger">确认</button>' +
+                        '</div>' +
+                    '</div>';
+                $('#content').html(c);
+                $("#update").on('click', function () {
+                    var data = {
+                        si: $('#server').val(),
+                        char_id: json.char_id,
+                        new_name: $("#new_name").val()
+                    };
+                    if ($('#igncheckstringOff').is(':checked')) {
+                        data.igncheckstring = $('#igncheckstringOff').val();
+                    } else if ($('#igncheckstringOn').is(':checked')) {
+                        data.igncheckstring = $('#igncheckstringOn').val();
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: location.href + "&jinIf=913",
+                        data: data,
+                        dataType: 'json',
+                        success: function (res) {
+                            if (res == 1) {
+                                layer.alert("改名成功", {icon: 1}, function (index) {
+                                    layer.close(index);
+                                    window.history.go(0);
+                                });
+                            } else {
+                                layer.alert("改名失败");
+                            }
+                        },
+                        error: function () {
+                            layer.alert("改名失败");
+                        }
+                    });
+                });
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+<?php echo '</script'; ?>
+>
+<?php }
+}

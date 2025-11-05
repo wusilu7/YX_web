@@ -1,0 +1,204 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.18.mailAudit.css" rel="stylesheet">
+<style type="text/css">
+    #bg{ display: none; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.2; opacity:.2; filter: alpha(opacity=70);}
+    .loading{display: none; position: absolute; top: 50%; left: 50%; z-index:1002; }
+</style>
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>补偿邮件审核</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<button id='allsend' class='btn btn-success'>全部审核</button>
+<hr>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>收件人</th>
+            <th>邮件标题</th>
+            <th>邮件内容</th>
+            <th>货币</th>
+            <th>道具
+            <th>经验</th>
+            <th>创建人</th>
+            <th>创建时间</th>
+            <th class="jin-mail-column10">操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    $(document).ready(gsSelect('#group', '#server', '#platform', jsonAudit));
+    //待审核邮件数据
+    function jsonAudit() {
+        var states = $("#states").val();
+        var url = location.href + "&jinIf=912";
+        var btn = [
+            "<div class='btn-group btn-group-sm'>" +
+            "<button data-type='a' class='btn btn-success'>发送</button>" +
+            "<button data-type='d' class='btn btn-danger'>删除</button>" +
+            "</div>"
+        ];
+        var receiver = function (json) {
+            return '【' + json.receiver_type + '】' + json.receiver;
+        };
+        var arr = ['mail_id', receiver, 'title', 'content', 'money', 'item','exp', 'cu', 'create_time', btn];
+        var id = ["#content", "#page"];
+        var data = {
+            page: 1,
+            si: $("#server").val(),
+        };
+        tableList(url, data, id, arr);
+    }
+
+
+    $("#allsend").click(function () {
+        var x = 0;
+        var pagesize=0;
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: location.href + "&jinIf=9139",
+            data: {
+                si: $("#server").val()
+            },
+            dataType: 'json',
+            success: function (json) {
+                pagesize=Math.ceil(json/10);
+            }
+        });
+        layer.msg('已完成0%', {
+            icon: 16
+            ,shade: 0.01,
+            time:100000
+        });
+        for (var i=0;i<10;i++){
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=941",
+                dataType: 'json',
+                data:{
+                    si:$("#server").val(),
+                    pagesize:pagesize
+                },
+                success: function (json) {
+                    x++;
+                    layer.msg('已经完成'+(x*10)+'%', {
+                        icon: 16,
+                        shade: 0.1,
+                        time:100000
+                    },function () {
+                        if(x==10){
+                            layer.msg('已完成全部', {
+                                time:100
+                            });
+                            jsonAudit();
+                        }
+                    });
+                }
+            });
+        }
+
+    });
+
+
+
+
+    //邮件审核
+    $('#content').on('click', 'button[data-type="a"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('审核通过后 <b>' + mail_id + '号邮件</b> 将激活', {icon: 0, btn: ['确定', '取消']}, function (tip) {
+            layer.close(tip);
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=9138",
+                data: {
+                    mail_id: mail_id
+                },
+                dataType: 'json',
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']
+                    });
+                },
+                success: function (json) {
+                    layer.closeAll('loading');
+                    if (json.status == 1) {
+                        layer.alert('审核通过，<b>' + mail_id + '号邮件</b> 已激活', {icon: 1}, function (index) {
+                            layer.close(index);
+                            jsonAudit();
+                        });
+                    } else {
+                        layer.alert(json.msg, {icon: 2}, function (index) {
+                            layer.close(index);
+                            jsonAudit();
+                        });
+                    }
+                }
+            });
+        });
+    }).on('click', 'button[data-type="d"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除[' + mail_id + '号邮件]？', {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    mail_id: mail_id
+                },
+                success: function () {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        jsonAudit();
+                    });
+                }
+            });
+        });
+    }).on('click', 'button[data-type="u"]', function () {
+        var mail_id = $(this).parents('tr').find('td').eq(0).text();
+        var title = $(this).parents('tr').find('td').eq(2).text();
+        var content = $(this).parents('tr').find('td').eq(3).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '邮件修改',
+            area: ['500px', '400px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">标题</span><input id="title" type="text" class="form-control" value="' +
+            title + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="content1"  rows="10"  class="form-control">' +
+            content + '</textarea></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=913',
+                    data: {
+                        mail_id: mail_id,
+                        title: $('#title').val(),
+                        content: $('#content1').val()
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('修改成功', {icon: 1}, function (index1) {
+                            layer.close(index1);
+                            jsonAudit();
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    })
+</script>

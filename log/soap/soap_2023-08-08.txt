@@ -1,0 +1,6 @@
+★15:07:31-219.135.170.27★发送请求★http://101.43.70.129:2002/mservice.wsdl|4|0|0|0|title=11111`cont=11111`sender_name=GM`receiver_id=2814754062074986`item_list=`money_list=3#10000000;`exp=
+★15:07:31-219.135.170.27★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:07:37-219.135.170.27★发送请求★http://101.43.70.129:2002/mservice.wsdl|4|0|0|0|title=1111`cont=1111`sender_name=GM`receiver_id=2814754062074986`item_list=5000002#1000#-1;5000022#10#-1;5000113#10#-1;5100015#10#-1;`money_list=2#10000;1#1000;4#1000;5#1000;14#10000;9#10000;`exp=
+★15:07:37-219.135.170.27★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:37:58-219.135.170.27★发送请求★http://101.43.70.129:2002/mservice.wsdl|4|0|0|0|title=111`cont=1111`sender_name=GM`receiver_id=2814754062074986`item_list=1000103#1#-1;1000203#1#-1;1001103#1#-1;1002003#1#-1;1004003#1#-1;`money_list=2#100000;`exp=
+★16:37:58-219.135.170.27★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

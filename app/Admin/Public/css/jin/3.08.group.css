@@ -1,0 +1,41 @@
+table > thead {
+    background-color: #62697f;
+    color: #fff;
+}
+
+.jin-group-table {
+    border: 3px solid #62697f;
+}
+
+/*最小列宽*/
+.jin-group-column6 {
+    width: 75px;
+}
+
+.jin-group-column7 {
+    width: 400px;
+}
+
+.jin-group-column9 {
+    width: 120px;
+}
+
+button[data-type="insert"] {
+    margin-bottom: 40px;
+}
+
+.jin-group-down img {
+    height: 30px;
+}
+
+.jin-group-down img:first-child {
+    margin-right: 5px;
+}
+
+.jin-group-res * {
+    text-align: left;
+}
+
+.jin-group-out {
+    font-weight: bold;
+}

@@ -1,0 +1,120 @@
+{{include file="../common/1header.html"}}
+
+<style type="text/css">
+    .form-control_input{
+        width: 300px;
+        display: initial;
+    }
+    .point{
+        cursor:pointer;
+    }
+    #jin_search{
+        margin-bottom: 0px
+    }
+</style>
+<div class="jin-content-title"><span>充值返还列表</span></div>
+
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <input id="account" type="text" class="form-control form-control_input" placeholder="账号ID">
+
+        <input id="char_guid" type="text" class="form-control form-control_input" placeholder="角色ID">
+        
+        <span class="btn-group">
+            <button type="button" class="btn btn-info" id="status">返还状态</button>
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a onclick="back(0)" class="point">全部</a></li>
+                <li><a onclick="back(2)" class="point">未领取</a></li>
+                <li><a onclick="back(1)" class="point">已领取</a></li>
+            </ul>
+        </span>
+
+        <a id="jin_search" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span></a>
+        <a id="jin_delete" class="btn btn-danger">删除过期领取码</span></a>
+    </div>
+</div>
+<hr/>
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>账号ID</th>
+            <th>角色ID</th>
+            <th>充值数</th>
+            <th>折扣后返还金钻</th>
+            <th>折扣后返还蓝钻</th>
+            <th>充值日期</th>
+            <th>生效开始时间</th>
+            <th>生效结束时间</th>
+            <th>领取时间</th>
+            <th>返还状态</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    calendar('month', '#time_start', '#time_end');
+
+    var url = location.href + "&jinIf=912";
+    var arr = ['account', 'char_guid', 'fee', 'fee_rate_golden', 'fee_rate_blue', 'pay_time', 'work_start', 'work_end', 'take_time', 'is_convert'];
+    var id = ["#content", "#page"];
+    var data = {};
+    data.page = 1;
+
+    $("#jin_search").on('click', function () {
+    	data.account = $('#account').val();
+    	data.char_guid = $('#char_guid').val();
+
+        tableList(url, data, id, arr);
+    });
+
+    $("#jin_delete").on('click', function () {
+        data.account = $('#account').val();
+        data.char_guid = $('#char_guid').val();
+
+        layer.confirm('确定要删除过期领取码？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            $.ajax({
+                type: "POST",
+                url: location + "&jinIf=913",
+                data: data,
+                dataType: "json",
+                success: function (json) {
+                    if (json) {
+                        layer.alert('删除成功', {icon: 6});
+                    } else {
+                        layer.msg('删除失败', {icon: 5});
+                    } 
+                }
+            });
+        });
+    });
+
+    var back = function(i) {
+        if (i == 0) {
+            $('#status').text('全部');
+            data.status = 0;
+        }
+        if (i == 1) {
+            $('#status').text('已领取');
+            data.status = 1;
+        }
+        if (i == 2) {
+            $('#status').text('未领取');
+            data.status = 2;
+        }
+    }
+    
+</script>

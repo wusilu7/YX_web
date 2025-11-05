@@ -1,0 +1,348 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>网易盾检测</span></div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div class="form-group" id="group_server_6"></div>
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+               placeholder="开始日期">
+        -
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+               placeholder="结束日期">
+        <input size="16" type="checkbox" id="ischeck1" value="1">
+        <label for="ischeck1" style="margin-left: 0px;">去重</label>
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+        <a id="ban_login" class="btn btn-danger">封号</a>
+    </div>
+    <div>
+        <label for="acc">筛选：</label>
+        <input id="code" type="text" class="form-control jin-search-input" placeholder="设备">
+        <input id="acc" type="text" class="form-control jin-search-input" placeholder="账号">
+        <input id="char" type="text" class="form-control jin-search-input" placeholder="角色ID/角色名">
+    </div>
+    <div>
+        <label for="plug_risk" style="font-size: 13px;">外挂风险：</label>
+        <select  id="plug_risk"></select>
+        <label for="env_risk" style="font-size: 13px;">环境风险：</label>
+        <select  id="env_risk" class="form-control jin-search-input"></select>
+        <label for="other_risk" style="font-size: 13px;">其他风险：</label>
+        <select  id="other_risk" class="form-control jin-search-input"></select>
+        <label for="risk_result" style="font-size: 13px;">风险处理：</label>
+        <select  id="risk_result" class="form-control jin-search-input">
+            <option value="999">全部</option>
+            <option value="未拦截">未拦截</option>
+            <option value="拦截成功">拦截成功</option>
+        </select>
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr id="thead">
+            <th class="jin-server-column1">
+                <input id="all_choose" type="checkbox">
+                <label for="all_choose">全选</label>
+            </th>
+            <th>设备id</th>
+            <th>ios版本</th>
+            <th>角色ID</th>
+            <th>账号</th>
+            <th>角色名</th>
+            <th>服务器</th>
+            <th>包名</th>
+            <th>ip</th>
+            <th>外挂风险</th>
+            <th>环境风险</th>
+            <th>其他风险</th>
+            <th>风险处理</th>
+            <th>时间</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    $(document).ready(gsSelect3('#g'));
+    var url = "http://croodsadmin.xuanqu100.com/?p=I&c=Player&a=cheater2";
+    var acc_check = function (json) {
+        return '<input type="checkbox" value="' + json['acc'] + '" />'
+    };
+    var arr = [acc_check,'code','ios_v','char_id','acc','char_name','si','pack','ip','plug_risk','env_risk','other_risk','risk_result','time'];
+    var id = ["#content", "#page"];
+    var data = {};
+    $(function () {
+        calendar('minute', '#time_start', '#time_end');
+        var plug_risk = [
+            {
+                id: '未发现',
+                text: '未发现'
+            },
+            {
+                id: '无样本外挂',
+                text: '无样本外挂'
+            },
+            {
+                id: '改机工具',
+                text: '改机工具'
+            },
+            {
+                id: '手游辅助',
+                text: '手游辅助'
+            },
+            {
+                id: '破解分析',
+                text: '破解分析'
+            },
+            {
+                id: '修改器',
+                text: '修改器'
+            },
+            {
+                id: '加速挂',
+                text: '加速挂'
+            },
+            {
+                id: '内购破解挂',
+                text: '内购破解挂'
+            },
+            {
+                id: '反越狱挂',
+                text: '反越狱挂'
+            },
+            {
+                id: '注入挂',
+                text: '注入挂'
+            }
+        ];
+        $("#plug_risk").select2({
+            data: plug_risk,
+            width: "300px",
+            multiple: true
+        });
+
+        var env_risk = [
+            {
+                id: '未发现',
+                text: '未发现'
+            },
+            {
+                id: '模拟器',
+                text: '模拟器'
+            },
+            {
+                id: '越狱',
+                text: '越狱'
+            },
+            {
+                id: '调试器',
+                text: '调试器'
+            },
+            {
+                id: '云真机',
+                text: '云真机'
+            }
+        ];
+        $("#env_risk").select2({
+            data: env_risk,
+            width: "300px",
+            multiple: true
+        });
+
+        var other_risk = [
+            {
+                id: '未发现',
+                text: '未发现'
+            },
+            {
+                id: '工作室',
+                text: '工作室'
+            },
+            {
+                id: '黑名单',
+                text: '黑名单'
+            },
+            {
+                id: '盗版',
+                text: '盗版'
+            }
+        ];
+        $("#other_risk").select2({
+            data: other_risk,
+            width: "300px",
+            multiple: true
+        });
+
+    });
+    function getCharge() {
+        data.page       = 1;
+        data.time_start = $('#time_start').val();
+        data.time_end   = $('#time_end').val();
+        data.acc        = $("#acc").val();
+        data.code       = $("#code").val();
+        data.char       = $('#char').val();
+        data.gi = $("#g").val();
+
+        data.plug_risk      = $('#plug_risk').val();
+        data.env_risk      = $('#env_risk').val();
+        data.other_risk      = $('#other_risk').val();
+        data.risk_result      = $('#risk_result').val();
+        data.ischeck1       = $('#ischeck1').is(':checked') ? $('#ischeck1').val() : '';
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        getCharge();
+    });
+    // 导出Excel
+    $("#jin_excel").on('click', function () {
+        data.page       = 'excel';
+        data.time_start = $('#time_start').val();
+        data.time_end   = $('#time_end').val();
+        data.acc        = $("#acc").val();
+        data.code       = $("#code").val();
+        data.char       = $('#char').val();
+        data.gi = $("#g").val();
+
+        data.plug_risk      = $('#plug_risk').val();
+        data.env_risk      = $('#env_risk').val();
+        data.other_risk      = $('#other_risk').val();
+        data.risk_result      = $('#risk_result').val();
+        data.ischeck1       = $('#ischeck1').is(':checked') ? $('#ischeck1').val() : '';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+    $("#ban_login").on('click', function () {  // 点击后本地数据库
+        var acc_str = getChoose();
+        console.log(acc_str);
+        if (acc_str == '') {
+            layer.msg('请选择对象!');
+            return false;
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '封号',
+            area: ['500px', '450px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content:'<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">目标渠道</span>' +
+            '<div class="select_group_div" >'+
+            '<select  id="g_other" class="selectpicker show-tick " multiple data-live-search="true" data-actions-box="true" title="请选择"></select>'+
+            '</div>'+
+            '</div><br>' +
+            '<div class="input-group"><span class="input-group-addon">理由</span><input id="reason" type="text" class="form-control jin-search-input" placeholder="限制理由(展示给玩家看的)"></div><br>' +
+            '<div class="input-group"><span class="input-group-addon">默认理由</span><select id="reason1" class="form-control jin-search-input">' +
+            '<option value="使用非法软件">使用非法软件</option>' +
+            '<option value="异常账号">异常账号</option>' +
+            '</select></div><br>' +
+            '<div class="input-group"><span class="input-group-addon">是否移除排行榜以及禁产出一年</span><select id="del_power" class="form-control jin-search-input">' +
+            '<option value="1">是</option>' +
+            '<option value="0">否</option>' +
+            '</select></div>' +
+            '</div>',
+            success: function (index) {
+                obj11 = {id: '#g_other'};
+                obj11.url = "?p=Admin&c=Operation&a=group&jinIf=943";
+                groups(obj11);
+            },
+            yes: function (index1) {
+                if ($("#g_other").val() == '') {
+                    layer.msg('请选择渠道!');
+                    return false;
+                }
+                user_name = '{{$user_name}}';
+                reason = $("#reason").val();
+                if(reason==''){
+                    reason = $("#reason1").val();
+                }
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=921",
+                    data: {
+                        content: acc_str,
+                        gig: $("#g_other").val(),
+                        del_power :$("#del_power").val(),
+                        reason:reason,
+                        user_name : user_name
+                    },
+                    dataType: "json",
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function (json) {
+                        layer.closeAll('loading');
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    // 全选
+    $('#all_choose').click(function() {
+        var check_on = $(this).is(':checked');
+        if (check_on) {
+            $('#content').find('input[type="checkbox"]').attr('checked', true);
+        } else {
+            $('#content').find('input[type="checkbox"]').attr('checked', false);
+        }
+    });
+    // 获取选中的服务器
+    function getChoose() {
+        var mail_id = '';
+        $('#content input[type="checkbox"]:checked').each(function(index, el) {
+            if (index == 0) {
+                mail_id = $(el).val();
+            } else {
+                mail_id += '\n' + $(el).val();
+            }
+        });
+        return mail_id;
+    }
+
+    $('#content').on('click', 'tr', function() {
+        var cb = $(this).find('td:first>input');
+        if (! cb.is(':checked')) {
+            cb.attr('checked', true);
+            $(this).attr('style', 'background: #aba5618c');
+        } else {
+            cb.attr('checked', false);
+            $(this).removeAttr('style', 'background: #aba5618c');
+        }
+    });
+
+
+</script>

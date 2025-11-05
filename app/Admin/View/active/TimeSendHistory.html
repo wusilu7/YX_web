@@ -1,0 +1,71 @@
+{{include file="../common/1header.html"}}
+<div class="jin-content-title"><span>定时应用记录</span></div>
+<div class="alert alert-info">
+     <div id="group_only" style="display: inline-block;" class="hide"></div>
+    <select  id="status" style="padding: 5px;">
+        <option value="0">未完成</option>
+        <option value="1">已完成</option>
+    </select>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>定时时间</th>
+            <th>应用服务器</th>
+            <th>活动名</th>
+            <th>活动标识</th>
+            <th>活动ID</th>
+            <th>类型</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    groupSelect({dom: "#group"});
+    var url = location.href + "&jinIf=912";
+    var btn = [
+        '<a data-type="delete" class="btn btn-danger">删除</a>'
+    ];
+    var arr = ['timing_id','time','sis','tb_path','sign','ids','is_add',btn];
+    var id = "#content";
+    var data = {};
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        common();
+    });
+    function common() {
+        data.status = $("#status").val();
+        data.gi=$("#group").val();
+        noPageContentList(url, data, id, arr);
+    }
+    $('#content').on('click', 'a[data-type="delete"]', function() {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除？', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                    });
+                    common();
+                }
+            });
+        });
+
+    })
+</script>

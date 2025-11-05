@@ -1,0 +1,118 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.02.selectonline.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<style type="text/css">
+    .alert-info{
+        color: white;
+    }
+    .form-group{
+        margin-bottom: 35px;
+    }
+    .col-sm-1 {
+        width: 90px;
+        padding-top: 8px;
+    }
+</style>
+<div class="jin-content-title"><span>充值趋势</span></div>
+<div class="alert alert-info">
+    <div class="form-group" id="group_server_6"></div>
+</div>
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <select id="gift_type" style="padding: 8px;">
+        <option value="1">全部</option>
+        <option value="2">正常</option>
+        <option value="3">付费礼包</option>
+        <option value="4">精准礼包</option>
+    </select>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+<div id="jin-charts-online"></div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<!--AJAX调用在线人数的json接口-->
+<script src="{{JS}}echarts.min.js"></script>
+<script src="{{JS}}highcharts.js"></script>
+<script type="text/javascript">
+    gsSelect3('#g')
+    calendarOne('month', '#time_start');
+    calendarOne('month', '#time_end');
+    var data = {};
+    function getOnline() {
+        data.gi    = $('#g').val();
+        data.gift_type    = $('#gift_type').val();
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end   = $('#time_end').val();//查询结束时间
+        $.ajax({
+            type: "post",
+            async: true,
+            url: location.href + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (res) {
+                var title_json = {
+                    'all':'所有(点击)',
+                    'all_success':'所有(成功)',
+                };
+                layer.closeAll('loading');
+                var series_middle = [];
+                for (var i in res){
+                    if(i!='day'){
+                        series_middle.push({
+                            name: title_json[i],
+                            data: eval('[' + res[i] + ']')
+                        });
+                    }
+                }
+                Highcharts.chart('jin-charts-online', {
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    yAxis: {
+                        title: {
+                            text: '人数'
+                        }
+                    },
+                    xAxis: {
+                        categories: res.day
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle'
+                    },
+                    tooltip: {
+                        shared: true
+                    },
+                    series: series_middle
+                });
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('暂时无法获取数据');
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getOnline();
+    });
+</script>

@@ -1,0 +1,107 @@
+{{include file="../common/1header.html"}}
+<style type="text/css">
+    .form-control2{
+        display: inline;
+        width: auto;
+    }
+</style>
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>充值玩家数据导出</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <input type="text" id="char" class="form-control form-control2" placeholder="角色id">
+    <input type="text" id="char_name" class="form-control form-control2" placeholder="角色名">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>用户平台ID</th>
+            <th>角色id</th>
+            <th>角色名</th>
+            <th>角色区服</th>
+            <th>累积金额</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--<div class="jin-explain">-->
+<!--<b>说明</b>：-->
+<!--<div>-->
+<!--①日期不填默认查询全部；-->
+<!--</div>-->
+<!--</div>-->
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    calendar('month', '#time_start', '#time_end');
+    $("#group_server").html(
+        '<label for="group">渠道：</label>' +
+        '<select id="group">' +
+        '<option value=""></option>' +
+        '</select>'
+    );
+    obj = {dom: '#group'};
+    groupSelect(obj);
+
+    var data = {};
+    function getDaily() {
+        var url = location.href + "&jinIf=912";
+        var arr = ['account', 'char', 'char_name', 'name', 'sumfee'];
+        var id = ["#content", "#page"];
+        data.page = 1;
+        data.group = $("#group").val();
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end = $('#time_end').val();//查询结束时间
+        data.char = $('#char').val();
+        data.char_name = $('#char_name').val();
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").click(function () {
+        getDaily();
+    });
+
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';
+        data.group = $("#group").val();
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end = $('#time_end').val();//查询结束时间
+        data.char = $('#char').val();
+        data.char_name = $('#char_name').val();
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

@@ -1,0 +1,160 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-08-15 10:00:39
+  from "D:\pro\WebSiteYiXing\app\Admin\View\active\updateFashion.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_66bd61478c9a77_08385586',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f474706bffdaaa2d3ce3fb94cde33ecb50a78ead' => 
+    array (
+      0 => 'D:\\pro\\WebSiteYiXing\\app\\Admin\\View\\active\\updateFashion.html',
+      1 => 1678771397,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_66bd61478c9a77_08385586 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<!--|↓↓↓↓↓↓|-->
+<link href="<?php echo CSS;?>
+jin/3.07.sa.css" rel="stylesheet">
+<div class="jin-content-title"><span>时装修改</span></div>
+<hr />
+<div class="form-horizontal col-sm-6 col-sm-offset-3">
+    <div class="form-group">
+        <label for="ID" class="col-sm-2 control-label">编号</label>
+        <div class="col-sm-10">
+            <input id="ID" class="form-control" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="IsOpen" class="col-sm-2 control-label">是否开放</label>
+        <div class="col-sm-10">
+            <select id="IsOpen" style="height: 34px;line-height: 34px; width: 100px; padding: 0 8px;">
+                <option value="1">开放</option>
+                <option value="0">关闭</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PayType" class="col-sm-2 control-label">付费类型</label>
+        <div class="col-sm-10">
+            <select id="PayType" style="height: 34px;line-height: 34px; width: 100px; padding: 0 8px;">
+                <option value="1">游戏货币</option>
+                <option value="0">人民币</option>
+                <option value="2">活动产出</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PriceSet1" class="col-sm-2 control-label">消耗货币</label>
+        <div class="col-sm-10">
+            <input id="PriceSet1" type="text"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OgrPrice" class="col-sm-2 control-label">消耗人民币(原始价格)</label>
+        <div class="col-sm-10">
+            <input id="OgrPrice" type="text"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PriceSet2" class="col-sm-2 control-label">消耗人民币</label>
+        <div class="col-sm-10">
+            <input id="PriceSet2" type="text"  class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="SKUIOS" class="col-sm-2 control-label">SKUIOS</label>
+        <div class="col-sm-10">
+            <input id="SKUIOS" type="text"  class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SKUAndroid" class="col-sm-2 control-label">SKUAndroid</label>
+        <div class="col-sm-10">
+            <input id="SKUAndroid" type="text"  class="form-control">
+        </div>
+    </div>
+    <div class="btn-group center jin-sa-btn">
+        <button data-type="update" class="btn  btn-success">修改</button>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+
+<?php echo '<script'; ?>
+ type="text/javascript">
+    $(function () {
+        getSa();
+    });
+    function getSa() {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=920",
+            dataType: "json",
+            success: function (json) {
+                $("#ID").val(json.ID);
+                $("#ID").attr('data-data-gi',json.gi);
+                $("#ID").attr('data-data-sign',json.gi_sign);
+                $("#IsOpen option[value='"+json.IsOpen+"']").attr("selected","selected");
+                $("#PayType option[value='"+json.PayType+"']").attr("selected","selected");
+                $("#PriceSet1").val(json.PriceSet1);
+                $("#OgrPrice").val(json.OgrPrice);
+                $("#PriceSet2").val(json.PriceSet2);
+                $("#SKUIOS").val(json.SKUIOS);
+                $("#SKUAndroid").val(json.SKUAndroid);
+
+            }
+        });
+    }
+
+    $('button[data-type="update"]').on('click', function () {//修改服务器
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            data: {
+                gi: $("#ID").attr('data-data-gi'),
+                sign: $("#ID").attr('data-data-sign'),
+                ID:$("#ID").val(),
+                IsOpen: $("#IsOpen").val(),
+                PayType: $("#PayType").val(),
+                PriceSet1: $("#PriceSet1").val(),
+                OgrPrice: $("#OgrPrice").val(),
+                PriceSet2: $("#PriceSet2").val(),
+                SKUIOS:$("#SKUIOS").val(),
+                SKUAndroid:$("#SKUAndroid").val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                layer.alert('成功', {icon: 1}, function (index) {
+                    layer.close(index);
+                    window.location.reload();
+                });
+            }
+        });
+    });
+<?php echo '</script'; ?>
+>
+<?php }
+}

@@ -1,0 +1,204 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.05.serverswitch.css" rel="stylesheet">
+<div class="jin-content-title"><span>屏蔽字</span></div>
+
+<div class="jin-server-select">
+    <div class="alert alert-info">
+        <div id="group_server"></div>
+    </div>
+
+        <select name="" id="type">
+            <option value="1">内容</option>
+            <option value="2">名字</option>
+        </select>
+
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <button id="add" class="btn btn-primary">新增</button>
+    <button id="copy" class="btn btn-success">复制</button>
+
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center jin-server-table">
+        <thead>
+        <tr>
+            <th>内容</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+    $("#group_server").html(
+        '<label for="group">渠道：</label>' +
+        '<select id="group">' +
+        '<option value=""></option>' +
+        '</select>'
+    );
+    obj = {dom: '#group'};
+    groupSelect(obj);
+
+    var btn2 = [
+        '<button data-type="del" class="btn btn-sm btn-danger">删除</button>'
+    ];
+    function getDaily() {
+        $.ajax({
+            type: "post",
+            url:  location.href + "&jinIf=912",
+            data: {
+                group:$("#group").val(),
+                type:$("#type").val()
+            },
+            dataType: "json",
+            success: function (json) {
+                console.log(json);
+                var c='';
+                if(json){
+                    for (var i = 0; i < json.length; i++) {
+                        c +=
+                            '<tr>' +
+                            '<td>' + json[i] + '</td>' +
+                            '<td>' + btn2 + '</td>' +
+                            '</tr>';
+                        $("#content").html(c);
+                    }
+                }else {
+                    $("#content").html('');
+                }
+
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").click(function () {
+        getDaily();
+    });
+    $('#content').on('click', 'button[data-type="del"]', function () {
+        var con = $(this).parents('tr').find('td').eq(0).text();
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=914",
+            data: {
+                group:$("#group").val(),
+                type:$("#type").val(),
+                con:con
+            },
+            dataType: "json",
+            success: function (json) {
+                getDaily();
+            }
+        });
+    });
+    
+    function groupframe(fun) {
+        $.ajax({
+            type: "POST",
+            url: "?p=Admin&c=Operation&a=group&jinIf=945",
+            dataType: 'json',
+            success: function (res) {
+                var con = '<div>' +
+                    '<input type="checkbox" id="check_all_groups" class="regular-checkbox big-checkbox"/><label for="check_all_groups"></label>' +
+                    '<label class="jin-all-text" for="check_all_groups">勾选所有</label></div>';
+                for (var i=0;i<res.length;i++){
+                    con += '<div style="width: 290px; display: inline-block;">'+
+                        '<input type="checkbox"  name="groups" id="' + res[i].group_id + '" value="' + res[i].group_id + '" class="regular-checkbox"/>' +
+                        '<label for="' + res[i].group_id+ '"></label><label class="jin-checkbox-text" for="' + res[i].group_id+ '">' + res[i].group_name + '</label>' +
+                        '</div>';
+                }
+                var docW = window.screen.width;
+                if(docW < 768){
+                    layerW = '80%';
+                    layerH = '80%';
+                }else{
+                    layerW = '600px';
+                    layerH = '450px;';
+                }
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '选取渠道',
+                    area: [layerW, layerW],
+                    btn: ['确定', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content: con,
+                    yes: function (index) {
+                        layer.close(index);
+                        fun(checkedValue('groups').join(","));
+
+                    },
+                    cancel: function () {
+                    }
+                });
+                checkedAll('groups');
+            }
+        });
+    }
+
+    function copy(groups) {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=915",
+            data: {
+                group : $("#group").val(),
+                type : $("#type").val(),
+                groups : checkedValue('groups').join(",")
+            },
+            dataType: "json",
+            success: function (json) {
+                layer.alert('复制成功', {icon: 1}, function (index) {
+                    layer.close(index);
+                    getDaily();
+                });
+            }
+        });
+    }
+    
+    function add(groups) {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增',
+            area: ['400px', '400px'],
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea  id="con" cols="30" rows="10" class="form-control"></textarea></div>' +
+            '</div>',
+            yes: function (index) {
+                layer.close(index);
+                $.ajax({
+                    type: "post",
+                    url: location.href + "&jinIf=916",
+                    data: {
+                        con : $("#con").val().split('\n').join('|'),
+                        type : $("#type").val(),
+                        groups : groups
+                    },
+                    dataType: "json",
+                    success: function (json) {
+                        layer.alert('新增成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            getDaily();
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    }
+    
+
+    $("#copy").click(function () {
+        groupframe(copy);
+    });
+
+    $("#add").click(function () {
+        groupframe(add);
+    });
+</script>

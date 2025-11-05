@@ -1,0 +1,111 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.19.mailSend.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<style type="text/css">
+    #editor{
+        width: 1550px;
+    }
+    .w-e-text-container,
+    .w-e-toolbar{
+        width: 1400px;
+        margin-left: 300px;
+    }
+</style>
+<div class="jin-content-title"><span>补偿邮件发送</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label ">标题*</label>
+        <div class="col-sm-10">
+            <input id="title" maxlength="20" class="form-control" placeholder="标题最多20个字"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="words" class="col-sm-2 control-label ">内容*</label>
+        <div class="col-sm-10">
+            <textarea id="words" class="form-control" cols="30" rows="4" placeholder="内容最多500个字符"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="words" class="col-sm-2 control-label ">货币*</label>
+        <div class="col-sm-10">
+            <input type="text" id="money" class="form-control" placeholder="货币1枚举#数量;货币2枚举#数量;      例 ：2#100;6#100;">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="words" class="col-sm-2 control-label ">物品ID*</label>
+        <div class="col-sm-10">
+            <input type="text" id="item" class="form-control" placeholder="物品1ID#数量#-1;物品2ID#数量#-1;      例 : 4903013#1#-1;4906006#1#-1;">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="content" class="col-sm-2 control-label ">角色和经验*</label>
+        <div class="col-sm-10">
+            <textarea id="receiver" class="form-control" rows="15"  placeholder="角色ID   经验&#10角色ID   经验&#10..."></textarea>
+        </div>
+    </div>
+</div>
+
+<!--发送-->
+<div class="center">
+    <button id="send" class="btn btn-primary">发送</button>
+</div>
+<div class="jin-explain">
+
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+
+    //发送功能
+    gsSelect('#group', '#server');
+    $("#send").on('click', function () {
+        var x=0;
+        var data = {
+            si: $("#server").val(),
+            title: $("#title").val(),
+            content: $("#words").val(),
+            item: $("#item").val(),
+            money: $("#money").val()
+        };
+        var receiver = $("#receiver").val().split('\n');
+        receiver.pop();
+        var len = Math.ceil(receiver.length/10);
+        layer.msg('0%', {
+            icon: 16,
+            shade: 0.1,
+            time:100000
+        });
+        for (var i=0;i<10;i++){
+            receivers=[];
+            reMid=receiver.slice(len*i,len*(i+1));
+            for (var j=0;j<reMid.length;j++){
+                receivers.push(reMid[j].split('	'))
+            }
+            data.receivers = JSON.stringify(receivers);
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=911",
+                data: data,
+                dataType: 'json',
+                success: function (json) {
+                    x++;
+                    layer.msg((x*10)+'%', {
+                        icon: 16,
+                        shade: 0.1,
+                        time:100000
+                    },function () {
+                        if(x==10){
+                            layer.msg('成功', {
+                                time:1000
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    });
+</script>

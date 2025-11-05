@@ -1,0 +1,116 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<style type="text/css">
+    .alert {
+        padding-bottom: 46px;
+    }
+    .alert-info{
+        color: white;
+    }
+
+</style>
+<div class="jin-content-title"><span>登录日志</span></div>
+<div class="alert alert-info">
+    {{if $Mobel == 'Mobel'}}
+    <div class="form-group" id="group_server_7_mobel"></div>
+    {{else}}
+    <div class="form-group" id="group_server_7"></div>
+    {{/if}}
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label class="select_label control-label">指定服务器:</label>
+        <select id="s" class="selectpicker show-tick col-sm-3 col-xs-12" multiple data-live-search="true" data-actions-box="true" title="请选择"></select>
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <input size="16" type="checkbox" id="ischeck1" value="1">
+        <label for="ischeck1" style="margin-left: 0px;">账号去重</label>
+        <input size="16" type="checkbox" id="ischeck2" value="1">
+        <label for="ischeck2" style="margin-left: 0px;">设备去重</label>
+        <label for="subtract_num">总量：</label>
+        <span id="subtract_num"></span>
+    </div>
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+               placeholder="开始日期">
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+               placeholder="结束日期">
+    </div>
+    <div>
+        <label for="order_id">筛选：</label>
+        <input id="code" type="text" class="form-control jin-search-input" placeholder="设备号">
+        <input id="ip" type="text" class="form-control jin-search-input" placeholder="IP">
+        <input id="acc" type="text" class="form-control jin-search-input" placeholder="账号">
+        <input id="app" type="text" class="form-control jin-search-input" placeholder="app">
+        <input id="res" type="text" class="form-control jin-search-input" placeholder="res">
+        <input id="pack" type="text" class="form-control jin-search-input" placeholder="pack">
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>服务器</th>
+            <th>时间</th>
+            <th>设备号</th>
+            <th>平台</th>
+            <th>IP</th>
+            <th>来源类型</th>
+            <th>账号</th>
+            <th>app</th>
+            <th>res</th>
+            <th>pack</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①查询条件可以按需自由组合；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    var url = location.href + "&jinIf=912";
+    var arr = ['id','si', 'time','code','pi', 'ip','src', 'acc','app','res','pack'];
+    var id = ["#content", "#page", "#subtract_num"];
+    var data = {page: 1};
+    $(function () {
+        gsSelect3('#g', '#p', '#s');
+        calendar('month', '#time_start', '#time_end');
+    });
+    function getCharge() {
+        var time_start  = $('#time_start').val();
+        var time_end    = $('#time_end').val();
+
+        data.page       = 1;
+        data.time_start = time_start;//查询开始时间;
+        data.time_end   = time_end;//查询结束时间
+        data.code   = $('#code').val();
+        data.ip = $('#ip').val();
+        data.acc  = $('#acc').val();
+        data.app  = $('#app').val();
+        data.res  = $('#res').val();
+        data.pack  = $('#pack').val();
+        data.gi = $("#g").val();
+        data.si = $("#s").val();
+        data.pi = $("#p").val();
+        data.ischeck1 = $('#ischeck1').is(':checked') ? $('#ischeck1').val() : '';
+        data.ischeck2 = $('#ischeck2').is(':checked') ? $('#ischeck2').val() : '';
+        tableList(url, data, id, arr,2);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getCharge();
+    });
+</script>

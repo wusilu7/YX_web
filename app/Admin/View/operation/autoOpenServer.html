@@ -1,0 +1,341 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.05.serverswitch.css" rel="stylesheet">
+<div class="jin-content-title"><span>自动开服</span></div>
+<style>
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: 300px;
+    }
+</style>
+<div class="jin-server-select">
+    {{if $Mobel == 'Mobel'}}
+    <div class="form-group" id="group_server_6_mobel"></div>
+    {{else}}
+    <div class="form-group" id="group_server_6"></div>
+    {{/if}}
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <button data-type="auto_open" class="btn btn-success" style="margin-left: 20px;">自动开服</button>
+    <button data-type="auto_history" class="btn btn-primary" style="margin-left: 20px;">自动开服记录</button>
+    <hr>
+</div>
+<div>
+    <label for="server_name">筛选：</label>
+    <input id="server_name" type="text" class="form-control jin-search-input" placeholder="服务器名字(模糊匹配)">
+</div>
+<br>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center jin-server-table">
+        <thead>
+        <tr>
+            <th class="jin-server-column1">
+                <input id="all_choose" type="checkbox">
+                <label for="all_choose">全选</label>
+            </th>
+            <th class="jin-server-column1">序号</th>
+            <th>服务器名称</th>
+            <th class="jin-server-column3">服务器ID</th>
+            <th>渠道名称</th>
+            <th>渠道号</th>
+            <th>游戏地址端口</th>
+            <th>状态说明</th>
+            <th>查看设备数</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    var url = location.href + '&jinIf=912';
+    var id = "#content";
+    var data = {};
+    //选服下拉框
+    $(document).ready(gsSelect3('#g'));  //页面加载完成后，调用groupSelect()函数，这个函数在jin-select.js中有封装
+    $("#jin_search").on('click', function () {    //根据渠道读取相应渠道的服务器信息
+        data.group_id = $("#g").val();
+        data.server_name = $("#server_name").val();
+        $.cookie('cookie_g', data.group_id, {expires: 30});
+        common();
+    });
+    function common() {
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                if(json.length>=1){
+                    for (var i = 0; i < json.length; i++) {
+                        if(json[i]['is_show']==0){
+                            var color='style="color:red;"';
+                        }else{
+                            var color='';
+                        }
+                        c +=
+                            '<tr '+color+' >' +
+                            '<td><input type="checkbox" value="' + json[i]['server_id'] + '" /></td>' +
+                            '<td>' + json[i]['sort'] + '</td>' +
+                            '<td>' + json[i]['name'] + '</td>' +
+                            '<td>' + json[i]['server_id'] + '</td>' +
+                            '<td>' + json[i]['group_name'] + '</td>' +
+                            '<td>' + json[i]['group_id'] + '</td>' +
+                            '<td>' + json[i]['game_dn'] + ':' + json[i]['game_port'] + '</td>' +
+                            '<td>' + json[i]['soap_add'] + ':' + json[i]['soap_port'] + '</td>' +
+                            '<td><button data-data-server="'+json[i]['server_id']+'" data-type="select_num" class="btn btn-primary" >查询设备数</button><br><button data-data-server="'+json[i]['server_id']+'" data-type="select_fee" class="btn btn-primary" >付费数</button></td>' +
+                            '</tr>';
+                    }
+                    $(id).html(c);
+                }else {
+                    $(id).html('');
+                }
+                if ($.cookie('cookie_gss')) {
+                    var gs = eval('[' + $.cookie('cookie_gss') + ']');
+                    for (var i in gs) {
+                        $('#content').find('input[type="checkbox"][value="'+gs[i]+'"]').attr('checked', true);
+                        $('#content').find('input[type="checkbox"][value="'+gs[i]+'"]').parent().parent().attr('style', 'background: #aba5618c');
+                    }
+                }
+            }
+        });
+    }
+
+    // 全选
+    $('#all_choose').click(function() {
+        var check_on = $(this).is(':checked');
+        if (check_on) {
+            $('#content').find('input[type="checkbox"]').attr('checked', true);
+        } else {
+            $('#content').find('input[type="checkbox"]').attr('checked', false);
+        }
+    });
+
+    // 获取选中的服务器
+    function getChoose() {
+        var server_id = '';
+        var name = '';
+        $('#content input[type="checkbox"]:checked').each(function(index, el) {
+            if (index == 0) {
+                server_id = $(el).val();
+                group_id = $(el).parent('td').next().next().next().next().next().text();
+                name = $(el).parent('td').next().next().text()+'('+group_id+')';
+            } else {
+                server_id += ',' + $(el).val();
+                group_id += ',' + $(el).parent('td').next().next().next().next().next().text();
+                name += '<br>' + $(el).parent('td').next().next().text()+'('+$(el).parent('td').next().next().next().next().next().text()+')';
+            }
+        });
+        if (server_id == '') {
+            layer.alert('请选择服务器！', {icon: 2});
+            return false;
+        }
+        return {
+            'server_id': server_id,
+            'name': name,
+            'group_id':group_id
+        };
+    }
+
+    $('button[data-type="auto_history"]').click(function() {
+        location.href += "&jinIf=914";
+    });
+
+
+    $('button[data-type="auto_open"]').click(function() {
+        var arr = getChoose();
+        if(arr){
+            autoOpen(arr.server_id, arr.name,arr.group_id);
+        }
+    });
+
+    function autoOpen(server_id, name,group_id) {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '自动开服设置',
+            area: ['800px', '600px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content:'<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">基准服务器ID</span>' +
+            '<div class="select_group_div" style="width: 45%;">'+
+            '<select id="g1" class="selectpicker show-tick " multiple data-live-search="true" data-actions-box="true" title="请选择"></select>'+
+            '</div>'+
+            '<div class="select_group_div" style="width: 45%;">'+
+            '<select id="s1" class="selectpicker show-tick" multiple data-live-search="true" data-actions-box="true" title="请选择"></select>'+
+            '</div>' +
+            '</div>' +
+            '<div class="input-group"><span class="input-group-addon">检测设备类型</span>' +
+            '<select id="code_type" class="input-group-addon" style="width: 150px;" >' +
+            '<option value="0">注册数</option>' +
+            '<option value="1">付费数</option>' +
+            '<option value="2">时间</option>' +
+            '</select></div>' +
+            '<div class="input-group codenum"><span class="input-group-addon">设备数</span><input type="number" id="codenum" value="1200" class="form-control jin-datetime-long"></div>' +
+            '<div class="input-group odate"><span class="input-group-addon">时间</span><input id="odate" type="text" class="form-control jin-datetime-long"></div>' +
+            '<div class="input-group"><span class="input-group-addon">检测时间段1</span>' +
+            '<input type="number" min="0" max="23"  id="hour1" value="00" style="height: 34px; text-align: center; width: 80px;">' +
+            ':' +
+            '<input type="number" min="0" max="23"  id="minute1" value="00" style="height: 34px; text-align: center;width: 80px;">' +'<span>------</span>'+
+            '<input type="number" min="0" max="23"  id="hour2" value="24"   style="height: 34px; text-align: center; width: 80px;">' +
+            ':' +
+            '<input type="number" min="0" max="23"  id="minute2" value="00" style="height: 34px; text-align: center;width: 80px;">' +
+            '</div>' +
+            '<div class="input-group"><span class="input-group-addon">检测时间段2</span>' +
+            '<input type="number" min="0" max="23"  id="hour3"   style="height: 34px; text-align: center; width: 80px;">' +
+            ':' +
+            '<input type="number" min="0" max="23"  id="minute3"  style="height: 34px; text-align: center;width: 80px;">' +'<span>------</span>'+
+            '<input type="number" min="0" max="23"  id="hour4"    style="height: 34px; text-align: center; width: 80px;">' +
+            ':' +
+            '<input type="number" min="0" max="23"  id="minute4"  style="height: 34px; text-align: center;width: 80px;">' +
+            '</div>' +
+            '<div class="input-group"><span class="input-group-addon">通知邮箱模板</span><select id="e_mail" class="input-group-addon" style="width: 150px;" ></select></div>' +
+            '<div class="input-group hide"><span class="input-group-addon">公告头模板</span><textarea  id="notice_title" class="form-control" cols="30" rows="4"></textarea></div>' +
+            '</div>',
+            success: function (index) {
+                $(".odate").hide();
+                $("#code_type").on('change',function () {
+                    if($(this).val()==2){
+                        $(".codenum").hide();
+                        $(".odate").show();
+                    }else{
+                        $(".codenum").show();
+                        $(".odate").hide();
+                    }
+                });
+
+                obj11 = {id: '#g1'};
+                obj11.url = "?p=Admin&c=Operation&a=group&jinIf=943";
+                obj33 = {id: '#s1'};
+                groups(obj11);
+                $('#g1').on('change', function () { //渠道改变的时候
+                    obj33.gi = $('#g1').val();
+                    obj33.url = "?p=Admin&c=Operation&a=server&jinIf=943";
+                    servers(obj33);
+                });
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=919",
+                    dataType:'json',
+                    success: function (json1) {
+                        var ccc='';
+                        var cccc = '';
+                        for (var j=0;j<json1.length;j++){
+                            if(json1[j]['temp_type']==2){
+                                ccc+='<option value="'+json1[j]['temp_info']+'">'+json1[j]['temp_title']+'</option>';
+                            }else{
+                                cccc=json1[j]['temp_info'];
+                            }
+                        }
+                        $("#e_mail").html(ccc);
+                        $("#notice_title").val(cccc)
+                    }
+                });
+            },
+            yes: function (index1) {
+                if($("#s1").val()==''){
+                    layer.msg('请正确填写内容!',{time:800});
+                    return false;
+                }
+                if($("#code_type").val()==2&&$("#odate").val()==''){
+                    layer.msg('请正确填写内容!',{time:800});
+                    return false;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=913",
+                    data: {
+                        gi:group_id,
+                        si: server_id,
+                        standard: $("#s1").val(),
+                        codenum: $("#codenum").val(),
+                        hour1: $("#hour1").val(),
+                        minute1: $("#minute1").val(),
+                        hour2: $("#hour2").val(),
+                        minute2: $("#minute2").val(),
+                        hour3: $("#hour3").val(),
+                        minute3: $("#minute3").val(),
+                        hour4: $("#hour4").val(),
+                        minute4: $("#minute4").val(),
+                        e_mail: $("#e_mail").val(),
+                        is_zhubo: 0,
+                        is_group_buy: 0,
+                        odate:$("#odate").val(),
+                        code_type:$("#code_type").val(),
+                        notice_title: 0,
+                        server_name : name
+                    },
+                    success: function () {
+                        layer.closeAll('loading');
+                        layer.alert('自动任务成功', {icon: 1}, function (index) {
+                            layer.close(index1);
+                            layer.close(index);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+        calendarOne('hour', '#odate');
+    }
+
+    $('#content').on('click', 'tr', function() {
+        var cb = $(this).find('td:first>input');
+        if (! cb.is(':checked')) {
+            cb.attr('checked', true);
+            $(this).attr('style', 'background: #aba5618c');
+        } else {
+            cb.attr('checked', false);
+            $(this).removeAttr('style', 'background: #aba5618c');
+        }
+        s_id='';
+        $('#content input[type="checkbox"]:checked').each(function(index, el) {
+            if (index == 0) {
+                s_id = $(el).val();
+            } else {
+                s_id += ',' + $(el).val();
+            }
+        });
+        $.cookie('cookie_gss', s_id, {expires: 7});
+    }).on('click', 'button[data-type="select_num"]', function () {
+        var si = $(this).attr('data-data-server');
+        var a_this = $(this);
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=920",
+            data: {
+                si: si
+            },
+            dataType:'json',
+            success: function (json) {
+                a_this.html(json)
+            }
+        });
+        return false;
+    }).on('click', 'button[data-type="select_fee"]', function () {
+        var si = $(this).attr('data-data-server');
+        var a_this = $(this);
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=9201",
+            data: {
+                si: si
+            },
+            dataType:'json',
+            success: function (json) {
+                a_this.html(json)
+            }
+        });
+        return false;
+    });
+</script>

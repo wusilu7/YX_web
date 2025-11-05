@@ -1,0 +1,159 @@
+{{include file="../common/1header.html"}}
+<style type="text/css">
+	.group{
+        display: -webkit-box;
+        width: 500px;
+        margin: auto;
+    }
+    .group_type{
+        width: 200px;
+        height: 300px;
+    }
+    .group_name{
+        width: 300px;
+        height: 1200px;
+    }
+    .group100{
+        width: 100%
+    }
+    .input-group{
+        margin-left: 10px
+    }
+    .has-success .input-group-addon{
+        background-color: #f0ad4e;
+        border-color: #f0ad4e;
+    }
+    .glyphicon-remove{
+        color: red;
+        cursor:pointer;
+    }
+</style>
+
+<div class="jin-content-title"><span>渠道分类配置</span></div>
+
+<div class="group100">
+    <div class="group">
+        <div class="group_type">
+            {{foreach $group_type as $v}}
+                <div>
+                    <label>
+                        <input type="radio" value="{{$v.id}}" name="radio" onclick="show_type_name({{$v.id}})"> 
+                        <span >{{$v.type_name}}</span>&nbsp;
+                    </label>
+                    <span class="glyphicon glyphicon-remove" onclick="del_type_name({{$v.id}}, '{{$v.type_name}}')"></span>
+                </div>
+            {{/foreach}}
+        </div>
+        <div class="group_name">
+            {{foreach $group_name as $v}}
+                <div>
+                    <label>
+                        <input type="checkbox" value="{{$v.group_id}}" name="checkbox" id="type_name_{{$v.group_id}}"> {{$v.group_name}}
+                    </label>
+                </div>
+            {{/foreach}}
+        </div>
+        <div>
+            <a id="jin_search" class="btn btn-warning">执行</a>
+            <div class="form-group has-success has-feedback">
+                <div class="input-group">
+                    <span class="input-group-addon"><a href="javascript:void(0)" style="color:white" id="addtype">添加分类</a></span>
+                    <input type="text" class="form-control" id="new_type" aria-describedby="inputGroupSuccess3Status" style="border-color: #f0ad4e;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+	var data = {};
+
+    $("#jin_search").click(function () {
+        data.type_id = $("input[name='radio']:checked").val();
+
+        var arr = new Array();
+        $(".group_name :checkbox:checked").each(function(i){
+            arr[i] = $(this).val();
+        });
+        var vals = arr.join(",");
+        data.group_id = vals
+            
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=912',
+            data: data,
+            dataType: "json",
+            success: function (json) {
+            	layer.closeAll();
+                if (json == 1) {
+                	layer.msg('归类成功');
+                } else {
+                	layer.msg('归类失败');
+                }
+            }
+        });
+    });
+
+    $("#addtype").click(function () {
+        data.new_type = $('#new_type').val();
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=914',
+            data: data,
+            dataType: "json",
+            success: function (json) {
+                if (json) {
+                    window.location.href = location.href;
+                }
+            }
+        });
+    });
+
+    var show_type_name = function (id) {
+        data.id = id;
+
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=913',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (json) {
+                layer.closeAll();
+
+                $('input[name="checkbox"]').each(function(){
+                    $(this).prop("checked", false);
+                });
+                for (var i = 0; i < json.length; i++) {
+                    $('#type_name_'+json[i].group_id).prop('checked', 'checked');
+                }
+            }
+        });
+    }
+
+    var del_type_name = function (del_id, del_name) {
+        data.del_id = del_id;
+
+        layer.confirm('确定要删除 "'+del_name+'" 这个分类吗？', {
+            btn: ['确定', '手滑了'] //按钮
+        }, function(){
+            $.ajax({
+                type: "post",
+                url: location.href + '&jinIf=915',
+                data: data,
+                dataType: "json",
+                success: function (json) {
+                    window.location.href = location.href;
+                }
+            });
+        }, function(){
+          
+        });
+    }
+</script>

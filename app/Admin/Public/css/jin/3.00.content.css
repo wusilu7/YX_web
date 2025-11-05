@@ -1,0 +1,233 @@
+/*div居中*/
+.center {
+    width: auto;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*内容区样式*/
+.jin-content {
+    padding: 0 30px;
+    margin-bottom: 60px;
+    box-shadow: 0 0 20px 3px #ddd;
+}
+
+/*面包屑撑起内容区*/
+.breadcrumb {
+    margin-top: 70px;
+}
+
+div[class="tab-content"] {
+    padding-top: 30px;
+}
+
+/*内容区大标题*/
+.jin-content-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.jin-content-title span {
+    cursor: default;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 0 #aaaaaa, 0 2px 0 #aaaaaa, 0 3px 0 #aaaaaa, 0 4px 0 #aaaaaa, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.jin-content-title span:hover {
+    color: #fdffcd;
+}
+
+.jin-datetime {
+    width: 165px;
+    text-align: center;
+    display: inline-block;
+}
+
+.jin-datetime-long {
+    width: 160px;
+    text-align: center;
+    display: inline-block;
+}
+
+#jin_search {
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+
+#jin_excel {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.alert-info {
+    border-radius: 10px;
+    background: -webkit-linear-gradient(left, #6a7187, #41d3a4); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #6a7187, #41d3a4); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #6a7187, #41d3a4); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #6a7187, #41d3a4); /* 标准的语法 */
+}
+
+.jin-skip {
+    margin-left: 20px;
+}
+
+.jin-skip > .form-control {
+    max-width: 50px;
+    padding: 0;
+    text-align: center;
+}
+
+.jin-search-span {
+    margin-left: 20px;
+}
+
+.jin-none {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+/*--------START表格--------*/
+/*表格标题文字居中*/
+th {
+    font-size: 15px;
+}
+
+th, td {
+    text-align: center;
+}
+
+.jin-explain * {
+    color: #777;
+    font-size: 12px;
+    cursor: default;
+}
+
+/*搜索框内间距*/
+#group_server > label, #group_only > label, #group_server_2 > label, #group_server_3 > label, #group_server_4 > label{
+    font-size: 18px;
+    color: #eee;
+    margin-bottom: 0;
+}
+
+#group_server > label:not(:first-child) {
+    margin-left: 20px;
+}
+
+#group_server_2 > label:not(:first-child) {
+    margin-left: 20px;
+}
+
+.jin-search-div label {
+    margin-left: 15px;
+}
+
+.jin-search-div > div:not(:first-child) {
+    margin-top: 10px;
+}
+
+/*12px字体（小）表格样式*/
+.jin-table-12px * {
+    font-size: 12px;
+}
+
+.jin-table-12px table tr td {
+    line-height: 28px;
+}
+
+.jin-table-form * {
+    font-size: 14px;
+}
+
+.jin-table-form td {
+    padding-top: 10px;
+}
+
+.jin-table-form td:first-child {
+    margin-top: 0;
+    float: right;
+    line-height: 23px;
+}
+
+.jin-table-form td:last-child {
+    text-align: left;
+}
+
+.attachment > div {
+    width: 85px;
+    display: block;
+}
+
+/*--------END表格--------*/
+
+/*--------START增加一个DIV--------*/
+.jin-add-button * {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px 10px;
+}
+
+.jin-add-button #plus {
+    color: #5cb85c;
+}
+
+.jin-add-button #minus {
+    color: #d9534f;
+}
+
+.jin-add-child {
+    display: none;
+    padding-top: 20px;
+}
+
+/*--------END增加一个DIV--------*/
+
+/*--------START子页面--------*/
+.jin-child {
+    padding: 15px 10px 0 10px;
+}
+
+.jin-child > div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.jin-child > div > span {
+    width: 100px;
+}
+
+/*--------END子页面--------*/
+
+/*输入框*/
+.jin-input {
+    margin-bottom: 25px;
+}
+
+.jin-search-input {
+    width: 225px;
+    display: inline;
+}
+
+.jin-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jin-btn-short {
+    margin-top: 10px;
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+    background-color: #33cc99;
+}
+
+/*--------表格页码--------*/
+.jin-page-list a {
+    cursor: default;
+}

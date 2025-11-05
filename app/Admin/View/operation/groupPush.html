@@ -1,0 +1,345 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.05.serverswitch.css" rel="stylesheet">
+<div class="jin-content-title"><span>渠道包推送设置</span></div>
+
+<div class="jin-server-select">
+    <div class="form-group" id="group_server_7"></div>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a data-type="all_push" class="btn btn-primary">推送</a>
+    <a data-type="all_time_push" class="btn btn-primary">定时推送</a>
+    <a data-type="select_time_push" class="btn btn-primary">定时推送任务查询</a>
+    <a data-type="select_push" class="btn btn-primary">推送记录查询</a>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center jin-server-table">
+        <thead>
+        <tr>
+            <th>渠道号</th>
+            <th>渠道名称</th>
+            <th>IOS推送key</th>
+            <th>IOS推送secret</th>
+            <th>安卓推送key</th>
+            <th>安卓推送secret</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    var url = location.href + '&jinIf=912';
+    var id = "#content";
+    var data = {};
+    var btn = [
+        '<div class="btn-group btn-group-sm">' +
+        '<a data-type="update" class="btn btn-primary">设置参数</a>' +
+        '</div>'
+    ];
+    //选服下拉框
+    $(document).ready(gsSelect3('#g','#p'));
+    function common() {
+        data.group_id = $("#g").val();
+        $.cookie('cookie_g', data.group_id, {expires: 30});
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "json",
+            success: function (json) {
+                if(json.length>=1){
+                    for (var i = 0; i < json.length; i++) {
+                        c +=
+                            '<tr>' +
+                            '<td>' + json[i]['group_id'] + '</td>' +
+                            '<td>' + json[i]['group_name'] + '</td>' +
+                            '<td>' + json[i]['ios_push_appkey'] + '</td>' +
+                            '<td>' + json[i]['ios_push_secret'] + '</td>' +
+                            '<td>' + json[i]['android_push_appkey'] + '</td>' +
+                            '<td>' + json[i]['android_push_secret'] +  '</td>' +
+                            '<td>' + btn +  '</td>' +
+                            '</tr>';
+                        $(id).html(c);
+                    }
+                }else {
+                    $(id).html('');
+                }
+            }
+        });
+    }
+    $("#jin_search").on('click', function () {
+        if ($("#g").val() == '') {
+            layer.alert('请选择渠道！', {icon: 2});
+            return false;
+        }
+        common();
+    });
+
+    $('a[data-type="all_push"]').click(function() {
+        if ($("#g").val() == '') {
+            layer.alert('请选择渠道！', {icon: 2});
+            return false;
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '渠道包推送通知',
+            area: ['600px', '400px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true,
+            content:'<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">环境</span><select style="padding: 6px 12px;" id="apns_production"><option value="1">生产环境</option><option value="0">开发环境</option></select></div>' +
+            '<div class="input-group"><span class="input-group-addon">标题</span><textarea id="pushtitle" rows="1"  class="form-control"></textarea></div>' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="pushcon" rows="8"  class="form-control"></textarea></div>' +
+            '' +
+            '</div>',
+            yes: function (index) {
+                var pushtitle = $("#pushtitle").val();
+                var pushcon  = $("#pushcon").val();
+                var apns_production = $("#apns_production").val();
+                layer.close(index);
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=914",
+                    data: {
+                        gi:$("#g").val(),
+                        pi:$("#p").val(),
+                        pushtitle:pushtitle,
+                        pushcon:pushcon,
+                        apns_production:apns_production
+                    },
+                    success: function () {
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+        $(document).ready(calendarOne('hour', "#time"));
+    });
+
+    $('a[data-type="all_time_push"]').click(function() {
+        if ($("#g").val() == '') {
+            layer.alert('请选择渠道！', {icon: 2});
+            return false;
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '定时渠道包推送通知',
+            area: ['600px', '600px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content:'<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">环境</span><select style="padding: 6px 12px;" id="apns_production"><option value="1">生产环境</option><option value="0">开发环境</option></select></div>' +
+            '<div class="input-group"><span class="input-group-addon">活动名称</span><input type="remain" id="remain" class="form-control"></div>' +
+            '<div class="input-group"><span class="input-group-addon">周期</span>' +
+            '<input type="checkbox" name="weeks"  value="0" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周日</label>'+
+            '<input type="checkbox" name="weeks"  value="1" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周一</label>'+
+            '<input type="checkbox" name="weeks"  value="2" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周二</label>'+
+            '<input type="checkbox" name="weeks"  value="3" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周三</label>'+
+            '<input type="checkbox" name="weeks"  value="4" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周四</label>'+
+            '<input type="checkbox" name="weeks"  value="5" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周五</label>'+
+            '<input type="checkbox" name="weeks"  value="6" style="width: 25px;height: 25px;" >' +
+            '<label style="width: 40px;height: 25px;" >周六</label>'+
+            '</div>' +
+            '<div class="input-group"><span class="input-group-addon">时刻</span>' +
+            '<input type="number" min="0" max="23"  id="hour" placeholder="小时"  style="height: 34px; text-align: center; width: 60px;">' +
+            '<span style="font-size: 20px; margin: 0 10px;">:</span>' +
+            '<input type="number" min="0" max="23"  id="minute" placeholder="分钟" style="height: 34px; text-align: center;width: 60px;">' +
+            '</div>' +
+            '<div class="input-group"><span class="input-group-addon">标题</span><textarea id="pushtitle" rows="1"  class="form-control"></textarea></div>' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="pushcon" rows="10"  class="form-control"></textarea></div>' +
+            '</div>',
+            yes: function (index) {
+                var pushtitle = $("#pushtitle").val();
+                var pushcon  = $("#pushcon").val();
+                var week  = checkedValue('weeks').join(",");
+                var hour  = $("#hour").val();
+                var minute  = $("#minute").val();
+                var remain  = $("#remain").val();
+                var apns_production = $("#apns_production").val();
+                layer.close(index);
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=915",
+                    data: {
+                        week:week,
+                        hour:hour,
+                        minute:minute,
+                        remain:remain,
+                        gi:$("#g").val(),
+                        pi:$("#p").val(),
+                        pushtitle:pushtitle,
+                        pushcon:pushcon,
+                        apns_production:apns_production
+                    },
+                    success: function () {
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    });
+
+    $('a[data-type="select_time_push"]').click(function() {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: location.href + "&jinIf=916",
+            success: function (json) {
+                var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                    '<tr><th>活动名称</th><th>周期</th><th>时刻(小时)</th><th>渠道</th><th>平台</th><th>操作</th></tr>';
+                for (var i=0;i<json.length;i++){
+                    c+='<tr><td>'+json[i]['remain']+'</td>' +
+                        '<td>'+json[i]['week']+'</td>' +
+                        '<td>'+json[i]['hour']+':'+json[i]['minute']+'</td>' +
+                        '<td>'+json[i]['gi']+'</td>' +
+                        '<td>'+json[i]['pi']+'</td>'+
+                        '<td data-data-id="'+json[i]['id']+'" data-data-info="'+json[i]['title']+'<hr>'+json[i]['content']+'">' +
+                        '<a data-type="select_timePush" class="btn btn-primary">查看</a>'+
+                        '<a data-type="del_timePush" class="btn btn-danger">删除</a></td>'+
+                        '</tr>';
+                }
+                c+='</table>';
+                var index1 = layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '修改推送参数',
+                    area: ['1000px', '700px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>',
+                    success: function (index) {
+                        $("a[data-type='select_timePush']").click(function () {
+                            layer.alert($(this).parent().data('data-info'));
+                        });
+                        $("a[data-type='del_timePush']").click(function () {
+                            var this_id=$(this).parent().data('data-id');
+                            layer.alert('确认删除？', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function (index) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: location.href + "&jinIf=917",
+                                    data: {
+                                        id:this_id
+                                    },
+                                    success: function () {
+                                        layer.alert('删除成功', {icon: 1}, function (index) {
+                                            layer.close(index);
+                                            layer.close(index1);
+                                        });
+                                    }
+                                });
+                            });
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    $('a[data-type="select_push"]').click(function() {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: location.href + "&jinIf=918",
+            success: function (json) {
+                var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                    '<tr><th>渠道</th><th>平台</th><th>标题</th><th>内容</th><th>时间</th><th>操作者</th></tr>';
+                for (var i=0;i<json.length;i++){
+                    c+='<tr><td>'+json[i]['gi']+'</td>' +
+                        '<td>'+json[i]['pi']+'</td>' +
+                        '<td>'+json[i]['title']+'</td>' +
+                        '<td>'+json[i]['content']+'</td>' +
+                        '<td>'+json[i]['time']+'</td>'+
+                        '<td>'+json[i]['create_user']+'</td>'+
+                        '</tr>';
+                }
+                c+='</table>';
+                var index1 = layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '修改推送参数',
+                    area: ['1000px', '700px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>',
+                    success: function () {
+
+                    }
+                });
+            }
+        });
+    });
+
+
+
+    $('#content').on('click', 'a[data-type="update"]', function() {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var ios_push_appkey = $(this).parents('tr').find('td').eq(2).text();
+        var ios_push_secret = $(this).parents('tr').find('td').eq(3).text();
+        var android_push_appkey = $(this).parents('tr').find('td').eq(4).text();
+        var android_push_secret = $(this).parents('tr').find('td').eq(5).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '修改推送参数',
+            area: ['600px', '320px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content:'<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">IOS推送key</span><input type="text" id="ios_push_appkey" class="form-control" value="'+ios_push_appkey+'"></div>' +
+            '<div class="input-group"><span class="input-group-addon">IOS推送secret</span><input type="text" id="ios_push_secret" class="form-control" value="'+ios_push_secret+'"></div>' +
+            '<div class="input-group"><span class="input-group-addon">安卓推送key</span><input type="text" id="android_push_appkey" class="form-control" value="'+android_push_appkey+'"></div>' +
+            '<div class="input-group"><span class="input-group-addon">安卓推送secret</span><input type="text" id="android_push_secret" class="form-control" value="'+android_push_secret+'"></div>' +
+            '</div>',
+            yes: function (index) {
+                var time = $("#time").val();
+                var groupNotice = $("#groupNotice").val();
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=913",
+                    data: {
+                        gi:id,
+                        ios_push_appkey:$("#ios_push_appkey").val(),
+                        ios_push_secret:$("#ios_push_secret").val(),
+                        android_push_appkey:$("#android_push_appkey").val(),
+                        android_push_secret:$("#android_push_secret").val()
+                    },
+                    success: function () {
+                        layer.close(index);
+                        common();
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+        return false;
+    })
+
+
+</script>

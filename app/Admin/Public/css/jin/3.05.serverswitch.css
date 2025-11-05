@@ -1,0 +1,39 @@
+/*表格*/
+table > thead {
+    background-color: #d2a87f;
+    color: #fff;
+}
+
+.jin-server-table {
+    border: 3px solid #d2a87f;
+}
+
+.jin-server-table > thead > tr > th {
+    font-size: 16px;
+}
+
+.jin-server-table > tbody > tr > td {
+    line-height: 36px;
+}
+
+
+/*选渠道下拉框*/
+.jin-server-select {
+    margin-bottom: 20px;
+}
+
+.jin-server-column1 {
+    width: 55px;
+}
+
+.jin-server-column3 {
+    width: 35px;
+}
+
+.jin-server-column5 {
+    width: 212px;
+}
+
+.jin-server-column6 {
+    width: 100px;
+}

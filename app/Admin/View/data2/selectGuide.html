@@ -1,0 +1,71 @@
+{{include file="../common/1header.html"}} <!-- 在公共的头部文件中引入了CSS文件 -->
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>新手指引节点</span></div>
+<div class="alert alert-info">
+    <!-- 下面的div里面的内容是通过js加载的，在2footer.html页面中引入了jin.js文件，该文件里通过jQuery操作DOM元素实现内容的添加 -->
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>新手指引编号</th>
+            <th>指引数量</th>
+        </tr>
+        </thead>
+        <!--↓↓ tbody中的内容通过js加载得到 ↓↓-->
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--↓↓ 下面div中的内容通过js加载得到 ↓↓-->
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①…；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+
+{{include file="../common/2footer.html"}} <!-- 在公共尾部文件中引入了js文件 -->
+
+<script>
+    var url = location.href + "&jinIf=912";
+    //计算任务完成率
+    //console.log(url);
+    var c_rate = function (json) {
+        return ((json.opt1 / json.opt0) * 100).toFixed(2) + '%';
+    };
+    //计算流失率
+    var a_rate = function (json) {
+        return ((1 - json.opt1 / json.opt0) * 100).toFixed(2) + '%';
+    };
+    //为调用自己封装的tableList方法声明相关的参数：url,arr,data,id
+    var arr = ['quest_id', 'quest_name', 'opt0', 'opt1', c_rate, a_rate];
+    var id = ["#content", "#page"];
+    var data = {page: 1, order: 'desc'};
+    //下面是依次加载相应的DOM元素，对应的渠道，服务器，和时间的选取分别调用gsSelect()和calendar()方法
+    $(document).ready(gsSelect('#group', '#server', getQuest)).ready(calendar('month', '#time_start', '#time_end'));
+    //设置一个函数来专门调用tableList方法
+    function getQuest() {
+        tableList(url, data, id, arr); //这个是自己封装的方法在jin-tableList.js文件中
+    }
+    $("#jin_search").on('click', function () {
+        data.page = 1;
+        data.time_start = $('#time_start').val();
+        data.time_end = $('#time_end').val();
+        getQuest();
+    });
+</script>

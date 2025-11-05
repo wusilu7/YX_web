@@ -1,0 +1,104 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.07.sa.css" rel="stylesheet">
+<div class="jin-content-title"><span>每周特卖修改</span></div>
+<hr />
+<div class="form-horizontal col-sm-6 col-sm-offset-3">
+    <div class="form-group">
+        <label for="ID" class="col-sm-2 control-label">编号</label>
+        <div class="col-sm-10">
+            <input id="ID" class="form-control" readonly/>
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label for="OpenDate" class="col-sm-2 control-label">开放日期</label>
+            <div class="col-sm-10">
+                <input id="OpenDate" class="form-control"/>
+                <!--<input type="number" id="OpenDate1" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">月-->
+                <!--<input type="number" id="OpenDate2" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">日-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="OpenTime" class="col-sm-2 control-label">开放时间</label>
+            <div class="col-sm-10">
+                <input id="OpenTime" class="form-control"/>
+                <!--<input type="number" id="OpenTime1" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">时-->
+                <!--<input type="number" id="OpenTime2" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">分-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Duration" class="col-sm-2 control-label">持续时间</label>
+            <div class="col-sm-10">
+                <input id="Duration" class="form-control"/>
+                <!--<input type="number" id="Duration" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">天-->
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="forced_send_ServerOption" class="col-sm-2 control-label">强制发送</label>
+                <input id="forced_send_ServerOption" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+                *当ServerOption为空,也会发送
+            </div>
+            <label for="ServerOption" class="col-sm-2 control-label">ServerOption</label>
+            <div class="col-sm-10">
+                <input id="ServerOption" class="form-control"/>
+                <!--<input type="number" id="ServerOption" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">天-->
+            </div>
+        </div>
+    </div>
+    <div class="btn-group center jin-sa-btn">
+        <button data-type="update" class="btn  btn-success">修改</button>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=920",
+            dataType: "json",
+            success: function (json) {
+                $("#ID").val(json.ID);
+                $("#ID").attr('data-data-gi',json.gi);
+                $("#ID").attr('data-data-sign',json.gi_sign);
+                $("#OpenDate").val(json.OpenDate);
+                $("#OpenTime").val(json.OpenTime);
+                $("#Duration").val(json.Duration);
+                $("#ServerOption").val(json.ServerOption);
+                $("#forced_send_ServerOption").prop("checked",parseInt(json.forced_send_ServerOption));
+            }
+        });
+    });
+    $('button[data-type="update"]').on('click', function () {//修改服务器
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            data: {
+                gi: $("#ID").attr('data-data-gi'),
+                sign: $("#ID").attr('data-data-sign'),
+                ID:$("#ID").val(),
+                OpenDate:$("#OpenDate").val(),
+                OpenTime:$("#OpenTime").val(),
+                Duration:$("#Duration").val(),
+                ServerOption:$("#ServerOption").val(),
+                forced_send_ServerOption:$('#forced_send_ServerOption').is(':checked') ? $('#forced_send_ServerOption').val() : 0,
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                layer.alert('成功', {icon: 1}, function (index) {
+                    layer.close(index);
+                    window.location.reload();
+                });
+            }
+        });
+    });
+</script>

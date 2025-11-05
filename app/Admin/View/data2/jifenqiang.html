@@ -1,0 +1,118 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>积分墙日志</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+               placeholder="开始日期">
+        -
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+               placeholder="结束日期">
+    </div>
+    <div>
+        <label for="order_id">筛选：</label>
+        <input id="char" type="text" class="form-control jin-search-input" placeholder="角色ID">
+
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+         <a id="server_summary" class="btn btn-success">服务器汇总</a>
+        <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+<!--        <label for="subtract_num">总量：</label>-->
+<!--        <span id="subtract_num"></span>-->
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr id="thead">
+            <th>服务器ID</th>
+            <th>角色ID</th>
+            <th>标题</th>
+            <th>珍珠</th>
+            <th>时间</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①查询条件可以按需自由组合；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    var url = location.href + "&jinIf=912";
+    var arr = ['si', 'receiver', 'title', 'money','create_time'];
+    var id = ["#content", "#page", "#subtract_num"];
+    var data = {};
+    $(function () {
+        gsSelect('#group', '#server', '#platform');
+        calendar('month', '#time_start', '#time_end');
+    });
+    function getCharge() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+
+        data.page       = 1;
+        data.time_start = time_start;//查询开始时间;
+        data.time_end   = time_end;//查询结束时间
+        data.char       = $('#char').val();
+        data.group      = $('#group').val();
+        data.si         = $('#server').val();
+        data.pi         = $('#platform').val();
+
+        tableList(url, data, id, arr,2);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getCharge();
+    });
+
+
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getCharge();
+    });
+
+    // 导出Excel
+    $("#jin_excel").on('click', function () {
+        data.page       = 'excel';
+        data.time_start = $('#time_start').val();//查询开始时间;
+        data.time_end   = $('#time_end').val();//查询结束时间
+        data.char       = $('#char').val();
+        data.group      = $('#group').val();
+        data.si         = $('#server').val();
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=912',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

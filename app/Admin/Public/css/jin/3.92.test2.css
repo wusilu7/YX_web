@@ -1,0 +1,8 @@
+.jin-test1-div {
+    word-break: break-all;
+    margin-top: 20px;
+    width: 80%;
+    height: 500px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}

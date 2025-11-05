@@ -1,0 +1,573 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+
+<div class="jin-content-title"><span>排行榜</span></div>
+<div class="alert alert-info">
+    <div id="group_server_2"></div>
+</div>
+
+<div class="jin-search-div">
+    <div class="form-group">
+        <label class="col-sm-1 control-label" style="line-height: 35px;width: 105px;">查询类型：</label>
+        <div class="col-sm-2">
+            <select id="type" name="type" class="selectpicker show-tick form-control" >
+                <!--<option value="0">0</option>-->
+                <option value="1">普通冒险</option>
+                <option value="3">时空裂隙</option>
+<!--                <option value="3">神灵秘境</option>-->
+<!--                <option value="4">节日积分</option>-->
+<!--                <option value="5">节日积分上一期</option>-->
+<!--                <option value="6">无尽模式</option>-->
+<!--                <option value="7">赛季A</option>-->
+<!--                <option value="8">/赛季A上一期</option>-->
+<!--                <option value="9">节日积分2</option>-->
+<!--                <option value="10">节日积分2上一期</option>-->
+<!--                <option value="11">无尽模式2</option>-->
+<!--                <option value="12">开服宝箱</option>-->
+<!--                <option value="13">活动宝箱</option>-->
+<!--                <option value="14">赛季B</option>-->
+<!--                <option value="15">赛季B上一期</option>-->
+<!--                <option value="16">赛季A永生者</option>-->
+<!--                <option value="17">赛季B永生者</option>-->
+<!--                <option value="18">赛季前夕A</option>-->
+<!--                <option value="19">赛季前夕B</option>-->
+<!--                <option value="20">保卫部落A</option>-->
+<!--                <option value="21">保卫部落B</option>-->
+            </select>
+        </div>
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <input size="16" type="checkbox" id="ischeck1" value="1">
+        <label for="ischeck1" style="margin-left: 0px;">查询合服前</label>
+        <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+        <button id="delete_power" class="btn btn-danger hide" style="float: right;">清除榜单</button>
+    </div>
+</div>
+
+<!-- 面板区 -->
+<div class="tab-content">
+    <!--今日-->
+    <div class="tab-pane active" id="top_today">
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead>
+                <tr id="ths">
+                    <th>排名</th>
+                    <th>名称</th>
+                    <th>角色ID</th>
+                    <th>账号</th>
+                    <th>等级</th>
+                    <th>充值金额</th>
+                    <th>进度</th>
+                    <th>通关时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    var url = location + "&jinIf=912";
+    var id = ["#content", "#page"];
+    var char_name = function (json) {
+        if (json.color == 1) {
+            return '<b style="color: red;">' + json.char_name + '</b>';
+        } else {
+            return json.char_name;
+        }
+    }
+
+    var btn = function (json) {
+        return [
+            '<div class="btn-group btn-group-sm">' +
+            '<a data-type="cancel" data-char_id="' + json.char_id + '" class="btn btn-warning">移除排行榜</a>' +
+            '<a data-type="delete" data-char_id="' + json.char_id + '" class="btn btn-danger">封号</a>' +
+            '<a data-type="stime" data-char_id="' + json.char_id + '" class="btn btn-primary">通关时间</a>' +
+            '<a data-type="charPack" data-char_id="' + json.char_id + '" class="btn btn-success">查询装备</a>' +
+            '<a data-type="ban_out" data-char_id="' + json.char_id + '" class="btn btn-warning">禁产出</a>' +
+            '<a data-type="select_attr" data-char_id="' + json.char_id + '" class="btn btn-primary">查面板属性</a>' +
+            '<a data-type="select_attr1" data-char_id="' + json.char_id + '" class="btn btn-warning">查进图属性</a>' +
+            '<a data-type="select_cheating" data-char_id="' + json.char_id + '" class="btn btn-success">检测外挂安卓</a>' +
+            // '<a data-type="select_cheating1" data-char_id="' + json.char_id + '" class="btn btn-success">检测外挂IOS</a>' +
+            '</div>'
+        ];
+    }
+   
+    var arr = ['rank', char_name,'char_id', 'acc_name', 'level','allfee','power','extend_data', btn];
+    var data = {};
+
+    // gsSelect('#group', '#server');
+    gsSelect('#group', '#server', '', getPower);
+    calendar('month', '#time_start', '#time_end');
+
+    //请求数据
+
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        getPower();
+    });
+    function getPower() {
+        data.si    = $('#server').val();
+        data.type  = $('#type').val();
+        data.page = '';
+        data.before      = $('#ischeck1').is(':checked') ? $('#ischeck1').val() : '';
+        tableList(url, data, id, arr);
+    }
+    $('#content').on('click', 'a[data-type=sign]', function() {
+        var char_id = $(this).attr('data-char_id');
+        $.ajax({
+            url: location.href + '&jinIf=913',
+            type: 'POST',
+            data: { char_id: char_id },
+            dataType: 'json',
+            success: function (json) {
+                if (json.status == 1) {
+                    layer.closeAll();
+                    layer.alert(json.msg, {icon: 1}, function (index) {
+                        getPower();
+                        layer.close(index);
+                    });
+                }
+            }
+        });
+
+    }).on('click', 'a[data-type=cancel]', function() {
+        var char_id = $(this).attr('data-char_id');
+        layer.alert('确认把玩家从排行榜移除？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                url: location.href + '&jinIf=9141',
+                type: 'POST',
+                data: {
+                    si:$('#server').val(),
+                    char_id: char_id,
+                    rank_type: $('#type').val()
+                },
+                dataType: 'json',
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']//0.3透明度的白色背景
+                    });
+                },
+                success: function (json) {
+                    layer.closeAll('loading');
+                    if(json==1){
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            getPower();
+                            layer.close(index);
+                        });
+                    }else{
+                        layer.alert('失败', {icon: 2}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                }
+            });
+        });
+    }).on('click', 'a[data-type=ban_out]', function() {
+        var char_id = $(this).attr('data-char_id');
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '禁产出',
+            area: ['300px', '220px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">时长</span><select id="days" class="form-control jin-search-input">' +
+            '<option value="1">1天</option>' +
+            '<option value="3">3天</option>' +
+            '<option value="7">7天</option>' +
+            '<option value="15">15天</option>' +
+            '<option value="365">365天</option>' +
+            '</select></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    url: location.href + '&jinIf=91411',
+                    type: 'POST',
+                    data: {
+                        days:$('#days').val(),
+                        si:$('#server').val(),
+                        char_id: char_id
+                    },
+                    dataType: 'json',
+                    success: function (json) {
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            getPower();
+                            layer.close(index);
+                        });
+                    }
+                });
+            }
+        });
+    }).on('click', 'a[data-type=delete]', function() {
+        var acc = $(this).parents('tr').find('td').eq(3).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '封号',
+            area: ['500px', '200px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">理由</span><input id="reason" type="text" class="form-control" placeholder="必填项"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=9142',
+                    data: {
+                        gi:$("#group").val(),
+                        si: $("#server").val(),
+                        reason: $("#reason").val(),
+                        acc:acc
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('修改成功', {icon: 1}, function (index1) {
+                            layer.close(index1);
+                        });
+                    }
+                });
+            }
+        });
+    }).on('click', 'a[data-type="charPack"]', function () {
+        var char_guid = $(this).attr('data-char_id');
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=917",
+            data: {
+                char_guid:char_guid,
+                si:$('#server').val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                    '<tr><th>名称</th><th>数量/星级</th>';
+                c+='<tr>' +
+                    '<td style="color: #ff5155">剩余金币</td>' +
+                    '<td>'+json['base_info']['gold']+'</td>' +
+                    '</tr>';
+                c+='<tr>' +
+                    '<td  style="color: #ff5155">剩余钻石</td>' +
+                    '<td>'+json['base_info']['money']+'</td>' +
+                    '</tr>';
+                for (var i=0;i<json['equip_info'].length;i++){
+                    c+='<tr>' +
+                        '<td>'+(json['equip_info'][i]['item_name'])+'</td>' +
+                        '<td>'+json['equip_info'][i]['star']+'</td>' +
+                        '</tr>';
+                }
+                c+='</table>';
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '',
+                    area: ['500px', '600px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>'
+                });
+            }
+        });
+    }).on('click', 'a[data-type="select_attr"]', function () {
+        var char_guid = $(this).attr('data-char_id');
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=918",
+            data: {
+                char_guid:char_guid,
+                si:$('#server').val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c='<table class="table table-bordered table-hover text-center jin-server-table"><span style="color: #ff4525;font-size: 20px;">该玩家三天之内最新的面板属性</span>' +
+                    '<tr><th>攻击</th><th>血量</th><th>速度</th>';
+                c+='<tr>' +
+                    '<td>'+json['param1']+'</td>' +
+                    '<td>'+json['param2']+'</td>' +
+                    '<td>'+json['param4']+'</td>' +
+                    '</tr>';
+                c+='</table>';
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '',
+                    area: ['500px', '200px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>'
+                });
+            }
+        });
+    }).on('click', 'a[data-type="select_attr1"]', function () {
+        var char_guid = $(this).attr('data-char_id');
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '查进图属性',
+            area: ['300px', '250px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child"><span style="color: #ff4525;font-size: 13px;">例:该玩家3天之内进图最高的血量</span>' +
+            '<div class="input-group">' +
+            '<span class="input-group-addon">时长</span><select id="days" class="form-control jin-search-input">' +
+            '<option value="3">3天内</option>' +
+            '<option value="7">7天内</option>' +
+            '</select>' +
+            '</div>' +
+            '<div class="input-group">' +
+            '<span class="input-group-addon">排序</span><select id="order_type" class="form-control jin-search-input">' +
+            '<option value="param2">血量</option>' +
+            '<option value="param1">攻击</option>' +
+            '<option value="param4">速度</option>' +
+            '</select>' +
+            '</div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "post",
+                    url: location.href + "&jinIf=920",
+                    data: {
+                        char_guid:char_guid,
+                        si:$('#server').val(),
+                        days:$('#days').val(),
+                        order_type:$('#order_type').val()
+                    },
+                    dataType: "json",
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function (json) {
+                        layer.closeAll('loading');
+                        var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                            '<tr><th>攻击</th><th>血量</th><th>速度</th>';
+                        c+='<tr>' +
+                            '<td>'+json['param1']+'</td>' +
+                            '<td>'+json['param2']+'</td>' +
+                            '<td>'+json['param4']+'</td>' +
+                            '</tr>';
+                        c+='</table>';
+                        layer.open({
+                            type: 1,
+                            closeBtn: 2,
+                            title: '',
+                            area: ['500px', '200px'],
+                            btnAlign: 'c',
+                            shadeClose: true, //点击遮罩关闭
+                            content:'<div class="jin-child">' +
+                            c+
+                            '</div>'
+                        });
+                    }
+                });
+            }
+        });
+    }).on('click', 'a[data-type="select_cheating"]', function () {
+        var char_guid = $(this).attr('data-char_id');
+        var acc = $(this).parents('tr').find('td').eq(3).text();
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=919",
+            data: {
+                char:char_guid,
+                acc:acc
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                    '<tr><th>设备名</th><th>设备类型</th><th>设备号</th><th>ip</th><th>包名</th><th>时间</th><th>检测结果</th><th>风险环境</th><th>风险等级</th><th>防御结果</th>';
+                for(var i=0;i<json.length;i++){
+                    c+='<tr>' +
+                        '<td>'+json[i]['device_name']+'</td>' +
+                        '<td>'+json[i]['device_type']+'</td>' +
+                        '<td>'+json[i]['code']+'</td>' +
+                        '<td>'+json[i]['ip']+'</td>' +
+                        '<td>'+json[i]['pack']+'</td>' +
+                        '<td>'+json[i]['time']+'</td>' +
+                        '<td>'+json[i]['check_result']+'</td>' +
+                        '<td>'+json[i]['risk']+'</td>' +
+                        '<td>'+json[i]['risk_level']+'</td>' +
+                        '<td>'+json[i]['defense_result']+'</td>' +
+                        '</tr>';
+                }
+                c+='</table>';
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '',
+                    area: ['1200px', '600px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>'
+                });
+            }
+        });
+    }).on('click', 'a[data-type="select_cheating1"]', function () {
+        var char_guid = $(this).attr('data-char_id');
+        var acc = $(this).parents('tr').find('td').eq(3).text();
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=9191",
+            data: {
+                char:char_guid,
+                acc:acc
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                    '<tr><th>设备id</th><th>ios版本</th><th>角色ID</th><th>账号</th><th>角色名</th><th>服务器</th><th>包名</th><th>ip</th><th>外挂风险</th><th>环境风险</th><th>其他风险</th><th>风险处理</th><th>时间</th>';
+                for(var i=0;i<json.length;i++){
+                    c+='<tr>' +
+                        '<td>'+json[i]['code']+'</td>' +
+                        '<td>'+json[i]['ios_v']+'</td>' +
+                        '<td>'+json[i]['char_id']+'</td>' +
+                        '<td>'+json[i]['acc']+'</td>' +
+                        '<td>'+json[i]['char_name']+'</td>' +
+                        '<td>'+json[i]['si']+'</td>' +
+                        '<td>'+json[i]['pack']+'</td>' +
+                        '<td>'+json[i]['ip']+'</td>' +
+                        '<td>'+json[i]['plug_risk']+'</td>' +
+                        '<td>'+json[i]['env_risk']+'</td>' +
+                        '<td>'+json[i]['other_risk']+'</td>' +
+                        '<td>'+json[i]['risk_result']+'</td>' +
+                        '<td>'+json[i]['time']+'</td>' +
+                        '</tr>';
+                }
+                c+='</table>';
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '',
+                    area: ['1200px', '600px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>'
+                });
+            }
+        });
+    }).on('click', 'a[data-type="stime"]', function () {
+        var char_guid = $(this).attr('data-char_id');
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=916",
+            data: {
+                opt_type:$('#type').val()-1,
+                char_guid:char_guid,
+                si:$('#server').val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var c='<table class="table table-bordered table-hover text-center jin-server-table"><span style="color: #ff4525;font-size: 20px;">该玩家各章节的最快通关时间</span>' +
+                    '<tr><th>周目</th><th>大章节</th><th>通关时间</th><th>记录时间</th></tr>';
+                for (var i=0;i<json.length;i++){
+                    c+='<tr>' +
+                        '<td>'+(json[i]['param0']-0+1)+'</td>' +
+                        '<td>'+json[i]['param1']+'</td>' +
+                        '<td>'+json[i]['param5']+'</td>' +
+                        '<td>'+json[i]['log_time']+'</td>' +
+                        '</tr>';
+                }
+                c+='</table>';
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '',
+                    area: ['500px', '600px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>'
+                });
+            }
+        });
+    });
+    $("#delete_power").on('click',function () {
+        layer.alert('确认删除清除吗？请谨慎操作！！！！', {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=915",
+                data: {
+                    si:$('#server').val(),
+                    rank_type: $('#type').val()
+                },
+                success: function () {
+                    layer.alert('成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    })
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                //location.href = output;
+                window.open(output)
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+
+</script>

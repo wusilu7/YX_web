@@ -1,0 +1,305 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.05.serverswitch.css" rel="stylesheet">
+<div class="jin-content-title"><span>服务器定时设置</span></div>
+
+<div class="jin-server-select">
+    <div class="form-group" id="group_server_6"></div>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <button data-type="all_select_gift" class="btn btn-primary">批量检测礼包</button>
+    <button data-type="all_select_log" class="btn btn-primary">批量检测日志</button>
+    <button data-type="all_select_serverConfig" class="btn btn-primary">批量检测配置</button>
+    <label style="cursor: pointer;"><input name="filter_type" type="radio" value="101" checked/>高防</label>
+    <label style="cursor: pointer;"><input name="filter_type" type="radio" value="102" />非高防</label>
+    <br>
+    <span>检测礼包: 查看未开服的跟已开服的按钮上的数字是否一致</span><br>
+    <span>检测日志: 查看时间跟现在时间是否相差1小时以上</span>
+    <hr>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center jin-server-table">
+        <thead>
+        <tr>
+            <th>
+                <input id="all_choose" type="checkbox">
+                <label for="all_choose">全选</label>
+            </th>
+            <th>服务器名称</th>
+            <th>地址端口</th>
+            <th>是否开服</th>
+            <th>检测礼包</th>
+            <th>检测日志</th>
+            <th>检测配置</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    var url = location.href + '&jinIf=912';
+    var id = "#content";
+    var data = {};
+    //选服下拉框
+    $(document).ready(gsSelect3('#g'));  //页面加载完成后，调用groupSelect()函数，这个函数在jin-select.js中有封装
+    $("#jin_search").on('click', function () {    //根据渠道读取相应渠道的服务器信息
+        data.group_id = $("#g").val();
+        $.cookie('cookie_g', data.group_id, {expires: 30});
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                if(json.length>=1){
+                    for (var i = 0; i < json.length; i++) {
+                        c +=
+                            '<tr>' +
+                            '<td><input type="checkbox" value="' + json[i]['server_id'] + '" />'+json[i]['server_id']+'</td>' +
+                            '<td>' + json[i]['name'] + '</td>' +
+                            '<td>游戏>>' + json[i]['game_dn'] + ':' + json[i]['game_port'] + '<br>soap>>' + json[i]['soap_add'] + ':' + json[i]['soap_port'] + '</td>' +
+                            '<td>' + json[i]['is_show'] + '</td>' +
+                            '<td><button data-type="select_gift"  class="btn btn-primary" >检测礼包</button></td>' +
+                            '<td><button data-type="select_log" class="btn btn-primary" >检测日志</button></td>' +
+                            '<td><button data-type="select_serverConfig" class="btn btn-primary" >检测配置</button></td>' +
+                            '</tr>';
+                    }
+                    $(id).html(c);
+                }else {
+                    $(id).html('');
+                }
+            }
+        });
+    });
+
+    $('#content').on('click', 'button[data-type="select_gift"]', function () {
+        var si = $(this).parents('tr').find('td').eq(0).text();
+        $this = $(this);
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=916",
+            data: {
+                si: si
+            },
+            dataType:'json',
+            success: function (json) {
+                $this.html(json);
+            }
+        });
+        return false;
+    }).on('click', 'button[data-type="select_log"]', function () {
+        var si = $(this).parents('tr').find('td').eq(0).text();
+        $this = $(this);
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=9161",
+            data: {
+                si: si
+            },
+            dataType:'json',
+            success: function (json) {
+                $this.html(json);
+            }
+        });
+        return false;
+    }).on('click', 'button[data-type="select_serverConfig"]', function () {
+        var si = $(this).parents('tr').find('td').eq(0).text();
+        $this = $(this);
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=9162",
+            data: {
+                si: si,
+                filter_type : $('input[name=filter_type]:checked').val()
+            },
+            dataType:'json',
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var xxx = ['host','soap','account','game','log'];
+                var yyy = ['port','user','pw','prefix'];
+                var xxx1 = ['游戏','soap','account','game','log'];
+                var yyy1= ['端口','用户','密码','库'];
+                var c='<table class="table table-bordered table-hover text-center jin-server-table">' +
+                    '<tr><th>类别</th><th>是否匹配</th></tr>';
+                for (var i=0;i<xxx.length;i++){
+                    for (var j=0;j<yyy.length;j++){
+                        if(i==0 || i==1){
+                            if(j==1||j==2||j==3){
+                                continue;
+                            }
+                        }
+                        c+='<tr>' +
+                            '<td>'+xxx1[i]+'--'+yyy1[j]+'</td>' +
+                            '<td>'+json[xxx[i]][yyy[j]]+'</td>'
+                    }
+
+                }
+                c+='</table>';
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '',
+                    area: ['600px', '800px'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:'<div class="jin-child">' +
+                    c+
+                    '</div>'
+                });
+            }
+        });
+        return false;
+    }).on('click', 'tr', function() {
+        var cb = $(this).find('td:first>input');
+        if (! cb.is(':checked')) {
+            cb.attr('checked', true);
+            $(this).attr('style', 'background: #aba5618c');
+        } else {
+            cb.attr('checked', false);
+            $(this).removeAttr('style', 'background: #aba5618c');
+        }
+    });
+
+    // 全选
+    $('#all_choose').click(function() {
+        var check_on = $(this).is(':checked');
+        if (check_on) {
+            $('#content').find('input[type="checkbox"]').attr('checked', true);
+        } else {
+            $('#content').find('input[type="checkbox"]').attr('checked', false);
+        }
+    });
+    // 获取选中的服务器
+    function getChoose() {
+        var server_id = '';
+        $('#content input[type="checkbox"]:checked').each(function(index, el) {
+            if (index == 0) {
+                server_id = $(el).val();
+            } else {
+                server_id += ',' + $(el).val();
+            }
+        });
+
+        if (server_id == '') {
+            layer.alert('请选择服务器！', {icon: 2});
+            return false;
+        }
+        return {
+            'server_id': server_id
+        };
+    }
+    // 禁止点击tr默认选中
+    function removeBackgroud(obj) {
+        var tr = $(obj).parents('tr');
+        var cb = tr.find('td:first>input');
+        if (! cb.is(':checked')) {
+            cb.attr('checked', true);
+            tr.attr('style', 'background: #aba5618c');
+        } else {
+            cb.attr('checked', false);
+            tr.removeAttr('style', 'background: #aba5618c');
+        }
+    }
+
+    $('button[data-type="all_select_gift"]').click(function() {
+        var si_str= getChoose();
+        if (si_str==false) {
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=917",
+            data: {
+                si: si_str.server_id
+            },
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            dataType:'json',
+            success: function (json) {
+                layer.closeAll('loading');
+                for (var i=0;i<json.length;i++){
+                    $('#content').find("input[type=checkbox][value='"+json[i].si+"']").parents('tr').find('td').eq(4).find('button ').html(json[i].all_num)
+                }
+            }
+        });
+    });
+
+    $('button[data-type="all_select_log"]').click(function() {
+        var si_str= getChoose();
+        if (si_str==false) {
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=9171",
+            data: {
+                si: si_str.server_id
+            },
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            dataType:'json',
+            success: function (json) {
+                layer.closeAll('loading');
+                for (var i=0;i<json.length;i++){
+                    if(json[i].status==1){
+                        $('#content').find("input[type=checkbox][value='"+json[i].si+"']").parents('tr').find('td').eq(5).find('button ').html(json[i].log_time).attr('class','btn btn-success')
+                    }else{
+                        $('#content').find("input[type=checkbox][value='"+json[i].si+"']").parents('tr').find('td').eq(5).find('button ').html(json[i].log_time).attr('class','btn btn-danger')
+                    }
+                }
+            }
+        });
+    });
+
+
+    $('button[data-type="all_select_serverConfig"]').click(function() {
+        var si_str= getChoose();
+        if (si_str==false) {
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=9172",
+            data: {
+                si: si_str.server_id,
+                filter_type : $('input[name=filter_type]:checked').val()
+            },
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            dataType:'json',
+            success: function (json) {
+                layer.closeAll('loading');
+                for (var i=0;i<json.length;i++){
+                    if(json[i].status==1){
+                        $('#content').find("input[type=checkbox][value='"+json[i].si+"']").parents('tr').find('td').eq(6).find('button ').html('匹配').attr('class','btn btn-success')
+                    }else{
+                        $('#content').find("input[type=checkbox][value='"+json[i].si+"']").parents('tr').find('td').eq(6).find('button ').html('不匹配').attr('class','btn btn-danger')
+                    }
+                }
+            }
+        });
+    });
+</script>

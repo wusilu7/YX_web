@@ -1,0 +1,2 @@
+★18:31:19-219.135.170.27★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062073961`order=inner_1686565874`amount=30.00`diamond=30.00`id=202
+★18:31:19-219.135.170.27★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

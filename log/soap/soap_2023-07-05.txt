@@ -1,0 +1,2 @@
+★15:46:43-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|29|0|0|0|charguid=2814754062074064`order=16885431943963966542643`amount=4.99`resettype=3`giftid=9`id=130`param=
+★15:46:43-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

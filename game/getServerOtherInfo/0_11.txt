@@ -1,0 +1,1 @@
+{"getGroupVersion":"|http:\/\/pack.qianjungame.com\/gamepacks\/jywshnaz_gxl1214.apk|111","NetworkLicense":"","CustomInfo2":"","CustomInfo3":"","Notice":"","UpdateInfo":"","NextUpdateInfo":""}

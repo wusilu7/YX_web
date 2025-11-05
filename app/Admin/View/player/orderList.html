@@ -1,0 +1,40 @@
+{{include file="../common/1header.html"}}
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>服务器</th>
+            <th>申请人</th>
+            <th>角色名</th>
+            <th>角色ID</th>
+            <th>订单号</th>
+            <th>充值金额</th>
+            <th>充值时间</th>
+            <th>状态</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    $(function () {
+        jsonAudit();
+    });
+    //刷新数据
+    function jsonAudit() {
+        var url = location.href + "&jinIf=912";
+	    var id = ["#content", "#page"];
+        var data = {};
+        data.page = 1;
+	    var btn = [
+	            "已审核"
+	        ];
+	    var arr = ['id', 'si', 'apply_name', 'char_name', 'char_guid','order', 'amount', 'apply_time', btn];
+	    tableList(url, data, id, arr);
+    }
+</script>

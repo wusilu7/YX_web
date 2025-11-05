@@ -1,0 +1,171 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.93.soapTest.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<style type="text/css">
+    .alert-info{
+        color: white;
+    }
+    .form-group{
+        margin-bottom: 35px;
+    }
+    #server_top .dropdown-header .text{
+        font-size: 20px;
+        color: black;
+        font-weight: 500;
+    }
+
+</style>
+<div class="jin-content-title"><span>主播</span></div>
+<div class="alert alert-info">
+    <div class="form-group" id="group_server_9"></div>
+</div>
+<div class="col-sm-10 col-sm-offset-1">
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead>
+            <tr>
+                <th>主播ID</th>
+                <th>主播名字</th>
+                <th>开播时间</th>
+                <th>停播时间</th>
+                <th>图标ID</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div class="clearfix">
+        <a data-type="insert" class="btn btn-success pull-right">新增</a>
+    </div>
+    <div class="center">
+        <button id="send" class="btn btn-primary">发送</button>
+    </div>
+    <div class="">
+        <button id="sended" class="btn btn-warning pull-right">上次发送记录</button>
+    </div>
+</div>
+
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect3('#g', '', '#s');
+    var id = "#content";
+    var url = location.href + "&jinIf=914";
+    var btn = ['<a data-type="delete" class="btn btn-danger">删除</a>'];
+    var arr = ['id', 'name', 'start_time', 'end_time', 'icon_id',btn];
+    var data = {};
+    soapTest();
+    function soapTest() {
+        noPageContentList(url, data, id, arr)
+    }
+    //新增
+    $("a[data-type='insert']").on('click', function () {
+        if ($('#s').val()=="") {
+            layer.msg('请选择服务器');
+            return false;
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增',
+            area: ['600px', '400px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">主播ID</span><input id="s_id" type="text" class="form-control" placeholder="角色名称（必填）"></div>' +
+            '<div class="input-group"><span class="input-group-addon">主播名字</span><input id="s_name" type="text" class="form-control" placeholder="对于该角色的简单说明"></div>' +
+            '<div class="input-group"><span class="input-group-addon">开播时间</span><input id="s_startime" type="text" class="form-control" placeholder="对于该角色的简单说明"></div>' +
+            '<div class="input-group"><span class="input-group-addon">停播时间</span><input id="s_endtime" type="text" class="form-control" placeholder="对于该角色的简单说明"></div>' +
+            '<div class="input-group"><span class="input-group-addon">图标ID</span><input id="s_icon" type="text" class="form-control" placeholder="对于该角色的简单说明"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=913',
+                    data: {
+                        si:$('#s').val(),
+                        s_id:$('#s_id').val(),
+                        s_name:$('#s_name').val(),
+                        s_startime:$('#s_startime').val(),
+                        s_endtime:$('#s_endtime').val(),
+                        s_icon:$('#s_icon').val()
+
+                    },
+                    success: function (res) {
+                        layer.close(index);
+                        layer.alert('添加成功！', {icon: 1}, function (index) {
+                            layer.close(index);
+                            soapTest();
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    });
+
+
+    $('#content').on('click', 'a[data-type="delete"]', function () {
+        var s_id = $(this).parents('tr').find('td').eq(0).text();
+        var s_name = $(this).parents('tr').find('td').eq(1).text();
+        var s_startime = $(this).parents('tr').find('td').eq(2).text();
+        var s_endtime = $(this).parents('tr').find('td').eq(3).text();
+        var s_icon = $(this).parents('tr').find('td').eq(4).text();
+
+        layer.alert('确认删除？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=915",
+                data: {
+                    s_id:s_id,
+                    s_name:s_name,
+                    s_startime:s_startime,
+                    s_endtime:s_endtime,
+                    s_icon:s_icon
+                },
+                dataType: 'json',
+                success: function (json) {
+                    layer.alert('删除成功！', {icon: 1}, function (index) {
+                        layer.close(index);
+                        soapTest();
+                    });
+                }
+            });
+        });
+    });
+
+
+    //发送
+    $('#send').on('click', function () {
+        layer.alert('确认发送？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=931",
+                data: {
+                    si:$('#s').val()
+                },
+                dataType: 'json',
+                success: function (res) {
+                    if(res.result==1){
+                        layer.alert('发送成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            soapTest();
+                        });
+                    }else{
+                        layer.closeAll('loading');
+                        layer.alert("发送失败");
+                    }
+
+                }
+            });
+        });
+    });
+
+    $('#sended').on('click', function () {
+            location.href += "&jinIf=916";
+    })
+</script>

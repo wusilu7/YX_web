@@ -1,0 +1,4 @@
+★09:16:18-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073958
+★09:16:18-115.192.33.211★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★09:20:22-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=邮件过期补偿`cont=邮件过期补偿`sender_name=GM`receiver_id=2814754062073958`item_list=40011#10#-1;40033#5#-1;`money_list=1#200;`exp=
+★09:20:22-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

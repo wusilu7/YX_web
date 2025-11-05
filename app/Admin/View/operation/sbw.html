@@ -1,0 +1,81 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.11.sbw.css" rel="stylesheet">
+<div class="jin-content-title"><span>黑白名单设置</span></div>
+
+<div class="form-horizontal col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+        <label for="server_id" class="col-sm-2 control-label">服务器ID</label>
+        <div class="col-sm-10">
+            <input id="server_id" class="form-control" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">服务器名称</label>
+        <div class="col-sm-10">
+            <input id="name" class="form-control" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="black" class="col-sm-2 control-label">黑名单</label>
+        <div class="col-sm-10">
+            <textarea id="black" class="form-control" rows="10"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="white" class="col-sm-2 control-label">白名单</label>
+        <div class="col-sm-10">
+            <textarea id="white" class="form-control" rows="10"></textarea>
+        </div>
+    </div>
+    <div class="btn-group center jin-sbw-btn">
+        <button data-type="update" class="btn  btn-success">修改</button>
+        <button data-type="return" class="btn  btn-primary">返回</button>
+    </div>
+    <div class="jin-explain  clearfix">
+        <b>说明</b>：
+        <div>
+            ① 名单中，多个IP之间以英文分号作间隔。
+            ② 名单设置后将会在下一次开服后生效，推荐设置完名单立即重启服务器。
+        </div>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    $(document).ready(getSbw());
+    function getSbw() {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=912",
+            dataType: "json",
+            success: function (json) {
+                $('#server_id').val(json.server_id);
+                $('#name').val(json.name);
+                $('#black').val(json.black);
+                $('#white').val(json.white);
+            }
+        });
+    }
+
+    $('button[data-type="update"]').on('click', function () {//修改服务器
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            data: {
+                server_id: $('#server_id').val(),
+                black: $('#black').val(),
+                white: $('#white').val()
+            },
+            success: function () {
+                layer.alert('修改成功', {icon: 1}, function (index) {
+                    layer.close(index);
+                    location.href = '?p=Admin&c=Operation&a=serverSwitch';
+                });
+            }
+        });
+    });
+    $('button[data-type="return"]').on('click', function () {
+        location.href = '?p=Admin&c=Operation&a=serverSwitch';
+    });
+</script>

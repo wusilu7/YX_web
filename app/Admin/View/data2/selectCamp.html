@@ -1,0 +1,138 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.22.selectCamp.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>阵营分布</span></div>
+<div class="alert alert-info">
+    <div id="group_server_2"></div>
+</div>
+<hr/>
+<div class="jin-search-div">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a>
+</div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①阵营分布，不分平台；
+    </div>
+</div>
+<hr/>
+<div id="jin_charts_camp"></div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script src="{{JS}}echarts.min.js"></script>
+<script type="text/javascript">
+    gsSelect('#group', '#server', '');
+    var data = {};
+    function getCamp() {
+        data.group = $("#group").val()
+        data.pi    = $('#platform').val();
+        data.si    = $('#server').val();
+        $.ajax({
+            type: "post",
+            async: true,
+            url: location.href + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                if (json === false) {
+                    layer.msg('从游戏服务器获取阵营数据失败');
+                } else {
+                    //开始画图，注意执行顺序
+                    var myChart = echarts.init(document.getElementById('jin_charts_camp'));
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b}: {c} ({d}%)"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            x: 'center',
+                            data: ['复仇之怒', '魔法之光']
+                        },
+                        color: ['#cb1600', '#00b3ff'],
+                        itemStyle: {
+                            normal: {
+                                // 阴影的大小
+                                shadowBlur: 20,
+                                // 阴影水平方向上的偏移
+                                shadowOffsetX: 0,
+                                // 阴影垂直方向上的偏移
+                                shadowOffsetY: 0,
+                                // 阴影颜色
+                                shadowColor: '#666'
+                            }
+                        },
+                        series: [
+                            {
+                                name: '阵营',
+                                type: 'pie',
+                                radius: ['50%', '70%'],
+                                avoidLabelOverlap: false,
+                                label: {
+                                    normal: {
+                                        show: false,
+                                        position: 'center'
+                                    },
+                                    emphasis: {
+                                        show: true,
+                                        textStyle: {
+                                            fontSize: '30',
+                                            fontWeight: 'bold'
+                                        }
+                                    }
+                                },
+                                labelLine: {
+                                    normal: {
+                                        show: false
+                                    }
+                                },
+                                data: [
+                                    {value: json[0], name: '复仇之怒'},
+                                    {value: json[1], name: '魔法之光'}
+                                ],
+                                animationType: 'scale',
+                                animationEasing: 'elasticOut',
+                                animationDelay: function (idx) {
+                                    return idx * 200;
+                                }
+                            }
+                        ]
+                    };
+                    myChart.setOption(option);
+                }
+            },
+            error: function (msg) {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").click(function () {
+        data.check_type = 912;  // 普通查询
+        if ($('#server').val() === null) {
+            layer.msg('请选择服务器');
+            return false;
+        }
+        getCamp();
+    });
+    // 服务器汇总
+    $("#server_summary").click(function () {
+        data.check_type = 998;  // 服务器汇总
+        getCamp();
+    });
+    // 渠道汇总
+    $("#group_summary").click(function () {
+        data.check_type = 999;  // 渠道汇总
+        giCollect(getCamp);
+    });
+</script>

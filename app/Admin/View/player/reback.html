@@ -1,0 +1,266 @@
+{{include file="../common/1header.html"}}
+
+<style type="text/css">
+    .jin_add{
+        margin-bottom: 5px;
+        margin-left: 55px;
+    }
+    .show_input{
+        margin-left: 56px;
+        margin-bottom: 20px;
+    }
+    .fee_rate{
+        width:300px;
+        display:none
+    }
+    .alert {
+        padding-bottom: 46px;
+    }
+    .col-sm-1 {
+        width: 90px;
+        padding-top: 8px;
+    }
+    .alert-info{
+        color: white;
+    }
+    .form-group{
+        margin-bottom: 35px;
+    }
+    #server_top .dropdown-header .text{
+        font-size: 20px;
+        color: black;
+        font-weight: 500;
+    }
+    .text_content{
+        margin-left: 35px;
+    }
+    .dropdown-header{
+        padding: 10px 20px;
+    }
+    #server_top{
+        width: 100px
+    }
+    #group{
+        width: 100%
+    }
+    .bs-actionsbox .btn-group .btn{
+        width: 33.3%;
+    }
+</style>
+
+<div class="jin-content-title"><span>充值返还</span></div>
+<div class="alert alert-info">
+    <div id="group_server_6"></div>
+</div>
+
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label class="select_label control-label">指定服务器:</label>
+        <div id="group_server_11"></div>
+        <label class="">返还指定货币类型:</label>
+        <select id="glod_type">
+            <option value="20">代币</option>
+            <option value="2">金钻</option>
+        </select>
+    </div>
+    <div>
+        <label for="time">生效日期：</label>
+        <input size="16" type="text" id="work_start" class="form-control jin-datetime">
+        <input size="16" type="text" id="work_end" class="form-control jin-datetime">
+    </div>
+    <div>
+        <label for="time">筛选日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime">
+       	<input size="16" type="text" id="time_end" class="form-control jin-datetime">
+    </div>
+    <div>
+        <label for="fee_date">折扣率条件：<span style="color:#aaa">(充值金额档位, 金钻/代币折扣率, 蓝钻折扣率, 金钻/代币上限（可不填）, 蓝钻上限（可不填）(上限只在第一个条件框内生效)。参数之间用英文格式下的逗号隔开, 折扣率用小数形式。 例如：200,0.1,0.1,400,300。点击右侧 + 按钮增加条件框)</span></label>
+        <a id="jin_add" class="btn btn-info jin_add"><span class="glyphicon glyphicon-plus"></span></a>
+        <a id="jin_search" class="btn btn-warning"><span class="glyphicon glyphicon-search"></span></a>
+        <a id="jin_save" class="btn btn-success" style="margin-bottom: 5px; margin-left: 8px;"><span class="glyphicon glyphicon-download-alt">
+        </span> 录入</a>
+        <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+
+        <input id="fee_rate1" type="text" class="fee_rate form-control">
+        <input id="fee_rate2" type="text" class="fee_rate form-control">
+        <input id="fee_rate3" type="text" class="fee_rate form-control">
+        <input id="fee_rate4" type="text" class="fee_rate form-control">
+        <input id="fee_rate5" type="text" class="fee_rate form-control">
+        <input id="fee_rate6" type="text" class="fee_rate form-control">
+    </div>
+</div>
+<hr/>
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>账号ID</th>
+            <th>角色名称</th>
+            <th>充值数</th>
+            <th>折扣后返还金钻/代币</th>
+            <th>折扣后返还蓝钻</th>
+            <th>充值日期</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+
+{{include file="../common/2footer.html"}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<script type="text/javascript">
+    calendar('hour', '#work_start', '#work_end');
+    calendar('month', '#time_start', '#time_end');
+    gsSelect3('#g');
+    gsSelect3('#g1','','#s');
+    var url = location.href + "&jinIf=912";
+    var arr = ['account', 'char_name', 'fee', 'fee_rate_golden', 'fee_rate_blue', 'pay_time'];
+    var id = ["#content", "#page"];
+    var data = {};
+    data.page = 1;
+
+    $("#jin_search").on('click', function () {
+        data.page = 1;
+    	data.time_start = $('#time_start').val();
+    	data.time_end = $('#time_end').val();
+        data.fee_rate1 = $("#fee_rate1").val();
+        data.fee_rate2 = $("#fee_rate2").val();
+        data.fee_rate3 = $("#fee_rate3").val();
+        data.fee_rate4 = $("#fee_rate4").val();
+        data.fee_rate5 = $("#fee_rate5").val();
+        data.fee_rate6 = $("#fee_rate6").val();
+        data.group = $("#g ").val();
+        data.glod_type = $("#glod_type").val();
+        $.cookie('cookie_g', data.group, {expires: 30});
+
+        if (!data.group) {
+            layer.alert('请选择渠道', {icon: 5});
+        } else {
+            tableList(url, data, id, arr);
+        }
+    });
+
+    $("#jin_save").on('click', function () {
+    	data.time_start = $('#time_start').val();
+    	data.time_end = $('#time_end').val();
+        data.fee_rate1 = $("#fee_rate1").val();
+        data.fee_rate2 = $("#fee_rate2").val();
+        data.fee_rate3 = $("#fee_rate3").val();
+        data.fee_rate4 = $("#fee_rate4").val();
+        data.fee_rate5 = $("#fee_rate5").val();
+        data.fee_rate6 = $("#fee_rate6").val();
+        data.work_start = $("#work_start").val();
+        data.work_end = $("#work_end").val();
+        data.group = $("#g").val();
+        data.si = $("#s1").val();
+        data.glod_type = $("#glod_type").val();
+        if (!data.group) {
+            layer.alert('请选择渠道', {icon: 5});
+        } else {
+            if (!data.work_start || !data.work_end) {
+                layer.alert('请选择生效日期', {icon: 5});
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: location + "&jinIf=913",
+                    data: data,
+                    dataType: "json",
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function (json) {
+                        layer.closeAll('loading');
+                        tableList(url, data, id, arr);
+                        layer.alert('录入成功', {icon: 6});
+                    },
+                    error: function () {
+                        layer.closeAll('loading');
+                        layer.msg('数据录入失败', {icon: 5});
+                    }
+                });
+            }
+        }
+    });
+
+    $("#jin_add").on('click', function () {
+        if( $("#fee_rate1").hasClass("show_input") ){
+            $("#fee_rate2").css('display', 'block');  
+
+            if( $("#fee_rate2").hasClass("show_input") ){
+                $("#fee_rate3").css('display', 'block');  
+
+                if( $("#fee_rate3").hasClass("show_input") ){
+                    $("#fee_rate4").css('display', 'block');
+
+                    if( $("#fee_rate4").hasClass("show_input") ){
+                        $("#fee_rate5").css('display', 'block'); 
+
+                        if( $("#fee_rate5").hasClass("show_input") ){
+                            $("#fee_rate6").css('display', 'block');  
+
+                            if( $("#fee_rate6").hasClass("show_input") ){
+                                layer.msg('条件框上限为6组');  
+                            } else {
+                                $("#fee_rate6").addClass("show_input");
+                            }   
+                        } else {
+                            $("#fee_rate5").addClass("show_input");
+                        }   
+                    } else {
+                        $("#fee_rate4").addClass("show_input");
+                    }  
+                } else {
+                    $("#fee_rate3").addClass("show_input");
+                }
+            } else {
+                $("#fee_rate2").addClass("show_input");
+            }
+        }else{
+            $("#fee_rate1").css('display', 'block').addClass("show_input");
+        }
+    });
+
+    var selected = function (i) {
+        if($("li[data-original-index='"+ i +"']").hasClass("selected")) {
+            $("li[data-original-index='"+ i +"']").removeClass("selected");
+        } else {
+            $("li[data-original-index='"+ i +"']").addClass("selected");
+        }
+    }
+
+    $('#g').selectpicker({
+        actionsBox: 'true'
+    });
+    $('.bs-select-all').text('全选');
+    $('.bs-deselect-all').text('取消全选');
+
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';  // 生成excel表
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

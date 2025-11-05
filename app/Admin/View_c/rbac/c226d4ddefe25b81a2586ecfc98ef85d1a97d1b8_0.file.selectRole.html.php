@@ -1,0 +1,249 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-05-07 10:58:10
+  from "D:\pro\WebSiteYiXing\app\Admin\View\rbac\selectRole.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_663998c2b17438_35680502',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'c226d4ddefe25b81a2586ecfc98ef85d1a97d1b8' => 
+    array (
+      0 => 'D:\\pro\\WebSiteYiXing\\app\\Admin\\View\\rbac\\selectRole.html',
+      1 => 1704262933,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_663998c2b17438_35680502 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<link href="<?php echo CSS;?>
+jin/3.14.selectrole.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>角色管理</span></div>
+<div class="col-sm-10 col-sm-offset-1">
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead>
+            <tr>
+                <th class="jin-role-column1">编号</th>
+                <th>角色名称</th>
+                <th>简要说明</th>
+                <th>上级</th>
+                <th class="jin-role-column3">操作</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div class="clearfix">
+        <a data-type="insert" class="btn btn-success pull-right">新增角色</a>
+    </div>
+    <div class="jin-explain">
+        <b>说明</b>：
+        <div>
+            ① 新增角色后请到权限分配页面赋予新角色相应的权限。
+        </div>
+        <div>
+            ② 开发人员新增/修改控制器后，请点击超管权限更新，会赋予超管最新的所有权限。当然，不点也没关系。
+        </div>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+    $(document).ready(getRole());
+    function getRole() {
+        var url = location.href + "&jinIf=912";
+        var btn = [
+            '<div class="btn-group btn-group-sm">' +
+            '<a data-type="update" class="btn btn-info">修改名称</a>' +
+            '<a data-type="per_set" class="btn btn-primary">分配权限</a>' +
+            '<a data-type="delete" class="btn btn-danger">删除角色</a>' +
+            '</div>',
+            '<a data-type="admin_update" class="btn btn-sm btn-default">超管权限更新</a>'
+        ];
+        
+        var arr = ['role_id', 'role_name', 'info', 'role_id_son', btn];
+        var id = "#content";
+        var data = {};
+        noPageRole(url, data, id, arr);//定制款
+    }
+    function noPageRole(url, data, id, arr) {
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                for (var i = 0; i < json.length; i++) {   //取数据填表
+                    c += '<tr>';
+                    for (var j = 0; j < arr.length; j++) {
+                        if (arr[j] instanceof Array) {
+                            if (Number(json[i]['role_id']) === 1) {
+                                c += '<td>' + arr[j][1] + '</td>';
+                            } else {
+                                c += '<td>' + arr[j][0] + '</td>';
+                            }
+                        } else {
+                            c += '<td>' + json[i][(arr[j])] + '</td>';
+                        }
+                    }
+                    c += '</tr>';
+                }
+                $(id).html(c);
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+    //新增角色
+    $("a[data-type='insert']").on('click', function () {
+        var h='';
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=915',
+            dataType: "json",
+            success: function (json) {
+                console.log(json)
+                for (var i=0;i<json.length;i++){
+                    h += '<option value="'+json[i].role_id+'">'+json[i].role_name+'</option>'
+                }
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '新增后台角色',
+                    area: ['350px', '300px'],
+                    btn: ['新增', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content: '<div class="jin-child">' +
+                    '<div class="input-group"><span class="input-group-addon">角色上级</span><select id="role_id_son" class="form-control">'+h+'</select></div>' +
+                    '<div class="input-group"><span class="input-group-addon">角色名称</span><input id="role_name" type="text" class="form-control" placeholder="角色名称（必填）"></div>' +
+                    '<div class="input-group"><span class="input-group-addon">简要说明</span><input id="info" type="text" class="form-control" placeholder="对于该角色的简单说明"></div>' +
+                    '</div>',
+                    yes: function (index) {
+                        $.ajax({
+                            type: "POST",
+                            url: location.href + '&jinIf=911',
+                            data: {
+                                role_id_son:$('#role_id_son').val(),
+                                role_name: $('#role_name').val(),
+                                info: $('#info').val()
+                            },
+                            success: function (res) {
+                                layer.close(index);
+                                layer.alert('添加成功！<br/>请到<b>权限分配</b>页面赋予新角色相应的权限！', {icon: 1}, function (index) {
+                                    layer.close(index);
+                                    getRole();
+                                });
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                })
+            }
+        });
+
+    });
+    //btn组
+    $('#content').on('click', 'a[data-type="update"]', function () {//修改名称
+        var role_id = $(this).parents('tr').find('td').eq(0).text();
+        var role_name = $(this).parents('tr').find('td').eq(1).text();
+        var info = $(this).parents('tr').find('td').eq(2).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '修改角色名称',
+            area: ['350px', '260px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">角色编号</span><input id="role_id" type="text" class="form-control" value="' +
+            role_id + '" readonly></div>' +
+            '<div class="input-group"><span class="input-group-addon">角色名称</span><input id="role_name" type="text" class="form-control" value="' +
+            role_name + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">简要说明</span><input id="info" type="text" class="form-control" value="' +
+            info + '"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=913',
+                    data: {
+                        role_id: $('#role_id').val(),
+                        role_name: $('#role_name').val(),
+                        info: $('#info').val()
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('修改成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            getRole();
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    }).on('click', 'a[data-type="delete"]', function () {//删除角色
+        var role_id = $(this).parents('tr').find('td').eq(0).text();
+        var role_name = $(this).parents('tr').find('td').eq(1).text();
+        layer.alert('确认删除角色[' + role_name + ']？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    role_id: role_id
+                },
+                success: function (res) {
+                    if (res === '-1') {
+                        layer.alert('请勿删除超级管理员', {icon: 2});
+                    } else {
+                        layer.alert('删除成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            getRole();
+                        });
+                    }
+                }
+            });
+        });
+    }).on('click', 'a[data-type="admin_update"]', function () {//超管权限更新
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=9139",
+            success: function (res) {
+                layer.alert('超管权限更新成功', {icon: 1});
+            }
+        });
+    }).on('click', 'a[data-type="per_set"]', function () {//分配权限
+        var role_id = $(this).parents('tr').find('td').eq(0).text();
+        location.href += '&child=per_set&ri=' + role_id;
+    });
+<?php echo '</script'; ?>
+><?php }
+}

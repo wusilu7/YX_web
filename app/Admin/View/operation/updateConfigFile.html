@@ -1,0 +1,166 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.06.server.css" rel="stylesheet">
+<style>
+    /* bootstrapTable 工具栏 */
+    .fixed-table-toolbar {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .search-input {
+        border-radius: 5px !important;
+    }
+</style>
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title">
+    <span>更新配置表</span>
+</div>
+<div class="jin-server-select"></div>
+<div class="table-responsive">
+    <table id="table"></table>
+</div>
+<hr>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+    $(document).ready(function () {
+        getConfigFile();
+    });
+
+    // 获取配置文件
+    function getConfigFile() {
+        $.ajax({
+            type: "GET",
+            url: location.href + "&jinIf=912",
+            dataType: 'json',
+            success: function (json) {
+                $('#table').bootstrapTable('destroy').bootstrapTable({
+                    data: json,
+                    search: true,
+                    columns: [
+                        {field: 'filename', title: '文件名'},
+                        {field: 'last_modified', title: '更新时间'},
+                        {field: 'operation', title: '操作', formatter: actionFormatter}
+                    ]
+                });
+            },
+            complete: function () {
+                renderAddFileButton();
+                bindAddButtonEvents();
+            }
+        });
+    }
+
+    // 渲染新增按钮
+    function renderAddFileButton() {
+        if ($('#addFile').length === 0) {
+            $('.fixed-table-toolbar').append(
+                '<button id="addFile" style="margin-left: 10px;width: 80px;" class="btn btn-success">新增</button>' +
+                '<form id="addFileForm" enctype="multipart/form-data" style="margin-left: 5px">' +
+                '<input accept=".xls,.xlsx" type="file" name="file"/>' +
+                '</form>'
+            );
+        }
+    }
+
+    // 绑定新增按钮的点击事件
+    function bindAddButtonEvents() {
+        // 新增事件
+        $('#addFile').off('click').on('click', function () {
+            var fileInput = $('#addFileForm').find('input[type="file"]')[0];
+            if (fileInput.files.length === 0) {
+                layer.msg('请选择文件后再新增！');
+                return;
+            }
+            var uploadedFile = fileInput.files[0];
+            var formData = new FormData();
+            formData.append('file', uploadedFile);
+            // 禁用按钮防止重复提交
+            $(this).prop('disabled', true).text('上传中...');
+            $.ajax({
+                type: 'POST',
+                url: location.href + "&jinIf=913",
+                data: formData,
+                dataType: 'json',
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    layer.msg(response.msg, {icon: response.code});
+                },
+                error: function (xhr, status, error) {
+                    layer.msg('新增失败：' + error, {icon: 2});
+                },
+                complete: function () {
+                    // 恢复按钮状态
+                    $('#addFile').prop('disabled', false).text('新增');
+                    // 重置表单以清空文件输入
+                    $('#addFileForm')[0].reset();
+                    // 重新获取文件信息
+                    getConfigFile();
+                }
+            });
+        })
+    }
+
+    // 格式化操作列
+    function actionFormatter(value, row, index) {
+        return `
+            <div class="btn-group btn-group-sm">
+                <a data-type="downloadConfig" href="${row.file_path}" class="btn btn-primary" download style="width: 80px;">下载</a>
+            </div>
+            <div class="btn-group btn-group-sm">
+                <form id="uploadForm-${index}" enctype="multipart/form-data" style="display: inline-block; width: 180px; margin-top: 3px">
+                    <input id="file-${index}" accept=".xls,.xlsx" type="file" name="file"/>
+                </form>
+                <a data-type="updateConfig" data-history="${row.filename}" data-index="${index}" class="btn btn-danger" style="width: 80px;">上传</a>
+            </div>
+        `;
+    }
+
+    // 上传
+    $(document).on('click', 'a[data-type="updateConfig"]', function (e) {
+        e.preventDefault();
+        var $form = $(this).prev('form');
+        var fileInput = $form.find('input[type="file"]')[0];
+        // 检查是否选择文件
+        if (fileInput.files.length === 0) {
+            layer.msg('请选择文件后再上传！')
+            return;
+        }
+        var uploadedFile = fileInput.files[0];
+        var uploadedFilename = uploadedFile.name;
+        var historyFileName = $(this).attr('data-history');
+        // 检查上传的文件名是否与历史文件名一致
+        if (uploadedFilename !== historyFileName) {
+            layer.msg('上传的文件名与预期的文件名不一致！');
+            return;
+        }
+        // 创建 FormData 对象，添加文件
+        var formData = new FormData();
+        formData.append('file', uploadedFile);
+        // 禁用按钮防止重复提交
+        $(this).prop('disabled', true).text('上传中...');
+        $.ajax({
+            type: 'POST',
+            url: location.href + "&jinIf=913",
+            data: formData,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                layer.msg(response.msg, {icon: response.code});
+            },
+            error: function (xhr, status, error) {
+                layer.msg('上传失败：' + error, {icon: 2});
+            },
+            complete: function () {
+                // 恢复按钮状态
+                $('a[data-type="updateConfig"]').prop('disabled', false).text('上传');
+                // 重新获取文件信息
+                getConfigFile();
+                // 重置表单以清空文件输入
+                $form[0].reset();
+            }
+        });
+    });
+</script>

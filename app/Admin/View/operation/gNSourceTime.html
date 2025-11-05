@@ -1,0 +1,474 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.06.server.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>组名资源设置定时版</span></div>
+<div class="jin-server-select">
+    <lable>模板：</lable>
+    <select  id="temName" style="padding: 0 8px; margin-right: 20px;"></select>
+    <a data-type="addTemplate" class="btn btn-primary">新增模板</a>
+    <a data-type="insertGN" class="btn btn-success">新增配置选项</a>
+    <a data-type="insertGN1" class="btn btn-success">新增配置选项(下拉选择)</a>
+    <a data-type="delTemplate" class="btn btn-danger pull-right">删除模板</a>
+    <a data-type="deleteType" class="btn btn-danger pull-right">删除模板分类</a>
+    <a data-type="insertType" class="btn btn-warning pull-right">新增模板分类</a>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>key</th>
+            <th>value</th>
+            <th>生效时间</th>
+            <th>有效</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<hr>
+描述：
+<br>
+<div class="clearfix">
+    <textarea   id="describe" style="width: 100%; height: 100px;"></textarea>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+
+    var btn = [
+        '<div class="btn-group btn-group-sm"><a data-type="deleteConfig" class="btn btn-danger">删除</a></div>'
+    ];
+
+    function common() {
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=917",
+            data: {
+                tem: $("#temName").val(),
+                is_valid:0
+            },
+            dataType: 'json',
+            success: function (json) {
+                var c='';
+                for (var i=0;i<json.length;i++){
+                    if(json[i].is_valid_source==1){
+                        sty = 'style="background: #aba5618c;"'
+                    }else {
+                        sty = '';
+                    }
+                    c+='<tr '+sty+' >' +
+                        '<td>'+json[i].id+'</td>' +
+                        '<td><input style="width: 500px;" type="text" value="'+json[i].key+'" class="form-control"></td>' +
+                        '<td><input style="width: 500px;" type="text" value="'+json[i].value+'" class="form-control"></td>' +
+                        '<td><input style="width: 200px;" type="text"  value="'+json[i].echotime+'" class="form-control "></td>' +
+                        '<td>'+json[i].is_valid_source1+'</td>' +
+                        '<td>'+btn+'</td>' +
+                        '</tr>'
+                }
+                $("#content").html(c);
+                describe();
+            }
+        });
+    }
+
+    function describe() {
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=924",
+            data: {
+                tem: $("#temName").val(),
+            },
+            dataType: 'json',
+            success: function (json) {
+                var c='';
+                c = json.content;
+                $("#describe").html(c);
+            }
+        });
+    }
+
+    $("#describe").on('blur',function () {
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=925",
+            data: {
+                des: $("#describe").val(),
+                tem: $("#temName").val()
+            },
+            dataType: 'json',
+            success: function (json) {
+
+            }
+        });
+    });
+
+    $("a[data-type='insertType']").on('click', function () {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增分类',
+            area: ['400px', '180px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">类名</span><input id="typename" type="text" class="form-control"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=911',
+                    data: {
+                        type_name:$('#typename').val(),
+                    },
+                    success: function (res) {
+                        layer.close(index);
+                        layer.alert('添加成功！', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    });
+
+    $("a[data-type='addTemplate']").on('click', function () {
+        var h= '';
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            dataType: 'json',
+            success: function (json) {
+                for (var i=0;i<json.length;i++){
+                    h += '<option value="'+json[i].id+'">'+json[i].type_name+'</option>'
+                }
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '新增模板',
+                    area: ['400px', '220px'],
+                    btn: ['确认', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content: '<div class="jin-child">' +
+                    '<div class="input-group"><span class="input-group-addon">模板名</span><input id="tem_name" type="text" class="form-control"></div>' +
+                    '<div class="input-group"><span class="input-group-addon">分类</span><select id="tem_type" class="form-control">'+h+'</select></div>' +
+                    '</div>',
+                    yes: function (index) {
+                        $.ajax({
+                            type: "POST",
+                            url: location.href + "&jinIf=914",
+                            data: {
+                                tem_name: $("#tem_name").val(),
+                                tem_type: $("#tem_type").val(),
+                                is_time:3
+                            },
+                            dataType: 'json',
+                            success: function (json) {
+                                if(json){
+                                    layer.close(index);
+                                    layer.alert('添加成功！', {icon: 1}, function (index) {
+                                        location.reload();
+                                    });
+                                }else{
+                                    layer.alert('重复模板名！', {icon: 2}, function (index) {
+                                        layer.close(index);
+                                    });
+                                }
+
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                });
+            }
+        });
+    });
+
+    $("a[data-type='insertGN']").on('click', function () {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增选项',
+            area: ['400px', '350px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">key</span><input id="gn_key" type="text" class="form-control"></div>' +
+            '<div class="input-group"><span class="input-group-addon">value</span><input id="gn_value" type="text" class="form-control"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=916",
+                    data: {
+                        temName:$("#temName").val(),
+                        gn_key: $("#gn_key").val(),
+                        gn_value: $("#gn_value").val(),
+                    },
+                    dataType: 'json',
+                    success: function (json) {
+                        if(json){
+                            layer.close(index);
+                            layer.alert('添加成功！', {icon: 1}, function (index) {
+                                layer.close(index);
+                                common();
+                            });
+                        }
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    });
+
+    $("a[data-type='insertGN1']").on('click', function () {
+        var h= '';
+        $.ajax({
+            type: "POST",
+            url: "?p=Admin&c=Operation&a=setHostInfo&jinIf=912",
+            dataType: 'json',
+            success: function (json) {
+                for (var i=0;i<json.length;i++){
+                    h += '<option value="'+json[i].host_name+'">'+json[i].host_name+'</option>'
+                }
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '新增选项',
+                    area: ['400px', '350px'],
+                    btn: ['确认', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content:  '<div class="jin-child">' +
+                    '<div class="input-group"><span class="input-group-addon">key</span><select id="gn_key" class="form-control">'+h+'</select></div>' +
+                    '<div class="input-group"><span class="input-group-addon">value</span><select id="gn_value" class="form-control"><option value="start">start</option><option value="stop">stop</option></select></div>' +
+                    '</div>',
+                    yes: function (index) {
+                        $.ajax({
+                            type: "POST",
+                            url: location.href + "&jinIf=916",
+                            data: {
+                                temName:$("#temName").val(),
+                                gn_key: $("#gn_key").val(),
+                                gn_value: $("#gn_value").val(),
+                            },
+                            dataType: 'json',
+                            success: function (json) {
+                                if(json){
+                                    layer.close(index);
+                                    layer.alert('添加成功！', {icon: 1}, function (index) {
+                                        layer.close(index);
+                                        common();
+                                    });
+                                }
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                });
+            }
+        });
+    });
+
+    $("a[data-type='deleteType']").on('click', function () {
+        var h= '';
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            dataType: 'json',
+            success: function (json) {
+                for (var i=0;i<json.length;i++){
+                    h += '<option value="'+json[i].id+'">'+json[i].type_name+'</option>'
+                }
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '删除模板分类',
+                    area: ['400px', '200px'],
+                    btn: ['确认', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content: '<div class="jin-child">' +
+                    '<div class="input-group"><span class="input-group-addon">分类</span><select id="tem_type" class="form-control">'+h+'</select></div>' +
+                    '</div>',
+                    yes: function (index) {
+                        $.ajax({
+                            type: "POST",
+                            url: location.href + "&jinIf=922",
+                            data: {
+                                tem_type: $("#tem_type").val(),
+                            },
+                            dataType: 'json',
+                            success: function (json) {
+                                if(json){
+                                    layer.close(index);
+                                    layer.alert('删除成功！', {icon: 1}, function (index) {
+                                        location.reload();
+                                    });
+                                }
+
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                });
+            }
+        });
+    });
+
+    $("a[data-type='delTemplate']").on('click', function () {
+        var temName = $("#temName").val();
+        layer.alert('确认删除 <span style="color: red">'+temName+'</span>？', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=923",
+                data: {
+                    temName : temName
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.closeAll('loading');
+                    if(json){
+                        layer.alert('删除成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            location.reload();
+                        });
+                    }
+                }
+            });
+        });
+    });
+
+    $("#temName").change(function () {
+        common();
+    });
+
+
+    function prefix(prefix) {
+        obj = {id: prefix};
+        obj.url = location.href + "&jinIf=915";
+        $.ajax({
+            type: "POST",
+            url: obj.url,
+            dataType: 'json',
+            success: function (res) {
+                var c = '';
+                var li = '';
+                for (var i = 0; i < res.length; i++) {
+                    c +='<optgroup style="color: red;" label="'+ res[i][0] +'">'
+                    li += '<li class="dropdown-header " data-optgroup="'+ i +'"><span class="text">'+ res[i][0] +'</span></li>';
+                    var x
+                    for (var j = 1; j < res[i].length; j++) {
+                        if (i == 0) {
+                            x = -1;
+                            for (var j = 1; j < res[i].length; j++) {
+                                var aa = j  - 1;
+                                c += '<option style="color: #0C0C0C" value="'+ res[i][j].gnTem_name +'">'+ res[i][j].gnTem_name +'</option>';
+                                li += '<li data-original-index="'+ aa +'">' +
+                                    '<a tabindex="0" data-tokens="null">' +
+                                    '<span class="text text_content">'+ res[i][j].gnTem_name +'</span><span class="glyphicon glyphicon-ok check-mark"></span>'+
+                                    '</a>'+
+                                    '</li>';
+                            }
+                        } else {
+                            x += res[i-1].length;
+                            for (var j = 1; j < res[i].length; j++) {
+                                var aa = j + x -i;
+                                c += '<option style="color: #0C0C0C" value="'+ res[i][j].gnTem_name +'">'+ res[i][j].gnTem_name +'</option>';
+                                li += '<li data-original-index="'+ aa +'">' +
+                                    '<a tabindex="0" data-tokens="null">' +
+                                    '<span class="text text_content">'+ res[i][j].gnTem_name +'</span><span class="glyphicon glyphicon-ok check-mark"></span>'+
+                                    '</a>'+
+                                    '</li>';
+                            }
+                        }
+                    }
+                    li += '<li class="divider" data-optgroup="2div"></li>';
+                    c += '</optgroup>';
+                }
+                $(obj.id).html(c);
+                $('.selectpicker').selectpicker('refresh');
+                common();
+            }
+        });
+    }
+    prefix("#temName");
+
+    $('#content').on('click', 'a[data-type="deleteConfig"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除？', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=918",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        common();
+                    });
+                }
+            });
+        });
+    }).on('blur', 'input', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var gn_key = $(this).parents('tr').find('td').eq(1).find('input').val();
+        var gn_value = $(this).parents('tr').find('td').eq(2).find('input').val();
+        var gn_echotime = $(this).parents('tr').find('td').eq(3).find('input').val();
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=919',
+            data: {
+                id:id,
+                gn_key:gn_key,
+                gn_value:gn_value,
+                gn_echotime:gn_echotime
+            },
+            success: function () {
+            }
+        });
+    }).on('click', 'span[data-type="no"]', function () {  // 点击后在游戏服务器列表中显示服务器
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=921",
+            data: {
+                id: id,
+                is_valid_source:1
+            },
+            dataType: 'json',
+            success: function () {
+                common();
+            }
+        });
+
+    }).on('click', 'span[data-type="yes"]', function () {  // 点击后在游戏服务器列表中隐藏服务器
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=921",
+            data: {
+                id: id,
+                is_valid_source:0
+            },
+            dataType: 'json',
+            success: function () {
+                common();
+            }
+        });
+    })
+
+
+</script>

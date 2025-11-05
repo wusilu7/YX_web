@@ -1,0 +1,118 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+
+<div class="jin-content-title"><span>今日充值</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<hr/>
+<div class="jin-search-div">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <!--<a id="group_summary" class="btn btn-success">渠道汇总</a>-->
+    <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+    <a id="role_search" class="btn btn-success" style="float: right;"><span class="glyphicon glyphicon-search"></span></a>
+    <input type="text" id="role_value" class="form-control" placeholder="角色ID查询" style="width: 20%; float: right;">
+</div>
+<hr/>
+<div class="tab-content">
+    <div class="tab-pane active" id="top_today">
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead>
+                <tr id="thead">
+                    <th>排名</th>
+                    <th>服务器</th>
+                    <th>渠道</th>
+                    <th>账号</th>
+                    <th>角色ID</th>
+                    <th>角色名</th>
+                    <th>等级</th>
+                    <th>今日充值金额</th>
+                </tr>
+                </thead>
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="page"></div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect('#group', '#server', '#platform');
+    calendar('month', '#time_start', '#time_end');
+
+    var si_name = function (json) {
+        return json.si_name + '<input class="si" type="hidden" value="' + json.si + '" />'
+    }
+    var url = location + "&jinIf=912";
+    var arr = ['rank', 'si','gi', 'account','char', 'char_name','level','fee'];
+    // var arr = ['rank', si_name,'gi', 'char', 'char_name', 'fee', '', '','stop_pay_days', 'stop_login_days', 'last_pay_time', 'logout_time'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    //请求数据
+    function getTop() {
+        if(eval('{{$wbGroup}}').indexOf($("#group").val())>=0){ //当前所选渠道是英文渠道，金额显示外币
+            arr[7] = 'fee1';
+            $("#thead").find('th').eq(7).html("今日充值金额");
+        }else {
+            arr[7] = 'fee';
+            $("#thead").find('th').eq(7).html("今日充值金额");
+        }
+        data.page = 1;
+        data.group      = $("#group").val();
+        data.pi         = $('#platform').val();
+        data.si         = $("#server").val();//放在里面，不然si的值会不正确
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end   = $('#time_end').val();//查询结束时间
+        data.role_value = $('#role_value').val();//角色查询
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getTop();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getTop();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getTop);
+    });
+    
+    $('#role_search').on('click', function () {
+        data.check_type = 912;
+        getTop();
+    })
+
+    // 导出Excel
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';
+        data.time_start = $('#time_start').val();//查询开始时间;
+        data.time_end = $('#time_end').val();//查询结束时间
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

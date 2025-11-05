@@ -1,0 +1,362 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.01.selectretention.css" rel="stylesheet">
+<style type="text/css">
+    .col-sm-1 {
+        width: 90px;
+        padding-top: 8px;
+    }
+    .alert-info{
+        color: white;
+    }
+    .form-group{
+        margin-bottom: 35px;
+    }
+    #server_top .dropdown-header .text{
+        font-size: 20px;
+        color: black;
+        font-weight: 500;
+    }
+    .text_content{
+        margin-left: 35px;
+    }
+    .dropdown-header{
+        padding: 10px 20px;
+    }
+    #server_top{
+        width: 100px
+    }
+    #group{
+        width: 100%
+    }
+    .table > tbody > tr > td{
+        width: 120px;
+        padding: 8px 0px;
+    }
+    .table > tbody > tr > td:nth-child(1),
+    .table > thead > tr > td:nth-child(1),
+    .table > tbody > tr > td:nth-child(2),
+    .table > thead > tr > td:nth-child(2){
+        width: 50px;
+    }
+</style>
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>LTV(按整个渠道统计)</span></div>
+<div class="alert alert-info">
+    <div class="form-group" id="group_server_7"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <input size="16" type="checkbox" id="ischeck" value="1">
+    <label  for="ischeck" style="margin-left: 0px;">查询今日实时更新</label>
+    <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+</div>
+<hr/>
+<div class="table-responsive jin-table-12px">
+    <table class="table table-striped text-center jin-retention-table">
+        <thead>
+        <tr>
+            <th class="jin-retention-column1" style="width: 110px;">日期</th>
+            <th>安装数</th>
+            <th>当日</th>
+            <th>2日</th>
+            <th>3日</th>
+            <th>4日</th>
+            <th>5日</th>
+            <th>6日</th>
+            <th>7日</th>
+            <th>8日</th>
+            <th>9日</th>
+            <th>10日</th>
+            <th>15日</th>
+            <th>30日</th>
+            <th>45日</th>
+            <th>60日</th>
+            <th>90日</th>
+            <th>120日</th>
+            <th>150日</th>
+            <th>180日</th>
+            <th>210日</th>
+            <th>240日</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+    gsSelect3('#g', '#p');
+    calendar('month', '#time_start', '#time_end');
+
+    var numin0 = function (json) {
+        if (!json.r0) {
+            json.r0 = '0%';
+        }
+        if (!json.numin0) {
+            json.numin0 = '0%';
+        }
+        var r_content = json.numin0 + '<br>( ' + json.r0+ ' )';
+        return r_content;
+    }
+
+    var numin1 = function (json) {
+        if (!json.r1) {
+            json.r1 = '0%';
+        }
+        if (!json.numin1) {
+            json.numin1 = '0%';
+        }
+        var r_content = json.numin1 + '<br>( ' + json.r1+ ' )';
+        return r_content;
+    }
+    var numin2 = function (json) {
+        if (!json.r2) {
+            json.r2 = '0%';
+        }
+        if (!json.numin2) {
+            json.numin2 = '0%';
+        }
+        var r_content = json.numin2 + '<br>( ' + json.r2+ ' )';
+        return r_content;
+    }
+    var numin3 = function (json) {
+        if (!json.r3) {
+            json.r3 = '0%';
+        }
+        if (!json.numin3) {
+            json.numin3 = '0%';
+        }
+        var r_content = json.numin3 + '<br>( ' + json.r3+ ' )';
+        return r_content;
+    }
+    var numin4 = function (json) {
+        if (!json.r4) {
+            json.r4 = '0%';
+        }
+        if (!json.numin4) {
+            json.numin4 = '0%';
+        }
+        var r_content = json.numin4 + '<br>( ' + json.r4+ ' )';
+        return r_content;
+    }
+    var numin5 = function (json) {
+        if (!json.r5) {
+            json.r5 = '0%';
+        }
+        if (!json.numin5) {
+            json.numin5 = '0%';
+        }
+        var r_content = json.numin5 + '<br>( ' + json.r5+ ' )';
+        return r_content;
+    }
+    var numin6 = function (json) {
+        if (!json.r6) {
+            json.r6 = '0%';
+        }
+        if (!json.numin6) {
+            json.numin6 = '0%';
+        }
+        var r_content = json.numin6 + '<br>( ' + json.r6+ ' )';
+        return r_content;
+    }
+    var numin7 = function (json) {
+        if (!json.r7) {
+            json.r7 = '0%';
+        }
+        if (!json.numin7) {
+            json.numin7 = '0%';
+        }
+        var r_content = json.numin7 + '<br>( ' + json.r7+ ' )';
+        return r_content;
+    }
+    var numin8 = function (json) {
+        if (!json.r8) {
+            json.r8 = '0%';
+        }
+        if (!json.numin8) {
+            json.numin8 = '0%';
+        }
+        var r_content = json.numin8 + '<br>( ' + json.r8+ ' )';
+        return r_content;
+    }
+    var numin9 = function (json) {
+        if (!json.r9) {
+            json.r9 = '0%';
+        }
+        if (!json.numin9) {
+            json.numin9 = '0%';
+        }
+        var r_content = json.numin9 + '<br>( ' + json.r9+ ' )';
+        return r_content;
+    }
+    var numin15 = function (json) {
+        if (!json.r14) {
+            json.r14 = '0%';
+        }
+        if (!json.numin14) {
+            json.numin14 = '0%';
+        }
+        var r_content = json.numin14 + '<br>( ' + json.r14+ ' )';
+        return r_content;
+    }
+    var numin30 = function (json) {
+        if (!json.r29) {
+            json.r29 = '0%';
+        }
+        if (!json.numin29) {
+            json.numin29 = '0%';
+        }
+        var r_content = json.numin29 + '<br>( ' + json.r29+ ' )';
+        return r_content;
+    }
+    var numin45 = function (json) {
+        if (!json.r44) {
+            json.r44 = '0%';
+        }
+        if (!json.numin44) {
+            json.numin44 = '0%';
+        }
+        var r_content = json.numin44 + '<br>( ' + json.r44+ ' )';
+        return r_content;
+    }
+    var numin60 = function (json) {
+        if (!json.r59) {
+            json.r59 = '0%';
+        }
+        if (!json.numin59) {
+            json.numin59 = '0%';
+        }
+        var r_content = json.numin59 + '<br>( ' + json.r59+ ' )';
+        return r_content;
+    }
+    var numin75 = function (json) {
+        if (!json.r74) {
+            json.r74 = '0%';
+        }
+        if (!json.numin74) {
+            json.numin74 = '0%';
+        }
+        var r_content = json.numin74 + '<br>( ' + json.r74+ ' )';
+        return r_content;
+    }
+    var numin90 = function (json) {
+        if (!json.r89) {
+            json.r89 = '0%';
+        }
+        if (!json.numin89) {
+            json.numin89 = '0%';
+        }
+        var r_content = json.numin89 + '<br>( ' + json.r89+ ' )';
+        return r_content;
+    }
+    var numin105 = function (json) {
+        if (!json.r104) {
+            json.r104 = '0%';
+        }
+        if (!json.numin104) {
+            json.numin104 = '0%';
+        }
+        var r_content = json.numin104 + '<br>( ' + json.r104+ ' )';
+        return r_content;
+    }
+    var numin120 = function (json) {
+        if (!json.r119) {
+            json.r119 = '0%';
+        }
+        if (!json.numin119) {
+            json.numin119 = '0%';
+        }
+        var r_content = json.numin119 + '<br>( ' + json.r119+ ' )';
+        return r_content;
+    }
+    var numin150 = function (json) {
+        if (!json.r149) {
+            json.r149 = '0%';
+        }
+        if (!json.numin149) {
+            json.numin149 = '0%';
+        }
+        var r_content = json.numin149 + '<br>( ' + json.r149+ ' )';
+        return r_content;
+    }
+    var numin180 = function (json) {
+        if (!json.r179) {
+            json.r179 = '0%';
+        }
+        if (!json.numin179) {
+            json.numin179 = '0%';
+        }
+        var r_content = json.numin179 + '<br>( ' + json.r179+ ' )';
+        return r_content;
+    }
+    var numin210 = function (json) {
+        if (!json.r209) {
+            json.r209 = '0%';
+        }
+        if (!json.numin209) {
+            json.numin209 = '0%';
+        }
+        var r_content = json.numin209 + '<br>( ' + json.r209+ ' )';
+        return r_content;
+    }
+    var numin240 = function (json) {
+        if (!json.r239) {
+            json.r239 = '0%';
+        }
+        if (!json.numin239) {
+            json.numin239 = '0%';
+        }
+        var r_content = json.numin239 + '<br>( ' + json.r239+ ' )';
+        return r_content;
+    }
+    var url = location.href + "&jinIf=912";
+    var arr = ['date', 'numup',numin0, numin1, numin2, numin3, numin4, numin5, numin6,numin7,numin8,numin9, numin15, numin30,numin45,numin60,numin90,numin120,numin150,numin180,numin210,numin240];
+    var id = ["#content", "#page"];
+    var data = {};
+    function getRetention() {
+        data.page       = 1;
+        data.group      = $('#g').val();
+        data.pi         = $('#p').val();
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end   = $('#time_end').val();//查询结束时间
+        data.ischeck       = $('#ischeck').is(':checked') ? $('#ischeck').val() : 0;
+        $.cookie('cookie_g', data.group, {expires: 30});
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getRetention();
+    });
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';  // 生成excel表
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

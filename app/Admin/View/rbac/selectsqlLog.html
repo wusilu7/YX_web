@@ -1,0 +1,29 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+
+<div class="jin-content-title"><span>后台操作日志</span></div>
+<div class="table-responsive jin-table-12px">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>日志编号</th>
+            <th>操作时间</th>
+            <th>操作方法</th>
+            <th>错误描述</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    var url = "/?p=Admin&c=Rbac&a=selectsqlLog&jinIf=911";
+    var arr = ['log_id', 'time', 'action_name', 'errorinfo'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    $(document).ready(tableList(url, data, id, arr));
+</script>

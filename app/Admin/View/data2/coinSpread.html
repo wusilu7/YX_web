@@ -1,0 +1,64 @@
+{{include file="../common/1header.html"}}
+
+<div class="alert alert-info">
+    <div id="group_server"></div>
+   
+</div>
+<label for="add_num">货币总产出：</label>
+<span id="add_num" style="font-size: 25px; color: red; margin-right: 30px;"></span>
+<label for="time_start">日期：</label>
+<input size="16" type="text" id="time_start" class="form-control jin-datetime"
+       placeholder="开始日期">
+-
+<input size="16" type="text" id="time_end" class="form-control jin-datetime"
+       placeholder="结束日期">
+<label for="money_type">货币类型：</label>
+<select id="money_type">
+    <option value=""></option>
+</select>
+<a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>行为</th>
+            <th>类型</th>
+            <th>产出数量</th>
+            <th>行为占比</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+	var url = location.href + "&jinIf=912";
+    var arr = ['currency_opt', 'opt', 'real_amount', 'percent'];
+    var id = ["#content", "#page", "#add_num"];
+    var data = {page: 1};
+    gsSelect('#group', '#server');
+    calendar('hour', '#time_start', '#time_end');
+    moneySelect();
+
+    //设置一个函数来专门调用tableList方法
+    function getQuest() {
+        data.time_start = $('#time_start').val();//查询开始时间;
+        data.time_end   = $('#time_end').val();//查询结束时间
+        data.money_type = $("#money_type").val();
+        data.group      = $('#group').val();
+        data.pi         = $('#platform').val();
+        data.si         = $('#server').val();
+
+        tableList(url, data, id, arr, 3); //这个是自己封装的方法在jin-tableList.js文件中
+    }
+
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        data.current_type = 'yes';
+        getQuest();
+    });
+</script>
+

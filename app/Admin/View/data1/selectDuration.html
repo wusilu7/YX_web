@@ -1,0 +1,77 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>在线时长</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>日期</th>
+            <th>总在线时长（分钟）</th>
+            <th>累计登录人数</th>
+            <th>平均在线时长（分钟）</th>
+            <th>平均在线人数</th>
+            <th>最高在线人数</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①在线时长指的是<b>角色</b>的在线时长。
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect('#group', '#server', '#platform');
+    calendar('month', '#time_start', '#time_end');
+    var url = location.href + "&jinIf=912";
+    var arr = ['date', 'total', 'dau', 'per','people','highpeople'];
+    var id = ["#content", "#page"];
+    var data = {};
+    function getDuration() {
+        data.page       = 1;
+        data.group      = $('#group').val();
+        data.pi         = $('#platform').val();
+        data.si         = $('#server').val();
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end   = $('#time_end').val();//查询结束时间
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getDuration();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getDuration();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getDuration);
+    });
+</script>

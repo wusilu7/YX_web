@@ -1,0 +1,185 @@
+{{include file="../common/1header.html"}}
+<style type="text/css">
+    .alert {
+        padding-bottom: 46px;
+    }
+    .alert-info{
+        color: white;
+    }
+
+</style>
+<div class="jin-content-title"><span>限制登录设置</span></div>
+<div class="jin-server-select">
+    <div class="form-group" id="group_server_6"></div>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="jin_add" class="btn btn-primary">新增</a>
+    <input style="float: right;" id="char_info" type="text" class="form-control jin-search-input" placeholder="角色ID/角色名字">
+    <input style="float: right;" id="con" type="text" class="form-control jin-search-input" placeholder="设备/账号">
+</div>
+<hr/>
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead>
+            <tr>
+                <th class="jin-role-column1">编号</th>
+                <th>渠道id</th>
+                <th>内容</th>
+                <th>原因</th>
+                <th>时间</th>
+                <th>渠道-服务器-角色名(角色ID)</th>
+                <th>操作者</th>
+                <th>解封</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div id="page"></div>
+</div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    $(document).ready(gsSelect3('#g'));
+    var data ={};
+    var url = location.href + '&jinIf=912';
+    var btn = function (json) {
+        return '<div class="btn-group btn-group-sm">' +
+            '<a data-type="delete" data-data-name="'+json.create_user+'" class="btn btn-danger">删除</a>' +
+            '</div>'
+    };
+    var other=function (json) {
+        var c='';
+        if(json['other']){
+            for (var iii=0;iii<json['other'].length;iii++){
+                c+=json['other'][iii]['gi']+'-'+json['other'][iii]['si']+'-'+json['other'][iii]['char_name']+'('+json['other'][iii]['char_guid']+')<br>';
+            }
+        }
+        return c;
+    };
+    var arr = ['id','gi', 'content', 'reason','create_time',other,'create_user',btn];
+    var id = ["#content", "#page"];
+    $("#jin_add").on('click', function () {
+        if ($('#g').val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增',
+            area: ['500px', '600px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content:'<div class="jin-child">' +
+            '<div class="select_group_div">'+
+            '<div class="input-group"><span class="input-group-addon">限制对象</span><textarea id="content1" rows="13" cols="20" placeholder="设备或者账号\n多个换行" class="form-control jin-search-input"></textarea></div><br>' +
+            '<div class="input-group"><span class="input-group-addon">理由</span><input id="reason" type="text" class="form-control jin-search-input" placeholder="限制理由(展示给玩家看的)"></div><br>' +
+            '<div class="input-group"><span class="input-group-addon">默认理由</span><select id="reason1" class="form-control jin-search-input">' +
+            '<option value="使用非法软件">使用非法软件</option>' +
+            '<option value="异常账号">异常账号</option>' +
+            '</select></div><br>' +
+            '<div class="input-group"><span class="input-group-addon">是否移除排行榜以及禁产出一年</span><select id="del_power" class="form-control jin-search-input">' +
+            '<option value="1">是</option>' +
+            '<option value="0">否</option>' +
+            '</select></div>' +
+            '</div>' +
+            '</div>',
+            yes: function (index1) {
+                user_name = '{{$user_name}}';
+                switch(document.domain) {
+                    case 'croodsadmin-juzhang.xuanqu100.com':
+                        url_finall = "http://106.14.43.222/?p=I&c=Player&a=limitLogin";
+                        break;
+                    case 'croodsadmin-lehao.xuanqu100.com':
+                        url_finall = "http://croodsadmin-lehao.xuanqu100.com/?p=I&c=Player&a=limitLogin";
+                        break;
+                    case 'croodsadmin-lufeifan.xuanqu100.com':
+                        url_finall = "http://croodsadmin-lufeifan.xuanqu100.com/?p=I&c=Player&a=limitLogin";
+                        break;
+                    case 'croodsadmin-channel.xuanqu100.com':
+                        url_finall = "http://139.224.10.141/?p=I&c=Player&a=limitLogin";
+                        break;
+                    default:
+                        url_finall = location.href + "&jinIf=911";
+                }
+                reason = $("#reason").val();
+                if(reason==''){
+                    reason = $("#reason1").val();
+                }
+                $.ajax({
+                    type: "POST",
+                    url: url_finall,
+                    data: {
+                        gi:$("#g").val(),
+                        del_power :$("#del_power").val(),
+                        reason:reason,
+                        content:$("#content1").val(),
+                        user_name : user_name
+                    },
+                    dataType:'json',
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function () {
+                        layer.closeAll('loading');
+                        layer.close(index1);
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            selectReason();
+                        });
+                    }
+                });
+            }
+        });
+    });
+    function selectReason() {
+        data.page = 1;
+        data.con = $("#con").val();
+        data.char_info = $("#char_info").val();
+        data.gi = $("#g").val();
+        tableList(url, data, id, arr);
+    }
+    $("#jin_search").on('click',function () {
+        if ($('#g').val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        selectReason();
+    });
+    $('#content').on('click', 'a[data-type="delete"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var info = $(this).parents('tr').find('td').eq(2).text();
+        var create_user = $(this).attr('data-data-name');
+        layer.alert('确认删除？删除后该对象下的所有角色<span style="color: red;">解除</span>禁产出处罚', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    id: id,
+                    info:info,
+                    create_user:create_user
+                },
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']//0.3透明度的白色背景
+                    });
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.closeAll('loading');
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        selectReason();
+                    });
+                }
+            });
+        });
+    })
+
+
+</script>

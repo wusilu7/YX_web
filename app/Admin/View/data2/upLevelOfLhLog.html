@@ -1,0 +1,99 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>龙魂升级日志</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+               placeholder="开始日期">
+        -
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+               placeholder="结束日期">
+    </div>
+    <div>
+        <label for="player_name">筛选：</label>
+        <input id="player_name" type="text" class="form-control jin-search-input" placeholder="角色名">
+        <input id="player_num" type="text" class="form-control jin-search-input" placeholder="帐号">
+        <input id="player_id" type="text" class="form-control jin-search-input" placeholder="角色ID">
+        <input id="item_id" type="text" class="form-control jin-search-input" placeholder="槽位id">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <a id="server_summary" class="btn btn-success">服务器汇总</a>
+        <a id="group_summary" class="btn btn-success">渠道汇总</a>
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>日期</th>
+            <th>帐号</th>
+            <th>角色ID</th>
+            <th>角色名</th>
+            <th>结果</th>
+            <th>槽位id</th>
+            <th>旧等级</th>
+            <th>新等级</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①查询条件可以按需自由组合；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    var url = location.href + "&jinIf=912";
+    var arr = ['log_time', 'account', 'char_guid', 'char_name', 'result', 'arg1', 'arg2', 'arg3'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    $(function () {
+        gsSelect('#group', '#server', '#platform');
+        calendar('month', '#time_start', '#time_end');
+    });
+    function getServiceresult() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        checkSummaryTime(data.check_type, time_start, time_end, 30, 15);
+
+        data.time_start  = time_start;//查询开始时间;
+        data.time_end    = time_end;//查询结束时间
+        data.player_name = $("#player_name").val();
+        data.player_id   = $("#player_id").val();
+        data.player_num  = $("#player_num").val();
+        data.item_id     = $("#item_id").val();
+        data.group       = $('#group').val();
+        data.pi          = $('#platform').val();
+        data.si          = $('#server').val();
+
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getServiceresult();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getServiceresult();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getServiceresult);
+    });
+</script>

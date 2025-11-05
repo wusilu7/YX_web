@@ -1,0 +1,216 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-04-24 18:13:18
+  from "D:\pro\WebSiteYiXing\app\Admin\View\operation\ActiveListResult.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_6628db3e977ce2_64822863',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f9968de133aae9ed321155900825984ef01a39a8' => 
+    array (
+      0 => 'D:\\pro\\WebSiteYiXing\\app\\Admin\\View\\operation\\ActiveListResult.html',
+      1 => 1704262932,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_6628db3e977ce2_64822863 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>热更结果查询</span></div>
+<!-- 这里是渠道和服务器的二级联动下拉框 -->
+<div class="alert alert-info">
+    <div id="group_server_2" style="display: inline-block;"></div>
+    <label for="tb_path" style="color: white;">表名：</label>
+    <select  id="tb_path"></select>
+    <select  id="search_type" style="padding: 3px 6px;">
+        <option value="0">客户端</option>
+        <option value="1">服务器</option>
+    </select>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="delete_all" class="btn btn-danger">删除所有数据(热更后数据库)</a>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr id="tb_th">
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+
+<!-- 下面为js脚本 -->
+<?php echo '<script'; ?>
+ type="text/javascript">
+    gsSelect('#group', '#server','',getTbPath);
+    var url = location.href + "&jinIf=912";
+    var btn = [
+        '<a data-type="delete" class="btn btn-danger">删除</a>&nbsp;&nbsp;'+
+        '<a data-type="delete1" class="btn btn-danger">撤回</a>'
+    ];
+    var arr = [];
+    var id = "#content";
+    var data = {};
+    var filed_name = [];
+    var id_check = function (json) {
+        return '<input type="checkbox" value="' + json['ID'] + '" />'
+    };
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        select();
+    });
+
+    $("#delete_all").on('click', function () {
+        var tb_info = $("#tb_path").val().split('***');
+        layer.alert('确认删除吗？请谨慎使用', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=9142",
+                data: {
+                    si: $("#server").val(),
+                    s_type:$("#search_type").val(),
+                    tb_path: tb_info[0],
+                    client_tb_id:tb_info[1]
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        common();
+                    });
+                }
+            });
+        });
+    });
+    function select() {
+        var tb_info = $("#tb_path").val().split('***');
+        $.ajax({
+            type: "POST",
+            url: "/?p=Admin&c=Operation&a=ActiveListStructure&jinIf=912&show=1",
+            data: {
+                gi:$("#group").val(),
+                tb_path:tb_info[0]
+            },
+            dataType: "json",
+            success: function (json) {
+                arr = [];
+//                arr.push(id_check);
+                //var c= '<th><input id="all_choose" type="checkbox"><label for="all_choose">全选</label></th>';
+                var c= '';
+                for (var i=0;i<json.length;i++){
+                    arr.push(json[i]['filed_name']);
+                    c += '<th>'+json[i]['filed_name']+'<br>'+json[i]['filed_annotation']+'<br>'+json[i]['client_col_id']+'</th>';
+                }
+                arr.push(btn);
+                c +='<th>操作</th>';
+                $("#tb_th").html(c);
+                common();
+            }
+        });
+    }
+    function common() {
+        var tb_info = $("#tb_path").val().split('***');
+        data.gi=$("#group").val();
+        data.si=$("#server").val();
+        data.tb_path=tb_info[0];
+        data.client_tb_id=tb_info[1];
+        data.s_type=$("#search_type").val();
+        data.c_type=0;
+        noPageContentList(url, data, id, arr);
+    }
+    function getTbPath() {
+        $.ajax({
+            type: "post",
+            url: "/?p=Admin&c=Operation&a=ActiveListStructure&jinIf=9121",
+            dataType: "json",
+            data:{
+                'gi': $("#group").val()
+            },
+            success: function (res) {
+                var arr = [];
+                for (var i = 0; i < res.length; i++) {
+                    arr[i] = {//索引版配置
+                        id: res[i].tb_path+'***'+res[i].client_tb_id,
+                        text: res[i].tb_name
+                    }
+                }
+                if(arr.length>0){
+                    $("#tb_path").select2({
+                        data: arr,
+                        placeholder: '请选择',
+                        theme: "classic",
+                        width: "200px",
+                        multiple: false
+                    }).trigger('change');
+                }else {
+                    $("#tb_path").html('').val('');
+                }
+            }
+        });
+    }
+    $('#content').on('click', 'a[data-type="delete"]', function() {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var tb_info = $("#tb_path").val().split('***');
+        layer.alert('确认删除吗？请谨慎使用', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    id: id,
+                    si: $("#server").val(),
+                    s_type:$("#search_type").val(),
+                    c_type:0,
+                    tb_path: tb_info[0],
+                    client_tb_id:tb_info[1]
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        common();
+                    });
+                }
+            });
+        });
+    }).on('click', 'a[data-type="delete1"]', function() {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var tb_info = $("#tb_path").val().split('***');
+        layer.alert('确认删除吗？请谨慎使用', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=9141",
+                data: {
+                    id: id,
+                    si: $("#server").val(),
+                    s_type:$("#search_type").val(),
+                    tb_path: tb_info[0],
+                    filed_name:arr,
+                    client_tb_id:tb_info[1]
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        common();
+                    });
+                }
+            });
+        });
+    })
+<?php echo '</script'; ?>
+><?php }
+}

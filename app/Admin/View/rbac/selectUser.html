@@ -1,0 +1,97 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+
+<div class="jin-content-title"><span>用户管理</span></div>
+<!--栅格搭框架-->
+<div class="col-sm-10  col-md-10  col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+    <div class="table-responsive">
+        <table class="table table-striped text-center">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>帐号</th>
+                <th>姓名</th>
+                <th>角色</th>
+                <th>创建时间</th>
+                <th>最近登录时间</th>
+                <th>最近登录IP</th>
+                <th>禁登</th>
+                <th>修改</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{foreach $su as $u}}
+            <tr>
+                <td>{{$u.id}}</td>
+                <td>{{$u.user_id}}</td>
+                <td>{{$u.name}}</td>
+                <td>{{$u.role_name}}</td>
+                <td>{{$u.create_time}}</td>
+                <td>{{$u.last_login_time}}</td>
+                <td>{{$u.last_login_ip}}</td>
+                <td>
+                    {{if $u.is_valid eq 1}}
+                    <button class="btn btn-success stopUser" data-data-name="{{$u.name}}" data-data-id="{{$u.id}}">有效帐号</button>
+                    {{else}}
+                    <button class="btn btn-danger recoveryUser" data-data-name="{{$u.name}}" data-data-id="{{$u.id}}">无效帐号</button>
+                    {{/if}}
+
+                </td>
+                <td><a href="?p=Admin&c=Rbac&a=selectUser&jinIf=112&id={{$u.id}}"><span
+                        class="glyphicon glyphicon-edit"></span></a>
+                </td>
+            </tr>
+            {{/foreach}}
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-primary pull-right" href="?p=Admin&c=Rbac&a=selectUser&jinIf=111">添&nbsp;加&nbsp;用&nbsp;户</a>
+</div>
+{{include file="../common/2footer.html"}}
+<script>
+    $(document).ready(function () {
+        //btn组
+        $('.stopUser').on('click', function () {//
+            var id = $(this).attr("data-data-id");
+            layer.alert('是否禁止【'+$(this).attr("data-data-name")+'】登录', {icon: 0, btn: ['确定', '取消']}, function () {
+                $.ajax({
+                    type: "GET",
+                    url: location.href + "&jinIf=114",
+                    data: {
+                        id: id
+                    },
+                    success: function (res) {
+                        layer.alert('禁止登录成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            window.location.reload();
+
+                        });
+
+                    }
+                });
+            });
+        })
+
+
+        $('.recoveryUser').on('click', function () {//
+            var id = $(this).attr("data-data-id");
+            layer.alert('是否恢复【'+$(this).attr("data-data-name")+'】登录', {icon: 0, btn: ['确定', '取消']}, function () {
+                $.ajax({
+                    type: "GET",
+                    url: location.href + "&jinIf=115",
+                    data: {
+                        id: id
+                    },
+                    success: function (res) {
+                        layer.alert('恢复登录成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            window.location.reload();
+                        });
+
+                    }
+                });
+            });
+        })
+    });
+</script>
+<!--|↑↑↑↑↑↑|-->

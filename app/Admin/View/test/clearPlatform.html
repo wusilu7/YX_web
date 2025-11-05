@@ -1,0 +1,67 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.26.sqlSelect.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>平台数据清档</span></div>
+<div class="alert alert-info">
+    <div id="group_server_2"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <a id="clear_server" class="btn btn-success">清除服务器数据</a>
+    <a id="clear_group" class="btn btn-success">清除渠道数据</a>
+    <!-- <a id="clear_group" class="btn btn-success">清除所有数据</a> -->
+</div>
+<hr/>
+<div class="table-responsive jin-table-12px">
+    <table id="content" class="table table-striped text-center jin-retention-table">
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<th></th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody id="content"></tbody>-->
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        <!-- ① 后台已自动拼接limit，所以SQL语句不需要再加limit； -->
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+    gsSelect('#group', '#server');
+    var data = {};
+    function get() {
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=912",
+            data: data,
+            success: function () {
+                layer.alert('清除成功', {icon: 1});
+            },
+            error: function () {
+                layer.msg('清除数据失败，请重新尝试~');
+            }
+        });
+    }
+    $("#clear_server").on('click', function () {
+        data.check_type = 912;
+        data.si = $("#server").val();
+        data.gi = $("#group").val();
+        get();
+    });
+    $("#clear_group").on('click', function () {
+        data.check_type = 913;
+        data.gi = $("#group").val();
+        get();
+    });
+    $("#clear_group").on('click', function () {
+        data.check_type = 999;
+        data.all = '1';
+        get();
+    });
+</script>

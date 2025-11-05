@@ -1,0 +1,164 @@
+{{include file="../common/1header.html"}}
+
+<div class="jin-search-div">
+    <form id="uploadForm" enctype="multipart/form-data" style="display: inline-block;">
+        <input id="file" type="file" name="file"/>
+    </form>
+    <button id="jin_excel" class='btn btn-success'>Excel模板下载</button>
+    <hr>
+    <button id="upload" class='btn btn-success'>导入数据</button>
+    <button id="allAudit" class='btn btn-success'>一键下单</button>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+      		<th>编号</th>
+            <th>服务器</th>
+            <th>申请人</th>
+            <th>角色名</th>
+            <th>角色ID</th>
+            <th>订单号</th>
+            <th>充值金额</th>
+            <th>充值时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    
+    $(function () {
+        jsonAudit();
+    });
+
+    //刷新数据
+    function jsonAudit() {
+        var url = location.href + "&jinIf=912";
+	    var id = "#content";
+	    var data = {};
+	    var btn = [
+	            "<div class='btn-group btn-group-sm'>" +
+	            "<button data-type='a' class='btn btn-success'>审核通过</button>" +
+	            "<button data-type='d' class='btn btn-danger'>删除</button>" +
+	            "</div>"
+	        ];
+	    var arr = ['id', 'si', 'apply_name', 'char_name', 'char_guid','order' ,'amount', 'apply_time', btn];
+	    noPageContentList(url, data, id, arr);
+    }
+
+    //充值审核
+    $('#content').on('click', 'button[data-type="a"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+	        $.ajax({
+	            type: "POST",
+	            url: location.href + "&jinIf=913",
+	            data: {
+                    id:id
+	            },
+	            dataType: 'json',
+	            success: function (json) {
+                    if (json.status == 1) {
+                        jsonAudit();
+                    } else {
+                        layer.alert(json.msg, {icon: 2}, function (index1) {
+                            layer.close(index1);
+                        });
+                    }
+	            }
+	        });
+    }).on('click', 'button[data-type="d"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除[' + id + '号充值]？', {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    id: id
+                },
+                success: function () {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        jsonAudit();
+                    });
+                }
+            });
+        });
+    });
+    $("#upload").click(function () {
+            var formData = new FormData($('#uploadForm')[0]);
+            $.ajax({
+                type: 'post',
+                url: location.href + '&jinIf=916',
+                data: formData,
+                cache: false,
+                dataType: 'json',
+                processData: false,
+                contentType: false,
+                success:function (json) {
+                    if(json.status==1){
+                        layer.alert(json.msg, {icon: 1}, function (index1) {
+                            layer.close(index1);
+                            $("#file").val('');
+                            jsonAudit();
+                        });
+                    }else{
+                        layer.alert(json.msg, {icon: 0}, function (index1) {
+                            layer.close(index1);
+                        });
+                    }
+
+                }
+            })
+    });
+
+    $("#allAudit").click(function () {
+        $.ajax({
+            type: 'post',
+            url: location.href + '&jinIf=917',
+            dataType: 'json',
+            success:function (json) {
+                if(json==1){
+                    layer.alert('一键下单成功', {icon: 1}, function (index1) {
+                        layer.close(index1);
+                        jsonAudit();
+                    });
+                }else if(json==2){
+                    layer.alert('无数据！', {icon: 2}, function (index1) {
+                        layer.close(index1);
+                    });
+                }else {
+                    layer.alert('部分失败，请手动下单！！', {icon: 2}, function (index1) {
+                        layer.close(index1);
+                        jsonAudit();
+                    });
+                }
+            }
+        })
+    });
+
+    $("#jin_excel").on('click', function () {
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

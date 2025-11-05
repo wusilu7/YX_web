@@ -1,0 +1,276 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-10-18 14:22:03
+  from "D:\phpStudy\PHPTutorial\WWW\WebSiteYiXing\app\Admin\View\mb\mailSend.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_6711fe8bcbbac9_29226199',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '6ad3d98d6a75efbb726073d562bfc25314509d10' => 
+    array (
+      0 => 'D:\\phpStudy\\PHPTutorial\\WWW\\WebSiteYiXing\\app\\Admin\\View\\mb\\mailSend.html',
+      1 => 1723704876,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_6711fe8bcbbac9_29226199 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<link href="<?php echo CSS;?>
+jin/3.19.mailSend.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<style type="text/css">
+    #editor{
+        width: 1550px;
+    }
+    .w-e-text-container,
+    .w-e-toolbar{
+        width: 1400px;
+        margin-left: 300px;
+    }
+</style>
+<div class="jin-content-title"><span>普通邮件发送</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <select id="receiver_type">
+                <option value="1">角色名</option>
+                <option value="2">角色ID</option>
+            </select>
+        </label>
+
+        <div class="col-sm-10">
+            <textarea id="receiver" class="form-control" rows="1"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label ">标题*</label>
+        <div class="col-sm-10">
+            <input id="title" maxlength="20" class="form-control" placeholder="必填，标题最多20个字"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="content" class="col-sm-2 control-label ">内容*</label>
+        <div class="col-sm-10">
+            <textarea id="words" class="form-control" cols="30" rows="10" placeholder="内容最多500个字符"></textarea>
+        </div>
+    </div>
+    <!--money-->
+    <div class="form-group">
+        <label class="col-sm-2 control-label jin-mail-gray">货币</label>
+        <div class="col-sm-10">
+            <hr/>
+        </div>
+    </div>
+    <!--2个货币槽位填充-->
+    <div id="money"></div>
+    <!--item-->
+    <div class="form-group">
+        <label class="col-sm-2 control-label jin-mail-gray">道具</label>
+        <div class="col-sm-10">
+            <hr/>
+        </div>
+    </div>
+    <!--5个道具槽位填充-->
+    <div id="item"></div>
+
+    <div class="form-group">
+        <label for="exp" class="col-sm-2 control-label ">经验</label>
+        <div class="col-sm-10">
+            <input id="exp" maxlength="20" class="form-control"/>
+        </div>
+    </div>
+</div>
+
+<!--发送-->
+<div class="center">
+    <button id="send" class="btn btn-primary">发送</button>
+</div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ① 每封邮件最多可附带6种货币，5种道具，不填货币/道具栏即代表不带相应附件；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+    //2个货币槽位生成
+
+    var c_money = function () {
+        var c = '';
+        for (var i = 1; i <= 6; i++) {
+            c +=
+                '<div class="form-group">' +
+                '<label class="col-sm-2 control-label">货币类型-' + i + '</label>' +
+                '<div class="col-sm-3">' +
+                '<select id="money_type' + i + '">' +
+                '<option value=""></option>' +
+                '</select>' +
+                '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<label class="col-sm-2 control-label ">货币数量-' + i + '</label>' +
+                '<div class="col-sm-10">' +
+                '<input id="money_num' + i + '" class="form-control" placeholder="数量"/>' +
+                '</div>' +
+                '</div>';
+        }
+        return c;
+    };
+    $("#money").html(c_money);
+    //给货币select框赋值
+    var obj1 = {}, obj2 = {}, obj3 = {}, obj4 = {}, obj5 = {}, obj6 = {};
+    obj1.dom = "#money_type1";
+    obj2.dom = "#money_type2";
+    obj3.dom = "#money_type3";
+    obj4.dom = "#money_type4";
+    obj5.dom = "#money_type5";
+    obj6.dom = "#money_type6";
+    moneySelect(obj1);
+    moneySelect(obj2);
+    moneySelect(obj3);
+    moneySelect(obj4);
+    moneySelect(obj5);
+    moneySelect(obj6);
+    //5个道具槽位生成
+    var c_item = function () {
+        var c = '';
+        for (var i = 1; i <= 5; i++) {
+            c +=
+                '<div class="form-group">' +
+                '<label class="col-sm-2 control-label ">道具id-' + i + '</label>' +
+                '<div class="col-sm-10">' +
+                '<select id="item_type' + i + '"  class="selectpicker"  data-live-search="true" data-actions-box="true" title="请选择道具-' + i + '-"></select>'+
+                '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                '<label class="col-sm-2 control-label ">道具数量-' + i + '</label>' +
+                '<div class="col-sm-10">' +
+                '<input id="item_num' + i + '" class="form-control" placeholder="-' + i + '-" maxlength=3/>' +
+                '</div>' +
+                '</div>' +
+                '<div class="form-group hide">' +
+                '<label class="col-sm-2 control-label ">道具过期时间-' + i + '</label>' +
+                '<div class="col-sm-10">' +
+                '<input id="item_time' + i + '" class="form-control" placeholder="不填代表该邮件道具永不过期">' +
+                '</div>' +
+                '</div>';
+        }
+        return c;
+    };
+    $("#item").html(c_item);
+    $(function () {
+        getItems(["#item_type1","#item_type2","#item_type3","#item_type4","#item_type5"],'');
+    });
+    calendarOne('hour', '#item_time1');
+    calendarOne('hour', '#item_time2');
+    calendarOne('hour', '#item_time3');
+    calendarOne('hour', '#item_time4');
+    calendarOne('hour', '#item_time5');
+    //发送功能
+    gsSelect('#group', '#server');
+    $("#send").on('click', function () {
+        //money字符串拼接
+        var money = '';
+        for (var i = 1; i <= 6; i++) {
+            var id_type = "#money_type" + i;
+            var id_num = "#money_num" + i;
+            var money_type = $(id_type).val();
+            var money_num = $(id_num).val();
+            if (money_type && money_num) {
+                money += money_type + '#' + money_num + ';';
+            }
+        }
+        //item字符串拼接
+        var item = '';
+        for (i = 1; i <= 5; i++) {
+            id_type = "#item_type" + i;
+            id_num = "#item_num" + i;
+            id_time = "#item_time" + i;
+            var item_type = $(id_type).val();
+            var item_num = $(id_num).val();
+            var item_time = $(id_time).val();
+            if (item_type && item_num) {
+                if (item_time === '') {
+                    item_time = -1;
+                } else {
+                    item_time = Date.parse(item_time) / 1000 + 28800;
+                }
+                item += item_type + '#' + item_num + '#' + item_time + ';';
+            }
+        }
+        var title = $("#title").val();
+        var content = $("#words").val();
+        var receiver = $("#receiver").val();
+        var exp = $("#exp").val();
+        if (getUrlParam("si"))
+        {
+            var si = getUrlParam("si");
+        }else
+        {
+            var si = $("#server").val();
+        }
+        var data = {
+            si: si,
+            receiver_type: $("#receiver_type").val(),
+            receiver: receiver,
+            title: title,
+            content: content,
+            money: money,
+            item: item,
+            exp:exp
+        };console.log(data);
+        if (title && content && receiver) {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=911",
+                data: data,
+                dataType: 'json',
+                success: function () {
+                    layer.alert("发送成功，请等待审核");
+                },
+                error: function () {
+                }
+            });
+        } else {
+            layer.alert("请填写收件人、邮件标题和内容");
+        }
+    });
+    $(document).ready(function(){
+        var char_id=getUrlParam("char_id");
+        var si = getUrlParam("si");
+        if(si != null  && char_id != null)
+        {
+            $(".alert").hide();
+            var c = '<option value="2">角色ID</option>';
+            $("#receiver_type").html(c);
+            $("#receiver_type").val(2);
+            $("#receiver").text(char_id);
+        }
+    })
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+<?php echo '</script'; ?>
+>
+<?php }
+}

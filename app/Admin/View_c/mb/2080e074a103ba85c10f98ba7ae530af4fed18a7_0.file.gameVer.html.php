@@ -1,0 +1,556 @@
+<?php
+/* Smarty version 3.1.30, created on 2023-04-21 09:30:16
+  from "/lnmp/www/app/Admin/View/mb/gameVer.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_6441e728dedca0_80902524',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2080e074a103ba85c10f98ba7ae530af4fed18a7' => 
+    array (
+      0 => '/lnmp/www/app/Admin/View/mb/gameVer.html',
+      1 => 1678771400,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_6441e728dedca0_80902524 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>更新说明</span></div>
+<div class="form-group" id="group_server_6"></div>
+<a id="jin_add" class="btn btn-primary">新增</a>
+<a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+<input size="16" type="checkbox" id="ischeck1" value="1">
+<label for="ischeck1">查看完整更新内容</label>
+<!--导航区-->
+<br>
+<br>
+<ul class="nav nav-tabs">
+    <li  class="active"><a href="#nav_content1" data-toggle="tab">新增未上线</a></li>
+    <li><a href="#nav_content2" data-toggle="tab">已上线</a></li>
+    <li><a href="#nav_content3" data-toggle="tab">已下线</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active" id="nav_content1">
+        <button id="status_yes1" class="btn btn-success">批量上线</button>
+        <button id="status_no1" class="btn btn-danger">批量下线</button>
+        <button id="all_delete1" class="btn btn-danger">批量删除</button>
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th class="jin-server-column1">
+                        <input id="all_choose1" type="checkbox">
+                        <label for="all_choose1">全选1</label>
+                    </th>
+                    <th>渠道</th>
+                    <th>版本号</th>
+                    <th>标题</th>
+                    <th>更新内容</th>
+                    <th>是否上线<br>(游戏中是否能看见)</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="content1"></tbody>
+            </table>
+        </div>
+        <div id="page1"></div>
+    </div>
+    <div class="tab-pane" id="nav_content2">
+        <div class="table-responsive">
+            <button id="status_yes2" class="btn btn-success">批量上线</button>
+            <button id="status_no2" class="btn btn-danger">批量下线</button>
+            <button id="all_delete2" class="btn btn-danger">批量删除</button>
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th class="jin-server-column1">
+                        <input id="all_choose2" type="checkbox">
+                        <label for="all_choose2">全选2</label>
+                    </th>
+                    <th>渠道</th>
+                    <th>版本号</th>
+                    <th>标题</th>
+                    <th>更新内容</th>
+                    <th>是否上线<br>(游戏中是否能看见)</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="content2"></tbody>
+            </table>
+        </div>
+        <div id="page2"></div>
+    </div>
+    <div class="tab-pane" id="nav_content3">
+        <button id="status_yes3" class="btn btn-success">批量上线</button>
+        <button id="status_no3" class="btn btn-danger">批量下线</button>
+        <button id="all_delete3" class="btn btn-danger">批量删除</button>
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th class="jin-server-column1">
+                        <input id="all_choose3" type="checkbox">
+                        <label for="all_choose3">全选3</label>
+                    </th>
+                    <th>渠道</th>
+                    <th>版本号</th>
+                    <th>标题</th>
+                    <th>更新内容</th>
+                    <th>是否上线<br>(游戏中是否能看见)</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="content3"></tbody>
+            </table>
+        </div>
+        <div id="page3"></div>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+    var isMultilingualClass='';
+    if(eval('<?php echo $_smarty_tpl->tpl_vars['isMultilingual']->value;?>
+')==0){
+        isMultilingualClass='hide'
+    }
+    var data = {};
+    var url = location + "&jinIf=912";
+    var btn = [
+        "<div class='btn-group btn-group-sm'>" +
+        "<button data-type='u' class='btn btn-success'>修改</button>" +
+        "<button data-type='d' class='btn btn-danger'>删除</button>" +
+        "</div>"
+    ];
+    var status1 = function (json) {
+        if (json.status == 1) {
+            var c = '<span style="color: #00a820;">上线中</span>';
+        } else {
+            var c = '<span style="color: red;">下线中</span>';
+        }
+        return c;
+    };
+    var contentss = function (json) {
+        return '<div style="width: 500px; margin: 0 auto; text-align: left;" data-data-content="'+json['content1000']+'">'+json['content1']+'</div>';
+    };
+    var checkbox = function (json) {
+        return '<input type="checkbox" data-data-gi="'+json.gig+'"  value="' + json.id + '" />'+json.id;
+    };
+    var arr = [checkbox,'gi', 'version','vdate', contentss,status1, btn];
+    $(document).ready(gsSelect3('#g'));
+    //切换页面
+    $('ul').on('click', 'a[href="#nav_content1"]', function () {
+        if ($("#g").val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        jsonQuery(1);
+    });
+    $('ul').on('click', 'a[href="#nav_content2"]', function () {
+        if ($("#g").val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        jsonQuery(2);
+    });
+    $('ul').on('click', 'a[href="#nav_content3"]', function () {
+        if ($("#g").val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        jsonQuery(3);
+    });
+    $("#jin_search").on('click', function () {
+        if ($("#g").val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        jsonQuery(1);
+        jsonQuery(2);
+        jsonQuery(3);
+    });
+
+    function jsonQuery(i) {
+        data.page = 1;
+        data.gi = $("#g").val();
+        data.checked = $('#ischeck1').is(':checked') ? $('#ischeck1').val() : '';
+        var id = ["#content"+i, "#page"+i];
+        data.content_type=i;
+        tableList(url, data, id, arr)
+    }
+
+    for (var i=1;i<=3;i++){
+        (function (i) {
+            $('#content'+i).on('click', 'button[data-type="d"]', function () {
+                var id = $(this).parents('tr').find('td').eq(0).text();
+                var version = $(this).parents('tr').find('td').eq(1).text();
+                layer.alert('确认删除[' + version + '版本说明]('+id+')？', {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+                    $.ajax({
+                        type: "POST",
+                        url: location.href + "&jinIf=914",
+                        data: {
+                            id: id
+                        },
+                        success: function () {
+                            layer.alert('删除成功', {icon: 1}, function (index) {
+                                layer.close(index);
+                                jsonQuery(i);
+                            });
+                        }
+                    });
+                });
+            }).on('click', 'button[data-type="u"]', function () {
+                var id = $(this).parents('tr').find('td').eq(0).text();
+                var vdate = $(this).parents('tr').find('td').eq(3).text();
+                var version = $(this).parents('tr').find('td').eq(2).text();
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=9121',
+                    data: {
+                        id: id
+                    },
+                    dataType: "json",
+                    success: function (res) {
+                        layer.open({
+                            type: 1,
+                            closeBtn: 2,
+                            title: '修改',
+                            area: ['900px', '600px'],
+                            btn: ['修改', '取消'],
+                            btnAlign: 'c',
+                            shadeClose: true, //点击遮罩关闭
+                            content: '<div class="jin-child">' +
+                            '<div class="input-group"><span class="input-group-addon">版本号</span><input id="vversion" type="text" class="form-control" value="' + version + '"></div>' +
+                            '<div class="input-group"><span class="input-group-addon">标题</span><input id="vvdate" type="text" class="form-control" value="' + vdate + '"></div>' +
+                            '<div class="input-group '+isMultilingualClass+'">' +
+                            '<ul class="nav nav-tabs">' +
+                            '<li  class="active"><a href="#nav_content11" data-toggle="tab">中文</a></li>' +
+                            '<li><a href="#nav_content22" data-toggle="tab">繁体</a></li>' +
+                            '<li><a href="#nav_content33" data-toggle="tab">英语</a></li>' +
+                            '<li><a href="#nav_content44" data-toggle="tab">西班牙</a></li>' +
+                            '<li><a href="#nav_content55" data-toggle="tab">阿拉伯语</a></li>' +
+                            '<li><a href="#nav_content66" data-toggle="tab">俄语</a></li>' +
+                            '<li><a href="#nav_content77" data-toggle="tab">泰文</a></li>' +
+                            '<li><a href="#nav_content88" data-toggle="tab">巴西</a></li>' +
+                            '<li><a href="#nav_content99" data-toggle="tab">印尼</a></li>' +
+                            '<li><a href="#nav_content1010" data-toggle="tab">日本</a></li>' +
+                            '<li><a href="#nav_content1111" data-toggle="tab">韩文</a></li>' +
+                            '</ul>' +
+                            '</div>' +
+                            '<div class="tab-content">' +
+                            '<div class="tab-pane active" id="nav_content11">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent1"  rows="12"  class="form-control">' + res.content1 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content22">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent2"  rows="12"  class="form-control">' + res.content2 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content33">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent3"  rows="12"  class="form-control">' + res.content3 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content44">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent4"  rows="12"  class="form-control">' + res.content4 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content55">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent5"  rows="12"  class="form-control">' + res.content5 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content66">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent6"  rows="12"  class="form-control">' + res.content6 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content77">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent7"  rows="12"  class="form-control">' + res.content7 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content88">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent8"  rows="12"  class="form-control">' + res.content8 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content99">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent9"  rows="12"  class="form-control">' + res.content9 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content1010">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent10"  rows="12"  class="form-control">' + res.content10 + '</textarea></div>' +
+                            '</div>' +
+                            '<div class="tab-pane" id="nav_content1111">' +
+                            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent11"  rows="12"  class="form-control">' + res.content11 + '</textarea></div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>',
+                            yes: function (index) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: location.href + '&jinIf=913',
+                                    data: {
+                                        id: id,
+                                        version: $('#vversion').val(),
+                                        vdate: $('#vvdate').val(),
+                                        content1: $('#vcontent1').val(),
+                                        content2: $('#vcontent2').val(),
+                                        content3: $('#vcontent3').val(),
+                                        content4: $('#vcontent4').val(),
+                                        content5: $('#vcontent5').val(),
+                                        content6: $('#vcontent6').val(),
+                                        content7: $('#vcontent7').val(),
+                                        content8: $('#vcontent8').val(),
+                                        content9: $('#vcontent9').val(),
+                                        content10: $('#vcontent10').val(),
+                                        content11: $('#vcontent11').val()
+                                    },
+                                    success: function () {
+                                        layer.close(index);
+                                        layer.alert('修改成功', {icon: 1}, function (index) {
+                                            layer.close(index);
+                                            jsonQuery(i);
+                                        });
+                                    }
+                                });
+                            },
+                            cancel: function () {
+                            }
+                        });
+                        calendar('hour', '#time_start1', '#time_end1');
+                    }
+                });
+            }).on('click', 'tr', function() {
+                var cb = $(this).find('td:first>input');
+                if (! cb.is(':checked')) {
+                    cb.attr('checked', true);
+                    $(this).attr('style', 'background: #aba5618c');
+                } else {
+                    cb.attr('checked', false);
+                    $(this).removeAttr('style', 'background: #aba5618c');
+                }
+            });
+
+            $('#status_yes'+i).on('click', function () {
+                var IDs =getChoose(i).idss;
+                if (IDs == '') {
+                    layer.msg('请选择数据!');
+                    return false;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=9131',
+                    data: {
+                        id: IDs,
+                        gig :getChoose(i).gigs,
+                        status: 1,
+                        gtype:0,
+                        gi: $("#group").val(),
+                        s_type:1
+                    },
+                    success: function (json) {
+                        jsonQuery(i);
+                    }
+                });
+            });
+
+            $('#status_no'+i).on('click', function () {
+                var IDs =getChoose(i).idss;
+                if (IDs == '') {
+                    layer.msg('请选择数据!');
+                    return false;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=9131',
+                    data: {
+                        id: IDs,
+                        status: 0
+                    },
+                    success: function (json) {
+                        jsonQuery(i);
+                    }
+                });
+            });
+
+
+            $('#all_delete'+i).on('click', function () {
+                var IDs =getChoose(i).idss;
+                if (IDs == '') {
+                    layer.msg('请选择数据!');
+                    return false;
+                }
+                layer.alert('确认删除？'+i, {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+                    $.ajax({
+                        type: "POST",
+                        url: location.href + '&jinIf=914',
+                        data: {
+                            id: IDs
+                        },
+                        success: function (json) {
+                            layer.alert('删除成功', {icon: 1}, function (index) {
+                                layer.close(index);
+                                jsonQuery(i);
+                            });
+                        }
+                    });
+                });
+            });
+
+            $('#all_choose'+i).click(function() {
+                var check_on = $(this).is(':checked');
+                if (check_on) {
+                    $('#content'+i).find('input[type="checkbox"]').attr('checked', true);
+                } else {
+                    $('#content'+i).find('input[type="checkbox"]').attr('checked', false);
+                }
+            });
+
+        })(i);
+    }
+
+    function getChoose(i) {
+        var idss = '';
+        var gigs = '';
+        $('#content'+i+' input[type="checkbox"]:checked').each(function(index, el) {
+            if (index == 0) {
+                idss = $(el).val();
+                gigs = $(el).attr('data-data-gi');
+            } else {
+                idss += ',' + $(el).val();
+                gigs += ',' + $(el).attr('data-data-gi');
+            }
+        });
+        return {
+            'idss':idss,
+            'gigs':gigs
+        };
+    }
+    $("#jin_add").on('click', function () {
+        if ($("#g").val() == '') {
+            layer.msg('请选择渠道!');
+            return false;
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增',
+            area: ['900px', '600px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">版本号</span><input id="version" type="text" class="form-control" ></div>' +
+            '<div class="input-group"><span class="input-group-addon">标题</span><input id="vdate" type="text" class="form-control"></div>' +
+            '<div class="input-group '+isMultilingualClass+'">' +
+            '<ul class="nav nav-tabs">' +
+            '<li  class="active"><a href="#nav_content11" data-toggle="tab">中文</a></li>' +
+            '<li><a href="#nav_content22" data-toggle="tab">繁体</a></li>' +
+            '<li><a href="#nav_content33" data-toggle="tab">英语</a></li>' +
+            '<li><a href="#nav_content44" data-toggle="tab">西班牙</a></li>' +
+            '<li><a href="#nav_content55" data-toggle="tab">阿拉伯语</a></li>' +
+            '<li><a href="#nav_content66" data-toggle="tab">俄语</a></li>' +
+            '<li><a href="#nav_content77" data-toggle="tab">泰文</a></li>' +
+            '<li><a href="#nav_content88" data-toggle="tab">巴西</a></li>' +
+            '<li><a href="#nav_content99" data-toggle="tab">印尼</a></li>' +
+            '<li><a href="#nav_content1010" data-toggle="tab">日本</a></li>' +
+            '<li><a href="#nav_content1111" data-toggle="tab">韩文</a></li>' +
+            '</ul>' +
+            '</div>' +
+            '<div class="tab-content">' +
+            '<div class="tab-pane active" id="nav_content11">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent1"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content22">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent2"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content33">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent3"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content44">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent4"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content55">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent5"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content66">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent6"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content77">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent7"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content88">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent8"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content99">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent9"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content1010">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent10"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '<div class="tab-pane" id="nav_content1111">' +
+            '<div class="input-group"><span class="input-group-addon">内容</span><textarea id="vcontent11"  rows="12"  class="form-control"></textarea></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>',
+            yes: function (index) {
+                var content1 = $("#vcontent1").val();
+                var content2 = $("#vcontent2").val();
+                var content3 = $("#vcontent3").val();
+                var content4 = $("#vcontent4").val();
+                var content5 = $("#vcontent5").val();
+                var content6 = $("#vcontent6").val();
+                var content7 = $("#vcontent7").val();
+                var content8 = $("#vcontent8").val();
+                var content9 = $("#vcontent9").val();
+                var content10 = $("#vcontent10").val();
+                var content11 = $("#vcontent11").val();
+                if ($("#version").val()&&$("#vdate").val()) {
+                    var data = {
+                        gi: $("#g").val(),
+                        version: $("#version").val(),
+                        vdate:$("#vdate").val(),
+                        content1: content1.replace(/[\n]/g,'<br>'),
+                        content2: content2.replace(/[\n]/g,'<br>'),
+                        content3: content3.replace(/[\n]/g,'<br>'),
+                        content4: content4.replace(/[\n]/g,'<br>'),
+                        content5: content5.replace(/[\n]/g,'<br>'),
+                        content6: content6.replace(/[\n]/g,'<br>'),
+                        content7: content7.replace(/[\n]/g,'<br>'),
+                        content8: content8.replace(/[\n]/g,'<br>'),
+                        content9: content9.replace(/[\n]/g,'<br>'),
+                        content10: content10.replace(/[\n]/g,'<br>'),
+                        content11: content11.replace(/[\n]/g,'<br>')
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: location.href + '&jinIf=911',
+                        data: data,
+                        dataType: 'json',
+                        beforeSend: function () {
+                            layer.load(2, {
+                                shade: [0.3, '#fff']//0.3透明度的白色背景
+                            });
+                        },
+                        success: function (res) {
+                            layer.closeAll('loading');
+                            layer.close(index);
+                            layer.alert('成功', {icon: 1}, function (index) {
+                                layer.close(index);
+                                jsonQuery(1);
+                            });
+                        }
+                    });
+                } else {
+                    layer.alert("请填写必要信息", {icon: 2});
+                }
+            }
+        });
+        //calendarOne('month', '#vdate');
+    });
+<?php echo '</script'; ?>
+><?php }
+}

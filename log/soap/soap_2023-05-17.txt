@@ -1,0 +1,4 @@
+★10:27:51-183.128.222.128★发送请求★http://101.43.70.129:1002/mservice.wsdl|27|0|0|0|ct_tb_id=Stage_Layer_monster_difficulty`row_idx=37`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Stage_Layer_monster_difficulty`row_idx=37`col_idx=WizardRand`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:27:51-183.128.222.128★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:27:53-183.128.222.128★发送请求★http://101.43.70.129:1002/mservice.wsdl|27|0|0|0|ct_tb_id=Stage_Layer_monster_difficulty`row_idx=38`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Stage_Layer_monster_difficulty`row_idx=38`col_idx=WizardRand`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:27:53-183.128.222.128★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

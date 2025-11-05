@@ -1,0 +1,35 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/4.01.setActivity.css" rel="stylesheet">
+<div class="jin-content-title"><span>活动配置</span></div>
+<!-- 这里是渠道和服务器的二级联动下拉框 -->
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center jin-server-table">
+        <thead>
+        <tr>
+            <th class="jin-server-column1">活动ID</th>
+            <th>活动名称</th>
+            <th class="jin-server-column3">开始时间</th>
+            <th class="jin-server-column4">结束时间</th>
+            <th class="jin-server-column5">操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+    <div class="jin-explain  clearfix">
+        <b>说明</b>：
+        <div>
+            ①点击渠道下拉框切换渠道。
+        </div>
+    </div>
+</div>
+{{include file="../common/2footer.html"}}
+
+<!-- 下面为js脚本 -->
+<script type="text/javascript">
+    $(document).ready(gsSelect('#group', '#server'));
+    
+</script>

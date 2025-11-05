@@ -1,0 +1,155 @@
+{{include file="../common/1header.html"}}
+
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>玩家帐号信息</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <input id="playerName" class="form-control jin-search-input" placeholder="帐号">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>帐号</th>
+            <th>权限</th>
+            <th>创建时间</th>
+            <th>最后登录时间</th>
+            <th>最后登录IP</th>
+            <th>更改账号类型</th>
+            <th>更改账号ID</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ① 查询框留空表示查询全部帐号信息；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    gsSelect('#group', '#server');
+    var acc_type = function (json) {
+        if (json.acc_type == undefined) {
+            c = '不可操作';
+        } else {
+            if (json.acc_type == 0) {
+                acc_type = '普通玩家';
+            } else if (json.acc_type == 1) {
+                acc_type = '工会账号';
+            } else {
+                acc_type = '机器人号';
+            }
+            
+            c = '<div class="btn-group">'+
+                    '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'+
+                        acc_type+' <span class="caret"></span></button>'+
+                    '<ul class="dropdown-menu">'+
+                        '<li><a href="javascript:void(0);" onclick=update('+json.account_id+',0,"'+json.acc_name+'")>普通玩家</a></li>'+
+                        '<li><a href="javascript:void(0);" onclick=update('+json.account_id+',1,"'+json.acc_name+'")>工会账号</a></li>'+
+                        '<li><a href="javascript:void(0);" onclick=update('+json.account_id+',2,"'+json.acc_name+'")>机器人</a></li>'+
+                    '</ul></div>';
+        }
+        
+        return c;
+    };
+
+    var btn = [
+        '<div class="btn-group btn-group-sm">' +
+        '<a data-type="updateAccount" class="btn btn-success">更改账号ID</a>' +
+        '</div>'
+    ];
+
+    var url = location.href + "&jinIf=912";
+    var arr = ['acc_name', 'auth', 'create_time', 'last_login_time', 'last_login_ip', acc_type, btn];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    
+    $("#jin_search").on('click', function () {
+        data.page = 1;
+        data.si = $('#server').val();
+        data.playerName = $("#playerName").val();
+        data.playerId = $("#playerId").val();
+        tableList(url, data, id, arr)
+    });
+
+    $('#content').on('click', 'a[data-type="updateAccount"]', function () {
+        var oldAccount = $(this).parents('tr').find('td').eq(0).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '账号ID修改',
+            area: ['600px', '300px'],
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">旧账号ID</span><input id="oldAccount" disabled type="text" class="form-control" value="'+oldAccount+'"></div>' +
+            '<div class="input-group"><span class="input-group-addon">新账号ID</span><input id="newAccount" type="text" class="form-control"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=914',
+                    data: {
+                        si: $("#server").val(),
+                        oldAccount: oldAccount,
+                        newAccount: $("#newAccount").val()
+                    },
+                    success: function (json) {
+                        layer.close(index);
+                        if (json == 1) {
+                            layer.alert('修改成功', {icon: 1}, function (index) {
+                                layer.close(index);
+                                tableList(url, data, id, arr)
+                            });
+                        }else if(json == 2){
+                            layer.alert('无权限操作！ 请联系管理员');
+                        } else{
+                            layer.alert('修改失败');
+                        }
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    });
+
+        var update = function(account_id, num, acc_name) {
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=913',
+            data: {
+                account_id: account_id,
+                num: num,
+                acc_name:acc_name,
+                si:si
+            },
+            success: function (json) {
+                if (json == 1) {
+                    layer.alert('修改成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        tableList(url, data, id, arr)
+                    });
+                } else {
+                    layer.alert('修改失败');
+                } 
+            }
+        });
+    }
+</script>

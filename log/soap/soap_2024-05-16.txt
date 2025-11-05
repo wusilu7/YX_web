@@ -1,0 +1,792 @@
+★00:24:26-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749360`order=17157902460153005912725`amount=30.00`id=209`param=
+★00:24:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:24:50-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749360`order=17157902788852105912725`amount=30.00`id=216`param=
+★00:24:50-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:25:30-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749360`order=17157903210283405912725`amount=198.00`id=217`param=
+★00:25:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:32:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17157907373637612382725`amount=3.00`resettype=3`giftid=105`id=245`param=
+★00:32:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:38:04-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791749486`order=17157910722318808272725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★00:38:04-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:43:46-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|5|0|0|0|charguid=1125917086715931`order=17157914139769424932725`amount=12.00`id=208`param=
+★00:43:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:56:48-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684309`order=17157921966811432132725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★00:56:48-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:58:30-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17157922998637912382725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★00:58:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★00:58:46-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17157923140938812382725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★00:58:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:00:42-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684312`order=17157924310055369752725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★01:00:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:03:16-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683121`order=17157925828614475222725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★01:03:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:03:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684272`order=17157925862391330152725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★01:03:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:11:40-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684309`order=17157930887945432132725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★01:11:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:12:52-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683691`order=17157931475439702462725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★01:12:52-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684309`order=17157931577829832132725`amount=30.00`resettype=3`giftid=94`id=234`param=
+★01:12:52-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:12:52-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:14:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684318`order=17157932402443732292725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★01:14:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:14:24-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684309`order=17157932537573932132725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★01:14:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:16:24-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684309`order=17157933743494632132725`amount=30.00`resettype=3`giftid=122`id=263`param=
+★01:16:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:19:14-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684309`order=17157935433929932132725`amount=68.00`resettype=3`giftid=123`id=264`param=
+★01:19:14-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:21:16-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381684309`order=17157936675178532132725`amount=12.00`id=208`param=
+★01:21:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:21:30-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381684309`order=17157936828994232132725`amount=30.00`id=209`param=
+★01:21:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:28:24-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716584`order=17157940895829062752725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★01:28:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:28:42-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684318`order=17157941048533332292725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★01:28:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:28:56-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381683331`order=17157941223825891262725`amount=12.00`id=208`param=
+★01:28:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:29:06-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684318`order=17157941331684332292725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★01:29:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:41:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381684312`order=17157948774711069752725`amount=30.00`id=209`param=
+★01:41:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:44:34-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684102`order=17157950626953919582725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★01:44:34-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★01:54:04-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684312`order=17157956334216269752725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★01:54:04-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:04:12-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381684312`order=17157962422144469752725`amount=12.00`id=208`param=
+★02:04:12-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:08:16-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17157964823337912382725`amount=6.00`resettype=3`giftid=102`id=242`param=
+★02:08:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:09:02-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17157965335256312382725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★02:09:02-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:13:46-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|29|0|0|0|charguid=1125904201812984`order=17157968065617238322725`amount=6.00`resettype=3`giftid=121`id=262`param=
+★02:13:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:21:26-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716681`order=17157972758873370902725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★02:21:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:22:40-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716681`order=17157973503157870902725`amount=30.00`resettype=3`giftid=94`id=234`param=
+★02:22:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:24:56-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716681`order=17157974864149170902725`amount=6.00`resettype=0`giftid=6`id=107`param=
+★02:24:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:52:26-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716554`order=17157991313421060132725`amount=6.00`resettype=3`giftid=96`id=236`param=
+★02:52:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★02:55:58-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716554`order=17157993460366760132725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★02:55:58-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★03:05:48-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748723`order=17157999232572389832725`amount=30.00`resettype=3`giftid=114`id=254`param=
+★03:05:48-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★03:18:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684327`order=17158006854723032842725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★03:18:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★03:30:14-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748954`order=17158013958803596502725`amount=1.00`resettype=3`giftid=110`id=250`param=
+★03:30:14-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★03:30:44-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748954`order=17158014347658896502725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★03:30:44-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★03:31:36-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791748954`order=17158014843904096502725`amount=6.00`id=201`param=
+★03:31:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★05:18:56-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684337`order=17158079215743433302725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★05:18:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★05:31:54-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684215`order=17158087035916764462725`amount=18.00`resettype=0`giftid=80`id=231`param=
+★05:31:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★06:24:16-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684215`order=17158118476522964462725`amount=6.00`resettype=3`giftid=96`id=236`param=
+★06:24:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★06:50:38-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749605`order=17158134283801510532725`amount=12.00`id=208`param=
+★06:50:38-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★07:15:34-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684215`order=17158149255185964462725`amount=6.00`resettype=3`giftid=14`id=135`param=
+★07:15:34-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★07:37:54-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684147`order=17158162547699421312725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★07:37:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★07:38:40-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684147`order=17158163068587021312725`amount=30.00`resettype=3`giftid=94`id=234`param=
+★07:38:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:02:36-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684048`order=17158177414202818152725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★08:02:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:27:36-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749813`order=17158192326002214832725`amount=68.00`id=207`param=
+★08:27:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:45:06-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683273`order=17158202935006088692725`amount=6.00`resettype=3`giftid=12`id=133`param=
+★08:45:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:45:24-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683273`order=17158203146681088692725`amount=6.00`resettype=3`giftid=14`id=135`param=
+★08:45:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:50:44-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791749813`order=17158206268959514832725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★08:50:44-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:51:28-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496781868`order=17158206558802568802725`amount=3.00`resettype=3`giftid=112`id=252`param=
+★08:51:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★08:53:36-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749813`order=17158208042429114832725`amount=30.00`id=216`param=
+★08:53:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:19:34-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684353`order=17158223620441534442725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★09:19:34-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:25:30-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684355`order=17158227200587034492725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★09:25:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:26:36-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|5|0|0|0|charguid=1125904201811992`order=17158227797878713942725`amount=68.00`id=207`param=
+★09:26:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:36:10-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683943`order=17158233579284115432725`amount=18.00`resettype=0`giftid=80`id=231`param=
+★09:36:10-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:41:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683943`order=17158236701464015432725`amount=6.00`resettype=3`giftid=96`id=236`param=
+★09:41:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:52:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683433`order=17158243294611795332725`amount=18.00`resettype=0`giftid=80`id=231`param=
+★09:52:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:57:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684215`order=17158246377553664462725`amount=30.00`resettype=3`giftid=16`id=137`param=
+★09:57:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://49.235.116.123:10002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://49.235.116.123:20002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://106.54.50.185:10002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://106.54.50.185:20002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:01-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:02-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:02-101.43.35.210★发送请求★http://121.37.40.146:55002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:02-101.43.35.210★发送请求★http://121.37.40.146:15002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:02-101.43.35.210★发送请求★http://121.37.40.146:25002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:02-101.43.35.210★发送请求★http://121.37.40.146:35002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:00:02-101.43.35.210★发送请求★http://121.37.40.146:45002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-05-16 10:00:00`allowip=`blackip=
+★10:00:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:53002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:43002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:33002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:23002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:13002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:52002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:42002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:32002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:22002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:12002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:45002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:35002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:25002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:15002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:55002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:50002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:40002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:30002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:20002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://106.54.50.185:10002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://49.235.116.123:20002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://49.235.116.123:10002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:52002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:42002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:32002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:22002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:12002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★"Could not connect to host"
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:45002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:35002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:25002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:46-183.128.217.60★发送请求★http://121.37.40.146:15002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:46`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:47-183.128.217.60★发送请求★http://121.37.40.146:55002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:47`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:47-183.128.217.60★发送请求★http://121.37.40.146:50002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:47`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:47-183.128.217.60★发送请求★http://121.37.40.146:40002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:47`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:47-183.128.217.60★发送请求★http://121.37.40.146:30002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:47`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:47-183.128.217.60★发送请求★http://121.37.40.146:20002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:47`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:13:47-183.128.217.60★发送请求★http://121.37.40.146:10002/mservice.wsdl|1|0|0|0|opentime=2024-05-15 10:13:47`closetime=`allowip=`blackip=
+★10:13:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:16:08-183.128.217.60★发送请求★http://121.37.40.146:10002/mservice.wsdl|27|0|0|0|ct_tb_id=GuideTable`row_idx=156`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=GuideTable`row_idx=156`col_idx=Condition`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:16:08-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:16:40-183.128.217.60★发送请求★http://121.37.40.146:10002/mservice.wsdl|27|0|0|0|ct_tb_id=Carnival`row_idx=15`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=NeedStage`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenDate`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Duration`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=ServerOption`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:16:40-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:16:46-183.128.217.60★发送请求★http://121.37.40.146:10002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=NeedStage`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=NeedStage`sv_value=0`isutf8=0`is_add=0&col_idx=OpenDate`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenDate`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=Duration`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Duration`sv_value=0`isutf8=0`is_add=0&col_idx=ServerOption`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ServerOption`sv_value=0`isutf8=0`is_add=0
+★10:16:46-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:16:55-183.128.217.60★发送请求★http://121.37.40.146:10002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=WearID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=WearID`sv_value=0`isutf8=0`is_add=0&col_idx=Condition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=Condition`sv_value=0`isutf8=0`is_add=0&col_idx=OtherCondition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=OtherCondition`sv_value=0`isutf8=0`is_add=0
+★10:16:55-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:02-183.128.217.60★发送请求★http://121.37.40.146:20002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=WearID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=WearID`sv_value=0`isutf8=0`is_add=0&col_idx=Condition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=Condition`sv_value=0`isutf8=0`is_add=0&col_idx=OtherCondition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=OtherCondition`sv_value=0`isutf8=0`is_add=0
+★10:17:02-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:12-183.128.217.60★发送请求★http://121.37.40.146:20002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=NeedStage`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=NeedStage`sv_value=0`isutf8=0`is_add=0&col_idx=OpenDate`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenDate`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=Duration`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Duration`sv_value=0`isutf8=0`is_add=0&col_idx=ServerOption`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ServerOption`sv_value=0`isutf8=0`is_add=0
+★10:17:12-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:17-183.128.217.60★发送请求★http://121.37.40.146:20002/mservice.wsdl|27|0|0|0|ct_tb_id=Carnival`row_idx=15`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=NeedStage`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenDate`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Duration`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=ServerOption`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:17:18-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:24-183.128.217.60★发送请求★http://121.37.40.146:20002/mservice.wsdl|27|0|0|0|ct_tb_id=GuideTable`row_idx=156`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=GuideTable`row_idx=156`col_idx=Condition`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:17:24-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:31-183.128.217.60★发送请求★http://121.37.40.146:30002/mservice.wsdl|27|0|0|0|ct_tb_id=GuideTable`row_idx=156`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=GuideTable`row_idx=156`col_idx=Condition`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:17:31-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:36-183.128.217.60★发送请求★http://121.37.40.146:30002/mservice.wsdl|27|0|0|0|ct_tb_id=Carnival`row_idx=15`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=NeedStage`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenDate`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Duration`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=ServerOption`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:17:36-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:41-183.128.217.60★发送请求★http://121.37.40.146:30002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=NeedStage`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=NeedStage`sv_value=0`isutf8=0`is_add=0&col_idx=OpenDate`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenDate`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=Duration`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Duration`sv_value=0`isutf8=0`is_add=0&col_idx=ServerOption`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ServerOption`sv_value=0`isutf8=0`is_add=0
+★10:17:41-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:48-183.128.217.60★发送请求★http://121.37.40.146:30002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=WearID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=WearID`sv_value=0`isutf8=0`is_add=0&col_idx=Condition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=Condition`sv_value=0`isutf8=0`is_add=0&col_idx=OtherCondition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=OtherCondition`sv_value=0`isutf8=0`is_add=0
+★10:17:48-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:53-183.128.217.60★发送请求★http://121.37.40.146:40002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=WearID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=WearID`sv_value=0`isutf8=0`is_add=0&col_idx=Condition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=Condition`sv_value=0`isutf8=0`is_add=0&col_idx=OtherCondition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=OtherCondition`sv_value=0`isutf8=0`is_add=0
+★10:17:53-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:17:57-183.128.217.60★发送请求★http://121.37.40.146:40002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=NeedStage`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=NeedStage`sv_value=0`isutf8=0`is_add=0&col_idx=OpenDate`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenDate`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=Duration`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Duration`sv_value=0`isutf8=0`is_add=0&col_idx=ServerOption`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ServerOption`sv_value=0`isutf8=0`is_add=0
+★10:17:57-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:18:02-183.128.217.60★发送请求★http://121.37.40.146:40002/mservice.wsdl|27|0|0|0|ct_tb_id=Carnival`row_idx=15`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=NeedStage`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenDate`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Duration`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=ServerOption`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:18:02-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:18:07-183.128.217.60★发送请求★http://121.37.40.146:40002/mservice.wsdl|27|0|0|0|ct_tb_id=GuideTable`row_idx=156`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=GuideTable`row_idx=156`col_idx=Condition`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:18:07-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:18:12-183.128.217.60★发送请求★http://121.37.40.146:50002/mservice.wsdl|27|0|0|0|ct_tb_id=GuideTable`row_idx=156`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=GuideTable`row_idx=156`col_idx=Condition`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:18:12-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:18:17-183.128.217.60★发送请求★http://121.37.40.146:50002/mservice.wsdl|27|0|0|0|ct_tb_id=Carnival`row_idx=15`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=NeedStage`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenDate`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=Duration`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=Carnival`row_idx=15`col_idx=ServerOption`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:18:17-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:18:25-183.128.217.60★发送请求★http://121.37.40.146:50002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=NeedStage`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=NeedStage`sv_value=0`isutf8=0`is_add=0&col_idx=OpenDate`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenDate`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=Duration`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=Duration`sv_value=0`isutf8=0`is_add=0&col_idx=ServerOption`sv_tb_name=/public/Carnival.txt`row_idx_name=ID`server_cond_value=15`col_idx_name=ServerOption`sv_value=0`isutf8=0`is_add=0
+★10:18:25-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:18:30-183.128.217.60★发送请求★http://121.37.40.146:50002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=WearID`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=WearID`sv_value=0`isutf8=0`is_add=0&col_idx=Condition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=Condition`sv_value=0`isutf8=0`is_add=0&col_idx=OtherCondition`sv_tb_name=/public/ReformWear.txt`row_idx_name=ID`server_cond_value=0`col_idx_name=OtherCondition`sv_value=0`isutf8=0`is_add=0
+★10:18:30-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:20:47-183.128.217.60★发送请求★http://49.235.116.123:10002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=EndTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=EndTime`sv_value=0`isutf8=0`is_add=0&col_idx=IsOpen`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=IsOpen`sv_value=0`isutf8=0`is_add=0&col_idx=StageLevel`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=StageLevel`sv_value=0`isutf8=0`is_add=0&col_idx=ResetType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ResetType`sv_value=0`isutf8=0`is_add=0&col_idx=GiftID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=GiftID`sv_value=0`isutf8=0`is_add=0&col_idx=PayType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PayType`sv_value=0`isutf8=0`is_add=0&col_idx=Price`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Price`sv_value=0`isutf8=0`is_add=0&col_idx=PriceiOS`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PriceiOS`sv_value=0`isutf8=0`is_add=0&col_idx=PriceAndroid`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PriceAndroid`sv_value=0`isutf8=0`is_add=0&col_idx=VipExp`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=VipExp`sv_value=0`isutf8=0`is_add=0&col_idx=LimitCount`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=LimitCount`sv_value=0`isutf8=0`is_add=0&col_idx=Cost`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Cost`sv_value=0`isutf8=0`is_add=0&col_idx=Reward`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Reward`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=Icon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Icon`sv_value=0`isutf8=0`is_add=0&col_idx=BackIcon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=BackIcon`sv_value=0`isutf8=0`is_add=0&col_idx=Type`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Type`sv_value=0`isutf8=0`is_add=0&col_idx=ChildType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ChildType`sv_value=0`isutf8=0`is_add=0&col_idx=Tip`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Tip`sv_value=0`isutf8=0`is_add=0&col_idx=SKUIOS`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SKUIOS`sv_value=0`isutf8=0`is_add=0&col_idx=SKUAndroid`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SKUAndroid`sv_value=0`isutf8=0`is_add=0&col_idx=ProductID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ProductID`sv_value=0`isutf8=0`is_add=0&col_idx=SuperValue`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SuperValue`sv_value=0`isutf8=0`is_add=0&col_idx=SortValue`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SortValue`sv_value=0`isutf8=0`is_add=0&col_idx=UpdateTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=UpdateTime`sv_value=0`isutf8=0`is_add=0&col_idx=TotalRewardCon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=TotalRewardCon`sv_value=0`isutf8=0`is_add=0&col_idx=TotalReward`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=TotalReward`sv_value=0`isutf8=0`is_add=0
+★10:20:47-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:20:52-183.128.217.60★发送请求★http://49.235.116.123:10002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=155`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=EndTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=IsOpen`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=StageLevel`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ResetType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=GiftID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PayType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Price`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PriceiOS`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PriceAndroid`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=VipExp`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=LimitCount`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Cost`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Reward`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Icon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=BackIcon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Type`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ChildType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Tip`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SKUIOS`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SKUAndroid`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ProductID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SuperValue`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SortValue`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=UpdateTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=TotalRewardCon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=TotalReward`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:20:52-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:21:21-183.128.217.60★发送请求★http://49.235.116.123:20002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=EndTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=EndTime`sv_value=0`isutf8=0`is_add=0&col_idx=IsOpen`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=IsOpen`sv_value=0`isutf8=0`is_add=0&col_idx=StageLevel`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=StageLevel`sv_value=0`isutf8=0`is_add=0&col_idx=ResetType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ResetType`sv_value=0`isutf8=0`is_add=0&col_idx=GiftID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=GiftID`sv_value=0`isutf8=0`is_add=0&col_idx=PayType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PayType`sv_value=0`isutf8=0`is_add=0&col_idx=Price`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Price`sv_value=0`isutf8=0`is_add=0&col_idx=PriceiOS`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PriceiOS`sv_value=0`isutf8=0`is_add=0&col_idx=PriceAndroid`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PriceAndroid`sv_value=0`isutf8=0`is_add=0&col_idx=VipExp`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=VipExp`sv_value=0`isutf8=0`is_add=0&col_idx=LimitCount`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=LimitCount`sv_value=0`isutf8=0`is_add=0&col_idx=Cost`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Cost`sv_value=0`isutf8=0`is_add=0&col_idx=Reward`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Reward`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=Icon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Icon`sv_value=0`isutf8=0`is_add=0&col_idx=BackIcon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=BackIcon`sv_value=0`isutf8=0`is_add=0&col_idx=Type`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Type`sv_value=0`isutf8=0`is_add=0&col_idx=ChildType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ChildType`sv_value=0`isutf8=0`is_add=0&col_idx=Tip`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Tip`sv_value=0`isutf8=0`is_add=0&col_idx=SKUIOS`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SKUIOS`sv_value=0`isutf8=0`is_add=0&col_idx=SKUAndroid`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SKUAndroid`sv_value=0`isutf8=0`is_add=0&col_idx=ProductID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ProductID`sv_value=0`isutf8=0`is_add=0&col_idx=SuperValue`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SuperValue`sv_value=0`isutf8=0`is_add=0&col_idx=SortValue`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SortValue`sv_value=0`isutf8=0`is_add=0&col_idx=UpdateTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=UpdateTime`sv_value=0`isutf8=0`is_add=0&col_idx=TotalRewardCon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=TotalRewardCon`sv_value=0`isutf8=0`is_add=0&col_idx=TotalReward`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=TotalReward`sv_value=0`isutf8=0`is_add=0
+★10:21:21-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:21:25-183.128.217.60★发送请求★http://49.235.116.123:20002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=155`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=EndTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=IsOpen`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=StageLevel`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ResetType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=GiftID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PayType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Price`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PriceiOS`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PriceAndroid`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=VipExp`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=LimitCount`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Cost`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Reward`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Icon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=BackIcon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Type`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ChildType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Tip`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SKUIOS`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SKUAndroid`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ProductID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SuperValue`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SortValue`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=UpdateTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=TotalRewardCon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=TotalReward`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:21:25-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:21:31-183.128.217.60★发送请求★http://106.54.50.185:10002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=155`col_idx=ID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=OpenTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=EndTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=IsOpen`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=StageLevel`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ResetType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=GiftID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PayType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Price`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PriceiOS`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=PriceAndroid`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=VipExp`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=LimitCount`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Cost`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Reward`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Name`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Icon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=BackIcon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Type`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ChildType`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=Tip`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SKUIOS`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SKUAndroid`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=ProductID`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SuperValue`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=SortValue`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=UpdateTime`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=TotalRewardCon`cli_value=0`isutf8=1`is_add=0`nocnv=0&ct_tb_id=PayGift`row_idx=155`col_idx=TotalReward`cli_value=0`isutf8=1`is_add=0`nocnv=0
+★10:21:31-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:21:37-183.128.217.60★发送请求★http://106.54.50.185:10002/mservice.wsdl|27|0|0|0|col_idx=ID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ID`sv_value=0`isutf8=0`is_add=0&col_idx=OpenTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=OpenTime`sv_value=0`isutf8=0`is_add=0&col_idx=EndTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=EndTime`sv_value=0`isutf8=0`is_add=0&col_idx=IsOpen`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=IsOpen`sv_value=0`isutf8=0`is_add=0&col_idx=StageLevel`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=StageLevel`sv_value=0`isutf8=0`is_add=0&col_idx=ResetType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ResetType`sv_value=0`isutf8=0`is_add=0&col_idx=GiftID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=GiftID`sv_value=0`isutf8=0`is_add=0&col_idx=PayType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PayType`sv_value=0`isutf8=0`is_add=0&col_idx=Price`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Price`sv_value=0`isutf8=0`is_add=0&col_idx=PriceiOS`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PriceiOS`sv_value=0`isutf8=0`is_add=0&col_idx=PriceAndroid`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=PriceAndroid`sv_value=0`isutf8=0`is_add=0&col_idx=VipExp`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=VipExp`sv_value=0`isutf8=0`is_add=0&col_idx=LimitCount`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=LimitCount`sv_value=0`isutf8=0`is_add=0&col_idx=Cost`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Cost`sv_value=0`isutf8=0`is_add=0&col_idx=Reward`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Reward`sv_value=0`isutf8=0`is_add=0&col_idx=Name`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Name`sv_value=0`isutf8=0`is_add=0&col_idx=Icon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Icon`sv_value=0`isutf8=0`is_add=0&col_idx=BackIcon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=BackIcon`sv_value=0`isutf8=0`is_add=0&col_idx=Type`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Type`sv_value=0`isutf8=0`is_add=0&col_idx=ChildType`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ChildType`sv_value=0`isutf8=0`is_add=0&col_idx=Tip`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=Tip`sv_value=0`isutf8=0`is_add=0&col_idx=SKUIOS`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SKUIOS`sv_value=0`isutf8=0`is_add=0&col_idx=SKUAndroid`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SKUAndroid`sv_value=0`isutf8=0`is_add=0&col_idx=ProductID`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=ProductID`sv_value=0`isutf8=0`is_add=0&col_idx=SuperValue`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SuperValue`sv_value=0`isutf8=0`is_add=0&col_idx=SortValue`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=SortValue`sv_value=0`isutf8=0`is_add=0&col_idx=UpdateTime`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=UpdateTime`sv_value=0`isutf8=0`is_add=0&col_idx=TotalRewardCon`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=TotalRewardCon`sv_value=0`isutf8=0`is_add=0&col_idx=TotalReward`sv_tb_name=/public/PayGift.txt`row_idx_name=ID`server_cond_value=155`col_idx_name=TotalReward`sv_value=0`isutf8=0`is_add=0
+★10:21:37-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:39-183.14.133.154★发送请求★http://106.54.50.185:10002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=107`create_time=1715759719`valid_time=1716364519`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★10:26:39-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:39-183.14.133.154★审核成功★时间：2024-05-16 10:26:39; 所有服务器id：3233,3190,3191; 审核成功id：3233
+★10:26:39-183.14.133.154★发送请求★http://49.235.116.123:10002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=107`create_time=1715759719`valid_time=1716364519`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★10:26:39-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:39-183.14.133.154★审核成功★时间：2024-05-16 10:26:39; 所有服务器id：3233,3190,3191; 审核成功id：3190
+★10:26:39-183.14.133.154★发送请求★http://49.235.116.123:20002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=107`create_time=1715759719`valid_time=1716364519`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★10:26:39-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:39-183.14.133.154★审核成功★时间：2024-05-16 10:26:39; 所有服务器id：3233,3190,3191; 审核成功id：3191
+★10:26:41-183.14.133.154★发送请求★http://106.54.50.185:10002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=105`create_time=1715759086`valid_time=1716363886`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★10:26:42-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:42-183.14.133.154★审核成功★时间：2024-05-16 10:26:42; 所有服务器id：3233,3190,3191; 审核成功id：3233
+★10:26:42-183.14.133.154★发送请求★http://49.235.116.123:10002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=105`create_time=1715759086`valid_time=1716363886`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★10:26:42-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:42-183.14.133.154★审核成功★时间：2024-05-16 10:26:42; 所有服务器id：3233,3190,3191; 审核成功id：3190
+★10:26:42-183.14.133.154★发送请求★http://49.235.116.123:20002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=105`create_time=1715759086`valid_time=1716363886`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★10:26:42-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:26:42-183.14.133.154★审核成功★时间：2024-05-16 10:26:42; 所有服务器id：3233,3190,3191; 审核成功id：3191
+★10:26:54-183.14.133.154★发送请求★http://49.235.116.123:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=844429225101661`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★10:26:54-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:22-183.128.217.60★发送请求★http://121.37.40.146:10002/mservice.wsdl|8|0|0|0|opt=0`template_id=103
+★11:02:22-183.128.217.60★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:31-183.14.133.154★发送请求★http://121.37.40.146:10002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=108`create_time=1715759762`valid_time=1716364562`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:31-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:31-183.14.133.154★审核成功★时间：2024-05-16 11:02:31; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3261
+★11:02:31-183.14.133.154★发送请求★http://121.37.40.146:20002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=108`create_time=1715759762`valid_time=1716364562`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:31-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:31-183.14.133.154★审核成功★时间：2024-05-16 11:02:31; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3262
+★11:02:31-183.14.133.154★发送请求★http://121.37.40.146:30002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=108`create_time=1715759762`valid_time=1716364562`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:31-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:31-183.14.133.154★审核成功★时间：2024-05-16 11:02:31; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3263
+★11:02:31-183.14.133.154★发送请求★http://121.37.40.146:40002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=108`create_time=1715759762`valid_time=1716364562`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:32-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:32-183.14.133.154★审核成功★时间：2024-05-16 11:02:32; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3264
+★11:02:32-183.14.133.154★发送请求★http://121.37.40.146:50002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（2）`cont=感谢一直以来的支持，本次更新对部分副本难度和数值进行了调整，为让广大冒险家更好的体验与感受新内容，本次更新维护额外补偿如下：`sender_name=GM`item_list=40124#10#-1;`money_list=2#3000;`exp=`template_id=108`create_time=1715759762`valid_time=1716364562`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:32-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:32-183.14.133.154★审核成功★时间：2024-05-16 11:02:32; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3265
+★11:02:35-183.14.133.154★发送请求★http://121.37.40.146:10002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=104`create_time=1715759060`valid_time=1716363860`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:35-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:35-183.14.133.154★审核成功★时间：2024-05-16 11:02:35; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3261
+★11:02:35-183.14.133.154★发送请求★http://121.37.40.146:20002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=104`create_time=1715759060`valid_time=1716363860`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:35-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:35-183.14.133.154★审核成功★时间：2024-05-16 11:02:35; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3262
+★11:02:35-183.14.133.154★发送请求★http://121.37.40.146:30002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=104`create_time=1715759060`valid_time=1716363860`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:35-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:35-183.14.133.154★审核成功★时间：2024-05-16 11:02:35; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3263
+★11:02:35-183.14.133.154★发送请求★http://121.37.40.146:40002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=104`create_time=1715759060`valid_time=1716363860`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:35-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:35-183.14.133.154★审核成功★时间：2024-05-16 11:02:35; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3264
+★11:02:35-183.14.133.154★发送请求★http://121.37.40.146:50002/mservice.wsdl|8|0|0|0|opt=1`title=维护补偿（1）`cont=亲爱的冒险家： 以下是本次的维护补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`item_list=51004#1#-1;`money_list=2#500;1#10;`exp=`template_id=104`create_time=1715759060`valid_time=1716363860`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=1715853619`cond_world_id=-1
+★11:02:35-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:35-183.14.133.154★审核成功★时间：2024-05-16 11:02:35; 所有服务器id：3261,3262,3263,3264,3265; 审核成功id：3265
+★11:02:50-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812761`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:50-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:50-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812553`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:50-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:50-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813286`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:50-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:50-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813676`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:50-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812998`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:51-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811949`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:51-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812029`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:51-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811971`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:51-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811980`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:51-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813218`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:51-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:51-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811972`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812594`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813137`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812661`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812411`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812956`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812630`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:52-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:52-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811981`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812383`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812847`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813506`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812761`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812553`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813286`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:53-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:53-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813676`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812998`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811949`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812029`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811971`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811980`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813218`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:54-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:54-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811972`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:55-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:55-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812594`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:55-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:55-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813137`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:55-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:55-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812661`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:55-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:55-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812411`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:55-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:55-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812956`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:55-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:55-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812630`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811981`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812383`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201812847`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201813506`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782132`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496781717`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:56-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:56-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782400`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:57-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496781328`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:57-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496781709`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:57-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782155`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:57-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782322`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:57-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782132`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:57-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496781717`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:57-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782400`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:58-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496781328`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:58-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496781709`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:58-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782155`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:58-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:20002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125908496782322`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:58-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749360`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:58-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:58-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748723`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749411`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791750102`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749702`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749663`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749980`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749074`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:02:59-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:02:59-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749748`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:00-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:00-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748972`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:00-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:00-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748513`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:00-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:00-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748841`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:00-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:00-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749360`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:00-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:00-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748723`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:00-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:00-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749411`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791750102`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749702`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749663`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749980`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749074`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791749748`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:01-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:01-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748972`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:02-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748513`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:02-101.43.35.210★发送请求★http://121.37.40.146:30002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125912791748841`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:02-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716633`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:02-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716327`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:02-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716489`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:02-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716200`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:02-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086715830`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:03-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716063`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:03-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716229`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:03-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716088`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:03-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716253`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:03-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716633`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:03-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:03-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716327`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716489`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716200`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086715830`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716063`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716229`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716088`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:04-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:04-101.43.35.210★发送请求★http://121.37.40.146:40002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125917086716253`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:05-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683128`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:05-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683943`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:05-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683381`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:05-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683285`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:05-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683273`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:05-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683269`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:05-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:06-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683128`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:06-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:06-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683943`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:06-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:06-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683381`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:06-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:06-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683285`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:06-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:06-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683273`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:06-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:03:06-101.43.35.210★发送请求★http://121.37.40.146:50002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125921381683269`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★11:03:06-101.43.35.210★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:06:56-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684204`order=17158288055092325482725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★11:06:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:07:14-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684204`order=17158288206007925482725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★11:07:14-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:07:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684204`order=17158288402136925482725`amount=6.00`resettype=3`giftid=12`id=133`param=
+★11:07:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:11:06-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684045`order=17158290515403918092725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★11:11:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:20:04-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716327`order=17158295925393939492725`amount=6.00`resettype=0`giftid=6`id=107`param=
+★11:20:04-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★11:33:48-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|29|0|0|0|charguid=1125904201811981`order=17158304165083013742725`amount=6.00`resettype=0`giftid=1`id=102`param=
+★11:33:48-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:06:51-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|29|0|0|0|charguid=844429225101458`order=17158323979185432972645`amount=6.00`resettype=0`giftid=1`id=102`param=
+★12:06:51-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:07:30-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|29|0|0|0|charguid=844429225101458`order=17158324376741832972645`amount=18.00`resettype=0`giftid=80`id=231`param=
+★12:07:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:10:50-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|5|0|0|0|charguid=1125904201812625`order=17158326375093130202725`amount=198.00`id=217`param=
+★12:10:50-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:16:30-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684359`order=17158329794212534832725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★12:16:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:38:06-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496781709`order=17158342755806928182725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★12:38:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:38:48-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17158343174274912382725`amount=6.00`resettype=3`giftid=121`id=262`param=
+★12:38:48-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:39:38-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496781709`order=17158343689972928182725`amount=68.00`resettype=1`giftid=1`id=110`param=
+★12:39:38-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:40:12-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683327`order=17158343908328391102725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★12:40:12-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:40:24-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683863`order=17158344148895012382725`amount=6.00`resettype=3`giftid=12`id=133`param=
+★12:40:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:41:42-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683618`order=17158344859132900462725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★12:41:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★12:57:56-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086715966`order=17158354647948125832725`amount=30.00`resettype=3`giftid=22`id=143`param=
+★12:57:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:05:38-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684189`order=17158359273532724412725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★13:05:38-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:06:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684317`order=17158359743435132262725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★13:06:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:19:04-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683862`order=17158367217019912352725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★13:19:04-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:30:44-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683475`order=17158374227839396412725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★13:30:44-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:35:54-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791750104`order=17158377419993428402725`amount=1.00`resettype=3`giftid=110`id=250`param=
+★13:35:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:36:38-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496782355`order=17158377814374881162725`amount=6.00`resettype=0`giftid=1`id=102`param=
+★13:36:38-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:43:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686377`order=17158381776879636252725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★13:43:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:51:58-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684353`order=17158387069173634442725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★13:51:58-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:54:54-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684074`order=17158388828708118812725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★13:54:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:58:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381684074`order=17158390909231218812725`amount=198.00`id=217`param=
+★13:58:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:59:08-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684074`order=17158391382292718812725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★13:59:08-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:23:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381684215`order=17158405877249164462725`amount=30.00`id=216`param=
+★14:23:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:24:24-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684215`order=17158406548795964462725`amount=30.00`resettype=3`giftid=18`id=139`param=
+★14:24:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:24:40-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684215`order=17158406697173564462725`amount=30.00`resettype=3`giftid=19`id=140`param=
+★14:24:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:28:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686424`order=17158408955955237852725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★14:28:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:31:10-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686380`order=17158410496076636352725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★14:31:10-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:33:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684162`order=17158411816051822282725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★14:33:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:39:30-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683819`order=17158415511451610162725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★14:39:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:44:54-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686424`order=17158418831677037852725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★14:44:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:46:26-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791750104`order=17158419760357028402725`amount=6.00`resettype=3`giftid=14`id=135`param=
+★14:46:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:51:10-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686446`order=17158422593578838652725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★14:51:10-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:06:59-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791749813`order=17158431522782814832725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★15:06:59-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:14:36-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686384`order=17158436626821536502725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★15:14:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:29:46-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683990`order=17158445755329216732725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★15:29:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:30:00-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683990`order=17158445916649116732725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★15:30:00-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:31:08-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686441`order=17158446513751838462725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★15:31:08-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:34:00-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496781853`order=17158448274412268372725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★15:34:00-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:49:22-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683944`order=17158457481471915492725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★15:49:22-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:04:22-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749059`order=17158466528387299432725`amount=12.00`id=208`param=
+★16:04:22-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:27:48-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|5|0|0|0|charguid=1125908496781709`order=17158480582395528182725`amount=68.00`id=219`param=
+★16:27:48-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:28:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683804`order=17158480840158107272725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★16:28:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:29:30-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683804`order=17158481613353307272725`amount=6.00`resettype=3`giftid=96`id=236`param=
+★16:29:30-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:37:26-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686380`order=17158486295918436352725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★16:37:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:39:14-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686455`order=17158487364494239362725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★16:39:14-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:44:31-183.14.133.154★发送请求★http://121.37.40.146:10002/mservice.wsdl|4|0|0|0|title=补偿邮件`cont=亲爱的冒险家： 以下是您购买通行证补偿，请查收！感谢您的理解与支持，祝您游戏愉快！`sender_name=GM`receiver_id=1125904201811992`item_list=91002#80#-1;`money_list=8#10000;`exp=
+★16:44:31-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:57:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686397`order=17158498393598236992725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★16:57:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:13:44-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684225`order=17158508113721126772725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★17:13:44-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:28:50-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686459`order=17158517131321839612725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★17:28:50-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:33:40-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381683489`order=17158520061025296702725`amount=30.00`id=209`param=
+★17:33:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:34:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683811`order=17158520589677809762725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★17:34:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:34:48-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683811`order=17158520783518909762725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★17:34:48-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:35:00-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684134`order=17158520871195220842725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★17:35:00-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:43:35-183.14.133.154★发送请求★http://49.235.116.123:10002/mservice.wsdl|5|0|0|0|charguid=844429225102697`order=inner_1715852512`amount=30.00`diamond=30.00`id=209
+★17:43:35-183.14.133.154★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:45:32-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716163`order=17158527197838132662725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★17:45:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★17:54:50-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496782078`order=17158532772113174062725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★17:54:50-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:07:34-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686441`order=17158540406369538462725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★18:07:34-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:15:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683489`order=17158545166027096702725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★18:15:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:23:16-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381683691`order=17158549728483302462725`amount=198.00`id=217`param=
+★18:23:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:26:16-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683489`order=17158551605272896702725`amount=6.00`resettype=3`giftid=96`id=236`param=
+★18:26:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:40:58-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|29|0|0|0|charguid=1125904201811981`order=17158560465328313742725`amount=30.00`resettype=1`giftid=0`id=109`param=
+★18:40:58-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:44:22-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683489`order=17158562526483096702725`amount=68.00`resettype=3`giftid=95`id=235`param=
+★18:44:22-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:46:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686489`order=17158563491203041502725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★18:46:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:50:38-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686489`order=17158566177242741502725`amount=30.00`resettype=3`giftid=94`id=234`param=
+★18:50:38-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:05:00-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683419`order=17158574828776894952725`amount=6.00`resettype=3`giftid=12`id=133`param=
+★19:05:00-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:05:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683419`order=17158575164339894952725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★19:05:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:06:24-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683974`order=17158575704447616252725`amount=6.00`resettype=3`giftid=12`id=133`param=
+★19:06:24-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:23:28-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496782174`order=17158585925679976472725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★19:23:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:34:18-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496782168`order=17158592394412176272725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★19:34:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:38:04-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686506`order=17158594732378642172725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★19:38:04-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:53:28-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791748764`order=17158603971564890912725`amount=30.00`id=209`param=
+★19:53:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:00:36-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|5|0|0|0|charguid=1125912791749702`order=17158608194741612622725`amount=30.00`id=216`param=
+★20:00:36-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:10:10-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748723`order=17158613966984489832725`amount=6.00`resettype=3`giftid=106`id=246`param=
+★20:10:10-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:16:42-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686544`order=17158617889729643782725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★20:16:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:25:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686386`order=17158623007804436452725`amount=3.00`resettype=3`giftid=9`id=130`param=
+★20:25:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:27:02-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748723`order=17158624109518189832725`amount=18.00`resettype=0`giftid=80`id=231`param=
+★20:27:02-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:29:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686544`order=17158625401708943782725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★20:29:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★20:37:42-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|5|0|0|0|charguid=1125908496781328`order=17158630509791951402725`amount=198.00`id=217`param=
+★20:37:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:00:00-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683824`order=17158643845441110562725`amount=12.00`resettype=3`giftid=72`id=193`param=
+★21:00:00-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:06:22-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496782174`order=17158647649277576472725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★21:06:22-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:11:06-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686537`order=17158650479604943442725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★21:11:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:14:54-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686563`order=17158652716357844382725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★21:14:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:19:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686551`order=17158655457581843962725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:19:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:20:06-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381683630`order=17158655876767100822725`amount=68.00`id=207`param=
+★21:20:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:20:52-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381684283`order=17158656426546830962725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:20:52-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:23:18-139.224.119.176★发送请求★http://121.37.40.146:40002/mservice.wsdl|29|0|0|0|charguid=1125917086716471`order=17158657782602849542725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:23:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:25:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686537`order=17158659049344243442725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:25:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:29:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686552`order=17158661462614343992725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:29:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:34:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686551`order=17158664621223543962725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★21:34:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:34:56-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683474`order=17158664618525696402725`amount=6.00`resettype=3`giftid=121`id=262`param=
+★21:34:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:39:42-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|5|0|0|0|charguid=1125904201812307`order=17158667720984721992725`amount=30.00`id=209`param=
+★21:39:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:40:32-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686563`order=17158668175287944382725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:40:32-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:41:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686487`order=17158668613915441442725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:41:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:42:54-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|5|0|0|0|charguid=1125921381686537`order=17158669594893243442725`amount=30.00`id=209`param=
+★21:42:54-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:50:46-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683474`order=17158674360497296402725`amount=30.00`resettype=3`giftid=94`id=234`param=
+★21:50:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:54:06-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686583`order=17158676328299845122725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:54:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:55:51-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|29|0|0|0|charguid=844429225101659`order=17158677379084643012645`amount=18.00`resettype=0`giftid=80`id=231`param=
+★21:55:51-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:57:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686565`order=17158678138264144422725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★21:57:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:01:38-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|5|0|0|0|charguid=1125904201812625`order=17158680749401030202725`amount=12.00`id=208`param=
+★22:01:38-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:02:04-139.224.119.176★发送请求★http://121.37.40.146:10002/mservice.wsdl|5|0|0|0|charguid=1125904201812625`order=17158681152857830202725`amount=68.00`id=218`param=
+★22:02:04-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:15:16-139.224.119.176★发送请求★http://121.37.40.146:20002/mservice.wsdl|29|0|0|0|charguid=1125908496782174`order=17158689013777376472725`amount=6.00`resettype=3`giftid=96`id=236`param=
+★22:15:16-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:19:08-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683474`order=17158691373791696402725`amount=30.00`resettype=3`giftid=122`id=263`param=
+★22:19:08-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:20:18-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683222`order=17158692014212485892725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★22:20:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:21:52-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748723`order=17158692887444789832725`amount=30.00`resettype=3`giftid=19`id=140`param=
+★22:21:52-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:44:40-139.224.119.176★发送请求★http://121.37.40.146:30002/mservice.wsdl|29|0|0|0|charguid=1125912791748606`order=17158706643615486272725`amount=6.00`resettype=0`giftid=6`id=107`param=
+★22:44:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:54:26-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686483`order=17158712468855241342725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★22:54:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:56:20-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683273`order=17158713671866788692725`amount=30.00`resettype=3`giftid=19`id=140`param=
+★22:56:20-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:26:40-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686505`order=17158731870021242162725`amount=3.00`resettype=3`giftid=7`id=128`param=
+★23:26:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:31:52-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686628`order=17158734991263948382725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★23:31:52-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:46:26-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686648`order=17158743742406247422725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★23:46:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:48:52-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686455`order=17158745167057739362725`amount=1.00`resettype=3`giftid=104`id=244`param=
+★23:48:52-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:55:26-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381686559`order=17158749144348244202725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★23:55:26-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:56:28-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683447`order=17158749747291495752725`amount=30.00`resettype=3`giftid=16`id=137`param=
+★23:56:28-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★23:56:46-139.224.119.176★发送请求★http://121.37.40.146:50002/mservice.wsdl|29|0|0|0|charguid=1125921381683447`order=17158749970577595752725`amount=6.00`resettype=3`giftid=93`id=233`param=
+★23:56:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

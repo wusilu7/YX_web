@@ -1,0 +1,23 @@
+★19:18:36-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062075420
+★19:18:36-115.192.211.214★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★19:18:44-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:18:44-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:18:59-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062075421
+★19:18:59-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:19:16-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:19:16-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:23:09-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:23:09-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:23:09-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:23:09-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:23:10-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:23:10-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:38:16-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:38:16-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:38:27-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:38:27-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:48:17-115.192.211.214★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074904
+★19:48:17-115.192.211.214★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:22:03-36.27.84.59★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=周末福利`cont=周末福利`sender_name=GM`item_list=`money_list=2#1500;`exp=`template_id=114`create_time=1705155630`valid_time=1706659256`cond_min_lv=20`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★22:22:03-36.27.84.59★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★22:22:03-36.27.84.59★审核成功★时间：2024-01-13 22:22:03; 所有服务器id：3185; 审核成功id：3185

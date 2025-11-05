@@ -1,0 +1,25 @@
+★13:16:32-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★13:16:32-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:24:49-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073956
+★13:24:49-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:25:03-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073956
+★13:25:03-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:25:03-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073956
+★13:25:03-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:25:40-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073956
+★13:25:41-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:25:44-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=福利`cont=福利`sender_name=GM`item_list=50107#1#-1;40027#30#-1;`money_list=2#2000;`exp=`template_id=140`create_time=1708406622`valid_time=1708646408`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★13:25:44-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:25:44-60.186.55.170★审核成功★时间：2024-02-20 13:25:44; 所有服务器id：3185; 审核成功id：3185
+★16:08:06-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★16:08:06-60.186.55.170★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★16:09:47-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★16:09:47-60.186.55.170★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★16:09:48-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★16:09:48-60.186.55.170★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★16:09:59-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★16:09:59-60.186.55.170★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★16:10:37-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★16:10:37-60.186.55.170★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:17:44-60.186.55.170★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★16:17:44-60.186.55.170★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}

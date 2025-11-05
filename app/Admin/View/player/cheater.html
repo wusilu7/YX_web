@@ -1,0 +1,222 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.25.charPack.css" rel="stylesheet">
+<div class="jin-content-title"><span>外挂异常检测</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<label for="time_start">日期：</label>
+<input size="16" type="text" id="time_start" class="form-control jin-datetime"
+       placeholder="开始(不填默认今天)">
+-
+<input size="16" type="text" id="time_end" class="form-control jin-datetime"
+       placeholder="结束">
+&nbsp;&nbsp;
+<label class="control-label">
+    <select id="char_type">
+        <option value="1">角色名</option>
+        <option value="2">角色ID</option>
+    </select>
+</label>
+<input id="char" type="text" class="form-control jin-search-input" placeholder="请按所选查找类型填写">
+<!--类型:-->
+<!--<select id="system_type">-->
+    <!--<option value="86">属性信息</option>-->
+    <!--<option value="90">初步认定外挂</option>-->
+    <!--<option value="91">怪物秒杀</option>-->
+    <!--<option value="94">跳关卡</option>-->
+<!--</select>-->
+排序(从高到低):
+<select id="order_type">
+    <!--<option value="log_time">记录时间</option>-->
+    <option value="param1">攻击</option>
+    <option value="param2">当前血量</option>
+    <option value="param3">最大血量</option>
+    <option value="param4">移动速度</option>
+</select>
+
+<!--<label  for="ischeck" style="margin-left: 15px;">玩家去重</label>-->
+<!--<input id="ischeck" value="1" type="checkbox" style="width: 20px; height: 20px;margin-right: 15px;">-->
+
+<a id="jin_search_86" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+<a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+<hr/>
+<input id="param0_86" type="text" class="form-control jin-search-input hide" placeholder="章节id">
+<input id="param1_86" type="text" class="form-control jin-search-input" placeholder="攻击">
+<input id="param2_86" type="text" class="form-control jin-search-input" placeholder="当前血量">
+<input id="param3_86" type="text" class="form-control jin-search-input" placeholder="最大血量">
+<input id="param4_86" type="text" class="form-control jin-search-input" placeholder="速度">
+<input id="param5_86" type="text" class="form-control jin-search-input hide" placeholder="时间戳">
+<input id="param6_86" type="text" class="form-control jin-search-input hide" placeholder="时差">
+<!-- 面板区 -->
+<div class="tab-content">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center">
+            <thead>
+            <tr id="th">
+                <th>日期</th>
+                <th>账号</th>
+                <th>角色ID</th>
+                <th>角色名</th>
+                <th>等级</th>
+                <th>设备</th>
+                <th>充值</th>
+                <th>攻击</th>
+                <th>当前血量</th>
+                <th>最大血量</th>
+                <th>速度</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="content_base"></tbody>
+        </table>
+    </div>
+    <div id="page_base"></div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    gsSelect('#group', '#server');
+    calendar('hour', '#time_start', '#time_end');
+    var url = location.href + "&jinIf=912";
+    var btn = [
+        '<div class="btn-group btn-group-sm">' +
+        '<a data-type="warm" class="btn btn-warning">警告</a>' +
+        '<a data-type="delete" class="btn btn-danger">封禁</a>' +
+//        '<a data-type="charge" class="btn btn-success">充值金额</a>' +
+        '</div>'
+    ];
+    var arr = ['log_time','acc', 'char_guid','char_name','level','code','allfee', 'param1', 'param2', 'param3', 'param4',btn];
+    var id = ["#content_base", "#page_base"];
+    var data = {};
+    $("#jin_search_86").on('click', function () {
+        data.time_start = $('#time_start').val();
+        data.time_end   = $('#time_end').val();
+        data.si = $("#server").val();
+        data.page          = 1;
+        //data.system_type          = $("#system_type").val();
+        data.system_type          = 86;
+        data.char_type = $("#char_type").val();
+        data.char = $("#char").val();
+        data.order_type =$("#order_type").val();
+        //data.ischeck    = $('#ischeck').is(':checked') ? $('#ischeck').val() : '';
+        data.ischeck    = 1;
+        data.param0 = $("#param0_86").val();
+        data.param1 = $("#param1_86").val();
+        data.param2 = $("#param2_86").val();
+        data.param3 = $("#param3_86").val();
+        data.param4 = $("#param4_86").val();
+        data.param5 = $("#param5_86").val();
+        data.param6 = $("#param6_86").val();
+        tableList(url, data, id, arr);
+    });
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';  // 生成excel表
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+    $('#content_base').on('click', 'a[data-type="warm"]', function () {
+        var char_guid = $(this).parents('tr').find('td').eq(2).text();
+        layer.alert('确认警告玩家？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    si: $("#server").val(),
+                    char_guid:char_guid
+                },
+                dataType: 'json',
+                success: function (json) {
+                    layer.alert('警告成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    }).on('click', 'a[data-type="delete"]', function () {
+        var char_guid = $(this).parents('tr').find('td').eq(2).text();
+        var acc = $(this).parents('tr').find('td').eq(1).text();
+        var code = $(this).parents('tr').find('td').eq(5).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '封号',
+            area: ['500px', '300px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">理由</span><input id="reason" type="text" class="form-control jin-search-input" placeholder="限制理由(展示给玩家看的)"></div>' +
+            '<div class="input-group"><span class="input-group-addon">默认理由</span><select id="reason1" class="form-control jin-search-input">' +
+            '<option value="使用非法软件">使用非法软件</option>' +
+            '<option value="异常账号">异常账号</option>' +
+            '</select></div>' +
+            '<div class="input-group"><span class="input-group-addon">是否移除排行榜以及禁产出一年</span><select id="del_power" class="form-control jin-search-input">' +
+            '<option value="1">是</option>' +
+            '<option value="0">否</option>' +
+            '</select></div>' +
+            '</div>',
+            yes: function (index) {
+                reason = $("#reason").val();
+                if(reason==''){
+                    reason = $("#reason1").val();
+                }
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=9141',
+                    data: {
+                        gi:$("#group").val(),
+                        si: $("#server").val(),
+                        del_power : $("#del_power").val(),
+                        acc: acc,
+                        code:code,
+                        reason: reason,
+                        char_guid:char_guid
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('修改成功', {icon: 1}, function (index1) {
+                            layer.close(index1);
+                        });
+                    }
+                });
+            }
+        });
+    }).on('click', 'a[data-type="charge"]', function () {
+        var char_guid = $(this).parents('tr').find('td').eq(2).text();
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=915",
+            data: {
+                si: $("#server").val(),
+                char_guid:char_guid
+            },
+            dataType: 'json',
+            success: function (json) {
+                layer.alert(json+'元', {icon: 1}, function (index) {
+                    layer.close(index);
+                });
+            }
+        });
+    });
+</script>

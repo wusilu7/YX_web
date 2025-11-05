@@ -1,0 +1,28 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.91.test1.css" rel="stylesheet">
+<div class="jin-content-title"><span>测试1</span></div>
+<button id="btn1" class="center">生成管理员权限</button>
+<div class="jin-test1-div center" id="content"></div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    $("#btn1").click(function () {
+        $.ajax({
+            type: "post",
+            async: true,
+            url: location.href + "&jinIf=911",
+            data: {},
+            dataType: "json",
+            success: function (json) {
+                var s = '';
+                s = json;
+                $("#content").html(s);
+            },
+            error: function (msg) {
+                layer.msg("数据获取失败");
+            }
+        });
+    });
+</script>

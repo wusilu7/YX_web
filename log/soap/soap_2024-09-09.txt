@@ -1,0 +1,32 @@
+★09:28:24-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|10|0|0|0|opentime=2024-09-09 00:00:00`othmmss=34080
+★09:28:24-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:37:06-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|10|0|0|0|opentime=2024-09-05 00:00:00`othmmss=34620
+★09:37:06-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★09:37:17-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|10|0|0|0|opentime=2024-09-04 00:00:00`othmmss=34620
+★09:37:17-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:28:29-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:28:29-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:28:33-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:28:33-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:29:00-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:29:00-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:32:23-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:32:23-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:34:02-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=DemoReward`cli_value=2:[试玩宠物](1040103);`isutf8=1`is_add=1`nocnv=0&ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:34:02-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:34:12-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=DemoReward`cli_value=2:[试玩宠物](1040103);`isutf8=1`is_add=1`nocnv=0&ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:34:12-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:38:10-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=DemoReward`cli_value=2:[试玩宠物](1040103);`isutf8=1`is_add=1`nocnv=0&ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:38:10-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:39:25-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=DemoReward`cli_value=2:[试玩宠物](1040103);`isutf8=1`is_add=1`nocnv=0&ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:39:25-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:41:08-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:41:08-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:41:32-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:41:32-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:42:43-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:42:43-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:45:38-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:45:38-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:52:12-192.168.1.169★发送请求★http://192.168.1.170:1002/mservice.wsdl|27|0|0|0|ct_tb_id=PayGift`row_idx=135`col_idx=ID`cli_value=135`isutf8=1`is_add=1`nocnv=0
+★16:52:13-192.168.1.169★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

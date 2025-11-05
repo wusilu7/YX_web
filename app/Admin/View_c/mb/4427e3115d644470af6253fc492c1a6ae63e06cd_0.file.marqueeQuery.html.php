@@ -1,0 +1,143 @@
+<?php
+/* Smarty version 3.1.30, created on 2023-08-16 20:54:18
+  from "/lnmp/www/app/Admin/View/mb/marqueeQuery.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_64dcc6fabd8715_83670030',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4427e3115d644470af6253fc492c1a6ae63e06cd' => 
+    array (
+      0 => '/lnmp/www/app/Admin/View/mb/marqueeQuery.html',
+      1 => 1678771400,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_64dcc6fabd8715_83670030 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<link href="<?php echo CSS;?>
+jin/3.12.marquee.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>跑马灯查询</span></div>
+<div class="alert alert-info">
+     <div id="group_only"></div>
+</div>
+<a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+<div class="tab-pane" id="board_query">
+    <div class="table-responsive">
+        <table class="table table-hover text-center">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>服务器id</th>
+                <th>开始时间</th>
+                <th>数量</th>
+                <th>间隔</th>
+                <th>文字内容</th>
+                <th>创建时间</th>
+                <th>创建人</th>
+                <th>审核时间</th>
+                <th>状态</th>
+                <th>审核人</th>
+                <th>审核备注</th>
+                <th>终止备注</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div id="page"></div>
+</div>
+
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①…
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+     gsSelect('#group','','','');
+     $("#jin_search").on('click', function () {
+         jsonQuery();
+     });
+    //刷新数据
+    function jsonQuery() {
+        var btn = [
+            "<button data-type='s' class='btn btn-sm btn-danger'>终止</button>"
+        ];
+        var time_start = function (json) {
+            if (json['time_start'] === '0') {
+                return '即时';
+            } else {
+                return getDate(json['time_start'] * 1000);//JS时间戳，毫秒
+            }
+        };
+        var state = function (json) {
+            if (json['state'] === '2') {
+                return '<span style="color: green;">启用中</span>';
+            } else if (json['state'] === '3')  {
+                return '<span style="color: blue;">已终止</span>';
+            } else if (json['state'] === '4')  {
+                return '<span style="color: red;">发送失败</span>';
+            }
+        };
+        var url = location + "&jinIf=912";
+        var arr = ['id', 'si_name', time_start, 'count', 'interval', 'words1', 'create_time', 'cu', 'audit_time', state, 'au', 'remain1', 'remain2', btn];
+        var id = ["#content", "#page"];
+        var data = {
+            page: 1,
+            gi: $("#group").val()
+        };
+        $(document).ready(tableList(url, data, id, arr));
+    }
+    //中止
+    $('#content').on('click', 'button[data-type="s"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('终止<b>' + id + '号跑马灯？', {icon: 0, btn: ['确定', '取消']}, function (tip) {
+            layer.close(tip);
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=9139",
+                data: {
+                    id: id
+                },
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']
+                    });
+                },
+                success: function (res) {
+                    layer.closeAll('loading');
+                    if (res === '-1') {
+                        layer.alert('失败，与当前游戏服务器的通讯发生故障', {icon: 2});
+                    } else {
+                        layer.alert(id + '号跑马灯已终止', {icon: 1}, function (index) {
+                            layer.close(index);
+                            jsonQuery();
+                        });
+                    }
+                }
+            });
+        });
+    });
+<?php echo '</script'; ?>
+>
+<?php }
+}

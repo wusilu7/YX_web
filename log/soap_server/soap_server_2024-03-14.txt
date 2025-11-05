@@ -1,0 +1,983 @@
+★00:13:44-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5M2BpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|7FB7083FCE9B8D090BD3F440E29F3047
+★00:13:44-101.43.35.210★密钥对比★收到：7FB7083FCE9B8D090BD3F440E29F3047 后台计算：7FB7083FCE9B8D090BD3F440E29F3047
+★00:13:44-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598928`char_guid=844437815040293`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★00:13:44-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5M2BpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★00:13:53-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5M2BpbnZpdGVfY29kZT14cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|E883DF05609CA480A06D3FFC518A8E9E
+★00:13:53-101.43.35.210★密钥对比★收到：E883DF05609CA480A06D3FFC518A8E9E 后台计算：E883DF05609CA480A06D3FFC518A8E9E
+★00:13:53-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598928`char_guid=844437815040293`invite_code=xq001`group_id=3`server_id=3233`device_type=11`result=2`info=
+★00:13:53-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5M2BpbnZpdGVfY29kZT14cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0yYGluZm89
+★00:14:09-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5M2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|EC39C06B1CCE32752FA9F86729810824
+★00:14:09-101.43.35.210★密钥对比★收到：EC39C06B1CCE32752FA9F86729810824 后台计算：EC39C06B1CCE32752FA9F86729810824
+★00:14:09-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598928`char_guid=844437815040293`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★00:14:09-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5M2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★00:14:17-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5M2BpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|7A462D866CFBA1C1294EC32BAFB2B0D9
+★00:14:18-101.43.35.210★密钥对比★收到：7A462D866CFBA1C1294EC32BAFB2B0D9 后台计算：7A462D866CFBA1C1294EC32BAFB2B0D9
+★00:14:18-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598928`char_guid=844437815040293`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★00:14:18-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTg5MjhgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5M2BpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★02:26:43-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTczNzVgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2ODczNWBpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MWBk
+ZXZpY2VfdHlwZT0xMWA=|6944580BEEC682DF26B1C8E544016F2B
+★02:26:43-101.43.35.210★密钥对比★收到：6944580BEEC682DF26B1C8E544016F2B 后台计算：6944580BEEC682DF26B1C8E544016F2B
+★02:26:43-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646597375`char_guid=844433520068735`invite_code=vip666`group_id=3`server_id=3191`device_type=11`result=2`info=
+★02:26:43-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTczNzVgY2hhcl9ndWlkPTg0NDQzMzUyMDA2ODczNWBpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★02:26:52-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTczNzVgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2ODczNWBpbnZpdGVfY29kZT12aXA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MWBk
+ZXZpY2VfdHlwZT0xMWA=|429911F51C117A0A3A384412DEEAA015
+★02:26:52-101.43.35.210★密钥对比★收到：429911F51C117A0A3A384412DEEAA015 后台计算：429911F51C117A0A3A384412DEEAA015
+★02:26:52-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646597375`char_guid=844433520068735`invite_code=vip888`group_id=3`server_id=3191`device_type=11`result=2`info=
+★02:26:52-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTczNzVgY2hhcl9ndWlkPTg0NDQzMzUyMDA2ODczNWBpbnZpdGVfY29kZT12aXA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★02:27:00-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTczNzVgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2ODczNWBpbnZpdGVfY29kZT12aXAxMTFgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MWBk
+ZXZpY2VfdHlwZT0xMWA=|AFD206592F0DE3704EAB4907E147EBDB
+★02:27:00-101.43.35.210★密钥对比★收到：AFD206592F0DE3704EAB4907E147EBDB 后台计算：AFD206592F0DE3704EAB4907E147EBDB
+★02:27:00-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646597375`char_guid=844433520068735`invite_code=vip111`group_id=3`server_id=3191`device_type=11`result=2`info=
+★02:27:00-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTczNzVgY2hhcl9ndWlkPTg0NDQzMzUyMDA2ODczNWBpbnZpdGVfY29kZT12aXAxMTFgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★08:11:40-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MjMzYGRldmljZV90eXBlPTExYA==|020E837BEB779B63692F986F416AF1CB
+★08:11:40-101.43.35.210★密钥对比★收到：020E837BEB779B63692F986F416AF1CB 后台计算：020E837BEB779B63692F986F416AF1CB
+★08:11:40-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUG0af11ad5`group_id=3`server_id=3233`device_type=11`result=7`info=
+★08:11:40-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD03YGluZm89
+★08:11:42-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MjMzYGRldmljZV90eXBlPTExYA==|020E837BEB779B63692F986F416AF1CB
+★08:11:42-101.43.35.210★密钥对比★收到：020E837BEB779B63692F986F416AF1CB 后台计算：020E837BEB779B63692F986F416AF1CB
+★08:11:42-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUG0af11ad5`group_id=3`server_id=3233`device_type=11`result=7`info=
+★08:11:42-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD03YGluZm89
+★08:11:42-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MjMzYGRldmljZV90eXBlPTExYA==|020E837BEB779B63692F986F416AF1CB
+★08:11:42-101.43.35.210★密钥对比★收到：020E837BEB779B63692F986F416AF1CB 后台计算：020E837BEB779B63692F986F416AF1CB
+★08:11:42-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUG0af11ad5`group_id=3`server_id=3233`device_type=11`result=7`info=
+★08:11:42-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD03YGluZm89
+★08:11:42-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MjMzYGRldmljZV90eXBlPTExYA==|020E837BEB779B63692F986F416AF1CB
+★08:11:42-101.43.35.210★密钥对比★收到：020E837BEB779B63692F986F416AF1CB 后台计算：020E837BEB779B63692F986F416AF1CB
+★08:11:42-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUG0af11ad5`group_id=3`server_id=3233`device_type=11`result=7`info=
+★08:11:42-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD03YGluZm89
+★08:11:45-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MjMzYGRldmljZV90eXBlPTExYA==|020E837BEB779B63692F986F416AF1CB
+★08:11:46-101.43.35.210★密钥对比★收到：020E837BEB779B63692F986F416AF1CB 后台计算：020E837BEB779B63692F986F416AF1CB
+★08:11:46-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUG0af11ad5`group_id=3`server_id=3233`device_type=11`result=7`info=
+★08:11:46-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD03YGluZm89
+★08:11:57-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|2B497041B240AA40BD1DBB41E737DD27
+★08:11:57-101.43.35.210★密钥对比★收到：2B497041B240AA40BD1DBB41E737DD27 后台计算：2B497041B240AA40BD1DBB41E737DD27
+★08:11:57-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★08:11:57-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★08:12:08-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|1097211F354FEA21CD56401137C1C74C
+★08:12:08-101.43.35.210★密钥对比★收到：1097211F354FEA21CD56401137C1C74C 后台计算：1097211F354FEA21CD56401137C1C74C
+★08:12:08-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★08:12:08-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★08:12:18-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|47C60EF037027CA3CD1C4E035A7C1615
+★08:12:18-101.43.35.210★密钥对比★收到：47C60EF037027CA3CD1C4E035A7C1615 后台计算：47C60EF037027CA3CD1C4E035A7C1615
+★08:12:18-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★08:12:18-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★08:12:24-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MjMzYGRldmljZV90eXBlPTExYA==|020E837BEB779B63692F986F416AF1CB
+★08:12:24-101.43.35.210★密钥对比★收到：020E837BEB779B63692F986F416AF1CB 后台计算：020E837BEB779B63692F986F416AF1CB
+★08:12:24-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUG0af11ad5`group_id=3`server_id=3233`device_type=11`result=7`info=
+★08:12:24-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUcwYWYxMWFkNWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD03YGluZm89
+★08:12:32-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUdhZjExYWQ1YGdyb3VwX2lkPTNgc2VydmVyX2lkPTMy
+MzNgZGV2aWNlX3R5cGU9MTFg|59F8A17022F05C49502D0693C614C814
+★08:12:32-101.43.35.210★密钥对比★收到：59F8A17022F05C49502D0693C614C814 后台计算：59F8A17022F05C49502D0693C614C814
+★08:12:32-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646596014`char_guid=844437815040272`invite_code=BUGaf11ad5`group_id=3`server_id=3233`device_type=11`result=2`info=
+★08:12:32-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTYwMTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI3MmBpbnZpdGVfY29kZT1CVUdhZjExYWQ1YGdyb3VwX2lkPTNgc2VydmVyX2lkPTMyMzNgZGV2aWNlX3R5cGU9MTFgcmVzdWx0PTJgaW5mbz0=
+★09:27:39-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDI4NjY1NGBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3Mzk1N2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMjU1YGRldmljZV90eXBlPTExYA==|2B52853DD435972D4899A4EF8C4E9EBE
+★09:27:39-101.43.35.210★密钥对比★收到：2B52853DD435972D4899A4EF8C4E9EBE 后台计算：2B52853DD435972D4899A4EF8C4E9EBE
+★09:27:39-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164286654`char_guid=2814754062073957`group_id=3`server_id=3255`device_type=11`result=3501`char_guid=2814754062073957`flag=0`info=
+★09:27:39-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDI4NjY1NGBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk1N2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMjU1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTU3YGZsYWc9MGBpbmZvPQ==
+★09:37:36-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTQ2ODVgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMTc1MmBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|531D4B11E70EABD51E4916901A51E161
+★09:37:36-101.43.35.210★密钥对比★收到：531D4B11E70EABD51E4916901A51E161 后台计算：531D4B11E70EABD51E4916901A51E161
+★09:37:36-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646594685`char_guid=844429225101752`invite_code=jq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★09:37:36-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTQ2ODVgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMTc1MmBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★09:37:45-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTQ2ODVgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMTc1MmBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|AE18A094B9A7553258BA7FFAF2BC4983
+★09:37:45-101.43.35.210★密钥对比★收到：AE18A094B9A7553258BA7FFAF2BC4983 后台计算：AE18A094B9A7553258BA7FFAF2BC4983
+★09:37:45-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646594685`char_guid=844429225101752`invite_code=xf001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★09:37:45-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTQ2ODVgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMTc1MmBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★09:37:56-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTQ2ODVgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMTc1MmBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|14ED5BC5D485AC04F090D99B2515C35D
+★09:37:56-101.43.35.210★密钥对比★收到：14ED5BC5D485AC04F090D99B2515C35D 后台计算：14ED5BC5D485AC04F090D99B2515C35D
+★09:37:56-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646594685`char_guid=844429225101752`invite_code=tq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★09:37:56-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTQ2ODVgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMTc1MmBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★09:42:15-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTI1MjhgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMTM0NmBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|8F7DF587D47A017A4D8AE9A6C52FD03A
+★09:42:15-101.43.35.210★密钥对比★收到：8F7DF587D47A017A4D8AE9A6C52FD03A 后台计算：8F7DF587D47A017A4D8AE9A6C52FD03A
+★09:42:15-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646592528`char_guid=844429225101346`invite_code=jq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★09:42:15-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTI1MjhgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMTM0NmBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★09:42:23-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTI1MjhgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMTM0NmBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|B2C8AE50282470D72369E21E4D8642C1
+★09:42:23-101.43.35.210★密钥对比★收到：B2C8AE50282470D72369E21E4D8642C1 后台计算：B2C8AE50282470D72369E21E4D8642C1
+★09:42:23-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646592528`char_guid=844429225101346`invite_code=xf001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★09:42:23-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTI1MjhgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMTM0NmBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★09:42:33-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTI1MjhgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMTM0NmBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|153C30B99554A80AC17E224726845352
+★09:42:33-101.43.35.210★密钥对比★收到：153C30B99554A80AC17E224726845352 后台计算：153C30B99554A80AC17E224726845352
+★09:42:33-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646592528`char_guid=844429225101346`invite_code=tq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★09:42:33-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTI1MjhgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMTM0NmBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★09:45:33-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★09:45:33-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★09:45:33-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★09:45:33-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★09:46:22-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTc1MDlgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2ODgwOGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|42EEABFEC5469D36CC0034CA98B46F9E
+★09:46:22-101.43.35.210★密钥对比★收到：42EEABFEC5469D36CC0034CA98B46F9E 后台计算：42EEABFEC5469D36CC0034CA98B46F9E
+★09:46:22-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646597509`char_guid=844433520068808`invite_code=jq001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★09:46:22-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTc1MDlgY2hhcl9ndWlkPTg0NDQzMzUyMDA2ODgwOGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★09:47:10-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTc1MDlgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2ODgwOGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|1DB7A3DEDBA0795C71D20C591725005D
+★09:47:10-101.43.35.210★密钥对比★收到：1DB7A3DEDBA0795C71D20C591725005D 后台计算：1DB7A3DEDBA0795C71D20C591725005D
+★09:47:10-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646597509`char_guid=844433520068808`invite_code=xf001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★09:47:10-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTc1MDlgY2hhcl9ndWlkPTg0NDQzMzUyMDA2ODgwOGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★09:47:20-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTc1MDlgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2ODgwOGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|C866A8D0767C5E3DEB2CB9385141F6AC
+★09:47:20-101.43.35.210★密钥对比★收到：C866A8D0767C5E3DEB2CB9385141F6AC 后台计算：C866A8D0767C5E3DEB2CB9385141F6AC
+★09:47:20-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646597509`char_guid=844433520068808`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★09:47:20-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTc1MDlgY2hhcl9ndWlkPTg0NDQzMzUyMDA2ODgwOGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★10:13:25-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTU0NTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5NGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|3AB557C1FC3BE49C71346F1D0952251E
+★10:13:25-101.43.35.210★密钥对比★收到：3AB557C1FC3BE49C71346F1D0952251E 后台计算：3AB557C1FC3BE49C71346F1D0952251E
+★10:13:25-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646595454`char_guid=844437815040294`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★10:13:25-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTU0NTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5NGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★10:13:48-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTU0NTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5NGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|61271FDFF9AB49EF885673F56918406D
+★10:13:48-101.43.35.210★密钥对比★收到：61271FDFF9AB49EF885673F56918406D 后台计算：61271FDFF9AB49EF885673F56918406D
+★10:13:48-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646595454`char_guid=844437815040294`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★10:13:48-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTU0NTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5NGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★10:13:57-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTU0NTRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDI5NGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|2F3BEE191E6D50974DA9F5A6F06295B5
+★10:13:57-101.43.35.210★密钥对比★收到：2F3BEE191E6D50974DA9F5A6F06295B5 后台计算：2F3BEE191E6D50974DA9F5A6F06295B5
+★10:13:57-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646595454`char_guid=844437815040294`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★10:13:57-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTU0NTRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDI5NGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★10:20:17-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MzEwNDFgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA3Mzk3NGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|AE1CD2EC7156424EFC7350D44177A11D
+★10:20:17-101.43.35.210★密钥对比★收到：AE1CD2EC7156424EFC7350D44177A11D 后台计算：AE1CD2EC7156424EFC7350D44177A11D
+★10:20:17-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646631041`char_guid=844433520073974`invite_code=jq001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★10:20:17-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MzEwNDFgY2hhcl9ndWlkPTg0NDQzMzUyMDA3Mzk3NGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★10:20:32-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MzEwNDFgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA3Mzk3NGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|F5BEED3F8CB348637318152F4B17CBC3
+★10:20:32-101.43.35.210★密钥对比★收到：F5BEED3F8CB348637318152F4B17CBC3 后台计算：F5BEED3F8CB348637318152F4B17CBC3
+★10:20:32-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646631041`char_guid=844433520073974`invite_code=xf001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★10:20:32-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MzEwNDFgY2hhcl9ndWlkPTg0NDQzMzUyMDA3Mzk3NGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★10:20:47-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MzEwNDFgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA3Mzk3NGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|19F7A20868A65B67A20D587BF422E772
+★10:20:47-101.43.35.210★密钥对比★收到：19F7A20868A65B67A20D587BF422E772 后台计算：19F7A20868A65B67A20D587BF422E772
+★10:20:47-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646631041`char_guid=844433520073974`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★10:20:47-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MzEwNDFgY2hhcl9ndWlkPTg0NDQzMzUyMDA3Mzk3NGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★11:02:42-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jYzU1NWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|578D739D8776833AC73F3320BA500338
+★11:02:42-101.43.35.210★密钥对比★收到：578D739D8776833AC73F3320BA500338 后台计算：578D739D8776833AC73F3320BA500338
+★11:02:42-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598136`char_guid=844437815040302`invite_code=cc555`group_id=3`server_id=3233`device_type=11`result=2`info=
+★11:02:42-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jYzU1NWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0yYGluZm89
+★11:02:56-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMmBpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|9F04E24761BF880AF545AC63A1943757
+★11:02:56-101.43.35.210★密钥对比★收到：9F04E24761BF880AF545AC63A1943757 后台计算：9F04E24761BF880AF545AC63A1943757
+★11:02:56-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598136`char_guid=844437815040302`invite_code=vip666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★11:02:56-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMmBpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★11:09:19-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2YGdyb3VwX2lkPTNgc2VydmVyX2lkPTMyMzNgZGV2
+aWNlX3R5cGU9MTFg|EB8879285F44F0F7BDE385A25F4C06C8
+★11:09:19-101.43.35.210★密钥对比★收到：EB8879285F44F0F7BDE385A25F4C06C8 后台计算：EB8879285F44F0F7BDE385A25F4C06C8
+★11:09:19-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598136`char_guid=844437815040302`invite_code=cj66`group_id=3`server_id=3233`device_type=11`result=2`info=
+★11:09:19-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2YGdyb3VwX2lkPTNgc2VydmVyX2lkPTMyMzNgZGV2aWNlX3R5cGU9MTFgcmVzdWx0PTJgaW5mbz0=
+★11:09:33-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2NmBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|FBDD7A7BB1081BF6257A1DC6B79866D2
+★11:09:33-101.43.35.210★密钥对比★收到：FBDD7A7BB1081BF6257A1DC6B79866D2 后台计算：FBDD7A7BB1081BF6257A1DC6B79866D2
+★11:09:33-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598136`char_guid=844437815040302`invite_code=cj666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★11:09:33-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2NmBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0yYGluZm89
+★11:09:34-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2NmBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|FBDD7A7BB1081BF6257A1DC6B79866D2
+★11:09:34-101.43.35.210★密钥对比★收到：FBDD7A7BB1081BF6257A1DC6B79866D2 后台计算：FBDD7A7BB1081BF6257A1DC6B79866D2
+★11:09:34-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598136`char_guid=844437815040302`invite_code=cj666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★11:09:34-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2NmBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0yYGluZm89
+★11:09:34-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2NmBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|FBDD7A7BB1081BF6257A1DC6B79866D2
+★11:09:34-101.43.35.210★密钥对比★收到：FBDD7A7BB1081BF6257A1DC6B79866D2 后台计算：FBDD7A7BB1081BF6257A1DC6B79866D2
+★11:09:34-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598136`char_guid=844437815040302`invite_code=cj666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★11:09:34-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgxMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMmBpbnZpdGVfY29kZT1jajY2NmBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0yYGluZm89
+★11:23:33-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgwNjRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwNGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|FA741AED9277C99900B40977BF9CD043
+★11:23:33-101.43.35.210★密钥对比★收到：FA741AED9277C99900B40977BF9CD043 后台计算：FA741AED9277C99900B40977BF9CD043
+★11:23:33-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598064`char_guid=844437815040304`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★11:23:33-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgwNjRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwNGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★11:23:38-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgwNjRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwNGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|AF09BE8F98248BDE6BF730553FC776E1
+★11:23:38-101.43.35.210★密钥对比★收到：AF09BE8F98248BDE6BF730553FC776E1 后台计算：AF09BE8F98248BDE6BF730553FC776E1
+★11:23:38-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598064`char_guid=844437815040304`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★11:23:38-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgwNjRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwNGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★11:23:45-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgwNjRgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwNGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|FCCB5E426A90D86FADA315E2173D6CEB
+★11:23:45-101.43.35.210★密钥对比★收到：FCCB5E426A90D86FADA315E2173D6CEB 后台计算：FCCB5E426A90D86FADA315E2173D6CEB
+★11:23:45-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646598064`char_guid=844437815040304`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★11:23:45-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTgwNjRgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwNGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★11:29:09-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzI0NzJgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwM2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|4E9CF62ABA44E024F6C5B502F5CDE211
+★11:29:09-101.43.35.210★密钥对比★收到：4E9CF62ABA44E024F6C5B502F5CDE211 后台计算：4E9CF62ABA44E024F6C5B502F5CDE211
+★11:29:09-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646632472`char_guid=844437815040303`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★11:29:09-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzI0NzJgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwM2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★11:29:28-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzI0NzJgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwM2BpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|49E104EC9A8E8753A62AA775D23F1291
+★11:29:28-101.43.35.210★密钥对比★收到：49E104EC9A8E8753A62AA775D23F1291 后台计算：49E104EC9A8E8753A62AA775D23F1291
+★11:29:28-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646632472`char_guid=844437815040303`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★11:29:28-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzI0NzJgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwM2BpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★11:29:36-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzI0NzJgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwM2BpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|62E0C45AB5EF7428599D7F16CC635F4E
+★11:29:36-101.43.35.210★密钥对比★收到：62E0C45AB5EF7428599D7F16CC635F4E 后台计算：62E0C45AB5EF7428599D7F16CC635F4E
+★11:29:36-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646632472`char_guid=844437815040303`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★11:29:36-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzI0NzJgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwM2BpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★11:35:27-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWppYW44MDAwMTFgY2hhcl9ndWlkPTI4MTQ3NTQw
+NjIwNzk2MjZgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4MmBkZXZpY2VfdHlwZT03YA==|9A1D191F5D10C0548984142EA429BC73
+★11:35:27-101.43.35.210★密钥对比★收到：9A1D191F5D10C0548984142EA429BC73 后台计算：9A1D191F5D10C0548984142EA429BC73
+★11:35:27-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=jian800011`char_guid=2814754062079626`group_id=0`server_id=3182`device_type=7`result=3501`char_guid=2814754062079626`flag=0`info=
+★11:35:27-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWppYW44MDAwMTFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzk2MjZgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4MmBkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc5NjI2YGZsYWc9MGBpbmZvPQ==
+★11:48:07-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjA5MWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|5A917F27EC23B86C6EC8FDA7E3D68F00
+★11:48:08-101.43.35.210★密钥对比★收到：5A917F27EC23B86C6EC8FDA7E3D68F00 后台计算：5A917F27EC23B86C6EC8FDA7E3D68F00
+★11:48:08-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646595591`char_guid=844429225102091`invite_code=jq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★11:48:08-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjA5MWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★11:48:21-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjA5MWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|F9E2FB3B880355EAA51AEF6C83547D72
+★11:48:21-101.43.35.210★密钥对比★收到：F9E2FB3B880355EAA51AEF6C83547D72 后台计算：F9E2FB3B880355EAA51AEF6C83547D72
+★11:48:21-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646595591`char_guid=844429225102091`invite_code=xf001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★11:48:21-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjA5MWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★11:48:31-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMQpgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MGBk
+ZXZpY2VfdHlwZT0xMWA=|D25F4CBCED28E97361C7FA1ED321F12A
+★11:48:31-101.43.35.210★密钥对比★收到：D25F4CBCED28E97361C7FA1ED321F12A 后台计算：D25F4CBCED28E97361C7FA1ED321F12A
+★11:48:31-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646595591`char_guid=844429225102091`invite_code=tq001
+`group_id=3`server_id=3190`device_type=11`result=2`info=
+★11:48:31-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMQpgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MGBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★11:48:38-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMQpgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MGBk
+ZXZpY2VfdHlwZT0xMWA=|D25F4CBCED28E97361C7FA1ED321F12A
+★11:48:38-101.43.35.210★密钥对比★收到：D25F4CBCED28E97361C7FA1ED321F12A 后台计算：D25F4CBCED28E97361C7FA1ED321F12A
+★11:48:38-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646595591`char_guid=844429225102091`invite_code=tq001
+`group_id=3`server_id=3190`device_type=11`result=2`info=
+★11:48:38-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMQpgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MGBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★11:48:39-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMQpgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MGBk
+ZXZpY2VfdHlwZT0xMWA=|D25F4CBCED28E97361C7FA1ED321F12A
+★11:48:39-101.43.35.210★密钥对比★收到：D25F4CBCED28E97361C7FA1ED321F12A 后台计算：D25F4CBCED28E97361C7FA1ED321F12A
+★11:48:39-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646595591`char_guid=844429225102091`invite_code=tq001
+`group_id=3`server_id=3190`device_type=11`result=2`info=
+★11:48:39-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMQpgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzE5MGBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★11:48:49-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|E842FD0F9515EA9CEE24D86E9BD2B19E
+★11:48:49-101.43.35.210★密钥对比★收到：E842FD0F9515EA9CEE24D86E9BD2B19E 后台计算：E842FD0F9515EA9CEE24D86E9BD2B19E
+★11:48:49-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646595591`char_guid=844429225102091`invite_code=tq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★11:48:49-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTU1OTFgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjA5MWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★12:55:08-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzIyMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|AD272EC30C179F0D51D1DD71F4521137
+★12:55:08-101.43.35.210★密钥对比★收到：AD272EC30C179F0D51D1DD71F4521137 后台计算：AD272EC30C179F0D51D1DD71F4521137
+★12:55:08-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646632236`char_guid=844437815040301`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★12:55:08-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzIyMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★12:55:16-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzIyMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|78150493703CCF6BA030AC0A2F04401A
+★12:55:16-101.43.35.210★密钥对比★收到：78150493703CCF6BA030AC0A2F04401A 后台计算：78150493703CCF6BA030AC0A2F04401A
+★12:55:16-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646632236`char_guid=844437815040301`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★12:55:16-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzIyMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★12:55:33-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzIyMzZgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMwMWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|6C4D1B7A324939E758C5616E47AF5754
+★12:55:34-101.43.35.210★密钥对比★收到：6C4D1B7A324939E758C5616E47AF5754 后台计算：6C4D1B7A324939E758C5616E47AF5754
+★12:55:34-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646632236`char_guid=844437815040301`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★12:55:34-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzIyMzZgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMwMWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★13:19:49-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★13:19:49-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★13:19:49-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★13:19:49-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★13:24:22-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★13:24:22-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★13:24:22-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★13:24:22-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★13:37:22-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★13:37:22-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★13:37:22-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★13:37:22-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★14:56:45-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMxODFgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNDJgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzI1NWBkZXZpY2VfdHlwZT0xMWA=|B8752E6638ADA9BFEBEF0E84B258E103
+★14:56:45-101.43.35.210★密钥对比★收到：B8752E6638ADA9BFEBEF0E84B258E103 后台计算：B8752E6638ADA9BFEBEF0E84B258E103
+★14:56:45-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633181`char_guid=2814754062075142`group_id=3`server_id=3255`device_type=11`result=3501`char_guid=2814754062075142`flag=0`info=
+★14:56:45-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMxODFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNDJgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzI1NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0MmBmbGFnPTBgaW5mbz0=
+★15:12:22-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMxODFgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNDJgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzI1NWBkZXZpY2VfdHlwZT0xMWA=|B8752E6638ADA9BFEBEF0E84B258E103
+★15:12:22-101.43.35.210★密钥对比★收到：B8752E6638ADA9BFEBEF0E84B258E103 后台计算：B8752E6638ADA9BFEBEF0E84B258E103
+★15:12:22-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633181`char_guid=2814754062075142`group_id=3`server_id=3255`device_type=11`result=3501`char_guid=2814754062075142`flag=0`info=
+★15:12:22-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMxODFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNDJgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzI1NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0MmBmbGFnPTBgaW5mbz0=
+★15:28:40-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MDI0OTVgY2hhcl9ndWlkPTg0NDQz
+NzgxNTAzNzk5MWBpbnZpdGVfY29kZT1WSVA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|C34B7C44F1C55640CF8377565D36F852
+★15:28:40-101.43.35.210★密钥对比★收到：C34B7C44F1C55640CF8377565D36F852 后台计算：C34B7C44F1C55640CF8377565D36F852
+★15:28:40-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646602495`char_guid=844437815037991`invite_code=VIP666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★15:28:40-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MDI0OTVgY2hhcl9ndWlkPTg0NDQzNzgxNTAzNzk5MWBpbnZpdGVfY29kZT1WSVA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★15:28:48-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MDI0OTVgY2hhcl9ndWlkPTg0NDQz
+NzgxNTAzNzk5MWBpbnZpdGVfY29kZT02NjY2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|53FC017A11C839894AD2ADFEDC0DCA44
+★15:28:48-101.43.35.210★密钥对比★收到：53FC017A11C839894AD2ADFEDC0DCA44 后台计算：53FC017A11C839894AD2ADFEDC0DCA44
+★15:28:48-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646602495`char_guid=844437815037991`invite_code=666666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★15:28:48-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MDI0OTVgY2hhcl9ndWlkPTg0NDQzNzgxNTAzNzk5MWBpbnZpdGVfY29kZT02NjY2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★15:39:31-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDI4NjY1NGBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3Mzk1N2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMjU1YGRldmljZV90eXBlPTExYA==|2B52853DD435972D4899A4EF8C4E9EBE
+★15:39:31-101.43.35.210★密钥对比★收到：2B52853DD435972D4899A4EF8C4E9EBE 后台计算：2B52853DD435972D4899A4EF8C4E9EBE
+★15:39:31-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164286654`char_guid=2814754062073957`group_id=3`server_id=3255`device_type=11`result=3501`char_guid=2814754062073957`flag=0`info=
+★15:39:31-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDI4NjY1NGBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk1N2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMjU1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTU3YGZsYWc9MGBpbmZvPQ==
+★15:43:08-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdp
+bllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGA=|4BDA7C15FD4E9FEDCC772468285A1A03
+★15:43:08-101.43.35.210★密钥对比★收到：4BDA7C15FD4E9FEDCC772468285A1A03 后台计算：4BDA7C15FD4E9FEDCC772468285A1A03
+★15:43:08-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=E:\server\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★15:43:08-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdpbllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGByZXN1bHQ9YGluZm89
+★15:43:22-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★15:43:22-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★15:43:22-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★15:43:22-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★15:44:25-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWppYW44MDAwYGNoYXJfZ3VpZD0yODE0NzU0MDYy
+MDc5OTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2A=|793BC9933EA5F4123D1FB8415EBA71D6
+★15:44:25-101.43.35.210★密钥对比★收到：793BC9933EA5F4123D1FB8415EBA71D6 后台计算：793BC9933EA5F4123D1FB8415EBA71D6
+★15:44:25-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=jian8000`char_guid=2814754062079922`group_id=0`server_id=3181`device_type=7`result=3501`char_guid=2814754062079922`flag=0`info=
+★15:44:25-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWppYW44MDAwYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc5OTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2ByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3OTkyMmBmbGFnPTBgaW5mbz0=
+★15:47:42-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YA==|DC40D9FFE4778C10F44E07BE8F990AD7
+★15:47:42-101.43.35.210★密钥对比★收到：DC40D9FFE4778C10F44E07BE8F990AD7 后台计算：DC40D9FFE4778C10F44E07BE8F990AD7
+★15:47:42-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646319083`char_guid=2814754062073961`group_id=0`server_id=3184`device_type=7`result=3501`char_guid=2814754062073961`flag=0`info=
+★15:47:42-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTYxYGZsYWc9MGBpbmZvPQ==
+★15:51:28-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YA==|DC40D9FFE4778C10F44E07BE8F990AD7
+★15:51:28-101.43.35.210★密钥对比★收到：DC40D9FFE4778C10F44E07BE8F990AD7 后台计算：DC40D9FFE4778C10F44E07BE8F990AD7
+★15:51:28-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646319083`char_guid=2814754062073961`group_id=0`server_id=3184`device_type=7`result=3501`char_guid=2814754062073961`flag=0`info=
+★15:51:28-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTYxYGZsYWc9MGBpbmZvPQ==
+★15:55:48-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzNDdgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNDRgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|A90CA636B9F00CC2A2C4A81B558844B2
+★15:55:48-101.43.35.210★密钥对比★收到：A90CA636B9F00CC2A2C4A81B558844B2 后台计算：A90CA636B9F00CC2A2C4A81B558844B2
+★15:55:48-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633347`char_guid=2814754062075144`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075144`flag=0`info=
+★15:55:48-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzNDdgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNDRgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0NGBmbGFnPTBgaW5mbz0=
+★15:56:59-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzNTJgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNDVgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzI1NWBkZXZpY2VfdHlwZT0xMWA=|52997130AFE378A43AF9E09FB5607F36
+★15:56:59-101.43.35.210★密钥对比★收到：52997130AFE378A43AF9E09FB5607F36 后台计算：52997130AFE378A43AF9E09FB5607F36
+★15:56:59-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633352`char_guid=2814754062075145`group_id=3`server_id=3255`device_type=11`result=3501`char_guid=2814754062075145`flag=0`info=
+★15:56:59-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzNTJgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNDVgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzI1NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0NWBmbGFnPTBgaW5mbz0=
+★15:58:34-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDU4ODA3NmBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3NTE0NmBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYA==|3709C6F69405728C376A95ACF0D6540F
+★15:58:34-101.43.35.210★密钥对比★收到：3709C6F69405728C376A95ACF0D6540F 后台计算：3709C6F69405728C376A95ACF0D6540F
+★15:58:34-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164588076`char_guid=2814754062075146`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075146`flag=0`info=
+★15:58:34-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDU4ODA3NmBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0NmBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc1MTQ2YGZsYWc9MGBpbmZvPQ==
+★15:58:57-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YA==|DC40D9FFE4778C10F44E07BE8F990AD7
+★15:58:57-101.43.35.210★密钥对比★收到：DC40D9FFE4778C10F44E07BE8F990AD7 后台计算：DC40D9FFE4778C10F44E07BE8F990AD7
+★15:58:57-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646319083`char_guid=2814754062073961`group_id=0`server_id=3184`device_type=7`result=3501`char_guid=2814754062073961`flag=0`info=
+★15:58:57-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTYxYGZsYWc9MGBpbmZvPQ==
+★15:59:27-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDI4NjY1NGBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3Mzk1N2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMjU1YGRldmljZV90eXBlPTExYA==|2B52853DD435972D4899A4EF8C4E9EBE
+★15:59:27-101.43.35.210★密钥对比★收到：2B52853DD435972D4899A4EF8C4E9EBE 后台计算：2B52853DD435972D4899A4EF8C4E9EBE
+★15:59:27-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164286654`char_guid=2814754062073957`group_id=3`server_id=3255`device_type=11`result=3501`char_guid=2814754062073957`flag=0`info=
+★15:59:27-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDI4NjY1NGBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk1N2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMjU1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTU3YGZsYWc9MGBpbmZvPQ==
+★16:02:09-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDQyNDMyMmBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3NTE0N2Bncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYA==|3B3597C621F176B4441B234B1C283C7A
+★16:02:09-101.43.35.210★密钥对比★收到：3B3597C621F176B4441B234B1C283C7A 后台计算：3B3597C621F176B4441B234B1C283C7A
+★16:02:09-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164424322`char_guid=2814754062075147`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075147`flag=0`info=
+★16:02:09-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDQyNDMyMmBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0N2Bncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc1MTQ3YGZsYWc9MGBpbmZvPQ==
+★16:02:20-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDUxMzM0NGBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3NTE0OGBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYA==|E8B6EA062D0CC2684392F51F1D8D84A9
+★16:02:20-101.43.35.210★密钥对比★收到：E8B6EA062D0CC2684392F51F1D8D84A9 后台计算：E8B6EA062D0CC2684392F51F1D8D84A9
+★16:02:20-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164513344`char_guid=2814754062075148`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075148`flag=0`info=
+★16:02:20-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDUxMzM0NGBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0OGBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc1MTQ4YGZsYWc9MGBpbmZvPQ==
+★16:02:39-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDMxMjIzOWBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3NTE0OWBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYA==|D9021F2D0263871F712660B0CE327630
+★16:02:39-101.43.35.210★密钥对比★收到：D9021F2D0263871F712660B0CE327630 后台计算：D9021F2D0263871F712660B0CE327630
+★16:02:39-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164312239`char_guid=2814754062075149`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075149`flag=0`info=
+★16:02:39-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDMxMjIzOWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0OWBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc1MTQ5YGZsYWc9MGBpbmZvPQ==
+★16:05:38-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMjk0NjJgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjhgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|70661309258745F5BCDC80D189C5206F
+★16:05:38-101.43.35.210★密钥对比★收到：70661309258745F5BCDC80D189C5206F 后台计算：70661309258745F5BCDC80D189C5206F
+★16:05:38-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646229462`char_guid=2814754062073968`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062073968`flag=0`info=
+★16:05:38-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMjk0NjJgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjhgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk2OGBmbGFnPTBgaW5mbz0=
+★16:09:47-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDMxMjIzOWBjaGFyX2d1aWQ9MjgxNDc1
+NDA2MjA3NTE0OWBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYA==|D9021F2D0263871F712660B0CE327630
+★16:09:47-101.43.35.210★密钥对比★收到：D9021F2D0263871F712660B0CE327630 后台计算：D9021F2D0263871F712660B0CE327630
+★16:09:47-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_164312239`char_guid=2814754062075149`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075149`flag=0`info=
+★16:09:47-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDMxMjIzOWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0OWBncm91cF9pZD0xYHNlcnZlcl9pZD0zMTg1YGRldmljZV90eXBlPTExYHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc1MTQ5YGZsYWc9MGBpbmZvPQ==
+★16:23:27-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YA==|DC40D9FFE4778C10F44E07BE8F990AD7
+★16:23:27-101.43.35.210★密钥对比★收到：DC40D9FFE4778C10F44E07BE8F990AD7 后台计算：DC40D9FFE4778C10F44E07BE8F990AD7
+★16:23:27-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646319083`char_guid=2814754062073961`group_id=0`server_id=3184`device_type=7`result=3501`char_guid=2814754062073961`flag=0`info=
+★16:23:27-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4NGBkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTYxYGZsYWc9MGBpbmZvPQ==
+★16:27:21-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzM0NjJgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNTBgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|CCDB6B122A6AA2540C76086CAD2AD9D5
+★16:27:21-101.43.35.210★密钥对比★收到：CCDB6B122A6AA2540C76086CAD2AD9D5 后台计算：CCDB6B122A6AA2540C76086CAD2AD9D5
+★16:27:21-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633462`char_guid=2814754062075150`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075150`flag=0`info=
+★16:27:21-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzM0NjJgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNTBgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE1MGBmbGFnPTBgaW5mbz0=
+★16:27:39-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzNDdgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNDRgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|A90CA636B9F00CC2A2C4A81B558844B2
+★16:27:39-101.43.35.210★密钥对比★收到：A90CA636B9F00CC2A2C4A81B558844B2 后台计算：A90CA636B9F00CC2A2C4A81B558844B2
+★16:27:39-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633347`char_guid=2814754062075144`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075144`flag=0`info=
+★16:27:39-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzNDdgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNDRgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE0NGBmbGFnPTBgaW5mbz0=
+★16:31:37-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★16:31:37-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★16:31:37-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★16:31:37-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★16:34:48-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★16:34:48-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★16:34:48-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★16:34:48-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★16:37:55-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★16:37:55-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★16:37:55-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★16:37:55-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★16:39:04-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★16:39:04-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★16:39:04-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★16:39:04-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★16:40:46-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★16:40:46-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★16:40:46-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★16:40:46-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★16:41:08-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★16:41:08-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★16:41:08-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★16:41:08-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★16:54:28-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★16:54:28-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★16:54:28-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★16:54:28-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★17:08:39-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdp
+bllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGA=|4BDA7C15FD4E9FEDCC772468285A1A03
+★17:08:39-101.43.35.210★密钥对比★收到：4BDA7C15FD4E9FEDCC772468285A1A03 后台计算：4BDA7C15FD4E9FEDCC772468285A1A03
+★17:08:39-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=E:\server\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★17:08:39-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdpbllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGByZXN1bHQ9YGluZm89
+★17:17:31-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★17:17:31-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★17:17:31-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★17:17:31-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★17:27:00-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★17:27:00-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★17:27:00-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★17:27:00-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★17:27:21-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★17:27:21-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★17:27:21-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★17:27:21-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★18:38:24-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTgzMzdgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTI5NmBpbnZpdGVfY29kZT1CVUdhNGZlZGNjY2Bncm91cF9pZD0zYHNlcnZlcl9pZD0z
+MTkxYGRldmljZV90eXBlPTExYA==|5F64714A9C352EFD4A2C33B43CF45411
+★18:38:24-101.43.35.210★密钥对比★收到：5F64714A9C352EFD4A2C33B43CF45411 后台计算：5F64714A9C352EFD4A2C33B43CF45411
+★18:38:24-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646598337`char_guid=844433520069296`invite_code=BUGa4fedccc`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【BUG礼包】`cont=非常抱歉让您遇到Bug，我们会尽快修复！`money_list=2#300;1#10;4#3;`item_list=`info=
+★18:38:24-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY1OTgzMzdgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTI5NmBpbnZpdGVfY29kZT1CVUdhNGZlZGNjY2Bncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkEJVR+ekvOWMheOAkWBjb250PemdnuW4uOaKseatieiuqeaCqOmBh+WIsEJ1Z++8jOaIkeS7rOS8muWwveW/q+S/ruWkje+8gWBtb25leV9saXN0PTIjMzAwOzEjMTA7NCMzO2BpdGVtX2xpc3Q9YGluZm89
+★19:10:39-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY0NDJgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjQyOWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|D4481436B24F0058ADF206C5942C782F
+★19:10:39-101.43.35.210★密钥对比★收到：D4481436B24F0058ADF206C5942C782F 后台计算：D4481436B24F0058ADF206C5942C782F
+★19:10:39-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646596442`char_guid=844429225102429`invite_code=jq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★19:10:39-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY0NDJgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjQyOWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★19:10:57-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY0NDJgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjQyOWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|EB964FD6D01DEC14BD59E1AC8AB2ED7F
+★19:10:57-101.43.35.210★密钥对比★收到：EB964FD6D01DEC14BD59E1AC8AB2ED7F 后台计算：EB964FD6D01DEC14BD59E1AC8AB2ED7F
+★19:10:57-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646596442`char_guid=844429225102429`invite_code=xf001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★19:10:57-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY0NDJgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjQyOWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★19:11:23-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY0NDJgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjQyOWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|5176691549C75AF51B0314DF4B0D9221
+★19:11:23-101.43.35.210★密钥对比★收到：5176691549C75AF51B0314DF4B0D9221 后台计算：5176691549C75AF51B0314DF4B0D9221
+★19:11:23-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646596442`char_guid=844429225102429`invite_code=tq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★19:11:23-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY0NDJgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjQyOWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★19:26:52-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★19:26:52-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★19:26:52-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★19:26:52-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★19:32:52-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★19:32:52-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★19:32:52-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★19:32:52-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★19:39:55-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★19:39:55-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★19:39:55-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★19:39:55-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★19:40:42-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMzUxODZgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNTFgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|49185389756CBFC4AEC11EF35A66C0A2
+★19:40:42-101.43.35.210★密钥对比★收到：49185389756CBFC4AEC11EF35A66C0A2 后台计算：49185389756CBFC4AEC11EF35A66C0A2
+★19:40:42-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646235186`char_guid=2814754062075151`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075151`flag=0`info=
+★19:40:42-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMzUxODZgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNTFgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE1MWBmbGFnPTBgaW5mbz0=
+★19:46:10-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMzUxODZgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNTFgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|49185389756CBFC4AEC11EF35A66C0A2
+★19:46:10-101.43.35.210★密钥对比★收到：49185389756CBFC4AEC11EF35A66C0A2 后台计算：49185389756CBFC4AEC11EF35A66C0A2
+★19:46:10-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646235186`char_guid=2814754062075151`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075151`flag=0`info=
+★19:46:10-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMzUxODZgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNTFgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE1MWBmbGFnPTBgaW5mbz0=
+★19:50:27-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★19:50:27-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★19:50:27-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★19:50:27-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★19:57:13-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★19:57:13-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★19:57:13-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★19:57:13-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★19:59:14-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDJgY2hhcl9ndWlkPTI4MTQ3NTQw
+NjIwNzc3MjhgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4M2BkZXZpY2VfdHlwZT03YA==|62A630119F8909EF19A33743A997B83C
+★19:59:14-101.43.35.210★密钥对比★收到：62A630119F8909EF19A33743A997B83C 后台计算：62A630119F8909EF19A33743A997B83C
+★19:59:14-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=hhhhhh2102`char_guid=2814754062077728`group_id=0`server_id=3183`device_type=7`result=3501`char_guid=2814754062077728`flag=0`info=
+★19:59:14-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDJgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzc3MjhgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4M2BkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc3NzI4YGZsYWc9MGBpbmZvPQ==
+★20:01:00-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDlgY2hhcl9ndWlkPTI4MTQ3NTQw
+NjIwNzc4MjlgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4M2BkZXZpY2VfdHlwZT03YA==|A4FA750F393C620A85D3B16DA9B286CC
+★20:01:00-101.43.35.210★密钥对比★收到：A4FA750F393C620A85D3B16DA9B286CC 后台计算：A4FA750F393C620A85D3B16DA9B286CC
+★20:01:00-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=hhhhhh2109`char_guid=2814754062077829`group_id=0`server_id=3183`device_type=7`result=3501`char_guid=2814754062077829`flag=0`info=
+★20:01:00-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDlgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzc4MjlgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4M2BkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDc3ODI5YGZsYWc9MGBpbmZvPQ==
+★20:08:23-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|A9AB98B3819148E415532C277C93252A
+★20:08:23-101.43.35.210★密钥对比★收到：A9AB98B3819148E415532C277C93252A 后台计算：A9AB98B3819148E415532C277C93252A
+★20:08:23-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=jq001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★20:08:23-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★20:08:40-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|6E438025382063418C7C751652C6EC16
+★20:08:40-101.43.35.210★密钥对比★收到：6E438025382063418C7C751652C6EC16 后台计算：6E438025382063418C7C751652C6EC16
+★20:08:40-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=xf001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★20:08:40-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★20:08:53-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:08:53-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:08:53-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★20:08:53-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★20:09:08-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:08-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:08-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:08-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:09-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:09-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:09-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:09-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:10-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:10-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:10-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:10-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:14-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:14-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:14-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:14-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:14-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:14-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:14-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:14-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:14-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:14-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:14-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:14-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:15-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:15-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:15-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:15-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:15-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:15-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:15-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:15-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:15-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:15-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:16-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:16-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:16-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:16-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:16-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:16-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:16-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:09:16-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQz
+MzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRl
+dmljZV90eXBlPTExYA==|54CD8576829B1C2D238854007C2C5D5E
+★20:09:16-101.43.35.210★密钥对比★收到：54CD8576829B1C2D238854007C2C5D5E 后台计算：54CD8576829B1C2D238854007C2C5D5E
+★20:09:16-101.43.35.210★明文结果★cmd_id=2`world_id=2`account=yc_1646600872`char_guid=844433520069927`invite_code=tq001`group_id=3`server_id=3191`device_type=11`result=8`info=
+★20:09:16-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MmBhY2NvdW50PXljXzE2NDY2MDA4NzJgY2hhcl9ndWlkPTg0NDQzMzUyMDA2OTkyN2BpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkxYGRldmljZV90eXBlPTExYHJlc3VsdD04YGluZm89
+★20:18:45-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxMGBpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|767849A5292CC8DFC87AB5093773BCFD
+★20:18:45-101.43.35.210★密钥对比★收到：767849A5292CC8DFC87AB5093773BCFD 后台计算：767849A5292CC8DFC87AB5093773BCFD
+★20:18:45-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646597840`char_guid=844437815040310`invite_code=vip666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★20:18:45-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxMGBpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★20:19:15-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdp
+bllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGA=|4BDA7C15FD4E9FEDCC772468285A1A03
+★20:19:15-101.43.35.210★密钥对比★收到：4BDA7C15FD4E9FEDCC772468285A1A03 后台计算：4BDA7C15FD4E9FEDCC772468285A1A03
+★20:19:15-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=E:\server\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★20:19:15-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdpbllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGByZXN1bHQ9YGluZm89
+★20:23:23-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzODBgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNTJgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|E95AB763589FD8A0B0DD95DBA90C9E94
+★20:23:24-101.43.35.210★密钥对比★收到：E95AB763589FD8A0B0DD95DBA90C9E94 后台计算：E95AB763589FD8A0B0DD95DBA90C9E94
+★20:23:24-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646633380`char_guid=2814754062075152`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075152`flag=0`info=
+★20:23:24-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY2MzMzODBgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNTJgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE1MmBmbGFnPTBgaW5mbz0=
+★20:23:36-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0
+MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2A=|64B5DB8B955DC57C17CE51A4754861C8
+★20:23:36-101.43.35.210★密钥对比★收到：64B5DB8B955DC57C17CE51A4754861C8 后台计算：64B5DB8B955DC57C17CE51A4754861C8
+★20:23:36-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=hhhhhh21010`char_guid=2814754062080122`group_id=0`server_id=3181`device_type=7`result=3501`char_guid=2814754062080122`flag=0`info=
+★20:23:36-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2ByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA4MDEyMmBmbGFnPTBgaW5mbz0=
+★20:23:52-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|11C3A321EECBD0358A2F49209F962BEA
+★20:23:53-101.43.35.210★密钥对比★收到：11C3A321EECBD0358A2F49209F962BEA 后台计算：11C3A321EECBD0358A2F49209F962BEA
+★20:23:53-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646305003`char_guid=2814754062073973`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062073973`flag=0`info=
+★20:23:53-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk3M2BmbGFnPTBgaW5mbz0=
+★20:24:25-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMzUxODZgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzUxNTFgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|49185389756CBFC4AEC11EF35A66C0A2
+★20:24:25-101.43.35.210★密钥对比★收到：49185389756CBFC4AEC11EF35A66C0A2 后台计算：49185389756CBFC4AEC11EF35A66C0A2
+★20:24:25-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646235186`char_guid=2814754062075151`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062075151`flag=0`info=
+★20:24:25-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYyMzUxODZgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzUxNTFgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NTE1MWBmbGFnPTBgaW5mbz0=
+★20:25:43-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0
+MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2A=|64B5DB8B955DC57C17CE51A4754861C8
+★20:25:43-101.43.35.210★密钥对比★收到：64B5DB8B955DC57C17CE51A4754861C8 后台计算：64B5DB8B955DC57C17CE51A4754861C8
+★20:25:43-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=hhhhhh21010`char_guid=2814754062080122`group_id=0`server_id=3181`device_type=7`result=3501`char_guid=2814754062080122`flag=0`info=
+★20:25:43-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2ByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA4MDEyMmBmbGFnPTBgaW5mbz0=
+★20:28:45-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0
+MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2A=|64B5DB8B955DC57C17CE51A4754861C8
+★20:28:45-101.43.35.210★密钥对比★收到：64B5DB8B955DC57C17CE51A4754861C8 后台计算：64B5DB8B955DC57C17CE51A4754861C8
+★20:28:45-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=hhhhhh21010`char_guid=2814754062080122`group_id=0`server_id=3181`device_type=7`result=3501`char_guid=2814754062080122`flag=0`info=
+★20:28:45-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2ByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA4MDEyMmBmbGFnPTBgaW5mbz0=
+★20:31:51-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0
+MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2A=|64B5DB8B955DC57C17CE51A4754861C8
+★20:31:51-101.43.35.210★密钥对比★收到：64B5DB8B955DC57C17CE51A4754861C8 后台计算：64B5DB8B955DC57C17CE51A4754861C8
+★20:31:51-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=hhhhhh21010`char_guid=2814754062080122`group_id=0`server_id=3181`device_type=7`result=3501`char_guid=2814754062080122`flag=0`info=
+★20:31:51-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PWhoaGhoaDIxMDEwYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDgwMTIyYGdyb3VwX2lkPTBgc2VydmVyX2lkPTMxODFgZGV2aWNlX3R5cGU9N2ByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA4MDEyMmBmbGFnPTBgaW5mbz0=
+★20:35:09-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★20:35:09-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★20:35:09-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★20:35:09-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★20:43:35-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|7EE24700D6BA5D7CCB6F40C35EFBD596
+★20:43:35-101.43.35.210★密钥对比★收到：7EE24700D6BA5D7CCB6F40C35EFBD596 后台计算：7EE24700D6BA5D7CCB6F40C35EFBD596
+★20:43:35-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★20:43:35-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★20:44:22-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★20:44:22-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★20:44:22-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★20:44:22-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★20:44:35-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdp
+bllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGA=|4BDA7C15FD4E9FEDCC772468285A1A03
+★20:44:35-101.43.35.210★密钥对比★收到：4BDA7C15FD4E9FEDCC772468285A1A03 后台计算：4BDA7C15FD4E9FEDCC772468285A1A03
+★20:44:35-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=E:\server\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★20:44:35-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdpbllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGByZXN1bHQ9YGluZm89
+★20:52:42-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1M2BjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDk2
+OGBncm91cF9pZD0wYHNlcnZlcl9pZD0zMTgyYGRldmljZV90eXBlPTdg|DE3904225836B846241AF867CD15C4CE
+★20:52:42-101.43.35.210★密钥对比★收到：DE3904225836B846241AF867CD15C4CE 后台计算：DE3904225836B846241AF867CD15C4CE
+★20:52:42-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=wu3`char_guid=2814754062074968`group_id=0`server_id=3182`device_type=7`result=3501`char_guid=2814754062074968`flag=0`info=
+★20:52:42-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1M2BjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDk2OGBncm91cF9pZD0wYHNlcnZlcl9pZD0zMTgyYGRldmljZV90eXBlPTdgcmVzdWx0PTM1MDFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzQ5NjhgZmxhZz0wYGluZm89
+★20:53:22-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1M2BjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDk2
+OGBncm91cF9pZD0wYHNlcnZlcl9pZD0zMTgyYGRldmljZV90eXBlPTdg|DE3904225836B846241AF867CD15C4CE
+★20:53:22-101.43.35.210★密钥对比★收到：DE3904225836B846241AF867CD15C4CE 后台计算：DE3904225836B846241AF867CD15C4CE
+★20:53:22-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=wu3`char_guid=2814754062074968`group_id=0`server_id=3182`device_type=7`result=3501`char_guid=2814754062074968`flag=0`info=
+★20:53:22-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1M2BjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDk2OGBncm91cF9pZD0wYHNlcnZlcl9pZD0zMTgyYGRldmljZV90eXBlPTdgcmVzdWx0PTM1MDFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzQ5NjhgZmxhZz0wYGluZm89
+★20:59:52-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1M2BjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDY1
+N2Bncm91cF9pZD0wYHNlcnZlcl9pZD0zMTg0YGRldmljZV90eXBlPTdg|5C7ACA93706B23FE43D7A18A5413F3B3
+★20:59:52-101.43.35.210★密钥对比★收到：5C7ACA93706B23FE43D7A18A5413F3B3 后台计算：5C7ACA93706B23FE43D7A18A5413F3B3
+★20:59:52-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=wu3`char_guid=2814754062074657`group_id=0`server_id=3184`device_type=7`result=3501`char_guid=2814754062074657`flag=0`info=
+★20:59:52-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1M2BjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDY1N2Bncm91cF9pZD0wYHNlcnZlcl9pZD0zMTg0YGRldmljZV90eXBlPTdgcmVzdWx0PTM1MDFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzQ2NTdgZmxhZz0wYGluZm89
+★21:00:22-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1MmBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDM1
+NmBncm91cF9pZD0wYHNlcnZlcl9pZD0zMTg0YGRldmljZV90eXBlPTdg|F0C93E13291ADDBCA2AF3092AEE044C5
+★21:00:22-101.43.35.210★密钥对比★收到：F0C93E13291ADDBCA2AF3092AEE044C5 后台计算：F0C93E13291ADDBCA2AF3092AEE044C5
+★21:00:22-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=wu2`char_guid=2814754062074356`group_id=0`server_id=3184`device_type=7`result=3501`char_guid=2814754062074356`flag=0`info=
+★21:00:22-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXd1MmBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3NDM1NmBncm91cF9pZD0wYHNlcnZlcl9pZD0zMTg0YGRldmljZV90eXBlPTdgcmVzdWx0PTM1MDFgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzQzNTZgZmxhZz0wYGluZm89
+★21:06:29-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|11C3A321EECBD0358A2F49209F962BEA
+★21:06:29-101.43.35.210★密钥对比★收到：11C3A321EECBD0358A2F49209F962BEA 后台计算：11C3A321EECBD0358A2F49209F962BEA
+★21:06:29-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646305003`char_guid=2814754062073973`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062073973`flag=0`info=
+★21:06:29-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk3M2BmbGFnPTBgaW5mbz0=
+★21:12:15-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★21:12:15-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★21:12:15-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★21:12:15-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★21:12:38-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★21:12:38-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★21:12:38-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★21:12:38-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★21:14:34-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxMGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|6FF660FB6EBB021233C3CFCBE2D4D8B4
+★21:14:34-101.43.35.210★密钥对比★收到：6FF660FB6EBB021233C3CFCBE2D4D8B4 后台计算：6FF660FB6EBB021233C3CFCBE2D4D8B4
+★21:14:34-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646597840`char_guid=844437815040310`invite_code=jq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★21:14:34-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxMGBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★21:14:41-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxMGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|44C82F4E7B03BC402696BCDAAA097CEE
+★21:14:41-101.43.35.210★密钥对比★收到：44C82F4E7B03BC402696BCDAAA097CEE 后台计算：44C82F4E7B03BC402696BCDAAA097CEE
+★21:14:41-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646597840`char_guid=844437815040310`invite_code=xf001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★21:14:41-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxMGBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★21:15:08-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxMGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRl
+dmljZV90eXBlPTExYA==|97A696A7C7F1ADD9230A10FD309B8EB6
+★21:15:08-101.43.35.210★密钥对比★收到：97A696A7C7F1ADD9230A10FD309B8EB6 后台计算：97A696A7C7F1ADD9230A10FD309B8EB6
+★21:15:08-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646597840`char_guid=844437815040310`invite_code=tq001`group_id=3`server_id=3233`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★21:15:08-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY1OTc4NDBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxMGBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMjMzYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★21:18:06-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★21:18:06-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★21:18:06-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★21:18:06-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★21:36:17-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★21:36:17-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★21:36:17-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★21:36:17-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★21:46:36-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★21:46:36-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★21:46:36-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★21:46:36-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★21:59:08-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★21:59:08-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★21:59:08-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★21:59:08-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★22:01:51-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★22:01:51-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★22:01:51-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★22:01:51-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:02:49-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:02:49-101.43.35.210★密钥对比★收到：7EE24700D6BA5D7CCB6F40C35EFBD596 后台计算：7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:02:49-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★22:02:49-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:04:29-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★22:04:29-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★22:04:30-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★22:04:30-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★22:06:12-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★22:06:12-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★22:06:12-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★22:06:12-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:07:42-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★22:07:42-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★22:07:42-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★22:07:42-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:08:22-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:08:22-101.43.35.210★密钥对比★收到：7EE24700D6BA5D7CCB6F40C35EFBD596 后台计算：7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:08:22-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★22:08:22-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:09:01-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★22:09:01-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★22:09:01-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★22:09:01-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:10:29-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★22:10:29-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★22:10:29-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★22:10:29-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:10:39-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdp
+bllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGA=|4BDA7C15FD4E9FEDCC772468285A1A03
+★22:10:39-101.43.35.210★密钥对比★收到：4BDA7C15FD4E9FEDCC772468285A1A03 后台计算：4BDA7C15FD4E9FEDCC772468285A1A03
+★22:10:39-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=E:\server\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★22:10:39-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RTpcc2VydmVyXFdpbllYMDAxXEJpblxYR2FtZVNlcnZlcmBzZXJ2ZXJfZ3JvdXBfaWQ9MGByZXN1bHQ9YGluZm89
+★22:11:40-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:11:40-101.43.35.210★密钥对比★收到：7EE24700D6BA5D7CCB6F40C35EFBD596 后台计算：7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:11:40-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★22:11:40-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:15:35-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9
+t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|8BAA66F28E5CB065C7723D3CF1B761B8
+★22:15:35-101.43.35.210★密钥对比★收到：8BAA66F28E5CB065C7723D3CF1B761B8 后台计算：8BAA66F28E5CB065C7723D3CF1B761B8
+★22:15:35-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\NRR�һ�˽��\bin\XGameServer`server_group_id=0`result=`info=
+★22:15:35-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcTlJSudK7+su9t/5cYmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:17:13-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY3MzJgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjU5MWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|B8C80BAFEDA52FCFBD411053EA60CF78
+★22:17:13-101.43.35.210★密钥对比★收到：B8C80BAFEDA52FCFBD411053EA60CF78 后台计算：B8C80BAFEDA52FCFBD411053EA60CF78
+★22:17:13-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646596732`char_guid=844429225102591`invite_code=jq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【加群礼包】`cont=恭喜找到组织，在群里多多交流，积极发言哦！`money_list=2#100;1#5;`item_list=40004#3;`info=
+★22:17:13-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY3MzJgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjU5MWBpbnZpdGVfY29kZT1qcTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOWKoOe+pOekvOWMheOAkWBjb250PeaBreWWnOaJvuWIsOe7hOe7h++8jOWcqOe+pOmHjOWkmuWkmuS6pOa1ge+8jOenr+aegeWPkeiogOWTpu+8gWBtb25leV9saXN0PTIjMTAwOzEjNTtgaXRlbV9saXN0PTQwMDA0IzM7YGluZm89
+★22:17:48-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY3MzJgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjU5MWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|7B23261FA6DAB7A558666276FD461FBD
+★22:17:48-101.43.35.210★密钥对比★收到：7B23261FA6DAB7A558666276FD461FBD 后台计算：7B23261FA6DAB7A558666276FD461FBD
+★22:17:48-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646596732`char_guid=844429225102591`invite_code=xf001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【新服礼包】`cont=欢迎来到异星之地，领取礼包开始冒险吧！`money_list=2#100;3#8888;`item_list=`info=
+★22:17:48-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY3MzJgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjU5MWBpbnZpdGVfY29kZT14ZjAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOaWsOacjeekvOWMheOAkWBjb250Peasoui/juadpeWIsOW8guaYn+S5i+WcsO+8jOmihuWPluekvOWMheW8gOWni+WGkumZqeWQp++8gWBtb25leV9saXN0PTIjMTAwOzMjODg4ODtgaXRlbV9saXN0PWBpbmZvPQ==
+★22:18:07-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★22:18:07-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★22:18:07-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★22:18:07-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:18:12-49.235.116.123★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY3MzJgY2hhcl9ndWlkPTg0NDQy
+OTIyNTEwMjU5MWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRl
+dmljZV90eXBlPTExYA==|E033226CA8BE6A6CCEB5B1B907D02F65
+★22:18:12-101.43.35.210★密钥对比★收到：E033226CA8BE6A6CCEB5B1B907D02F65 后台计算：E033226CA8BE6A6CCEB5B1B907D02F65
+★22:18:12-101.43.35.210★明文结果★cmd_id=2`world_id=1`account=yc_1646596732`char_guid=844429225102591`invite_code=tq001`group_id=3`server_id=3190`device_type=11`result=0`sender_name=GM`title=【特权礼包】`cont=领取您的专属特权！`money_list=2#150;4#2;5#1;`item_list=`info=
+★22:18:12-49.235.116.123★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDY1OTY3MzJgY2hhcl9ndWlkPTg0NDQyOTIyNTEwMjU5MWBpbnZpdGVfY29kZT10cTAwMWBncm91cF9pZD0zYHNlcnZlcl9pZD0zMTkwYGRldmljZV90eXBlPTExYHJlc3VsdD0wYHNlbmRlcl9uYW1lPUdNYHRpdGxlPeOAkOeJueadg+ekvOWMheOAkWBjb250PemihuWPluaCqOeahOS4k+WxnueJueadg++8gWBtb25leV9saXN0PTIjMTUwOzQjMjs1IzE7YGl0ZW1fbGlzdD1gaW5mbz0=
+★22:28:34-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|AA7E14B35A6667D750743A094E3E2C31
+★22:28:34-101.43.35.210★密钥对比★收到：AA7E14B35A6667D750743A094E3E2C31 后台计算：AA7E14B35A6667D750743A094E3E2C31
+★22:28:34-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\YXServer\Bin\XGameServer`server_group_id=0`result=`info=
+★22:28:34-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcWVhTZXJ2ZXJcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:29:34-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFc
+QmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYA==|7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:29:34-101.43.35.210★密钥对比★收到：7EE24700D6BA5D7CCB6F40C35EFBD596 后台计算：7EE24700D6BA5D7CCB6F40C35EFBD596
+★22:29:34-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=G:\WinYX001\Bin\XGameServer`server_group_id=0`result=`info=
+★22:29:34-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RzpcV2luWVgwMDFcQmluXFhHYW1lU2VydmVyYHNlcnZlcl9ncm91cF9pZD0wYHJlc3VsdD1gaW5mbz0=
+★22:43:57-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|11C3A321EECBD0358A2F49209F962BEA
+★22:43:57-101.43.35.210★密钥对比★收到：11C3A321EECBD0358A2F49209F962BEA 后台计算：11C3A321EECBD0358A2F49209F962BEA
+★22:43:57-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646305003`char_guid=2814754062073973`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062073973`flag=0`info=
+★22:43:57-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk3M2BmbGFnPTBgaW5mbz0=
+★22:44:05-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWA=|11C3A321EECBD0358A2F49209F962BEA
+★22:44:05-101.43.35.210★密钥对比★收到：11C3A321EECBD0358A2F49209F962BEA 后台计算：11C3A321EECBD0358A2F49209F962BEA
+★22:44:05-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646305003`char_guid=2814754062073973`group_id=1`server_id=3185`device_type=11`result=3501`char_guid=2814754062073973`flag=0`info=
+★22:44:05-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMDUwMDNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NzNgZ3JvdXBfaWQ9MWBzZXJ2ZXJfaWQ9MzE4NWBkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MzUwMWBjaGFyX2d1aWQ9MjgxNDc1NDA2MjA3Mzk3M2BmbGFnPTBgaW5mbz0=
+★22:56:31-125.119.223.61★收到请求★1|Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVj
+dFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBg
+|6218158274034FCB288CED36CD13C038
+★22:56:31-101.43.35.210★密钥对比★收到：6218158274034FCB288CED36CD13C038 后台计算：6218158274034FCB288CED36CD13C038
+★22:56:31-101.43.35.210★明文结果★cmd_id=1`world_id=1`platfrom_id=10`file_path=D:\DL_Project\Server\YXServer_Test\Bin\CGameServer`server_group_id=0`result=`info=
+★22:56:31-125.119.223.61★返回密文★#Y21kX2lkPTFgd29ybGRfaWQ9MWBwbGF0ZnJvbV9pZD0xMGBmaWxlX3BhdGg9RDpcRExfUHJvamVjdFxTZXJ2ZXJcWVhTZXJ2ZXJfVGVzdFxCaW5cQ0dhbWVTZXJ2ZXJgc2VydmVyX2dyb3VwX2lkPTBgcmVzdWx0PWBpbmZvPQ==
+★23:22:17-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxM2BpbnZpdGVfY29kZT1WSVA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|4383004324E1381E59CABC97D84DA8C3
+★23:22:17-101.43.35.210★密钥对比★收到：4383004324E1381E59CABC97D84DA8C3 后台计算：4383004324E1381E59CABC97D84DA8C3
+★23:22:17-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646634930`char_guid=844437815040313`invite_code=VIP666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★23:22:17-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxM2BpbnZpdGVfY29kZT1WSVA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★23:22:44-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxM2BpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|1169EF137FB2C8DF6BBDE85FE1630EAB
+★23:22:44-101.43.35.210★密钥对比★收到：1169EF137FB2C8DF6BBDE85FE1630EAB 后台计算：1169EF137FB2C8DF6BBDE85FE1630EAB
+★23:22:44-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646634930`char_guid=844437815040313`invite_code=vip666`group_id=3`server_id=3233`device_type=11`result=2`info=
+★23:22:44-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxM2BpbnZpdGVfY29kZT12aXA2NjZgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★23:22:54-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxM2BpbnZpdGVfY29kZT12aXA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|7FDFFDE1C8BEDFB49899486A98B06069
+★23:22:54-101.43.35.210★密钥对比★收到：7FDFFDE1C8BEDFB49899486A98B06069 后台计算：7FDFFDE1C8BEDFB49899486A98B06069
+★23:22:54-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646634930`char_guid=844437815040313`invite_code=vip888`group_id=3`server_id=3233`device_type=11`result=2`info=
+★23:22:54-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxM2BpbnZpdGVfY29kZT12aXA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★23:23:11-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxM2BpbnZpdGVfY29kZT1WSVA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|ACAC986028432B20FC8335ABA2614C32
+★23:23:11-101.43.35.210★密钥对比★收到：ACAC986028432B20FC8335ABA2614C32 后台计算：ACAC986028432B20FC8335ABA2614C32
+★23:23:11-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646634930`char_guid=844437815040313`invite_code=VIP888`group_id=3`server_id=3233`device_type=11`result=2`info=
+★23:23:11-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxM2BpbnZpdGVfY29kZT1WSVA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★23:23:12-106.54.50.185★收到请求★2|Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQz
+NzgxNTA0MDMxM2BpbnZpdGVfY29kZT1WSVA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2Bk
+ZXZpY2VfdHlwZT0xMWA=|ACAC986028432B20FC8335ABA2614C32
+★23:23:12-101.43.35.210★密钥对比★收到：ACAC986028432B20FC8335ABA2614C32 后台计算：ACAC986028432B20FC8335ABA2614C32
+★23:23:12-101.43.35.210★明文结果★cmd_id=2`world_id=3`account=yc_1646634930`char_guid=844437815040313`invite_code=VIP888`group_id=3`server_id=3233`device_type=11`result=2`info=
+★23:23:12-106.54.50.185★返回密文★#Y21kX2lkPTJgd29ybGRfaWQ9M2BhY2NvdW50PXljXzE2NDY2MzQ5MzBgY2hhcl9ndWlkPTg0NDQzNzgxNTA0MDMxM2BpbnZpdGVfY29kZT1WSVA4ODhgZ3JvdXBfaWQ9M2BzZXJ2ZXJfaWQ9MzIzM2BkZXZpY2VfdHlwZT0xMWByZXN1bHQ9MmBpbmZvPQ==
+★23:23:20-125.119.223.61★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4M2BkZXZpY2VfdHlwZT03YA==|E58009E779231B3AB753F654CC0BC3B3
+★23:23:20-101.43.35.210★密钥对比★收到：E58009E779231B3AB753F654CC0BC3B3 后台计算：E58009E779231B3AB753F654CC0BC3B3
+★23:23:20-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646319083`char_guid=2814754062073961`group_id=0`server_id=3183`device_type=7`result=3501`char_guid=2814754062073961`flag=0`info=
+★23:23:20-125.119.223.61★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzE4M2BkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTYxYGZsYWc9MGBpbmZvPQ==
+★23:35:37-101.43.70.129★收到请求★3|Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3
+NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzI1M2BkZXZpY2VfdHlwZT03YA==|A469ECD69E08EC12ECB2C208EEBCFEDA
+★23:35:37-101.43.35.210★密钥对比★收到：A469ECD69E08EC12ECB2C208EEBCFEDA 后台计算：A469ECD69E08EC12ECB2C208EEBCFEDA
+★23:35:37-101.43.35.210★明文结果★cmd_id=3`world_id=1`account=yc_1646319083`char_guid=2814754062073961`group_id=0`server_id=3253`device_type=7`result=3501`char_guid=2814754062073961`flag=0`info=
+★23:35:37-101.43.70.129★返回密文★#Y21kX2lkPTNgd29ybGRfaWQ9MWBhY2NvdW50PXljXzE2NDYzMTkwODNgY2hhcl9ndWlkPTI4MTQ3NTQwNjIwNzM5NjFgZ3JvdXBfaWQ9MGBzZXJ2ZXJfaWQ9MzI1M2BkZXZpY2VfdHlwZT03YHJlc3VsdD0zNTAxYGNoYXJfZ3VpZD0yODE0NzU0MDYyMDczOTYxYGZsYWc9MGBpbmZvPQ==

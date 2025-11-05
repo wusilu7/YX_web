@@ -1,0 +1,23 @@
+★13:16:28-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★13:16:28-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:02:41-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062074195
+★14:02:42-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:02:42-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073957
+★14:02:42-115.192.33.211★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★14:41:51-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=【临时维护补偿】`cont=临时维护补偿`sender_name=GM`item_list=`money_list=2#100;`exp=`template_id=142`create_time=1709016105`valid_time=1709078400`cond_min_lv=20`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★14:41:51-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:41:51-115.192.33.211★审核成功★时间：2024-02-27 14:41:51; 所有服务器id：3185; 审核成功id：3185
+★15:37:10-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|13|0|0|0|new_char_name=末世之水滴`charguid=2814754062073963`igncheckstring=1
+★15:37:10-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:58:01-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★15:58:01-115.192.33.211★Result★{"Ret":"1","RetEx":"error=1`error_msg=`result=1"}
+★17:03:16-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=【补偿】`cont=掉落补偿`sender_name=GM`receiver_id=2814754062073961`item_list=40033#1#-1;`money_list=`exp=
+★17:03:16-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:19:20-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★19:19:20-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:20:54-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★19:20:54-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:20:54-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★19:20:55-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:20:55-115.192.33.211★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
+★19:20:55-115.192.33.211★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

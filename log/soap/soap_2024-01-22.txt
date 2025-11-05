@@ -1,0 +1,15 @@
+★10:51:08-115.192.213.49★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062075743
+★10:51:08-115.192.213.49★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★14:02:39-115.192.213.49★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=补偿`cont=补偿精炼元件`sender_name=GM`receiver_id=2814754062075424`item_list=40030#120#-1;`money_list=`exp=
+★14:02:39-115.192.213.49★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★15:35:41-115.192.213.49★发送请求★http://101.43.70.129:1002/mservice.wsdl|7|0|0|0|char_guid=2814754062074083
+★15:35:41-115.192.213.49★Result★{"Ret":"0","RetEx":"error=1`error_msg=`result=0"}
+★15:35:43-115.192.213.49★发送请求★http://101.43.70.129:1002/mservice.wsdl|7|0|0|0|char_guid=2814754062074083
+★15:35:43-115.192.213.49★Result★{"Ret":"0","RetEx":"error=1`error_msg=`result=0"}
+★19:57:17-115.192.213.49★发送请求★http://192.168.1.147:1002/mservice.wsdl|1|0|0|0|opentime=2024-01-21 19:57:17`closetime=`allowip=`blackip=
+★19:58:17-115.192.213.49★Result★"Could not connect to host"
+★21:04:38-115.192.213.49★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=补偿`cont=体力补偿`sender_name=GM`item_list=`money_list=1#30;`exp=`template_id=118`create_time=1705928625`valid_time=1706659217`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★21:04:38-115.192.213.49★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★21:04:38-115.192.213.49★审核成功★时间：2024-01-22 21:04:38; 所有服务器id：3185; 审核成功id：3185
+★23:20:00-36.24.168.249★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=体力`cont=体力`sender_name=GM`receiver_id=2814754062075424`item_list=`money_list=1#10;`exp=
+★23:20:00-36.24.168.249★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

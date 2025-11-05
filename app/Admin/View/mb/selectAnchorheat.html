@@ -1,0 +1,105 @@
+{{include file="../common/1header.html"}} <!-- 在公共的头部文件中引入了CSS文件 -->
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>主播热度查询</span></div>
+<label class="select_label control-label">渠道:</label>
+<div class="col-xs-12 col-sm-3">
+    <select id="g" class="selectpicker show-tick form-control" multiple data-live-search="true" data-actions-box="true" title="请选择"></select>
+</div>
+<label class="select_label control-label">平台：</label>
+<div class="col-xs-12 col-sm-2">
+    <select id="p" class="selectpicker show-tick form-control" data-live-search="false" title="全部"></select>
+</div>
+<label class="select_label control-label">服务器:</label>
+<div class="col-xs-12 col-sm-3" >
+    <select id="s" class="selectpicker show-tick form-control" multiple data-live-search="true" data-actions-box="true" title="请选择"></select>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+
+    <input size="16" type="text" id="anchor_id" class="form-control jin-datetime"
+           placeholder="主播ID">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>主播ID</th>
+            <th>变化值</th>
+            <th>角色</th>
+            <th>物品名称</th>
+            <th>物品数量</th>
+            <th>时间</th>
+        </tr>
+        </thead>
+        <!--↓↓ tbody中的内容通过js加载得到 ↓↓-->
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--↓↓ 下面div中的内容通过js加载得到 ↓↓-->
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①…；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+
+{{include file="../common/2footer.html"}} <!-- 在公共尾部文件中引入了js文件 -->
+
+<script>
+
+
+
+
+    var url = location.href + "&jinIf=912";
+
+    var arr = ['id', 'anchor_id', 'changeheat', 'char_id','item_id', 'item_num', 'time'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    //下面是依次加载相应的DOM元素，对应的渠道，服务器，和时间的选取分别调用gsSelect()和calendar()方法
+    gsSelect3('#g', '#p', '#s');
+    //设置一个函数来专门调用tableList方法
+    function getQuest() {
+        data.page       = 1;
+        data.gi     = $('#g').val();
+        data.pi         = $('#p').val();
+        data.si         = $('#s').val();
+        data.anchor_id         = $('#anchor_id').val();
+        tableList(url, data, id, arr); //这个是自己封装的方法在jin-tableList.js文件中
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        getQuest();
+    });
+
+    //邮件审核
+    $('#content').on('click', 'input[data-toggle="popover"]', function () {
+        a = $(this);
+        if(a.attr('data-off') == 'true'){
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=913",
+                data: {
+                    char_id:a.val()
+                },
+                dataType: 'json',
+                async:false,
+                success: function (json) {
+                    a.attr('data-content', '总充值：'+json);
+                    a.attr('data-off', false);
+                    a.popover();
+                }
+            });
+        }
+    })
+
+
+
+
+</script>

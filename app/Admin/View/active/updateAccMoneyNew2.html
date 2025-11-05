@@ -1,0 +1,388 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.07.sa.css" rel="stylesheet">
+<div class="jin-content-title"><span>掘宝修改</span></div>
+<hr />
+<div class="form-horizontal col-sm-6 col-sm-offset-3">
+    <div class="form-group">
+        <label for="ID" class="col-sm-2 control-label">编号</label>
+        <div class="col-sm-10">
+            <input id="ID" class="form-control" readonly/>
+        </div>
+    </div>
+    <div style="border: 1px solid red; margin: 10px 0;">
+    <div class="form-group">
+        <label for="OpenDate" class="col-sm-2 control-label">开放日期</label>
+        <div class="col-sm-10">
+            <input id="OpenDate" class="form-control"/>
+            <!--<input type="number" id="OpenDate1" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">月-->
+            <!--<input type="number" id="OpenDate2" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">日-->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OpenTime" class="col-sm-2 control-label">开放时间</label>
+        <div class="col-sm-10">
+            <input id="OpenTime" class="form-control"/>
+            <!--<input type="number" id="OpenTime1" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">时-->
+            <!--<input type="number" id="OpenTime2" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">分-->
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Duration" class="col-sm-2 control-label">持续时间</label>
+        <div class="col-sm-10">
+            <input id="Duration" class="form-control"/>
+            <!--<input type="number" id="Duration" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">天-->
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-group">
+            <label for="forced_send_ServerOption" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_ServerOption" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当ServerOption为空,也会发送
+        </div>
+        <label for="ServerOption" class="col-sm-2 control-label">ServerOption</label>
+        <div class="col-sm-10">
+            <input id="ServerOption" class="form-control"/>
+            <!--<input type="number" id="ServerOption" style="height: 34px;line-height: 34px; width: 70px; text-align: center;">天-->
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="AccMoneyNum" class="col-sm-2 control-label">累充金额</label>
+        <div class="col-sm-10">
+            <input id="AccMoneyNum" class="form-control" style="width: 10%;display: inline-block;"/>
+        </div>
+    </div>
+    <div  style="border: 1px solid blue; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_ShowAccMoneyReward" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_ShowAccMoneyReward" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+        <div class="form-group">
+            <label for="reward_type6" class="col-sm-2 control-label">展示奖励1</label>
+            <div class="col-sm-10">
+                <select id="reward_type6" style="width: 100px; height: 32px; line-height: 32px;">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son6">
+                </div>
+                数量:<input id="item_num6" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">*数量为空不配该奖励
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type7" class="col-sm-2 control-label">展示奖励2</label>
+            <div class="col-sm-10">
+                <select id="reward_type7" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son7">
+                </div>
+                数量:<input id="item_num7" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type8" class="col-sm-2 control-label">展示奖励3</label>
+            <div class="col-sm-10">
+                <select id="reward_type8" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son8">
+                </div>
+                数量:<input id="item_num8" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type9" class="col-sm-2 control-label">展示奖励4</label>
+            <div class="col-sm-10">
+                <select id="reward_type9" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son9">
+                </div>
+                数量:<input id="item_num9" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type10" class="col-sm-2 control-label">展示奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type10" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son10">
+                </div>
+                数量:<input id="item_num10" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+    </div>
+    <div  style="border: 1px solid red; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_AccMoneyReward" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_AccMoneyReward" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+        <div class="form-group">
+            <label for="reward_type1" class="col-sm-2 control-label">实际奖励1</label>
+            <div class="col-sm-10">
+                <select id="reward_type1" style="width: 100px; height: 32px; line-height: 32px;">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son1">
+                </div>
+                数量:<input id="item_num1" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">*数量为空不配该奖励
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type2" class="col-sm-2 control-label">实际奖励2</label>
+            <div class="col-sm-10">
+                <select id="reward_type2" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son2">
+                </div>
+                数量:<input id="item_num2" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type3" class="col-sm-2 control-label">实际奖励3</label>
+            <div class="col-sm-10">
+                <select id="reward_type3" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son3">
+                </div>
+                数量:<input id="item_num3" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type4" class="col-sm-2 control-label">实际奖励4</label>
+            <div class="col-sm-10">
+                <select id="reward_type4" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son4">
+                </div>
+                数量:<input id="item_num4" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type5" class="col-sm-2 control-label">实际奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type5" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son5">
+                </div>
+                数量:<input id="item_num5" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+            </div>
+        </div>
+    </div>
+    <div  style="border: 1px solid aqua; margin: 10px 0;">
+        <div class="form-group">
+            <label for="forced_send_AccMoneyRewardRandPool" class="col-sm-2 control-label">强制发送</label>
+            <input id="forced_send_AccMoneyRewardRandPool" value="1" type="checkbox" style="margin-left: 10px; width: 20px; height: 20px;">
+            *当奖励设置为空,也会发送
+        </div>
+        <div class="form-group">
+            <label for="reward_type11" class="col-sm-2 control-label">随机奖励1</label>
+            <div class="col-sm-10">
+                <select id="reward_type11" style="width: 100px; height: 32px; line-height: 32px;">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son11">
+                </div>
+                数量:<input id="item_num11" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability11" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type12" class="col-sm-2 control-label">随机奖励2</label>
+            <div class="col-sm-10">
+                <select id="reward_type12" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son12">
+                </div>
+                数量:<input id="item_num12" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability12" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type13" class="col-sm-2 control-label">随机奖励3</label>
+            <div class="col-sm-10">
+                <select id="reward_type13" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son13">
+                </div>
+                数量:<input id="item_num13" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability13" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type14" class="col-sm-2 control-label">随机奖励4</label>
+            <div class="col-sm-10">
+                <select id="reward_type14" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son14">
+                </div>
+                数量:<input id="item_num14" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability14" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type15" class="col-sm-2 control-label">随机奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type15" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son15">
+                </div>
+                数量:<input id="item_num15" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability15" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type16" class="col-sm-2 control-label">随机奖励6</label>
+            <div class="col-sm-10">
+                <select id="reward_type16" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son16">
+                </div>
+                数量:<input id="item_num16" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability16" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type17" class="col-sm-2 control-label">随机奖励7</label>
+            <div class="col-sm-10">
+                <select id="reward_type17" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son17">
+                </div>
+                数量:<input id="item_num17" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability17" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reward_type18" class="col-sm-2 control-label">随机奖励5</label>
+            <div class="col-sm-10">
+                <select id="reward_type18" style="width: 100px; height: 32px; line-height: 32px; ">
+                    <option value="[奖励道具]">[奖励道具]</option>
+                    <option value="[奖励货币]">[奖励货币]</option>
+                </select>
+                <div style="display: inline-block" id="reward_type_son18">
+                </div>
+                数量:<input id="item_num18" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="数量">
+                概率:<input id="probability18" style="width: 80px; height: 32px; line-height: 32px;" type="text" placeholder="概率">*填写1-100之间
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="AccMoneyRewardRandNum" class="col-sm-2 control-label">随机数量</label>
+        <div class="col-sm-10">
+            <input type="text" id="AccMoneyRewardRandNum" style="height: 34px;line-height: 34px; width: 60px; text-align: center;">*从随机奖励中抽取X个
+        </div>
+    </div>
+    <div class="btn-group center jin-sa-btn">
+        <button data-type="update" class="btn  btn-success">修改</button>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    $(function () {
+        ItemsTag(18);
+    });
+    function getSa() {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=920",
+            dataType: "json",
+            success: function (json) {
+                $("#ID").val(json.ID);
+                $("#ID").attr('data-data-gi',json.gi);
+                $("#ID").attr('data-data-sign',json.gi_sign);
+                $("#OpenDate").val(json.OpenDate);
+                $("#OpenTime").val(json.OpenTime);
+                $("#Duration").val(json.Duration);
+                $("#ServerOption").val(json.ServerOption);
+                $("#forced_send_ServerOption").prop("checked",parseInt(json.forced_send_ServerOption));
+                $("#AccMoneyNum").val(json.AccMoneyNum);
+
+                $("#forced_send_ShowAccMoneyReward").prop("checked",parseInt(json.forced_send_ShowAccMoneyReward));
+                $("#forced_send_AccMoneyReward").prop("checked",parseInt(json.forced_send_AccMoneyReward));
+                $("#forced_send_AccMoneyRewardRandPool").prop("checked",parseInt(json.forced_send_AccMoneyRewardRandPool));
+
+                reward_shadow(json.AccMoneyReward.split(';'),5);
+                if(json.ShowAccMoneyReward){
+                    reward_shadow(json.ShowAccMoneyReward.split(';'),10,6);
+                }
+                if(json.AccMoneyRewardRandPool){
+                    reward_shadow(json.AccMoneyRewardRandPool.split(';'),18,11);
+                }
+
+                $("#AccMoneyRewardRandNum").val(json.AccMoneyRewardRandNum);
+            }
+        });
+    }
+    $('button[data-type="update"]').on('click', function () {//修改服务器
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            data: {
+                gi: $("#ID").attr('data-data-gi'),
+                sign: $("#ID").attr('data-data-sign'),
+                ID:$("#ID").val(),
+                at_type:GetQueryValue('at_type'),
+                OpenDate:$("#OpenDate").val(),
+                OpenTime:$("#OpenTime").val(),
+                Duration:$("#Duration").val(),
+                ServerOption:$("#ServerOption").val(),
+                forced_send_ServerOption:$('#forced_send_ServerOption').is(':checked') ? $('#forced_send_ServerOption').val() : 0,
+                AccMoneyNum:$("#AccMoneyNum").val(),
+                forced_send_ShowAccMoneyReward:$('#forced_send_ShowAccMoneyReward').is(':checked') ? $('#forced_send_ShowAccMoneyReward').val() : 0,
+                forced_send_AccMoneyReward:$('#forced_send_AccMoneyReward').is(':checked') ? $('#forced_send_AccMoneyReward').val() : 0,
+                forced_send_AccMoneyRewardRandPool:$('#forced_send_AccMoneyRewardRandPool').is(':checked') ? $('#forced_send_AccMoneyRewardRandPool').val() : 0,
+                AccMoneyRewardRandPool:reward_rand(18,11),
+                ShowAccMoneyReward:reward(10,6),
+                AccMoneyReward:reward(5),
+                AccMoneyRewardRandNum:$("#AccMoneyRewardRandNum").val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                layer.alert('成功', {icon: 1}, function (index) {
+                    layer.close(index);
+                    window.location.reload();
+                });
+            }
+        });
+    });
+</script>

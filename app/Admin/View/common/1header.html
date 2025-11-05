@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <!-- |↑↑↑|上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- |↓↓↓|IE 兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- |↓↓↓|国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- Bootstrap -->
+    <link href="{{CSS}}layui.css" rel="stylesheet">
+    <link href="{{CSS}}bootstrap.css" rel="stylesheet">
+    <link href="{{CSS}}bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="{{CSS}}bootstrap-switch.min.css" rel="stylesheet">
+    <link href="{{CSS}}select2.min.css" rel="stylesheet">
+    <link href="{{CSS}}checkbox.css" rel="stylesheet">
+    <link href="{{CSS}}jin/1.header.css{{HTML_VERSION}}" rel="stylesheet">
+    <link href="{{CSS}}jin/2.sidebar.css{{HTML_VERSION}}" rel="stylesheet">
+    <link href="{{CSS}}jin/3.00.content.css{{HTML_VERSION}}" rel="stylesheet">
+    <link href="{{CSS}}jin/4.footer.css{{HTML_VERSION}}" rel="stylesheet">
+    <link href="{{CSS}}bootstrap-select.min.css" rel="stylesheet">
+    <style type="text/css">
+        a:hover,a:focus{
+            text-decoration : none
+        }
+        @media all and (max-device-width: 1000px){
+            .shouji{
+                width:89%;
+                margin-left:11%;
+            }
+        }
+        @media all and (max-device-width: 1000px){
+            .select_group_div .bs-searchbox{
+                display: none !important;
+            }
+            .select_server_div .bs-searchbox{
+                display: none !important;
+            }
+        }
+        .select2-search__field{
+            display: none !important;
+        }
+    </style>
+    <title>{{if $breadcrumb.parent == ''}}首页{{else}}{{$breadcrumb.son}}{{/if}}</title>
+    <script>
+        window.onload=function () {
+            startTime()
+        }
+        //时钟
+        function startTime() {
+            var today = new Date();
+            var y = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var d = today.getDate();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            $("#time1").html(y + "-" + month + "-" + d + " " + h + ":" + m + ":" + s);
+            t = setTimeout(function () {
+                startTime()
+            }, 1000);
+        }
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+</head>
+
+<body>
+<!--顶部导航条-->
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#23262E;border-bottom-color:#393D49;box-shadow:0 0 0px 0px #ccc;">
+    <!-- 左LOGO -->
+    <div class="navbar-header nav-title ">
+<!--        <a class="navbar-brand jin-logo" style="margin-left: 0px;font-size: 36px;font-family: STHeiti;color: rgba(78,84,101,0)" href="?p=Admin&c=Index&a=index">魔魂网络</a>-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <span id="time1" style="color:#9d9d9d;font-size: 25px; margin-right: 10px; float: left;margin-top: 7px;margin-left: 10px"></span>
+        <span style="color: #9d9d9d;font-size: 25px; float: left;margin-top: 7px; "><span style="font-size: 25px;">|</span>&nbspIP:{{$ip}}</span>
+    </div>
+    <!-- 右个人信息 -->
+    <div class="collapse navbar-collapse navbar-right is-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a style="background-color:#009688;color:white">你好 , {{$smarty.SESSION.name}}</a></li>
+            <!--<li><a href="?p=Admin&c=Rbac&a=personalSetting">个人设置</a></li>-->
+            <li><a href="?p=Admin&c=Signin&a=signout" style="margin-right:20px">安全退出</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--START菜单栏和内容区-->
+<div class="container-fluid">
+    <!--菜单栏S-->
+    <div class="col-sm-1">
+        <ul class="layui-nav layui-nav-tree layui-nav-side" style="margin-top:50px; width: 150px;" lay-shrink="all">
+            {{foreach $menu as $k => $m}}
+            <li class="layui-nav-item {{if $m.parent.controller == $get_c}}layui-nav-itemed{{/if}}">
+                <a href="javascript:;">{{$m.parent.per_name}}</a>
+                {{foreach $m as $key => $c}}
+                {{if $key !== 'parent' && $c.p !== ''}}
+                <dl class="layui-nav-child" style="margin-bottom:0px">
+                    <dd id ="{{$c.p}}{{$c.c}}{{$c.a}}">
+                        <a href='?p={{$c.p}}&c={{$c.c}}&a={{$c.a}}' target="_self">{{$c.per_name}}</a>
+                    </dd>
+                </dl>
+                {{/if}}
+                {{/foreach}}
+            </li>
+            {{/foreach}}
+        </ul>
+    </div>
+
+
+    <!--菜单栏E-->
+
+    <!--START主体内容区-->
+    <div class="col-sm-11" style="margin-left: 140px;">
+        <!--面包屑导航S-->
+        <ol class="breadcrumb">
+            <li><a href="?p=Admin&c=Index&a=index">首页</a></li>
+            {{if $breadcrumb.parent neq ''}}
+            <li class="active">{{$breadcrumb.parent}}</li>
+            <li class="active">{{$breadcrumb.son}}</li>
+            {{/if}}
+        </ol>
+        <!--面包屑导航E-->
+        <div class="clearfix">
+            <!--接下面-->

@@ -1,0 +1,109 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span> 副本数据分析</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>副本ID</th>
+            <th>副本名称</th>
+            <!-- <th>可参与人数</th> -->
+            <th>参与人数</th>
+            <!-- <th>参与率</th> -->
+            <th>参与次数</th>
+            <th>平均参与次数</th>
+            <th>通过次数</th>
+            <th>失败次数</th>
+            <th>平均时长</th>
+            <th>通过率</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ① 参与率：副本参与人数/所选时间段内活跃并且有资格参与该副本的人数；
+    </div>
+    <div>
+        ① 通过率：副本通过总次数/该副本参与总次数；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    var url = location.href + "&jinIf=912";
+    //计算任务完成率
+    //console.log(url);
+    var c_num = function (json) {
+        if (json.number > 0) {
+            c_num =(json.reps / json.number).toFixed(1);
+        } else {
+            c_num = '0.0';
+        }
+        return c_num;
+    };
+    //计算流失率
+    var p_rate = function (json) {
+        if (json.reps > 0) {
+            p_rate =(json.success / json.reps * 100).toFixed(1) + '%';
+        } else {
+            p_rate = '0.0%';
+        }
+        return p_rate;
+    };
+    //为调用自己封装的tableList方法声明相关的参数：url,arr,data,id
+    var arr = ['map_id', 'map_name', 'number', 'reps', c_num, 'success', 'failure', 'avg', p_rate];
+    var id = ["#content", "#page"];
+    var data = {page: 1, order: 'desc'};
+    //下面是依次加载相应的DOM元素，对应的渠道，服务器，和时间的选取分别调用gsSelect()和calendar()方法
+    $(document).ready(gsSelect('#group', '#server', '#platform')).ready(calendar('month', '#time_start', '#time_end'));
+    //设置一个函数来专门调用tableList方法
+    function getQuest() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        checkSummaryTime(data.check_type, time_start, time_end, 30, 15);
+
+        data.time_start = time_start;//查询开始时间;
+        data.time_end   = time_end;//查询结束时间
+        data.group      = $('#group').val();
+        data.pi         = $('#platform').val();
+        data.si         = $('#server').val();
+        tableList(url, data, id, arr); //这个是自己封装的方法在jin-tableList.js文件中
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getQuest();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getQuest();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getQuest);
+    });
+</script>

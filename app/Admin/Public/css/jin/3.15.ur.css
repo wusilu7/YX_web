@@ -1,0 +1,54 @@
+.jin-ur-btn {
+    margin-top: 50px;
+}
+
+.jin-ur-btn > button {
+    width: 110px;
+}
+
+.regular-checkbox + label {
+    vertical-align: middle;
+}
+
+.regular-checkbox *, label * {
+    cursor: default;
+}
+
+.jin-checkbox-text {
+    font-weight: normal;
+    margin: 10px 22px 0 0;
+    padding-left: 5px; /*选框和文字间距*/
+}
+
+.jin-all-text {
+    font-size: 22px;
+    padding-left: 6px;
+}
+
+.jin-checkbox-inline {
+    display: inline-block;
+}
+
+.jin-checkbox-title {
+    margin-bottom: 5px;
+}
+
+.jin-checkbox-title * {
+    font-size: 17px;
+}
+
+.jin-checkbox-title span:not(:first-child) {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/*功能权限div*/
+#role_per, #role_ser {
+    padding-top: 7px;
+    cursor: default;
+}
+
+#role_num_per, #role_num_ser {
+    margin-left: 10px;
+    font-size: 16px;
+}

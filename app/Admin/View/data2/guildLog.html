@@ -1,0 +1,113 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.03.selectdistribution.css" rel="stylesheet">
+<div class="jin-content-title"><span>公会日志</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+               placeholder="开始日期">
+        -
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+               placeholder="结束日期">
+        <a id="all_guild" class="btn btn-primary pull-right">公会信息</a>
+    </div>
+    <div>
+        <label for="player_name">筛选：</label>
+        <input id="player_name" type="text" class="form-control jin-search-input" placeholder="角色名">
+        <input id="player_id" type="text" class="form-control jin-search-input" placeholder="角色ID">
+        <input id="guild_name" type="text" class="form-control jin-search-input" placeholder="公会名称">
+        <select  id="opt">
+            <option value="0">创建公会</option>
+            <option value="1">解散公会</option>
+            <option value="2">职位变更</option>
+            <option value="3">退会</option>
+            <option value="4">加入公会</option>
+            <option value="5">删除成员</option>
+            <option value="6">更新战力</option>
+            <option value="11">修改公会公告</option>
+        </select>
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <a id="server_summary" class="btn btn-success">服务器汇总</a>
+        <a id="group_summary" class="btn btn-success">渠道汇总</a>
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>时间</th>
+            <th>行为</th>
+            <th>角色ID</th>
+            <th>角色名</th>
+            <th>公会ID</th>
+            <th>公会名</th>
+            <th>公会等级</th>
+            <th>公会战力</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①查询条件可以按需自由组合，不填代表查询所有；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    gsSelect('#group', '#server');
+    calendar('month', '#time_start', '#time_end');
+    var url = location.href + "&jinIf=912";
+    var arr = ['log_time', 'opt', 'char_guid', 'char_name','guild_id', 'guild_name', 'guild_level', 'guild_fight','guild_str'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    function getLog() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        checkSummaryTime(data.check_type, time_start, time_end, 30, 15);
+
+        data.time_start  = time_start;//查询开始时间;
+        data.time_end    = time_end;//查询结束时间
+        data.group       = $('#group').val();
+        data.pi          = $('#platform').val();
+        data.si          = $('#server').val();
+        data.player_name = $("#player_name").val();
+        data.player_id   = $("#player_id").val();
+        data.guild_name  = $('#guild_name').val();
+        data.opt        = $("#opt").val();
+
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getLog();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getLog();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getLog);
+    });
+
+    $("#all_guild").on('click', function () {
+        location.href += "&jinIf=913";
+    });
+</script>

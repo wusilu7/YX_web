@@ -1,0 +1,16 @@
+#content {
+    margin: 20px;
+}
+
+h4 {
+    font-weight: bold;
+    color: #00a820;
+}
+
+.text {
+    padding-bottom: 25px;
+}
+
+.text div {
+    margin-bottom: 5px;
+}

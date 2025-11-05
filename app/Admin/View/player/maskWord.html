@@ -1,0 +1,110 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>屏蔽字</span></div>
+
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <select id="mask_type" class="selectpicker">
+        <option value="1">人工处理</option>
+        <option value="2">自动禁言</option>
+        <option value="3">自动封号</option>
+    </select>
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="jin_add" class="btn btn-info jin_add"><span class="glyphicon glyphicon-plus"></span></a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>关键词</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    var del = function (json) {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="del" data-data-name="'+json.create_user+'" class="btn btn-danger">删除</a>' +
+            '</div>';
+        return c;
+    };
+    var url = location.href + "&jinIf=912";
+    var arr = ['id', 'name',del];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    $("#jin_search").on('click', function () {
+        data.page = 1;
+        data.mask_type= $("#mask_type").val();
+        tableList(url, data, id, arr)
+    });
+
+    $('#content').on('click', 'a[data-type="del"]', function () {
+        var del_id = $(this).parents('tr').find('td').eq(0).text();
+		var info = $(this).parents('tr').find('td').eq(1).text();
+		var create_user = $(this).attr('data-data-name');
+		console.log(create_user)
+        layer.confirm('确定要删除？', {
+            btn: ['确定', '手滑了'] //按钮
+        }, function(index){
+            $.ajax({
+                type: "post",
+                url: location.href + '&jinIf=915',
+                data: {
+                    del_id : del_id,
+					info:info,
+					create_user:create_user
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.close(index);
+                    tableList(url, data, id, arr)
+                }
+            });
+        }, function(){
+
+        });
+    });
+
+    $("#jin_add").on('click', function () {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增屏蔽字',
+            area: ['600px','350px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">屏蔽字</span><input id="name" type="text" class="form-control"></div>' +
+            '<div class="input-group"><span class="input-group-addon">程度</span><select id="type" class="form-control">'+
+            '<option value="1">人工处理</option> '+
+            '<option value="2">自动禁言</option> '+
+            '<option value="3">自动封号</option> '+
+            '</select></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=913',
+                    data: {
+                        name: $('#name').val(),
+                        type: $('#type').val()
+                    },
+                    success: function (res) {
+                        layer.close(index);
+                        tableList(url, data, id, arr)
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    });
+</script>

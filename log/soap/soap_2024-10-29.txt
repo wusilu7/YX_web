@@ -1,0 +1,16 @@
+★13:28:01-192.168.1.149★发送请求★http://192.168.1.170:1002/mservice.wsdl|15|0|0|0|charguid=2814754062074356`opttype=0
+★13:28:01-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:34:30-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:34:30-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:34:43-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:34:43-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:35:09-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:35:09-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:35:40-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:35:40-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:35:51-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:35:51-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:39:21-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:39:22-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:39:44-192.168.1.149★发送请求★http://192.168.1.149:1002/mservice.wsdl|15|0|0|0|charguid=2814754062073956`opttype=0
+★13:39:44-192.168.1.149★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

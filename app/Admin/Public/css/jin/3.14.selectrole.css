@@ -1,0 +1,24 @@
+table > thead {
+    background-color: #62697f;
+    color: #fff;
+}
+
+table > tbody {
+    background-color: #fafafa;
+}
+
+.jin-child > div > span {
+    width: 80px;
+}
+
+.table-bordered {
+    border: 3px solid #62697f;
+}
+
+.jin-role-column1 {
+    width: 70px;
+}
+
+.jin-role-column3 {
+    width: 230px;
+}

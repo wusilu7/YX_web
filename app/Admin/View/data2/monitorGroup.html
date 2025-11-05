@@ -1,0 +1,70 @@
+{{include file="../common/1header.html"}}
+
+<div class="jin-content-title"><span>勾选监控渠道</span></div>
+
+<table class="table table-striped text-center">
+    <thead>
+    <tr>
+    	<th>渠道名称</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody id="content"></tbody>
+</table>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+	var btn = function (json) {
+		if (json.on_monitor == 1) {
+			var r_content = '<a data-type ="monitor" data-status = "1" gid = "'+json.group_id+'" class="btn btn-success">已监控</a>';
+		} else {
+			var r_content = '<a data-type ="monitor" data-status = "2" gid = "'+json.group_id+'" class="btn btn-danger">未监控</a>';
+		}
+        
+        return r_content;
+    }
+	var data = {};
+	
+	var url = location.href + "&jinIf=912";
+	var arr = ['group_name', btn];
+    var id = "#content";
+    noPageContentList(url, data, id, arr);
+
+    $('#content').on('click', 'a[data-type="monitor"]', function () { 
+    	var status = $(this).attr("data-status");
+    	var gid = $(this).attr("gid");
+
+    	layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '勾选监控渠道',
+            area: ['400px', '170px'],
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            content: '<div style="width: 90px;margin: auto;margin-top: 20px;font-weight: bold;">确定更改吗？</div>',
+            yes: function (res) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=913",
+                    data: {
+                        status: status,
+                        gid: gid
+                    },
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res == 1) {
+                            layer.closeAll();
+                            layer.alert('更改成功', {icon: 1});
+                            noPageContentList(url, data, id, arr);
+                        } else {
+                            layer.msg('更改失败', {icon: 2});
+                        }
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    });
+</script>

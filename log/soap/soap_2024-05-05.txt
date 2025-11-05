@@ -1,0 +1,4 @@
+★09:32:40-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|29|0|0|0|charguid=844429225101458`order=17148727481076032972645`amount=18.00`resettype=0`giftid=80`id=231`param=
+★09:32:41-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★18:05:22-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|5|0|0|0|charguid=844429225101659`order=17149035089534943012645`amount=30.00`id=209`param=
+★18:05:22-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

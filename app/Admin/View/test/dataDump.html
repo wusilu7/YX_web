@@ -1,0 +1,69 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>后台数据清空（危险操作）</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<div id="delete">
+    <a data-type="delete" class="btn btn-lg btn-danger">清空数据库（包括渠道数据）</a>
+    <br/>
+    <br/>
+    <a data-type="delete_all" class="btn btn-lg btn-warning">清空数据库（渠道数据除外）</a>
+</div>
+<div class="jin-explain  clearfix">
+    <b>说明</b>：
+    <div>
+        ①“清空数据库（包括渠道数据）”会清除服务器数据和该服务器所在渠道的数据，比如设备安装数、资源更新数。
+    </div>
+    <div>
+        ②“清空数据库（渠道数据除外）”只清除服务器数据而不清除该服务器所在渠道的数据。
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect('#group', '#server');
+    $('#delete').on('click', 'a[data-type="delete"]', function () {//
+        var server_id = $(this).parents('tr').find('td').eq(1).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '服务器配置修改',
+            area: ['400px', '310px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">服务器ID</span><input id="server_id" type="text" class="form-control" value="' +
+            server_id + '" readonly></div>' +
+            '<div class="input-group"><span class="input-group-addon">服务器名称</span><input id="name" type="text" class="form-control" value="' +
+            name + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">IP地址</span><input id="game_dn" type="text" class="form-control" value="' +
+            game_dn + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">端口</span><input id="game_port" type="text" class="form-control" value="' +
+            game_port + '"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=913',
+                    data: {
+                        server_id: $('#server_id').val(),
+                        name: $('#name').val(),
+                        game_dn: $('#game_dn').val(),
+                        game_port: $('#game_port').val()
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('修改成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            noPageContentList(url, data, id, arr);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    });
+</script>

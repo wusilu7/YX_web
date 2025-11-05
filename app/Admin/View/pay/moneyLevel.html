@@ -1,0 +1,210 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.03.selectdistribution.css" rel="stylesheet">
+<style>
+    .btn_on {
+        color: #fff;
+        background-color: #269abc;
+        border-color: #1b6d85;
+    }
+</style>
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>首充金额分布</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime" placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime" placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <!--<a id="group_summary" class="btn btn-success">渠道汇总</a>-->
+</div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ① 首充金额分布图表示日期选择框（不填默认今天）注册的角色首充时所在等级的人数总和；
+    </div>
+</div>
+<hr/>
+
+<div id="jin-charts-distribution"></div>
+<div id='total' class="center"></div>
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>等级</th>
+            <th>人数</th>
+            <th>占比</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<!--AJAX调用等级比例分布的json接口-->
+<script type="text/javascript">
+    gsSelect('#group', '#server', '#platform');
+    calendar('month', '#time_start', '#time_end');
+    var fee = [];
+    var num = [];
+    var data1 = {};
+    var check = true;
+    function getDistribution() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        // check = checkSummaryTime(data1.check_type, time_start, time_end, 30, 15);
+        // if (check === false) {
+        //     return false;
+        // }
+
+        data1.time_start  = time_start;//查询开始时间;
+        data1.time_end    = time_end;//查询结束时间
+        data1.pi    = $('#platform').val();
+        data1.si    = $('#server').val();
+        data1.group = $('#group').val();
+        $.ajax({
+            type: "post",
+            async: true,
+            url: location.href + "&jinIf=912",
+            data: data1,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                var s = '';
+                if (json == 0) {
+                    total = json;
+                } else {
+                    total = json[json.length - 1];
+                }
+                for (var i = 0; i <= json.length - 2; i++) {
+                    fee.push(json[i].fee + '元');
+                    num.push(json[i].num);
+                    if (total === '0') {
+                        var scale = 0;
+                    } else {
+                        if (json[i].num == '') {
+                            scale = '0%';
+                        } else {
+                            scale = (json[i].num / total * 100).toFixed(2) + '%';
+                        }
+                    }
+                    if (json[i].fee > 0) {
+                        s += '<tr>' +
+                            '<td>' + json[i].fee + '元' + '</td>' +
+                            '<td>' + json[i].num + '</td>' +
+                            '<td>' + scale + '</td>' +
+                            '</tr>';
+                    }
+                }
+                $("#content").html(s);
+                s = '总人数：' + total + '人';
+                $("#total").html(s);
+                myChart.setOption(option);
+                fee.splice(0, fee.length);//清空数组
+                num.splice(0, num.length);
+            },
+            error: function () {
+                $("#content").html('');
+                $("#total").html('');
+                myChart.clear();
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").click(function () {
+        data1.check_type = 912;  // 普通查询
+        if ($('#server').val() === null) {
+            layer.msg('请选择服务器');
+            return false;
+        }
+        getDistribution();
+    });
+    // 服务器汇总
+    $("#server_summary").click(function () {
+        data1.check_type = 998;  // 服务器汇总
+        getDistribution();
+    });
+    // 渠道汇总
+    $("#group_summary").click(function () {
+        data1.check_type = 999;  // 渠道汇总
+        giCollect(getDistribution,1);
+    });
+
+</script>
+<script src="{{JS}}echarts.min.js"></script>
+<script>
+    var myChart = echarts.init(document.getElementById('jin-charts-distribution'));
+    var option = {
+        tooltip: {
+            show: true,
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        color: ['#009966'],
+        legend: {
+            data: ['人数']
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {
+                    name: 'xoa',
+                    title: '保存'
+                }
+            }
+        },
+        xAxis: [
+            {
+                boundaryGap: false,
+                name: '元',
+                type: 'category',
+                data: fee
+            }
+        ],
+        yAxis: [
+            {
+                boundaryGap: false,
+                name: '人数',
+                type: 'value',
+                data: num
+            }
+        ],
+        series: [
+            {
+                name: "人数",
+                type: "bar",
+                data: num,
+                roam: true,
+                markPoint: {
+                    data: [
+                        {type: 'max', name: '最大值'},
+                        {type: 'min', name: '最小值'}
+                    ]
+                },
+                markLine: {
+                    data: [
+                        {type: 'average', name: '平均值'}
+                    ]
+                }
+            }
+        ]
+    };
+</script>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<definitions name="Billing" targetNamespace="urn:Billing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:Billing"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+    <types xmlns="http://schemas.xmlsoap.org/wsdl/"/>
+    <portType name="BillingPort">
+        <operation name="BillingCmdVersion">
+            <input message="tns:BillingCmdVersionRequest"/>
+            <output message="tns:BillingCmdVersionResponse"/>
+        </operation>
+    </portType>
+    <binding name="BillingBinding" type="tns:BillingPort">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="BillingCmdVersion">
+            <soap:operation soapAction="urn:Billing#SoapHandle#BillingCmdVersion"/>
+            <input>
+                <soap:body use="encoded" namespace="urn:Billing"
+                           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output>
+                <soap:body use="encoded" namespace="urn:Billing"
+                           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="Billing">
+        <documentation/>
+        <port name="BillingPort" binding="tns:BillingBinding">
+            <soap:address location="http://www.xoa.jc:80/s/create_wsdl.php"/>
+        </port>
+    </service>
+    <message name="BillingCmdVersionRequest">
+        <part name="id" type="xsd:string"/>
+        <part name="s" type="xsd:string"/>
+        <part name="key" type="xsd:string"/>
+    </message>
+    <message name="BillingCmdVersionResponse">
+        <part name="BillingCmdVersion" type="xsd:string"/>
+    </message>
+</definitions>

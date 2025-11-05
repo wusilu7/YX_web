@@ -1,0 +1,131 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>怪物死亡日志页面</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <label for="time_start">输入怪物id：</label>
+    <input id="monstor" class="form-control jin-search-input" placeholder="怪物id">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a>
+    <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>怪物id</th>
+            <th>怪物名称</th>
+            <th>死亡次数</th>
+            <th>可参与的玩家数</th>
+            <th>实际参与的玩家数</th>
+            <th>活跃度</th>
+        </tr>
+        </thead>
+        <!--↓↓ tbody中的内容通过js加载得到 ↓↓-->
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--↓↓ 下面div中的内容通过js加载得到 ↓↓-->
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①可参与人数如果为空，可能是monster表未添加怪物信息和等级段；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    var url = location.href + "&jinIf=912";
+//    getmonstor();
+//    function getmonstor() {
+//        //获取怪物id
+//        $.ajax({
+//            type: "POST",
+//            url: "?p=Admin&c=Data2&a=getMonstors",
+//            dataType: 'json',
+//            data: {
+//            },
+//            success: function (res) {
+//                $("#monstor").select2({
+//                    data: res,
+//                    placeholder: '请选择',
+//                    theme: "classic",
+//                    width: "150px",
+//                    multiple: false
+//                }).val("").trigger('change');
+//            }
+//        });
+//    }
+    //为调用自己封装的tableList方法声明相关的参数：url,arr,data,id
+    var arr = ['template_id', 'monstor_name', 'die_sum', 'canplayer_nums','palyer_nums','activity'];
+    var id = ["#content", "#page"];
+    var data = {page: 1, order: 'desc'};
+    //下面的id为group和server的DOM元素在哪里？js中追加的
+    $(document).ready(gsSelect('#group', '#server', '#platform')).ready(calendar('month', '#time_start', '#time_end'));
+    //设置一个函数来专门调用tableList方法
+    function getQuest() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        checkSummaryTime(data.check_type, time_start, time_end, 30, 15);
+
+        data.page        = 1;
+        data.time_start  = time_start;//查询开始时间;
+        data.time_end    = time_end;//查询结束时间
+        data.group       = $('#group').val();
+        data.pi          = $('#platform').val();
+        data.si          = $('#server').val();
+        data.template_id = $('#monstor').val();
+        tableList(url, data, id, arr); //这个是自己封装的方法在jin-tableList.js文件中
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getQuest();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getQuest();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getQuest);
+    });
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';  // 生成excel表
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

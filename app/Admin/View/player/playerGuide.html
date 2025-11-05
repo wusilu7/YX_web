@@ -1,0 +1,70 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>新手指引角色信息查询</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+<!--     <div>
+        <label for="time">日期：</label>
+        <input size="16" type="text" id="time" class="form-control jin-datetime"
+               placeholder="默认当天">
+    </div> -->
+    <div>
+        <label for="player_name">筛选：</label>
+        <input id="player_name" type="text" class="form-control jin-search-input" placeholder="角色ID/角色名">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>日期</th>
+            <th>角色ID</th>
+            <th>角色名</th>
+            <th>新手指引ID</th>
+            <th>arg0</th>
+            <th>arg1</th>
+            <th>地图ID</th>
+            <th>横轴</th>
+            <th>纵轴</th>
+            <th>等级</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①日期不填默认查询当天；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect('#group', '#server');
+//    calendarOne('month', '#time');
+    var url = location.href + "&jinIf=912";
+    var arr = ['log_time', 'char_guid', 'char_name', 'data_id', 'arg0', 'arg1','map_id','pos_x','pos_z','levle'];
+    var id = ["#content", "#page"];
+    var data = {};
+    function getPlayerinfo(){
+        data.page = 1;
+        data.si = $("#server").val();//放在里面，不然si的值会不正确
+        data.player_name = $("#player_name").val();
+        tableList(url, data, id, arr);
+    }
+    $("#jin_search").on('click', function () {
+        if($("#player_name").val()==""){
+            alert("请输入角色ID或者角色名");
+            return false;
+        }
+        getPlayerinfo();
+    });
+</script>

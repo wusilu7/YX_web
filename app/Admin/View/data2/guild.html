@@ -1,0 +1,98 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.03.selectdistribution.css" rel="stylesheet">
+<div class="jin-content-title"><span>公会信息</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <input id="guild_id" type="text" class="form-control jin-search-input" placeholder="公会ID">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>公会ID</th>
+            <th>公会名</th>
+            <th>公会公告</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    gsSelect('#group', '#server');
+    var btn = [
+        '<div class="btn-group btn-group-sm">' +
+        '<a data-type="updateNotice" class="btn btn-primary">强制修改公会公告</a>' +
+        '</div>'
+    ];
+    var url = location.href + "&jinIf=914";
+    var arr = [ 'guild_id', 'guild_name', 'guild_str', 'create_time',btn];
+    var id = "#content";
+    var data = {};
+    function getLog() {
+        data.si          = $('#server').val();
+        data.guild_id  =$("#guild_id").val();
+        noPageContentList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        getLog();
+    });
+    $('#content').on('click', 'a[data-type="updateNotice"]', function () {
+        var guild = $(this).parents('tr').find('td').eq(0).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '修改公会公告',
+            area: ['560px', '420px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            shadeClose: false, //点击遮罩
+            content: '<div class="jin-child" style="margin-top: -3px;">' +
+            '<div class="input-group"><span class="input-group-addon">公告</span><textarea class="form-control" id="notice"  rows="10"></textarea></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=915',
+                    data: {
+                        guild: guild,
+                        notice: $('#notice').val(),
+                        si: $('#server').val()
+                    },
+                    dataType: "json",
+                    success: function (json) {
+                        if (json.result==1) {
+                            layer.close(index);
+                            layer.alert('修改成功', {icon: 1}, function (index) {
+                                layer.close(index);
+                            });
+                        }else{
+                            layer.close(index);
+                            layer.alert('修改失败', {icon: 2}, function (index) {
+                                layer.close(index);
+                            });
+                        }
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    });
+
+</script>

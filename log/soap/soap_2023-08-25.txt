@@ -1,0 +1,6 @@
+★10:04:24-183.14.31.145★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=福利`cont=请查收。`sender_name=GM`receiver_id=2814754062077598`item_list=40004#500#-1;`money_list=2#10000;`exp=
+★10:04:24-183.14.31.145★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★13:58:24-183.14.31.145★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=福利`cont=请查收。`sender_name=GM`receiver_id=2814754062077598`item_list=`money_list=2#50000;1#1000;`exp=
+★13:58:24-183.14.31.145★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:46:36-122.235.190.254★发送请求★http://192.168.1.147:1002/mservice.wsdl|10|0|0|0|opentime=2023-08-25 00:00:00`othmmss=60360
+★16:47:36-122.235.190.254★Result★"Could not connect to host"

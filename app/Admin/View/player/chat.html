@@ -1,0 +1,292 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>聊天监控</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime-long"
+               placeholder="开始日期">
+        -
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime-long"
+               placeholder="结束日期">
+    </div>
+    <div>
+        <label for="player_name">筛选：</label>
+        <input id="player_name" type="text" class="form-control jin-search-input" placeholder="角色ID/角色名">
+        <select id="chat_type">
+            <option value="999">全部</option>
+        </select>
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <input size="16" type="checkbox" id="ischeck" value="1">
+        <label  style="margin-left: 0px;">自动刷新</label>
+        &nbsp;
+        <input type="text" id="time_num" placeholder="单位秒，不填默认5秒">
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>角色ID</th>
+            <th>角色名</th>
+            <th>账号</th>
+            <th>时间</th>
+            <th>聊天内容</th>
+            <th>聊天对象角色ID</th>
+            <th>踢下线</th>
+            <th>禁言</th>
+            <th>封号</th>
+            <th>封IP</th>
+            <th>屏蔽词</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①查询条件可以按需自由组合，不填代表查询所有；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    var kick = function () {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="kick"  class="btn btn-danger">踢下线</a>' +
+            '</div>';
+        return c;
+    };
+    var shutup =  function () {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="shutup"  class="btn btn-danger">禁言</a>' +
+            '</div>';
+        return c;
+    };
+    var ban =   function () {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="ban"  class="btn btn-danger">封号</a>' +
+            '</div>';
+        return c;
+    };
+    var ip =   function () {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="ip"  class="btn btn-danger">封IP</a>' +
+            '</div>';
+        return c;
+    };
+    var mask =   function () {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="mask"  class="btn btn-danger">加入屏蔽词</a>' +
+            '</div>';
+        return c;
+    };
+    var recall =   function () {
+        var c = '<div class="btn-group btn-group-sm">' +
+            '<a data-type="recall"  class="btn btn-danger">撤回信息</a>' +
+            '</div>';
+        return c;
+    };
+    chatType();
+    gsSelect('#group', '#server');
+    calendar('day', '#time_start', '#time_end');
+    var url = location.href + "&jinIf=912";
+    var arr = ['char_guid', 'char_name','account', 'log_time', 'char_msg','target_char_guid', kick, shutup, ban,ip, mask,recall];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    var time = '';
+    $("#jin_search").on('click', function () {
+        if ($('#ischeck').is(':checked')) {
+            clearInterval(time);
+            common();
+            num  = 5;
+            if($("#time_num").val()){
+                num = $("#time_num").val();
+            }
+            time=setInterval(common,num*1000);
+        }else{
+            clearInterval(time);
+            common();
+        }
+    });
+    function common() {
+        data.page = 1;
+        data.chat_type = $('#chat_type').val();
+        data.time_start = $('#time_start').val();//查询开始时间;
+        data.time_end = $('#time_end').val();//查询结束时间
+        data.player_name = $("#player_name").val();//角色
+        tableList(url, data, id, arr);
+    }
+    $('#content').on('click', 'a[data-type="kick"]', function () {
+        var char_name = $(this).parents('tr').find('td').eq(1).text();
+        var char_guid = $(this).parents('tr').find('td').eq(0).text();
+        var si = $("#server").val();
+        layer.alert('确认把'+char_name+'踢下线？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: "?p=Admin&c=Player&a=violationChat&jinIf=913",
+                data: {
+                    si : si,
+                    char_guid: char_guid
+                },
+                dataType: 'json',
+                success: function (json) {
+                    if (json.result==1) {
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    } else {
+                        layer.alert('失败', {icon: 2}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                }
+            });
+        });
+    }).on('click', 'a[data-type="shutup"]', function () {
+        var char_name = $(this).parents('tr').find('td').eq(1).text();
+        var char_guid = $(this).parents('tr').find('td').eq(0).text();
+        var si = $("#server").val();
+        layer.alert('确认把'+char_name+'禁言1周？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url:  "?p=Admin&c=Player&a=violationChat&jinIf=914",
+                data: {
+                    si : si,
+                    char_guid: char_guid
+                },
+                dataType: 'json',
+                success: function (json) {
+                    if (json.result==1) {
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    } else {
+                        layer.alert('失败', {icon: 2}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                }
+            });
+        });
+    }).on('click', 'a[data-type="ban"]', function () {
+        var char_name = $(this).parents('tr').find('td').eq(1).text();
+        var account = $(this).parents('tr').find('td').eq(2).text();
+        layer.alert('确认把'+char_name+'封号？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: "?p=Admin&c=Player&a=violationChat&jinIf=919",
+                data: {
+                    account :account
+                },
+                dataType: 'json',
+                success: function (json) {
+                    layer.alert('成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    }).on('click', 'a[data-type="ip"]', function () {
+        var char_name = $(this).parents('tr').find('td').eq(1).text();
+        var si = $("#server").val();
+        var account = $(this).parents('tr').find('td').eq(2).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '封'+char_name+'的IP',
+            area: ['300px','180px'],
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">是否把该ip的角色全踢下线</span><select id="type" class="form-control">'+
+            '<option value="0">否</option> '+
+            '<option value="1">是</option> '+
+            '</select></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: "?p=Admin&c=Player&a=violationChat&jinIf=920",
+                    data: {
+                        account: account,
+                        si: si,
+                        type: $("#type").val()
+                    },
+                    success: function (res) {
+                        layer.close(index);
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    }).on('click', 'a[data-type="mask"]', function () {
+        var mask = $(this).parents('tr').find('td').eq(4).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增屏蔽字',
+            area: ['500px','220px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">屏蔽字</span><input id="name" value="'+mask+'" type="text" class="form-control"></div>' +
+            '<div class="input-group"><span class="input-group-addon">程度</span><select id="type" class="form-control">'+
+            '<option value="1">人工处理</option> '+
+            '<option value="2">自动禁言</option> '+
+            '<option value="3">自动封号</option> '+
+            '</select></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: "?p=Admin&c=Player&a=violationChat&jinIf=917",
+                    data: {
+                        name: $('#name').val(),
+                        type: $('#type').val()
+                    },
+                    success: function (res) {
+                        layer.close(index);
+                        layer.alert('成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        })
+    }).on('click', 'a[data-type="recall"]', function () {
+        var si = $("#server").val();
+        var info = $(this).parents('tr').find('td').eq(4).text();
+        layer.alert('确认撤回？', {icon: 0, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: "?p=Admin&c=Player&a=violationChat&jinIf=923",
+                data: {
+                    si :si,
+                    info:info
+                },
+                dataType: 'json',
+                success: function (json) {
+                    layer.alert('成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    });
+</script>

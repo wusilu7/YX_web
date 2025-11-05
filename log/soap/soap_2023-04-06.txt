@@ -1,0 +1,10 @@
+★09:13:18-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062074173`order=16807435971831373802643`amount=68.00`id=-1`param=
+★09:13:18-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:24:42-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062074178`order=16807694812708232722643`amount=648.00`id=-1`param=
+★16:24:42-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:24:44-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062074178`order=16807694839074032722643`amount=648.00`id=-1`param=
+★16:24:44-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:24:47-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062074178`order=16807694862007932722643`amount=648.00`id=-1`param=
+★16:24:47-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:25:40-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062074178`order=16807695400895132722643`amount=648.00`id=-1`param=
+★16:25:40-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

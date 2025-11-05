@@ -1,0 +1,107 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.02.selectonline.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>实时创角</span></div>
+<div class="alert alert-info">
+    <div id="group_server_2"></div>
+</div>
+<hr/>
+<div class="jin-search-div">
+    <label for="time">日期：</label>
+    <input size="16" type="text" id="time" class="form-control jin-datetime"
+           placeholder="选择日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+<div id="jin-charts-online"></div>
+
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<!--AJAX调用在线人数的json接口-->
+<script src="{{JS}}echarts.min.js"></script>
+<script src="{{JS}}highcharts.js"></script>
+<script type="text/javascript">
+
+    // gsSelect('#group', '#server', '#platform', getOnline);
+    gsSelect('#group', '#server', '', getOnline);
+    calendarOne('month', '#time');
+    // 初始化两个数组，存储从数据库中获取到的数据
+    var log_time = [], player_count = [], date;
+    var data = {};
+    function getOnline() {
+        data.group = $('#group').val();
+        // data.pi    = $('#platform').val();
+        data.si    = $('#server').val();
+        data.time  = $('#time').val();//查询开始时间
+        $.ajax({
+            type: "post",
+            async: true,
+            url: location.href + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (res) {
+                layer.closeAll('loading');
+                var today = eval('[' + res.today + ']');
+                var yesterday = eval('[' + res.yesterday + ']');
+                var seven = eval('[' + res.sdays_before + ']');
+                var thirty = eval('[' + res.tdays_before + ']');
+                var chooseday = eval('[' + res.chooseday + ']');
+                var oneday = data.time;
+
+                var chart = Highcharts.chart('jin-charts-online', {
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    yAxis: {
+                        title: {
+                            text: '创角数'
+                        }
+                    },
+                    xAxis: {
+                        categories: res.day
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle'
+                    },
+                    tooltip: {
+                        shared: true
+                    },
+                    series: [{
+                        color: 'red',
+                        name: '今天',
+                        data: today
+                    }, {
+                        name: '昨天',
+                        data: yesterday
+                    }, {
+                        name: '7天前',
+                        data: seven,
+                        color:"#C0C0C0"
+                    }, {
+                        name: '30天前',
+                        data: thirty
+                    }, {
+                        name: oneday,
+                        data: chooseday
+                    }]
+                });
+            }
+        });
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getOnline();
+    });
+</script>

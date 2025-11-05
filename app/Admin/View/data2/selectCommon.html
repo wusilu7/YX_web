@@ -1,0 +1,75 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>充值订单日志查询</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <!--<label for="player_name">筛选：</label>-->
+        <input id="orderlog" type="text" class="form-control jin-search-input" placeholder="充值日志模糊查询">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+        <!-- <a id="server_summary" class="btn btn-success">服务器汇总</a> -->
+        <!-- <a id="group_summary" class="btn btn-success">渠道汇总</a> -->
+    </div>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>时间</th>
+            <th>内容</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--<div class="jin-explain">-->
+    <!--<b>说明</b>：-->
+    <!--<div>-->
+        <!--①日期不填默认查询全部；-->
+    <!--</div>-->
+<!--</div>-->
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect('#group', '#server', '#platform',getCommon);
+//    calendarOne('month', '#time');
+    var url = location.href + "&jinIf=912";
+    var arr = ['log_time','common_msg'];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    function getCommon(){
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        checkSummaryTime(data.check_type, time_start, time_end, 30, 15);
+
+        data.time_start = time_start;//查询开始时间;
+        data.time_end   = time_end;//查询结束时间
+        data.group      = $('#group').val();
+        data.pi         = $('#platform').val();
+        data.si         = $('#server').val();
+        data.common_msg = $("#orderlog").val();
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getCommon();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getCommon();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        getCommon();
+    });
+</script>

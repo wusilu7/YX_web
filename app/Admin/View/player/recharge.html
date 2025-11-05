@@ -1,0 +1,85 @@
+{{include file="../common/1header.html"}}
+
+<style type="text/css">
+	.center{
+		display:inline-block
+	}
+	.chargemoney{
+		margin-left: 50px;
+    	font-size: 17px;
+	}
+</style>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+
+<div class="form-horizontal col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+        <select id="role_type">
+            <option value="1">角色名</option>
+            <option value="2">角色ID</option>
+        </select>
+        <input type="text" class="form-control" id="charge_role" required style="width:20%;display:inline-block">
+        <span class="chargemoney">充值档位</span>
+        <select id="charge_money">
+	        <option value=""></option>
+	    </select>
+        <a id="send" class="btn btn-success center">充值</a>
+	</div>
+</div>
+
+{{include file="../common/2footer.html"}}
+
+<script type="text/javascript">
+    gsSelect('#group', '#server', '#platform');
+    $('#group').on('change', function () { //渠道改变的时候
+        if(eval('{{$wbGroup}}').indexOf($("#group").val())>=0){
+            $("#charge_money").html('');
+            chargeMoneySelect1();
+        }else {
+            $("#charge_money").html('');
+            chargeMoneySelect();
+        }
+    });
+
+    var data = {};
+
+    $("#send").on('click', function () {
+        data.charge_money = $("#charge_money").val();
+        data.role_type = $("#role_type").val();
+        data.charge_role = $("#charge_role").val();
+        data.group = $("#group").val();
+        data.pi = $("#platform").val();
+        data.si = $("#server").val();
+
+        if (data.charge_money && data.charge_role) {
+	        $.ajax({
+	            type: "POST",
+	            url: location + "&jinIf=912",
+	            data: data,
+	            dataType: "json",
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']//0.3透明度的白色背景
+                    });
+                },
+	            success: function (json) {
+                    layer.closeAll('loading');
+	            	if (json == 1) {
+	            		layer.alert('充值成功, 请等待审核');
+	            	} else if (json == 2) {
+	            		layer.alert('充值失败, 该服没有此游戏角色');
+	            	} else {
+	            		layer.alert('充值失败！');
+	            	}
+	            },
+	            error: function () {
+	                layer.closeAll('loading');
+	                layer.msg('充值失败！');
+	            }
+	        });
+	    } else {
+	    	layer.alert('请完整填写角色名/角色ID , 充值档位!');
+	    }
+    });
+</script>

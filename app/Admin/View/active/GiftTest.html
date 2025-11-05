@@ -1,0 +1,104 @@
+{{include file="../common/1header.html"}}
+
+<style type="text/css">
+    .center {
+        display: inline-block;
+    }
+</style>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+
+<div class="form-horizontal col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+        <select id="role_type">
+            <option value="1">角色名</option>
+            <option value="2">角色ID</option>
+        </select>
+        <input type="text" class="form-control" id="charge_role" required style="width:20%;display:inline-block">
+        <span class="chargemoney">充值类型</span>
+        <select id="charge_type">
+            <option value="1">付费礼包</option>
+            <!--<option value="0">精准礼包</option>
+            <option value="2">时装</option>-->
+        </select>
+        <span class="chargemoney">充值档位</span>
+        <select id="charge_money"></select>
+        <span class="chargemoney">额外参数</span>
+        <input type="text" id="other_param">
+        <input size="16" type="checkbox" id="ischeck" value="1">
+        <label for="ischeck" style="margin-left: 0px;">忽略校验次数</label>
+        <a id="send" class="btn btn-success center">充值</a>
+    </div>
+</div>
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+    // 初始化并加载组和服务器数据
+    gsSelect('#group', '#server', '#platform', selectMoneyType);
+    let data = {};
+
+    // 根据充值类型选择充值档位
+    function selectMoneyType() {
+        const groupId = $("#group").val();
+        const serverId = $("#server").val();
+        const chargeType = $("#charge_type").val();
+
+        $.ajax({
+            type: "POST",
+            url: `${location}&jinIf=913`,
+            data: {gi: groupId, si: serverId, charge_type: chargeType},
+            dataType: "json",
+            success: function (response) {
+                if (response.length) {
+                    let chargeOptions = response.map(item =>
+                        `<option value="${item.Price}|${item.ResetType}|${item.GiftID}">${item.Name} (${item.ID})</option>`
+                    ).join('');
+                    $("#charge_money").html(chargeOptions);
+                } else {
+                    $("#charge_money").html('<option value="">暂无选项</option>');
+                }
+            },
+            error: function () {
+                console.error('获取充值选项失败');
+            }
+        });
+    }
+
+    // 当充值类型改变时，重新获取充值档位
+    $("#charge_type").on('change', selectMoneyType);
+
+    // 处理充值按钮点击事件
+    $("#send").on('click', function () {
+        data = {
+            charge_money: $("#charge_money").val(),
+            charge_type: $("#charge_type").val(),
+            role_type: $("#role_type").val(),
+            charge_role: $("#charge_role").val(),
+            group: $("#group").val(),
+            pi: $("#platform").val(),
+            si: $("#server").val(),
+            other_param: $("#other_param").val(),
+            ischeck: $('#ischeck').is(':checked') ? $('#ischeck').val() : 0
+        };
+
+        $.ajax({
+            type: "POST",
+            url: `${location}&jinIf=912`,
+            data: data,
+            dataType: "json",
+            success: function (response) {
+                if (response == 1) {
+                    layer.alert('充值成功');
+                } else if (response == 2) {
+                    layer.alert('充值失败, 该服没有此游戏角色');
+                } else {
+                    layer.alert('充值失败！信息:' + response);
+                }
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('充值失败！');
+            }
+        });
+    });
+</script>

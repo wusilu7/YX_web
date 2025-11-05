@@ -1,0 +1,61 @@
+.jin-sidebar-t * {
+    font-size: 19px;
+    font-weight: bold;
+    color: #666;
+}
+
+.jin-sidebar-t {
+    cursor: default;
+    padding: 10px;
+    text-shadow: 2px 2px 13px #ddd;
+}
+
+.jin-sidebar-c ul li a {
+    font-size: 15px;
+    text-shadow: 1px 1px 13px #ddd;
+    padding: 8px 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.jin-sidebar-c ul li a:hover {
+    color: #777;
+}
+
+.jin-hidden {
+    display: none;
+}
+
+.sidebar > hr {
+    margin: 10px 0;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 0;
+    height: 0; /*左侧栏隐藏滚动条*/
+    background-color: #F5F5F5;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 66px 0 0 0;
+
+        overflow-x: hidden; /*不能去除，去掉就不能滚动了*/
+        text-align: center;
+        letter-spacing: 1px;
+        box-shadow: 0 0 16px 2px #ddd;
+        width: 15.8%;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        padding-top: 130px;
+        text-align: center;
+    }
+}

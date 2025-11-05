@@ -1,0 +1,213 @@
+<?php
+/* Smarty version 3.1.30, created on 2023-08-12 12:55:05
+  from "/lnmp/www/app/Admin/View/operation/selectTiming.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_64d710a9ea4261_14512538',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '816544f898fa9afd30d2383b458708f820a9945a' => 
+    array (
+      0 => '/lnmp/www/app/Admin/View/operation/selectTiming.html',
+      1 => 1678771401,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_64d710a9ea4261_14512538 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<link href="<?php echo CSS;?>
+jin/3.09.notice.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>定时任务查询</span></div>
+<hr/>
+<!--<label for="Timing_type">定时类型：</label>-->
+<!--<select id="Timing_type">-->
+    <!--<option value="all">全部</option>-->
+<!--</select>-->
+
+<button data-type="insert" class="btn btn-info">新增常规任务</button>
+<br>
+<br>
+<div class="col-sm-12">
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead>
+            <tr>
+                <th style="width: 50px;">任务编号</th>
+                <th>类型</th>
+                <th>定时时间</th>
+                <th style="width: 600px;">服务器</th>
+                <th>参数1</th>
+                <th>参数2</th>
+                <th>审核</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div id="page"></div>
+</div>
+
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+//timingType();
+        var audit = function (json) {
+            if (json.audit == 1) {
+                var c = '<span style="color: #00a820">已审核</span>';
+            } else {
+                var c = '<div class="btn-group btn-group-sm">' +
+                    '<a data-type="audit" class="btn btn-primary">审核</a>' +
+                    '</div>';
+            }
+
+            return c;
+        }
+        var id = ["#content", "#page"];
+        var data = {page: 1};
+        var url = location.href + '&jinIf=912';
+        var btn = [
+            '<div class="btn-group btn-group-sm">' +
+            '<a data-type="update" class="btn btn-primary">修改</a>' +
+            '<a data-type="delete" class="btn btn-danger">删除</a>' +
+            '</div>'
+        ];
+        var arr = ['timing_id', 'function', 'time','siStr','param_id','param_str',audit,'state',btn];
+
+        tableList(url, data, id, arr);
+
+    $('#content').on('click', 'a[data-type="delete"]', function () {
+        var timing_id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除？', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    id: timing_id
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        tableList(url, data, id, arr);
+                    });
+                }
+            });
+        });
+    }).on('click', 'a[data-type="audit"]', function () {
+        var timing_id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认审核通过？', {icon: 0, btn: ['确定', '取消'], shadeClose: true}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=915",
+                data: {
+                    id: timing_id
+                },
+                dataType: "json",
+                success: function (json) {
+                    layer.alert('审核成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        tableList(url, data, id, arr);
+                    });
+                }
+            });
+        });
+    }).on('click', 'a[data-type="update"]', function () {
+        var timing_id = $(this).parents('tr').find('td').eq(0).text();
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '修改',
+            area: ['400px', '170px'],
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child"><div class="input-group"><span class="input-group-addon">时间</span>' +
+            '<input type="text" id="time" class="form-control jin-datetime-long"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=916',
+                    data: {
+                        id: timing_id,
+                        utime: $("#time").val()
+                    },
+                    success: function (json) {
+                        layer.close(index);
+                        layer.alert('修改成功', {icon: 1}, function (index) {
+                            layer.close(index);
+                            tableList(url, data, id, arr);
+                        });
+
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+        $(document).ready(calendarOne('hour', "#time"));
+    });
+
+    $('button[data-type="insert"]').click(function() {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title:  '新增常规定时任务',
+            area: ['500px', '300px'],
+            btn: ['确认维护', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content:  '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">时间</span><input type="text" id="time" class="form-control jin-datetime-long"></div>' +
+            '<div class="input-group"><span class="input-group-addon">间隔</span><input id="Interval" type="text" class="form-control"></div>' +
+            '<div class="input-group"><span class="input-group-addon">url地址</span><input id="Turl" type="text" class="form-control"></div>' +
+            '</div>',
+            yes: function (index) {
+                    $.ajax({
+                        type: "POST",
+                        url: location.href + "&jinIf=911",
+                        data: {
+                            time: $("#time").val(),
+                            interval: $("#Interval").val(),
+                            turl: $("#Turl").val()
+
+                        },
+                        success: function (json) {
+                            if(json){
+                                layer.close(index);
+                                layer.alert('新增成功', {icon: 1}, function (index) {
+                                    layer.close(index);
+                                    tableList(url, data, id, arr);
+                                });
+                            }
+
+                        }
+                    });
+            },
+            cancel: function () {
+            }
+        });
+        $(document).ready(calendarOne('hour', "#time"));
+    });
+
+
+<?php echo '</script'; ?>
+><?php }
+}

@@ -1,0 +1,100 @@
+{{include file="../common/1header.html"}}
+<style type="text/css">
+    .same{
+        width: 90px;
+        margin: auto;
+        margin-top: 20px;
+        font-weight: bold;    
+    }
+</style>
+<div class="jin-content-title"><span>角色信息复制</span></div>
+
+<table class="table table-striped text-center">
+    <thead>
+    <tr>
+    	<th>帐号</th>
+        <th>渠道</th>
+        <th>平台</th>
+        <th>角色ID</th>  
+        <th>角色名</th>
+        <th>等级</th>
+        <th>创建时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody id="content"></tbody>
+</table>
+
+<div class="alert alert-info">
+    <div id="group_server_2"></div>
+</div>
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+	gsSelect('#group', '#server', '');
+
+    var devicetype = function (json) {
+        if (json.devicetype == 8) {
+            return 'ios(' + json.devicetype + ')';
+        } else if (json.devicetype == 11) {
+            return 'android(' + json.devicetype + ')';
+        }
+    }
+    var btn = function (json) {
+        var c = '<div class="btn-group btn-group-sm">' +
+        '<a data-type="copy" class="btn btn-success">复制到以下渠道服务器下</a>' + 
+        '</div>';
+        
+        return c;
+    }
+	var data = {};
+	data.char_id = $.getUrlParam('char_id');
+	var url = '/?p=Admin&c=Player&a=playerCharacter&jinIf=914';
+	var arr = ['acc_name', 'group_name', devicetype, 'char_id', 'char_name', 'level', 'create_time', btn];
+    var id = "#content";
+    noPageContentList(url, data, id, arr);
+
+	$('#content').on('click', 'a[data-type="copy"]', function () { 
+        var gid = $('#group').val();
+		var sid = $('#server').val();
+        var char_id = $(this).parents('tr').find('td').eq(3).text();
+        var sid_old = $.getUrlParam('sid');
+
+		if (sid != '') {
+			layer.open({
+	            type: 1,
+	            closeBtn: 2,
+	            title: '角色信息复制',
+	            area: ['400px', '170px'],
+	            btn: ['确定', '取消'],
+	            btnAlign: 'c',
+	            content: '<div class="same">确定复制吗？</div>',
+	            yes: function (res) {
+	                $.ajax({
+	                    type: "POST",
+	                    url: '/?p=Admin&c=Player&a=playerCharacter&jinIf=915',
+	                    data: {
+                            gid: gid,
+	                        sid: sid,
+                            sid_old: sid_old,
+	                        char_id: char_id
+	                    },
+	                    dataType: 'json',
+	                    success: function (res) {
+	                        if (res == 1) {
+	                            layer.closeAll();
+	                            layer.alert('复制成功', {icon: 1});
+                                noPageContentList(url, data, id, arr);
+	                        } else {
+	                            layer.msg('复制失败', {icon: 2});
+	                        }
+	                    }
+	                });
+	            },
+	            cancel: function () {
+	            }
+	        })
+		} else {
+			layer.alert('请选择服务器！');
+		} 
+    });
+</script>

@@ -1,0 +1,123 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>异常账号</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label for="time_start">日期：</label>
+        <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+               placeholder="开始日期">
+        -
+        <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+               placeholder="结束日期">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>角色ID</th>
+            <th>opt</th>
+            <th>param0</th>
+            <th>param1</th>
+            <th>param2</th>
+            <th>param3</th>
+            <th>param4</th>
+            <th>param5</th>
+            <th>param6</th>
+            <th>记录时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    var url = location.href + "&jinIf=912";
+    var btn = [
+        "<div class='btn-group btn-group-sm'>" +
+        "<button data-type='a' class='btn btn-success'>封号</button>" +
+        "</div>"
+    ];
+    var btns = function (json) {
+      if(json['color']==1){
+            return "<button data-type='d' class='btn btn-danger'>解除封号</button>";
+      }else{
+           return btn;
+      }
+    };
+    var all = function (json) {
+        return '<a class="btn btn-info" data-info="' + JSON.stringify(json).replace(/\"/g, "").replace(/,/g, "<br/>") + '"><span class="glyphicon glyphicon-info-sign"></span></a>';
+    };
+    var arr = ['char_guid','opt_type','param0','param1','param2','param3','param4','param5','param6','log_time',btns,all];
+    var id = ["#content", "#page"];
+    var data = {page: 1};
+    $(function () {
+        gsSelect('#group', '#server', '#platform');
+        calendar('minute', '#time_start', '#time_end');
+    });
+    function getCharge() {
+        data.time_start = $('#time_start').val();//查询开始时间;
+        data.time_end   = $('#time_end').val();//查询结束时间
+        data.si         = $('#server').val();
+        data.pi         = $('#platform').val();
+        tableList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        getCharge();
+    });
+    $('#content').on('click', 'button[data-type="a"]', function () {
+        var char_guid=$(this).parents('tr').find('td').eq(0).text();
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=913",
+            data: {
+                char_guid:char_guid,
+                si:$('#server').val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                getCharge();
+            }
+        });
+    }).on('click', 'button[data-type="d"]', function () {
+        var char_guid=$(this).parents('tr').find('td').eq(0).text();
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=914",
+            data: {
+                char_guid:char_guid,
+                si:$('#server').val()
+            },
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                getCharge();
+            }
+        });
+    });
+    $('#content').on('click', 'a[class="btn btn-info"]', function () {
+        layer.alert($(this).data('info'),{area: ['320px', '600px']});
+    });
+</script>

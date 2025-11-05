@@ -1,0 +1,3 @@
+★10:47:34-115.192.210.183★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=Bug补偿`cont=非常抱歉，由于怪物和人质Bug导致卡关，给您带来不好的体验，现在退出游戏更新补丁后已修复，给您发放如下补偿，请查收。`sender_name=GM`item_list=`money_list=2#1000;1#30;`exp=`template_id=109`create_time=1704249950`valid_time=1706659256`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★10:47:35-115.192.210.183★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★10:47:35-115.192.210.183★审核成功★时间：2024-01-03 10:47:35; 所有服务器id：3185; 审核成功id：3185

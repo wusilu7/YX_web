@@ -1,0 +1,2 @@
+★14:26:01-122.234.213.223★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=赠送太刀`cont=赠送太刀`sender_name=GM`receiver_id=2814754062074904`item_list=1002003#1#-1;`money_list=`exp=
+★14:26:01-122.234.213.223★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

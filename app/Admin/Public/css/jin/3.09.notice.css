@@ -1,0 +1,34 @@
+.jin-notice-column6 {
+    width: 420px;
+}
+
+.jin-notice-column9 {
+    width: 115px;
+}
+
+label[for="sort"] {
+    margin-left: 30px;
+}
+
+td, th {
+    text-align: left;
+}
+
+.jin-notice-head {
+    background-color: #bf666c;
+    color: #fff;
+}
+
+.jin-notice-head * {
+    font-size: 18px;
+}
+
+.jin-notice-enabled > td:nth-child(7) {
+    font-weight: bold;
+    color: #00a917;
+    font-size: 16px;
+}
+
+.jin-notice-disabled * {
+    color: #ddd;
+}

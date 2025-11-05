@@ -1,0 +1,11 @@
+★16:19:47-115.192.210.235★发送请求★http://dilao001.xuanqu100.com:1002/mservice.wsdl|8|0|0|0|opt=1`title=【福利内容】`cont=感谢您参与测试，请查收您的测试福利。有任何问题，可以在群里反馈。`sender_name=GM`item_list=40033#5#-1;`money_list=2#1000;`exp=`template_id=110`create_time=1704529066`valid_time=1706659204`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★16:20:48-115.192.210.235★Result★"Could not connect to host"
+★16:23:44-115.192.210.235★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=【福利内容】`cont=感谢您参与测试，请查收您的测试福利。有任何问题，可以在群里反馈。`sender_name=GM`item_list=40033#5#-1;`money_list=2#1000;`exp=`template_id=111`create_time=1704529388`valid_time=1706659211`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
+★16:23:45-115.192.210.235★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:23:45-115.192.210.235★审核成功★时间：2024-01-06 16:23:45; 所有服务器id：3185; 审核成功id：3185
+★16:39:51-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062074083`order=17045303900129766542643`amount=6.00`id=201`param=
+★16:39:51-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:41:05-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062073956`order=17045304638485766542643`amount=6.00`id=201`param=
+★16:41:05-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★16:41:35-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062073956`order=17045304927031666542643`amount=30.00`id=202`param=
+★16:41:35-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

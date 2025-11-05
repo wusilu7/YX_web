@@ -1,0 +1,394 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-01-18 20:16:23
+  from "/lnmp/www/app/Admin/View/mb/marqueeAudit.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_65a916973d1897_87622947',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a79bc44717accd2e86227626ffd75fd5fc905a5c' => 
+    array (
+      0 => '/lnmp/www/app/Admin/View/mb/marqueeAudit.html',
+      1 => 1678771400,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_65a916973d1897_87622947 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<link href="<?php echo CSS;?>
+jin/3.12.marquee.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>跑马灯审核</span></div>
+<div class="jin-server-select">
+    <select  id="status" class="hide" style="padding: 10px;">
+        <option value="0">普通</option>
+        <option value="1">定时</option>
+
+    </select>
+</div>
+<div class="alert alert-info">
+    <!-- <div id="group_server"></div> -->
+    <!-- <div id="group_only"></div> -->
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>服务器ID</th>
+            <th>开始时间</th>
+            <th>数量</th>
+            <th>间隔</th>
+            <th>滚屏次数</th>
+            <th class="jin-marquee-column5">文字内容</th>
+            <th>创建时间</th>
+            <th>创建人</th>
+            <th>审核备注</th>
+            <th>终止备注</th>
+            <th>定时时间</th>
+            <th class="jin-marquee-column8">操作</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①…
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+    var isMultilingualClass='';
+    if(eval('<?php echo $_smarty_tpl->tpl_vars['isMultilingual']->value;?>
+')==0){
+        isMultilingualClass='hide'
+    }
+    calendarOne('hour', '#time_start');
+
+    $(function () {
+        jsonAudit();
+    })
+
+    //刷新数据
+    function jsonAudit() {
+        if($("#status").val()==0){
+            var btn = [
+                "<div class='btn-group btn-group-sm'>" +
+                "<button data-type='u' class='btn btn-primary'>修改</button>" +
+                "<button data-type='a' class='btn btn-success'>审核通过</button>" +
+                //"<button data-type='ta' class='btn btn-warning'>定时审核</button>" +
+                "<button data-type='d' class='btn btn-danger'>删除</button>" +
+                "</div>"
+            ];
+        }else{
+            var btn = [
+                "<div class='btn-group btn-group-sm'>" +
+                "<button data-type='u' class='btn btn-primary'>修改</button>" +
+                "<button data-type='a' class='btn btn-success'>立即生效</button>" +
+//                "<button data-type='ta' class='btn btn-warning'>定时审核</button>" +
+                "<button data-type='d' class='btn btn-danger'>删除</button>" +
+//                "<button data-type='s' class='btn btn-danger'>终止</button>" +
+                "</div>"
+            ];
+        }
+        var time_start = function (json) {
+            if (json['time_start'] === '0') {
+                return '即时';
+            } else {
+                return getDate(json['time_start'] * 1000);//JS时间戳，毫秒
+            }
+        };
+        var create_time=function (json) {
+            return '<span data-data-gi="'+json['gi']+'">'+json['create_time']+'</span>'
+        };
+        var url = location + "&jinIf=912";
+        var arr = ['id', 'si', time_start, 'count', 'interval', 'run_times', 'words1', create_time, 'cu', 'remain1', 'remain2', 'timing_time', btn];
+        var id = "#content";
+        var data = {
+             status: $("#status").val()
+            // si: $("#server").val()
+        };
+        noPageContentList(url, data, id, arr);
+    }
+    $("#status").change(function () {
+        jsonAudit();
+    });
+
+    //跑马灯审核
+    $('#content').on('click', 'button[data-type="a"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('审核通过后 <b>' + id + '号跑马灯</b> 将生效', {icon: 0, btn: ['确定', '取消']}, function (tip) {
+            layer.close(tip);
+            var url = location.href + "&jinIf=9138";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    id:  id,
+                    status: $("#status").val(),
+                    url: url
+                },
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']
+                    });
+                },
+                success: function (res) {
+                    layer.closeAll('loading');
+                    if (res === '-1') {
+                        layer.alert('失败，与当前游戏服务器的通讯发生故障', {icon: 2});
+                    } else {
+                        layer.alert('审核通过，<b>' + id + '号跑马灯</b> 已生效', {icon: 1}, function (index) {
+                            layer.close(index);
+                            jsonAudit();
+                        });
+                    }
+                }
+            });
+        });
+    }).on('click', 'button[data-type="d"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('确认删除[' + id + '号跑马灯]？', {icon: 0, shadeClose: true, btn: ['确定', '取消']}, function () {
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=914",
+                data: {
+                    id: id
+                },
+                success: function () {
+                    layer.alert('删除成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        jsonAudit();
+                    });
+                }
+            });
+        });
+    }).on('click', 'button[data-type="u"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var time_start = $(this).parents('tr').find('td').eq(2).text();
+        if (time_start === '即时') {
+            time_start = '';
+        }
+        var count = $(this).parents('tr').find('td').eq(3).text();
+        var interval = $(this).parents('tr').find('td').eq(4).text();
+        var run_times = $(this).parents('tr').find('td').eq(5).text();
+        var words = $(this).parents('tr').find('td').eq(6).text();
+        var ggg1 =$(this).parents('tr').find('td').eq(7).find('span').attr('data-data-gi');
+        var sss1 =$(this).parents('tr').find('td').eq(1).text();
+        $.ajax({
+            type: "POST",
+            url: location.href + '&jinIf=9121',
+            data: {
+                id: id
+            },
+            dataType: "json",
+            success: function (res) {
+                layer.open({
+                    type: 1,
+                    closeBtn: 2,
+                    title: '跑马灯修改',
+                    area: ['500px', '700px'],
+                    btn: ['修改', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true, //点击遮罩关闭
+                    content: '<div class="jin-child">' +
+                    '<div class="input-group"><span class="input-group-addon" style="width: 100px;">开启服务器</span>' +
+                    '<div class="select_group_div" style="width: 80%;">'+
+                    '<select id="ss" class="selectpicker show-tick" multiple data-live-search="true" data-actions-box="true" title="请选择"></select>'+
+                    '</div>' +
+                    '</div>' +
+                    '<div class="input-group"><span class="input-group-addon">开始时间</span><input id="time_start1" type="text" class="form-control" placeholder="不填代表立即滚动" value="' +
+                    time_start + '"></div>' +
+                    '<div class="input-group"><span class="input-group-addon">数量</span><input id="count1" type="text" class="form-control" value="' +
+                    count + '"></div>' +
+                    '<div class="input-group"><span class="input-group-addon">间隔</span><input id="interval1" type="text" class="form-control" value="' +
+                    interval + '"></div>' +
+                    '<div class="input-group"><span class="input-group-addon">滚屏次数</span><input id="run_times1" type="text" class="form-control" value="' +
+                    run_times + '"></div>' +
+                    '<div class="input-group '+isMultilingualClass+'">' +
+                    '<ul class="nav nav-tabs">' +
+                    '<li  class="active"><a href="#nav_content1" data-toggle="tab">中文</a></li>' +
+                    '<li><a href="#nav_content2" data-toggle="tab">繁体</a></li>' +
+                    '<li><a href="#nav_content3" data-toggle="tab">英语</a></li>' +
+                    '<li><a href="#nav_content4" data-toggle="tab">西班牙</a></li>' +
+                    '<li><a href="#nav_content5" data-toggle="tab">阿拉伯语</a></li>' +
+                    '<li><a href="#nav_content6" data-toggle="tab">俄语</a></li>' +
+                    '<li><a href="#nav_content7" data-toggle="tab">泰文</a></li>' +
+                    '<li><a href="#nav_content8" data-toggle="tab">巴西</a></li>' +
+                    '<li><a href="#nav_content9" data-toggle="tab">印尼</a></li>' +
+                    '<li><a href="#nav_content10" data-toggle="tab">日本</a></li>' +
+                    '<li><a href="#nav_content11" data-toggle="tab">韩文</a></li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '<div class="tab-content">' +
+                    '<div class="tab-pane active" id="nav_content1">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words1"  rows="8"  class="form-control">' +res.words1 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content2">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words2"  rows="8"  class="form-control">' + res.words2 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content3">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words3"  rows="8"  class="form-control">' + res.words3 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content4">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words4"  rows="8"  class="form-control">' + res.words4 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content5">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words5"  rows="8"  class="form-control">' + res.words5 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content6">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words6"  rows="8"  class="form-control">' + res.words6 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content7">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words7"  rows="8"  class="form-control">' + res.words7 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content8">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words8"  rows="8"  class="form-control">' + res.words8 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content9">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words9"  rows="8"  class="form-control">' + res.words9 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content10">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words10"  rows="8"  class="form-control">' + res.words10 + '</textarea></div>' +
+                    '</div>' +
+                    '<div class="tab-pane" id="nav_content11">' +
+                    '<div class="input-group"><span class="input-group-addon">文字内容</span><textarea id="words11"  rows="8"  class="form-control">' + res.words11 + '</textarea></div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>',
+                    success:function () {
+                        obj3 = {id: '#ss'};
+                        obj3.url = "?p=Admin&c=Operation&a=server&jinIf=943";
+                        obj3.gi = ggg1;
+                        servers(obj3);
+                        setTimeout(function () {
+                            $('#ss').selectpicker('val', eval('[' +sss1+ ']'));
+                            $('#ss').selectpicker('refresh');
+                        },500)
+                    },
+                    yes: function (index) {
+                        $.ajax({
+                            type: "POST",
+                            url: location.href + '&jinIf=913',
+                            data: {
+                                id: id,
+                                time_start: $('#time_start1').val(),
+                                count: $('#count1').val(),
+                                interval: $('#interval1').val(),
+                                run_times: $('#run_times1').val(),
+                                words1: $('#words1').val(),
+                                words2: $('#words2').val(),
+                                words3: $('#words3').val(),
+                                words4: $('#words4').val(),
+                                words5: $('#words5').val(),
+                                words6: $('#words6').val(),
+                                words7: $('#words7').val(),
+                                words8: $('#words8').val(),
+                                words9: $('#words9').val(),
+                                words10: $('#words10').val(),
+                                words11: $('#words11').val()
+                            },
+                            success: function () {
+                                layer.close(index);
+                                layer.alert('修改成功', {icon: 1}, function (index) {
+                                    layer.close(index);
+                                    jsonAudit();
+                                });
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                });
+                $(document).ready(calendarOne('hour', '#time_start1'));
+            }
+        });
+
+    }).on('click', 'button[data-type="ta"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        var ttime1 = $(this).parents('tr').find('td').eq(11).text();
+        if(ttime1=='无'){
+            ttime1='';
+        }
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '定时审核',
+            area: ['400px', '200px'],
+            btn: ['修改', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">定时时间</span><input id="ttime" type="text" class="form-control" value="'+ttime1+'"></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=915',
+                    data: {
+                        id: id,
+                        ttime: $('#ttime').val()
+                    },
+                    success: function () {
+                        layer.close(index);
+                        layer.alert('设置定时成功', {icon: 1}, function (index1) {
+                            layer.close(index1);
+                            jsonAudit();
+                        });
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+        $(document).ready(calendarOne('hour', "#ttime"));
+    }).on('click', 'button[data-type="s"]', function () {
+        var id = $(this).parents('tr').find('td').eq(0).text();
+        layer.alert('终止<b>' + id + '号跑马灯？', {icon: 0, btn: ['确定', '取消']}, function (tip) {
+            layer.close(tip);
+            $.ajax({
+                type: "POST",
+                url: location.href + "&jinIf=9139",
+                data: {
+                    id: id
+                },
+                beforeSend: function () {
+                    layer.load(2, {
+                        shade: [0.3, '#fff']
+                    });
+                },
+                success: function (res) {
+                    layer.closeAll('loading');
+                    if (res === '-1') {
+                        layer.alert('失败，与当前游戏服务器的通讯发生故障', {icon: 2});
+                    } else {
+                        layer.alert(id + '号跑马灯已终止', {icon: 1}, function (index) {
+                            layer.close(index);
+                            jsonAudit();
+                        });
+                    }
+                }
+            });
+        });
+    });
+<?php echo '</script'; ?>
+>
+<?php }
+}

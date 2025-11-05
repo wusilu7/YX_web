@@ -1,0 +1,8 @@
+★19:38:10-115.192.34.64★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
+★19:39:59-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}
+★19:40:07-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}
+★19:49:05-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}
+★19:49:11-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}
+★19:50:21-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}
+★19:51:44-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}
+★19:52:16-115.192.34.64★SOAP★{"Ret":"0","RetEx":"error=130`error_msg=`result=0"}

@@ -1,0 +1,130 @@
+{{include file="../common/1header.html"}} <!-- 在公共的头部文件中引入了CSS文件 -->
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>任务节点</span></div>
+<div class="alert alert-info">
+    <!-- 下面的div里面的内容是通过js加载的，在2footer.html页面中引入了jin.js文件，该文件里通过jQuery操作DOM元素实现内容的添加 -->
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a>
+    <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>任务编号</th>
+            <th>指引名称</th>
+            <th>参加任务人数</th>
+            <th>完成任务人数</th>
+            <th>完成率</th>
+            <th>流失率</th>
+        </tr>
+        </thead>
+        <!--↓↓ tbody中的内容通过js加载得到 ↓↓-->
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--↓↓ 下面div中的内容通过js加载得到 ↓↓-->
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①…；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+
+{{include file="../common/2footer.html"}} <!-- 在公共尾部文件中引入了js文件 -->
+
+<script>
+    var url = location.href + "&jinIf=912";
+    //计算任务完成率
+    //console.log(url);
+    var c_rate = function (json) {
+        if (json.opt0 > 0) {
+            rate =((json.opt1 / json.opt0) * 100).toFixed(2) + '%';
+        } else {
+            rate = '0.00%';
+        }
+        return rate;
+    };
+    //计算流失率
+    var a_rate = function (json) {
+        if (json.opt0 > 0) {
+            rate =((1 - json.opt1 / json.opt0) * 100).toFixed(2) + '%';
+        } else {
+            rate = '0.00%';
+        }
+        return rate;
+    };
+    //为调用自己封装的tableList方法声明相关的参数：url,arr,data,id
+    var arr = ['quest_id', 'quest_name', 'opt0', 'opt1', c_rate, a_rate];
+    var id = ["#content", "#page"];
+    var data = {page: 1, order: 'desc'};
+    //下面是依次加载相应的DOM元素，对应的渠道，服务器，和时间的选取分别调用gsSelect()和calendar()方法
+    $(document).ready(gsSelect('#group', '#server', '#platform')).ready(calendar('month', '#time_start', '#time_end'));
+    //设置一个函数来专门调用tableList方法
+    function getQuest() {
+        var time_start = $('#time_start').val();
+        var time_end   = $('#time_end').val();
+        // 检测汇总时间是否过长
+        checkSummaryTime(data.check_type, time_start, time_end, 30, 15);
+
+        data.page       = 1;
+        data.time_start = time_start;//查询开始时间;
+        data.time_end   = time_end;//查询结束时间
+        data.group      = $('#group').val();
+        data.pi         = $('#platform').val();
+        data.si         = $('#server').val();
+        tableList(url, data, id, arr); //这个是自己封装的方法在jin-tableList.js文件中
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        data.check_type = 912;
+        getQuest();
+    });
+    // 服务器汇总
+    $("#server_summary").on('click', function () {
+        data.check_type = 998;
+        getQuest();
+    });
+    // 渠道汇总
+    $("#group_summary").on('click', function () {
+        data.check_type = 999;
+        giCollect(getQuest);
+    });
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';  // 生成excel表
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+</script>

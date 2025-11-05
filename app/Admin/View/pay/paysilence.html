@@ -1,0 +1,101 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<div class="jin-content-title"><span>充值沉默率</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <label for="time_start">选择额度：</label>
+    <select id="amount"><option value=""></option></select>
+
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th>上周开始日期</th>
+            <th>本周截止日期</th>
+            <th>上周付费用户人数</th>
+            <th>上周付费中本周未付费用户人数</th>
+            <th>上周新增付费用户人数</th>
+            <th>上周新增用户付费中本周未付费用户人数</th>
+            <th>充值沉默率</th>
+            <th>新增充值沉默率</th>
+        </tr>
+        </thead>
+        <!--↓↓ tbody中的内容通过js加载得到 ↓↓-->
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<!--↓↓ 下面div中的内容通过js加载得到 ↓↓-->
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ①本周未付费用户：在上周付费用户的人群中，本周未付费用户；
+    </div>
+    <div>
+        ②本周未付费新用户：在上周新增用户付费的人群中，本周未付费的新用户；
+    </div>
+    <div>
+        ③充值沉默率：本周未付费用户人数/上周付费用户人数；
+    </div>
+    <div>
+        ④新增充值沉默率：本周未付费新用户人数/上周付费的新用户人数；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+        getamount();
+        function getamount() {
+            //获取额度
+            $.ajax({
+                type: "POST",
+                url: "?p=Admin&c=Pay&a=getAmount",
+                dataType: 'json',
+                data: {
+                },
+                success: function (res) {
+                    $("#amount").select2({
+                        data: res,
+                        placeholder: '请选择',
+                        theme: "classic",
+                        width: "150px",
+                        multiple: false
+                    }).val("").trigger('change');
+                }
+            });
+        }
+    gsSelect('#group', '#server', '#platform');
+    calendar('month', '#time_start', '#time_end');
+    var url = location.href + "&jinIf=912";
+    var arr = ['starttime', 'endtime','payer_sum', 'untpayer_sum', 'newpayer_sum', 'untnewpayer_sum', 'rate', 'newrate'];
+    var id = ["#content", "#page"];
+    var data = {};
+    function getSilence() {
+        data.page = 1;
+        data.si = $("#server").val();//放在里面，不然si的值会不正确
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end = $('#time_end').val();//查询结束时间
+        data.amount = $('#amount').val();//选择的额度
+        tableList(url, data, id, arr);
+    }
+    $("#jin_search").on('click', function () {
+        if($('#amount').val()!=="" && $('#time_start').val() ==""){
+            alert("请输入时间进行选择");
+            return false;
+        }
+        getSilence();
+    });
+</script>

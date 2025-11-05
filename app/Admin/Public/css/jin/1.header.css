@@ -1,0 +1,101 @@
+/*--------START公共部分--------*/
+* {
+    font-size: 14px;
+    font-family: Microsoft YaHei, sans-serif;
+}
+
+/*滚动条*/
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, rgb(206, 206, 206)));
+}
+
+/*--------END公共部分--------*/
+/*--------START头部--------*/
+.navbar-inverse {
+    background-color: #313645;
+    box-shadow: 0 0 3px 2px #ccc;
+}
+
+ .navbar-inverse .navbar-brand {
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgb(0, 207, 255)), to(rgb(0, 207, 150)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+/* .navbar-inverse .navbar-brand:hover{
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgb(0, 255, 78)), to(rgb(75, 75, 75)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+#jin-username {
+    font-size: 17px;
+    font-weight: normal;
+    background-color: #47b865;
+    margin: auto 22px;
+}
+
+#jin-username:hover {
+    background-color: #cdcf3c;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.jin-logo {
+    font-family: 'SimHei', Arial, sans-serif;;
+    margin-left: 16px;
+    font-size: 32px;
+}
+
+/* 复选下拉框 */
+#server_top .dropdown-header .text,
+#group .dropdown-header .text{
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+.text_content{
+    margin-left: 35px;
+}
+.dropdown-header{
+    padding: 10px 20px;
+}
+#server_top{
+    width: 100px
+}
+#group{
+    width: 100%
+}
+.select_group_div,
+.select_platform_div,
+.select_server_div
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left
+}
+.select_group_div{
+    width: 35%
+}
+.select_platform_div{
+    width: 14%
+}
+.select_server_div{
+    width: 35%
+}
+.select_label{
+    padding-top: 8px;
+    float: left;
+    text-align: center;
+}
+/*--------END头部--------*/

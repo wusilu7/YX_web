@@ -1,0 +1,24 @@
+.jin-footer {
+    margin: 60px 0;
+}
+
+.jin-footer * {
+    font-size: 10px;
+}
+
+.jin-footer-version {
+    cursor: default;
+    line-height: normal;
+    background-color: #999;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.jin-footer-version:hover {
+    background-color: #ff4343;
+}
+
+.jin-footer-copyright {
+    cursor: default;
+}

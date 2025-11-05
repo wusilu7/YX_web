@@ -1,0 +1,160 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+
+<style type="text/css">
+    #content tr td{
+        line-height: 40px;
+        font-size: 16px;
+        text-align: left;
+        border: 3px solid white;
+    }
+
+    #title tr th{
+        text-align: left;
+    }
+</style>
+
+<div class="jin-content-title"><span>日报汇总</span></div>
+<div class="alert alert-info">
+    <div id="group_server"> </div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime"
+           placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime"
+           placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    <a id="server_summary" class="btn btn-success">服务器汇总</a>
+    <a id="group_summary" class="btn btn-success">渠道汇总</a>
+    <a id="jin_excel" class="btn btn-danger">保存到Excel</a>
+</div>
+<hr/>
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead id="title">
+        <tr>
+            <th style="text-align:center">日期</th>
+            <th>服数</th>
+            <th>注册数</th>
+            <th>活跃付费人数(DAU)</th>
+            <th>活跃付费率(PUR)</th>
+            <th>新用户付费率(新PUR)</th>
+            <th>新用户付费金额</th>
+            <th>新用户ARPPU</th>
+            <th>充值人数</th>
+            <th>ARPU值</th>
+            <th>充值金额</th>
+            <th>平均单服收入</th>
+        </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+</div>
+<div id="page"></div>
+<div class="jin-explain">
+    <b>说明</b>：
+    <div>
+        ① 当日数据实时更新；
+    </div>
+    <div>
+        ② 括号上的数字为总数，括号内的两个数字：<b>左</b>为老玩家数据，<b>右</b>为新玩家数据；
+    </div>
+    <div>
+        ③ <b>DAU</b>：Daily Active User 日活跃用户；<b>APA</b>：Active Payment Account 充值人数；
+        <b>PUR</b>：Pay User Rate 付费比率，通过 <u>APA/DAU</u> 计算得出；<b>ARPU</b>：Average Revenue Per User 活跃用户平均付费值，通过
+        <u>总充值金额/DAU</u> 计算得出；
+        <b>ARPPU</b>：Average Revenue Per Paying User 付费用户平均付费值，通过 <u>总充值金额/APA</u> 计算得出；
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script type="text/javascript">
+    gsSelect('#group', '#server', '#platform');
+    calendar('hour', '#time_start', '#time_end');
+    calendar('hour', '#accurate_start', '#accurate_end');
+    var myDate = new Date();
+    var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    Y = myDate.getFullYear() + '-';
+    M = (myDate.getMonth()+1 < 10 ? '0'+(myDate.getMonth()+1) : myDate.getMonth()+1) + '-';
+    D = myDate.getDate() < 10 ? '0'+myDate.getDate():myDate.getDate();
+    stime = Y+M+D;
+    var c_rate = function (json) {
+        if (json.date == stime) {
+            rate =json.date+'<br>(实时更新)';
+        } else {
+            if(json.date!='汇总'){
+                var dt = new Date(Date.parse(json.date))
+                rate = json.date+weekDay[dt.getDay()];
+            }else{
+                rate = json.date;
+            }
+        }
+        return rate;
+    };
+    var url = location.href + "&jinIf=912";
+    var arr = [c_rate, 'si_num', 'character', 'dau', 'pur',  'pur_new', 'amount_new', 'arppu_new', 'apa', 'arpu', 'amount', 'si_comein'];
+    var id = ["#content", "#page"];
+    var data = {};
+    function getDaily() {
+        data.page       = 1;
+        data.group      = $("#group").val();
+        data.pi         = $('#platform').val();
+        data.si         = $("#server").val();//放在里面，不然si的值会不正确
+        data.gi         = $("#group").val();
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end   = $('#time_end').val();//查询结束时间
+        data.weight     = 1;
+        tableList(url, data, id, arr);
+    }
+
+    // 普通查询
+    $("#jin_search").click(function () {
+        data.check_type = 912;  // 普通查询
+        if ($('#server').val() === null) {
+            layer.msg('请选择服务器');
+            return false;
+        }
+        getDaily();
+    });
+
+    // 服务器汇总
+    $("#server_summary").click(function () {
+        data.check_type = 998;  // 服务器汇总
+        getDaily();
+    });
+
+    // 渠道汇总
+    $("#group_summary").click(function () {
+        data.check_type = 999;  // 渠道汇总
+        giCollect(getDaily);
+    });
+
+    $("#jin_excel").on('click', function () {
+        data.page = 'excel';
+        $.ajax({
+            type: "post",
+            url: location.href + '&jinIf=951',
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']
+                });
+            },
+            success: function (output) {
+                layer.closeAll('loading');
+                location.href = output;
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('文件下载失败，请缩小筛选条件后再次下载');
+            }
+        });
+    });
+
+
+</script>

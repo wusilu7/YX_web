@@ -1,0 +1,59 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+
+<div class="jin-content-title"><span>在线时长排行</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<hr/>
+<div class="jin-search-div">
+    <label for="time_start">日期：</label>
+    <input size="16" type="text" id="time_start" class="form-control jin-datetime" placeholder="开始日期">
+    -
+    <input size="16" type="text" id="time_end" class="form-control jin-datetime" placeholder="结束日期">
+    <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+</div>
+<hr/>
+
+<div class="tab-content">
+    <!--累计-->
+    <div class="tab-pane active" id="top_total">
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead>
+                <tr  id="thead">
+                    <th>排名</th>
+                    <th>角色ID</th>
+                    <th>角色名</th>
+                    <th>在线时长</th>
+                </tr>
+                </thead>
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="page"></div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+<script>
+    gsSelect('#group', '#server', '#platform');
+    calendar('month', '#time_start', '#time_end');
+    var url = location + "&jinIf=912";
+    var arr = ['rank', 'char_guid', 'char_name', 'alltime'];
+    var id = "#content";
+    var data = {};
+    //请求数据
+    function getTop() {
+        data.pi         = $('#platform').val();
+        data.si         = $("#server").val();//放在里面，不然si的值会不正确
+        data.time_start = $('#time_start').val();//查询开始时间
+        data.time_end   = $('#time_end').val();//查询结束时间
+
+        noPageContentList(url, data, id, arr);
+    }
+    // 普通查询
+    $("#jin_search").on('click', function () {
+        getTop();
+    });
+</script>

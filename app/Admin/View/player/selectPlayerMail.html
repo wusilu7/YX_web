@@ -1,0 +1,115 @@
+{{include file="../common/1header.html"}}
+<!--|↓↓↓↓↓↓|-->
+<link href="{{CSS}}jin/3.25.charPack.css" rel="stylesheet">
+<div class="jin-content-title"><span>玩家邮件查询</span></div>
+<div class="alert alert-info">
+    <div id="group_server"></div>
+</div>
+<!--查询div-->
+<hr/>
+<div class="jin-search-div">
+    <div>
+        <label class="control-label">
+            <select id="char_type">
+                <option value="1">角色名</option>
+                <option value="2">角色ID</option>
+            </select>
+        </label>
+        <input id="char" type="text" class="form-control jin-search-input" placeholder="请按所选查找类型填写">
+        <a id="jin_search" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+    </div>
+</div>
+<hr/>
+<!--导航区-->
+
+<!-- 面板区 -->
+<div class="tab-content">
+    <!--基础信息-->
+    <div class="tab-pane active" id="base_info">
+        <!--主输入区-->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center">
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>收件人</th>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>货币</th>
+                    <th>物品</th>
+                    <th>创建者</th>
+                    <th>创建时间</th>
+                    <th>审核人</th>
+                    <th>审核时间</th>
+                </tr>
+                </thead>
+                <tbody id="content_base"></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<!--|↑↑↑↑↑↑|-->
+{{include file="../common/2footer.html"}}
+
+<script>
+    gsSelect('#group', '#server');
+    var data = {};
+    function charPack(data) {
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=912",
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (json) {
+                layer.closeAll('loading');
+                switch (json) {
+                    case -1:
+                        layer.alert('角色不存在，请重新输入');
+                        break;
+                    case 0:
+                        layer.alert('无数据');
+                        break;
+                    default:
+                        var c = '';
+                        for (var i=0;i<json.length;i++){
+                            c += '<tr>';
+                            c += '<td>' + json[i].mail_id + '</td>';
+                            c += '<td>' + json[i].receiver + '</td>';
+                            c += '<td>' + json[i].title + '</td>';
+                            c += '<td>' + json[i].content + '</td>';
+                            c += '<td>' + json[i].money + '</td>';
+                            c += '<td>' + json[i].item + '</td>';
+                            c += '<td>' + json[i].create_user + '</td>';
+                            c += '<td>' + json[i].create_time + '</td>';
+                            c += '<td>' + json[i].audit_user + '</td>';
+                            c += '<td>' + json[i].audit_time + '</td>';
+
+                            c += '</tr>';
+                        }
+                        $('#content_base').html(c);
+                        break;
+                }
+
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+
+
+    $("#jin_search").on('click', function () {
+        data.si = $("#server").val();
+        data.char_type = $("#char_type").val();//查找类型
+        data.char = $("#char").val();//角色
+        charPack(data);
+    });
+</script>

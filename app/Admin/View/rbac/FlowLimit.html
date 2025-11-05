@@ -1,0 +1,265 @@
+{{include file="../common/1header.html"}}
+<link href="{{CSS}}jin/3.14.selectrole.css" rel="stylesheet">
+<!--|↓↓↓↓↓↓|-->
+
+<div class="jin-content-title"><span>API限流配置</span></div>
+<!--栅格搭框架-->
+<div class="col-sm-10  col-md-10  col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+    <div class="table-responsive">
+        <table class="table table-striped text-center">
+            <thead>
+            <tr>
+                <th>接口名称</th>
+                <th>限流队列键值</th>
+                <th>容量上限</th>
+                <th>每次弹出量</th>
+                <th>接口P参数</th>
+                <th>接口C参数</th>
+                <th>接口A参数</th>
+                <th>状态</th>
+                <th>更新时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+    <div class="clearfix">
+        <a data-type="insert" class="btn btn-success pull-right">新增限流</a>
+    </div>
+</div>
+{{include file="../common/2footer.html"}}
+<script>
+    $(document).ready(getData());
+    function getData() {
+        var url = location.href + "&jinIf=912";
+        var btn = [
+            '<div class="btn-group btn-group-sm">' +
+            '<a data-type="update" class="btn btn-info">修改</a>' +
+            '<a data-type="delete" class="btn btn-danger">删除</a>' +
+            '</div>',
+        ];
+
+        var arr = ['name', 'code', 'max', 'pop', 'uri_p', 'uri_c', 'uri_a', 'status', 'update_time',btn];
+        var id = "#content";
+        var data = {};
+        noPageRole(url, data, id, arr);//定制款
+    }
+    function noPageRole(url, data, id, arr) {
+        var c = '';
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "json",
+            beforeSend: function () {
+                layer.load(2, {
+                    shade: [0.3, '#fff']//0.3透明度的白色背景
+                });
+            },
+            success: function (res) {
+                layer.closeAll('loading');
+                for (var i = 0; i < res.data.length; i++) {   //取数据填表
+                    c += '<tr>';
+                    for (var j = 0; j < arr.length; j++) {
+                        if (arr[j] instanceof Array) {
+                            if (Number(res.data[i]['role_id']) === 1) {
+                                c += '<td>' + arr[j][1] + '</td>';
+                            } else {
+                                c += '<td>' + arr[j][0] + '</td>';
+                            }
+                        } else if (arr[j] == 'status') {
+                            if (Number(res.data[i]['status']) === 2) {
+                                c += '<td style="color: blue">启用</td>';
+                            } else {
+                                c += '<td style="color: darkgray">禁用</td>';
+                            }
+                        } else {
+                            c += '<td>' + res.data[i][(arr[j])] + '</td>';
+                        }
+                    }
+                    c += '</tr>';
+                }
+                $(id).html(c);
+            },
+            error: function () {
+                layer.closeAll('loading');
+                layer.msg('数据获取失败，请勿频繁刷新');
+            }
+        });
+    }
+
+    //新增限流
+    $("a[data-type='insert']").on('click', function () {
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '新增限流接口',
+            area: ['450px', '530px'],
+            btn: ['新增', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">接口名称</span><input id="name" type="text" class="form-control" placeholder="接口的描述(必填)"></div>' +
+            // '<div class="input-group"><span class="input-group-addon">接口键值</span><input id="code" type="text" class="form-control" placeholder="配置接口键值(必填,不能和已有键值相同)"></div>' +
+            '<div class="input-group"><span class="input-group-addon">容量上限</span><input id="max" type="text" class="form-control" placeholder="容量上限(必填)"></div>' +
+            '<div class="input-group"><span class="input-group-addon">每次弹出量</span><input id="pop" type="text" class="form-control" placeholder="每次弹出量(必填)"></div>' +
+            '<div class="input-group"><span class="input-group-addon">P参数</span><input id="uri_p" type="text" class="form-control" placeholder="P参数(必填)" value="I"></div>' +
+            '<div class="input-group"><span class="input-group-addon">C参数</span><input id="uri_c" type="text" class="form-control" placeholder="C参数(必填)"></div>' +
+            '<div class="input-group"><span class="input-group-addon">A参数</span><input id="uri_a" type="text" class="form-control" placeholder="A参数(必填)"></div>' +
+            '<div class="input-group"><span class="input-group-addon">状态</span><select id="status" class="form-control"><option value="2">启用</option><option value="1">禁用</option></select></div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=911',
+                    dataType: 'json',
+                    data: {
+                        code:$('#code').val(),
+                        name: $('#name').val(),
+                        list_key: $('#list_key').val(),
+                        max:$('#max').val(),
+                        pop: $('#pop').val(),
+                        uri_p: $('#uri_p').val(),
+                        uri_c:$('#uri_c').val(),
+                        uri_a: $('#uri_a').val(),
+                        status: $('#status').val(),
+                    },
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function (res) {
+                        layer.closeAll('loading');
+                        layer.close(index);
+                        if (res.status == 2){
+                            layer.msg(res.msg,{time:200},function(){
+                                getData();
+                            })
+                        }else{
+                            layer.msg(res.msg)
+                        }
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    });
+
+    //btn组
+    $('#content').on('click', 'a[data-type="update"]', function () {//修改
+        var td = $(this).parents('tr').find('td');
+        var name = td.eq(0).text();
+        var code = td.eq(1).text();
+        var max = td.eq(2).text();
+        var pop = td.eq(3).text();
+        var uri_p = td.eq(4).text();
+        var uri_c = td.eq(5).text();
+        var uri_a = td.eq(6).text();
+        var status = td.eq(7).text();
+        console.log("status:" + status);
+        var opts = '<select id="status" class="form-control">' +
+            '<option value="2"'+ (status=='启用'?'selected':'') +'>启用</option>' +
+            '<option value="1"'+ (status=='禁用'?'selected':'')+'>禁用</option>' +
+            '</select>';
+        layer.open({
+            type: 1,
+            closeBtn: 2,
+            title: '编辑:' + name,
+            area: ['450px', '400px'],
+            btn: ['确认', '取消'],
+            btnAlign: 'c',
+            shadeClose: true, //点击遮罩关闭
+            content: '<div class="jin-child">' +
+            '<div class="input-group"><span class="input-group-addon">接口名称</span><input id="name" type="text" class="form-control" value="' +
+            name + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">容量上限</span><input id="max" type="text" class="form-control" value="' +
+            max + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">每次弹出量</span><input id="pop" type="text" class="form-control" value="' +
+            pop + '"></div>' +
+            // '<div class="input-group"><span class="input-group-addon">P参数</span><input id="uri_p" type="text" class="form-control" value="' +
+            // uri_p + '"></div>' +
+            // '<div class="input-group"><span class="input-group-addon">C参数</span><input id="uri_c" type="text" class="form-control" value="' +
+            // uri_c + '"></div>' +
+            // '<div class="input-group"><span class="input-group-addon">A参数</span><input id="uri_a" type="text" class="form-control" value="' +
+            // uri_a + '"></div>' +
+            '<div class="input-group"><span class="input-group-addon">状态</span>'+opts+'</div>' +
+            '</div>',
+            yes: function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: location.href + '&jinIf=914',
+                    dataType: 'json',
+                    data: {
+                        name: $('#name').val(),
+                        max: $('#max').val(),
+                        pop: $('#pop').val(),
+                        uri_p: uri_p,
+                        uri_c: uri_c,
+                        uri_a: uri_a,
+                        status: $('#status').val(),
+                    },
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function (res) {
+                        layer.closeAll('loading');
+                        layer.close(index);
+                        if (res.status == 2){
+                            layer.msg(res.msg,{time:200},function(){
+                                getData();
+                            })
+                        }else{
+                            layer.msg(res.msg)
+                        }
+                    }
+                });
+            },
+            cancel: function () {
+            }
+        });
+    }).on('click', 'a[data-type="delete"]', function () {//删除角色
+        var code = $(this).parents('tr').find('td').eq(1).text();
+        var name = $(this).parents('tr').find('td').eq(0).text();
+        layer.open({
+            type: 0,
+            title: "删除:" + name,
+            shadeClose: true,
+            shade: 0.5,
+            area: ['400px', '200px'],
+            content: '确认删除配置[' + name + ']?',
+            yes: function(index, layero){
+                $.ajax({
+                    type: "POST",
+                    url: location.href + "&jinIf=913",
+                    dataType: 'json',
+                    data: {
+                        code: code
+                    },
+                    beforeSend: function () {
+                        layer.load(2, {
+                            shade: [0.3, '#fff']//0.3透明度的白色背景
+                        });
+                    },
+                    success: function (res) {
+                        layer.closeAll('loading');
+                        layer.close(index);
+                        if (res.status == 2){
+                            layer.msg(res.msg,{time:200},function(){
+                                getData();
+                            })
+                        }else{
+                            layer.msg(res.msg)
+                        }
+                    }
+                });
+            }
+        });
+
+    });
+</script>
+<!--|↑↑↑↑↑↑|-->

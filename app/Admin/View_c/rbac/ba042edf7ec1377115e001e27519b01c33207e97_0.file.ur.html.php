@@ -1,0 +1,235 @@
+<?php
+/* Smarty version 3.1.30, created on 2024-10-29 13:27:04
+  from "D:\phpStudy\PHPTutorial\WWW\WebSiteYiXing\app\Admin\View\rbac\ur.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_672072280ed9e8_62131863',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ba042edf7ec1377115e001e27519b01c33207e97' => 
+    array (
+      0 => 'D:\\phpStudy\\PHPTutorial\\WWW\\WebSiteYiXing\\app\\Admin\\View\\rbac\\ur.html',
+      1 => 1723704877,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../common/1header.html' => 1,
+    'file:../common/2footer.html' => 1,
+  ),
+),false)) {
+function content_672072280ed9e8_62131863 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../common/1header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<!--|↓↓↓↓↓↓|-->
+<link href="<?php echo CSS;?>
+jin/3.15.ur.css" rel="stylesheet">
+<div class="jin-content-title"><span>分配权限</span></div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="role_id" class="col-sm-2 control-label">角色ID</label>
+        <div class="col-sm-9">
+            <input id="role_id" class="form-control" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="role_name" class="col-sm-2 control-label">角色名称</label>
+        <div class="col-sm-9">
+            <input id="role_name" class="form-control" readonly/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">功能权限</label>
+        <div id="role_per" class="col-sm-9">
+            <!--多选列表-->
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">渠道权限</label>
+        <div id="role_group" class="col-sm-9">
+            <!--多选列表-->
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">服务器权限</label>
+        <div id="role_ser" class="col-sm-9">
+        </div>
+    </div>
+
+    <div class="btn-group center jin-ur-btn">
+        <button data-type="update" class="btn  btn-success">修改</button>
+        <button data-type="return" class="btn  btn-primary">返回</button>
+    </div>
+</div>
+<!--|↑↑↑↑↑↑|-->
+<?php $_smarty_tpl->_subTemplateRender("file:../common/2footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<script'; ?>
+>
+    var role_per = '';
+    var role_group = '';
+    var role_ser = '';
+    var my_id = '';
+    $(document).ready(getUr());
+    function getUr() {
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=912",
+            dataType: "json",
+            success: function (json) {
+                $('#role_id').val(json.role_id);
+                $('#role_name').val(json.role_name);
+                role_per = json.per_id;
+                role_group = json.group_id;
+                role_ser = json.ser_id;
+                my_id = json.my_id;
+                getAllRole('per', role_per, 9129, '功能',my_id );
+                getAllGroup('group', role_group, 9125, '渠道',my_id );
+                getAllRole('ser', role_ser, 9127, '服务器',my_id );
+            }
+        });
+    }
+
+    function getAllRole(type, role, jinIf, text,my_id ) {
+        var r_num = 0;//权限总数
+        var c2 = '';
+
+        if (text == '服务器') {
+            var c = '<div>' +
+            '<input type="checkbox" id="check_all_' + type + '" class="regular-checkbox big-checkbox"/><label for="check_all_' + type + '"></label>' +
+            '<label class="jin-all-text" for="check_all_' + type + '">勾选所有' + text + '</label>' +
+            '<label id="role_num_' + type + '"></label>' ;
+            if(my_id == 1){
+                c += '<input type="checkbox" name="ser" id="ser_1000" value="1000" class="regular-checkbox"><label for="ser_1000"></label><label class="jin-checkbox-text" for="ser_1000">服务器全部显示</label>'
+            }
+            c+='</div>' +
+                '<hr/>';
+
+        } else {
+            var c = '<div>' +
+            '<input type="checkbox" id="check_all_' + type + '" class="regular-checkbox big-checkbox"/><label for="check_all_' + type + '"></label>' +
+            '<label class="jin-all-text" for="check_all_' + type + '">勾选所有' + text + '</label>' +
+            '<label id="role_num_' + type + '"></label>' +
+            '</div>' +
+            '<hr/>';
+        }
+        
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=" + jinIf,//功能权限
+            dataType: "json",
+            success: function (json) {
+                for (var i = 0; i < json.length; i++) {//取数据填表
+                    r_num += json[i].length - 1;
+                    var icon = json[i][json[i].length - 1].icon;
+                    icon = isExist(icon, 'flash');
+                    c +=
+                        '<div class="jin-checkbox-title">' +
+                        '<span class="glyphicon glyphicon-' + icon + '"></span>' +
+                        '<span>' + json[i][json[i].length - 1].name + '</span></div>';
+                    for (var j = 0; j < json[i].length - 1; j++) {
+                        c +=
+                            '<div class="jin-checkbox-inline">' +
+                            '<input type="checkbox" data-data-group_id="'+json[i][j].group_id+'" name="' + type + '" id="' + type + '_' + json[i][j].id + '" value="' + json[i][j].id + '" class="regular-checkbox"/>' +
+                            '<label for="' + type + '_' + json[i][j].id + '"></label><label class="jin-checkbox-text" for="' + type + '_' + json[i][j].id + '">' + json[i][j].name + '</label>' +
+                            '</div>';
+                    }
+                    c += '<hr/>';
+                }
+                $("#role_" + type).html(c);
+                //全选函数
+                checkedAll(type);
+                //勾上已经保存的勾选
+                for (var k = 0; k < role.length; k++) {
+                    $('#' + type + '_' + role[k]).prop("checked", true);
+                }
+                //动态统计勾选数
+                c2 = checkedValue(type).length + '/' + r_num;
+                $("#role_num_" + type).html(c2);
+                $(":checkbox").click(function () {
+                    var c2 = checkedValue(type).length + '/' + r_num;
+                    $("#role_num_" + type).html(c2);
+                });
+            }
+        });
+    }
+
+    function getAllGroup(type, role, jinIf, text,my_id ) {
+        var r_num = 0;//权限总数
+        var c2 = '';
+
+            var c = '<div>' +
+                '<input type="checkbox" id="check_all_' + type + '" class="regular-checkbox big-checkbox"/><label for="check_all_' + type + '"></label>' +
+                '<label class="jin-all-text" for="check_all_' + type + '">勾选所有' + text + '</label>' +
+                '<label id="role_num_' + type + '"></label>';
+            if(my_id == 1){
+                c += '<input type="checkbox" name="group" id="group_1000" value="1000" class="regular-checkbox"><label for="group_1000"></label><label class="jin-checkbox-text" for="group_1000">渠道全部显示</label>';
+            }
+        c += '</div>' +
+             '<hr/>';
+
+
+        $.ajax({
+            type: "post",
+            url: location.href + "&jinIf=" + jinIf,//功能权限
+            dataType: "json",
+            success: function (json) {
+                for (var i = 0; i < json.length; i++) {//取数据填表
+                    r_num = json.length ;
+                    c +=
+                        '<div class="jin-checkbox-inline" style="width: 300px;">' +
+                        '<input type="checkbox" name="' + type + '" id="' + type + '_' + json[i].id + '" value="' + json[i].id + '" class="regular-checkbox"/>' +
+                        '<label for="' + type + '_' + json[i].id + '"></label><label class="jin-checkbox-text" for="' + type + '_' + json[i].id + '">' + json[i].name + '</label>' +
+                        '</div>';
+                }
+                $("#role_" + type).html(c);
+                //全选函数
+                checkedAll(type);
+                //勾上已经保存的勾选
+                for (var k = 0; k < role.length; k++) {
+                    $('#' + type + '_' + role[k]).prop("checked", true);
+                }
+                //动态统计勾选数
+                c2 = checkedValue(type).length + '/' + r_num;
+                $("#role_num_" + type).html(c2);
+                $(":checkbox").click(function () {
+                    var c2 = checkedValue(type).length + '/' + r_num;
+                    $("#role_num_" + type).html(c2);
+                });
+            }
+        });
+    }
+    //修改
+    $('button[data-type="update"]').on('click', function () {console.log(checkedValue('ser').join(","));
+        $.ajax({
+            type: "POST",
+            url: location.href + "&jinIf=913",
+            data: {
+                role_id: $('#role_id').val(),
+                per_id: checkedValue('per').join(","),
+                group_id: checkedValue('group').join(","),
+                ser_id: checkedValue('ser').join(",")
+            },
+            success: function (json) {
+                if (json == 1) {
+                    layer.alert('修改成功', {icon: 1}, function (index) {
+                        layer.close(index);
+                        location.href = '?p=Admin&c=Rbac&a=selectRole';
+                    }); 
+                }
+            }
+        });
+    });
+    //返回
+    $('button[data-type="return"]').on('click', function () {
+        location.href = '?p=Admin&c=Rbac&a=selectRole';
+    });
+<?php echo '</script'; ?>
+><?php }
+}

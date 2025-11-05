@@ -1,0 +1,9 @@
+#jin_search {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+#content td {
+    word-break: keep-all;
+    white-space: nowrap;
+}
