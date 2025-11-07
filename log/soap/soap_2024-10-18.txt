@@ -1,8 +1,0 @@
-★13:54:15-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|10|0|0|0|opentime=2024-10-18 00:00:00`othmmss=50040
-★13:54:16-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:59:03-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|10|0|0|0|opentime=2024-10-13 00:00:00`othmmss=53940
-★14:59:03-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★15:34:12-192.168.1.147★发送请求★http://192.168.1.170:1002/mservice.wsdl|4|0|0|0|title=1`cont=1`sender_name=GM`receiver_id=2814754062074757`item_list=62010#1#-1;`money_list=`exp=
-★15:34:12-192.168.1.147★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★15:36:38-192.168.1.147★发送请求★http://192.168.1.147:1002/mservice.wsdl|4|0|0|0|title=12`cont=12`sender_name=GM`receiver_id=2814754062073956`item_list=62010#1#-1;`money_list=`exp=
-★15:36:38-192.168.1.147★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

@@ -1,4 +1,0 @@
-★14:45:50-192.168.1.147★发送请求★http://192.168.1.147:1002/mservice.wsdl|10|0|0|0|opentime=2024-10-17 00:00:00`othmmss=53100
-★14:45:50-192.168.1.147★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★16:29:12-192.168.1.147★发送请求★http://192.168.1.147:1002/mservice.wsdl|10|0|0|0|opentime=2024-10-16 00:00:00`othmmss=59340
-★16:29:13-192.168.1.147★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

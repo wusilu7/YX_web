@@ -1,1 +1,0 @@
-★09:56:03-183.14.30.61★发送普通邮件失败★记录时间：2024-03-11 09:56:03,返回码：error=13`error_msg=`result=0，错误数据： title=致命护腕补偿`cont=请查收！`sender_name=GM`receiver_id=844429225101640`item_list=1040104#1#-1;`money_list=`exp=

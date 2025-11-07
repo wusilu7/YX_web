@@ -1,4 +1,0 @@
-★14:18:29-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|10|0|0|0|opentime=2024-08-18 00:00:00`othmmss=51480
-★14:18:29-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:33:06-192.168.1.144★发送请求★http://192.168.1.144:1002/mservice.wsdl|1|0|0|0|opentime=2024-08-22 14:33:06`closetime=`allowip=`blackip=
-★14:33:06-192.168.1.144★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

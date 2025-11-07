@@ -1,2 +1,0 @@
-★00:10:38-125.122.223.132★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=补偿`cont=补偿`sender_name=GM`receiver_id=2814754062073958`item_list=40011#1#-1;`money_list=`exp=
-★00:10:38-125.122.223.132★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

@@ -1,6 +1,0 @@
-★14:23:00-192.168.1.147★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:24:04-192.168.1.147★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:24:47-192.168.1.147★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:25:26-192.168.1.147★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:26:44-192.168.1.147★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:27:59-192.168.1.147★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

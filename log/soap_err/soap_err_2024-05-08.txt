@@ -1,3 +1,0 @@
-★18:01:47-183.14.132.164★发送普通邮件失败★记录时间：2024-05-08 18:01:47,返回码：error=13`error_msg=`result=0，错误数据： title=内部福利下发`cont=内部体验资源下发`sender_name=GM`receiver_id=1646822214`item_list=`money_list=2#2000;1#200;9#3000;4#30;5#20;3#10000;`exp=
-★18:05:12-183.14.132.164★发送普通邮件失败★记录时间：2024-05-08 18:05:12,返回码：error=1`error_msg=`result=0，错误数据： title=内部福利下发`cont=内部体验资源下发`sender_name=GM`receiver_id=1646822214`item_list=9#3000`money_list=2#2000;1#200;4#30;5#20;3#10000;`exp=
-★18:07:26-183.14.132.164★发送普通邮件失败★记录时间：2024-05-08 18:07:26,返回码：error=13`error_msg=`result=0，错误数据： title=内部福利`cont=福利`sender_name=GM`receiver_id=1646822214`item_list=`money_list=1#50;2#2000;4#100;5#100;9#2000;`exp=

@@ -1,4 +1,0 @@
-★09:20:22-115.192.213.32★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=测试资源`cont=测试资源`sender_name=GM`receiver_id=2814754062075216`item_list=`money_list=2#5000;3#50000;`exp=
-★09:20:22-115.192.213.32★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★19:58:53-115.192.213.32★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062075216
-★19:58:53-115.192.213.32★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

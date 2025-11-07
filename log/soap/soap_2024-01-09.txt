@@ -1,3 +1,0 @@
-★17:50:20-115.192.212.40★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=【福利内容】`cont=感谢您参与测试，请查收您的测试福利。有任何问题，可以在群里反馈。`sender_name=GM`item_list=40028#500#-1;`money_list=`exp=`template_id=112`create_time=1704792548`valid_time=1706659213`cond_min_lv=20`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
-★17:50:21-115.192.212.40★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★17:50:21-115.192.212.40★审核成功★时间：2024-01-09 17:50:21; 所有服务器id：3185; 审核成功id：3185

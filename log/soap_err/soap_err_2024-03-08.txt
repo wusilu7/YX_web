@@ -1,6 +1,0 @@
-★11:54:00-183.14.30.61★发送普通邮件失败★记录时间：2024-03-08 11:54:00,返回码：error=13`error_msg=`result=0，错误数据： title=反馈礼包`cont=请查收！钻石*200，复活胶囊*5，1小时巡逻金币*1`sender_name=GM`receiver_id=844429225102778`item_list=40004#5#-1;51004#1#-1;`money_list=2#200;`exp=
-★14:16:21-101.43.35.210★发送普通邮件失败★记录时间：2024-03-08 14:16:21,返回码：error=13`error_msg=`result=0，错误数据： title=加群礼包`cont=请查收！钻石*100  复活胶囊*3  体力*5`sender_name=GM`receiver_id=844429225101499`item_list=`money_list=2#100;`exp=
-★14:16:21-101.43.35.210★发送普通邮件失败★记录时间：2024-03-08 14:16:21,返回码：error=13`error_msg=`result=0，错误数据： title=加群礼包`cont=请查收！钻石*100  复活胶囊*3  体力*5`sender_name=GM`receiver_id=844429225101562`item_list=`money_list=2#100;`exp=
-★14:16:21-101.43.35.210★发送普通邮件失败★记录时间：2024-03-08 14:16:21,返回码：error=13`error_msg=`result=0，错误数据： title=加群礼包`cont=请查收！钻石*100  复活胶囊*3  体力*5`sender_name=GM`receiver_id=844429225102326`item_list=`money_list=2#100;`exp=
-★14:16:21-101.43.35.210★发送普通邮件失败★记录时间：2024-03-08 14:16:21,返回码：error=13`error_msg=`result=0，错误数据： title=加群礼包`cont=请查收！钻石*100  复活胶囊*3  体力*5`sender_name=GM`receiver_id=844433520069433`item_list=`money_list=2#100;`exp=
-★14:16:21-101.43.35.210★发送普通邮件失败★记录时间：2024-03-08 14:16:21,返回码：error=13`error_msg=`result=0，错误数据： title=加群礼包`cont=请查收！钻石*100  复活胶囊*3  体力*5`sender_name=GM`receiver_id=844429225102573`item_list=`money_list=2#100;`exp=

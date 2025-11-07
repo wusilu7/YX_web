@@ -1,3 +1,0 @@
-★10:18:21-115.192.32.94★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★10:20:37-115.192.32.94★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★10:20:38-115.192.32.94★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

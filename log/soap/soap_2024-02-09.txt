@@ -1,5 +1,0 @@
-★16:55:13-36.161.47.188★发送请求★http://101.43.70.129:1002/mservice.wsdl|19|0|0|0|charguid=2814754062073961
-★16:55:13-36.161.47.188★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★18:02:53-36.161.47.188★发送请求★http://101.43.70.129:1002/mservice.wsdl|8|0|0|0|opt=1`title=新年福利`cont=福利`sender_name=GM`item_list=50107#1#-1;40008#20#-1;40033#2#-1;`money_list=2#3000;`exp=`template_id=135`create_time=1707472963`valid_time=1708077763`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
-★18:02:53-36.161.47.188★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★18:02:53-36.161.47.188★审核成功★时间：2024-02-09 18:02:53; 所有服务器id：3185; 审核成功id：3185

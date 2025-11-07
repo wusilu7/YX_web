@@ -1,2 +1,0 @@
-★09:21:49-60.186.195.178★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★09:21:52-60.186.195.178★SOAP★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

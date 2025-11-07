@@ -1,6 +1,0 @@
-★12:27:22-122.233.178.72★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=红色测试装备`cont=红色测试装备`sender_name=GM`receiver_id=2814754062074904`item_list=1000104#1#-1;1000304#1#-1;1001104#1#-1;1001004#1#-1;1002004#1#-1;`money_list=`exp=
-★12:27:22-122.233.178.72★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★12:27:25-122.233.178.72★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=红色测试装备`cont=红色测试装备`sender_name=GM`receiver_id=2814754062074904`item_list=1010104#1#-1;1020104#1#-1;1030104#1#-1;1040104#1#-1;1050104#1#-1;`money_list=`exp=
-★12:27:25-122.233.178.72★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★12:27:28-122.233.178.72★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=红色装备测试`cont=红色装备测试`sender_name=GM`receiver_id=2814754062074904`item_list=1060104#1#-1;1070104#1#-1;`money_list=`exp=
-★12:27:28-122.233.178.72★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

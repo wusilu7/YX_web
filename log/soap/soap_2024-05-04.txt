@@ -1,6 +1,0 @@
-★00:02:50-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|29|0|0|0|charguid=844429225101458`order=17147521574506532972645`amount=18.00`resettype=0`giftid=80`id=231`param=
-★00:02:50-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★00:39:56-139.224.119.176★发送请求★http://49.235.116.123:10002/mservice.wsdl|5|0|0|0|charguid=844429225101659`order=17147543654138843012645`amount=12.00`id=208`param=
-★00:39:56-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★15:16:27-139.224.119.176★发送请求★http://49.235.116.123:20002/mservice.wsdl|5|0|0|0|charguid=844433520069190`order=17148069701975581512645`amount=12.00`id=208`param=
-★15:16:27-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

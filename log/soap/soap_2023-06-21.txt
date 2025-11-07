@@ -1,4 +1,0 @@
-★13:36:41-219.135.170.27★发送请求★http://101.43.70.129:1002/mservice.wsdl|4|0|0|0|title=1`cont=1`sender_name=GM`receiver_id=2814754062074690`item_list=`money_list=2#100000;3#10000000;1#300;`exp=
-★13:36:41-219.135.170.27★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★15:30:57-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|29|0|0|0|charguid=2814754062074064`order=16873326561305966542643`amount=30.00`resettype=3`giftid=8`id=129`param=
-★15:30:57-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

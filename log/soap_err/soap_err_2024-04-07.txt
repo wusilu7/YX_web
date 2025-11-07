@@ -1,1 +1,0 @@
-★10:15:34-183.14.135.190★发送普通邮件失败★记录时间：2024-04-07 10:15:34,返回码：error=13`error_msg=`result=0，错误数据： title=勇士宝箱钥匙补偿`cont=请查收！祝您游戏愉快1`sender_name=GM`receiver_id=装备抽奖钥匙`item_list=40040#55#-1;`money_list=`exp=

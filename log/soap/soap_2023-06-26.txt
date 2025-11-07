@@ -1,8 +1,0 @@
-★09:17:29-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|29|0|0|0|charguid=2814754062075000`order=16877422481726077262643`amount=30.00`resettype=3`giftid=9`id=130`param=
-★09:17:29-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★09:18:46-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062075000`order=16877423249662877262643`amount=30.00`id=208`param=
-★09:18:46-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★09:18:50-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062075000`order=16877423291448177262643`amount=68.00`id=209`param=
-★09:18:50-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★13:38:05-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|29|0|0|0|charguid=2814754062075000`order=16877578848254377262643`amount=45.00`resettype=3`giftid=10`id=131`param=
-★13:38:06-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

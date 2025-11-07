@@ -1,4 +1,0 @@
-★01:19:48-115.192.85.157★发送请求★http://101.43.70.129:1002/mservice.wsdl|10|0|0|0|opentime=2023-11-25 00:00:00`othmmss=4740
-★01:19:48-115.192.85.157★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★01:20:39-139.224.119.176★发送请求★http://101.43.70.129:1002/mservice.wsdl|5|0|0|0|charguid=2814754062073956`order=17008464380334166542643`amount=0.99`id=201`param=
-★01:20:39-139.224.119.176★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

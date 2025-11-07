@@ -1,4 +1,0 @@
-★09:30:46-115.192.210.235★发送请求★http://101.43.70.129:1002/mservice.wsdl|1|0|0|0|opentime=`closetime=2024-01-03 09:30:46`allowip=`blackip=
-★09:30:46-115.192.210.235★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★09:39:03-115.192.210.235★发送请求★http://101.43.70.129:1002/mservice.wsdl|1|0|0|0|opentime=2024-01-03 09:39:03`closetime=`allowip=`blackip=
-★09:39:03-115.192.210.235★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

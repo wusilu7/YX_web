@@ -1,8 +1,0 @@
-★14:17:13-122.235.190.65★发送请求★http://101.43.70.129:3002/mservice.wsdl|13|0|0|0|new_char_name=的回复`charguid=2814754062074508`igncheckstring=0
-★14:17:13-122.235.190.65★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:17:43-122.235.190.65★发送请求★http://101.43.70.129:3002/mservice.wsdl|13|0|0|0|new_char_name=刘刘刘`charguid=2814754062074507`igncheckstring=0
-★14:17:43-122.235.190.65★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:24:34-122.235.190.65★发送请求★http://101.43.70.129:1002/mservice.wsdl|10|0|0|0|opentime=2023-03-13 00:00:00`othmmss=51840
-★14:24:34-122.235.190.65★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
-★14:24:49-122.235.190.65★发送请求★http://101.43.70.129:2002/mservice.wsdl|10|0|0|0|opentime=2023-03-13 00:00:00`othmmss=51840
-★14:24:49-122.235.190.65★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}

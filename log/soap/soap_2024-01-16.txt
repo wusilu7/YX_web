@@ -1,4 +1,0 @@
-★17:18:08-115.192.212.172★发送请求★http://192.168.1.149:1002/mservice.wsdl|8|0|0|0|opt=1`title=哈哈哈哈哈`cont=爱上大大`sender_name=GM`item_list=`money_list=1#100;2#10000;3#1000;`exp=`template_id=115`create_time=1705396646`valid_time=1706001446`cond_min_lv=-1`cond_max_lv=-1`cond_create_time=-1`cond_world_id=-1
-★17:19:08-115.192.212.172★Result★"Could not connect to host"
-★17:20:53-115.192.212.172★发送请求★http://192.168.1.149:1002/mservice.wsdl|8|0|0|0|opt=0`template_id=115
-★17:21:53-115.192.212.172★Result★"Could not connect to host"

@@ -1,2 +1,0 @@
-★17:46:09-219.135.170.27★发送请求★http://101.43.70.129:2002/mservice.wsdl|4|0|0|0|title=1`cont=111`sender_name=GM`receiver_id=2814754062074564`item_list=1010502#5#-1;1010503#5#-1;1010506#5#-1;1010510#5#-1;`money_list=`exp=
-★17:46:09-219.135.170.27★Result★{"Ret":"1","RetEx":"error=0`error_msg=`result=1"}
